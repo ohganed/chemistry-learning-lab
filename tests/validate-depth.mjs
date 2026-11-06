@@ -77,6 +77,12 @@ html.forEach(s=>{
  assert.ok(s.includes('src="./chemistry-depth-viewer.js"'),'Viewer missing');
  assert.ok(s.includes('window.ChemistryDepth.render'),'Viewer not invoked');
  assert.ok(s.includes('id="depthMount"'),'No explanation mount');
+ const code=s.match(/<script>([\s\S]*?)<\/script>/)?.[1];
+ assert.ok(code,'Missing inline chapter logic');
+ assert.doesNotThrow(()=>new Function(code),'Chapter JS must parse');
+ assert.ok(code.indexOf('<div id="depthMount"></div>')<code.indexOf('<details class="chapter-summary">'),'Detailed explanations must appear before the compact review');
+ assert.ok(code.includes("esc(s.body)")&&code.includes("esc(s.formula)"),'Existing chapter content must remain available');
+
 });
 const sw=readFileSync(new URL('../sw.js',import.meta.url),'utf8');
 for(let group=0;group<6;group++)assert.ok(sw.includes('chemistry-depth-'+group+'.json'), 'Missing offline data group '+group);
@@ -110,6 +116,10 @@ assert.ok(bridges.bridges.some(x=>x.id==='conservative-state'&&x.chapters.includ
 assert.ok(viewer.includes('chemistry-knowledge-bridges-v1.json')&&viewer.includes('appendBridges'),'Viewer does not load prior-knowledge bridges');
 const lab=readFileSync(new URL('../state-function-lab.html',import.meta.url),'utf8');
 assert.ok(lab.includes('workA')&&lab.includes('workB')&&lab.includes('distance'),'Path dependence must be explorable in mechanics and thermodynamics');
+const labCode=lab.match(/<script>([\s\S]*?)<\/script>/)?.[1];
+assert.ok(labCode,'Standalone lab script missing');
+assert.doesNotThrow(()=>new Function(labCode),'Interactive lab JS must parse');
+assert.doesNotThrow(()=>new Function(viewer),'Curriculum viewer JS must parse');
 assert.ok(lab.includes('400+Wby')&&lab.includes('q+w'),'Energy balance must conserve ΔU under path changes');
 assert.ok(lab.includes('H=U+PV'),'Keep state-property and work definitions distinct');
 assert.ok(sw.includes('chemistry-knowledge-bridges-v1.json')&&sw.includes('state-function-lab.html'),'New learning connections must be cached offline');
