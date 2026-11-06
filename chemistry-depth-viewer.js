@@ -3,9 +3,11 @@
 (function(){
 "use strict";
 const CACHE=new Map(), KEY="chemistry-depth-reflections-v1";
+let extensionsPromise=null;
+function loadExtensions(){if(!extensionsPromise)extensionsPromise=fetch("./data/chemistry-depth-extensions-v1.json").then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(data=>{if(data.schema!=="chemistry-depth-extensions"||data.schemaVersion!=="1.0"||!Array.isArray(data.topics))throw Error("Invalid extension curriculum");return data.topics}).catch(e=>{extensionsPromise=null;throw e});return extensionsPromise}
 const COPY={
- ja:{heading:"詳しく学ぶ",subtitle:"順番は自由です。最初の節だけを開き、必要に応じて続きを読めます。",loading:"詳しい解説を読み込み中…",failed:"解説データを読み込めませんでした。接続をご確認いただくか、もう一度お試しください。",reopen:"再読み込み",example:"例題：自分で考える",showSolution:"解き方を見る",pitfall:"誤解しやすい点",bridge:"知識のつながり・後からの再解釈",inquiry:"自分で問いを立てる",note:"考えが変わったことや新しい疑問（記録は任意）",save:"気づきを保存",saved:"端末内に記録しました。",failedSave:"保存できませんでした。ブラウザの保存領域を確認してください。",previous:"以前の気づき",delete:"削除",draft:"詳細教材（編集初稿）"},
- en:{heading:"Study in depth",subtitle:"There is no required order. Expand each section as needed; the first is open by default.",loading:"Loading extended explanations…",failed:"Could not load the extended lesson. Check your connection or try again.",reopen:"Retry",example:"Worked example: think first",showSolution:"Reveal a worked solution",pitfall:"Common misconception",bridge:"Connection and later reinterpretation",inquiry:"Investigate further",note:"An observation, changed idea or open question (optional)",save:"Save reflection",saved:"Saved on this device.",failedSave:"Unable to save to device storage.",previous:"Earlier reflections",delete:"Delete",draft:"Expanded curriculum (editorial draft"}
+ ja:{heading:"詳しく学ぶ",subtitle:"順番は自由です。最初の節だけを開き、必要に応じて続きを読めます。",loading:"詳しい解説を読み込み中…",failed:"解説データを読み込めませんでした。接続をご確認いただくか、もう一度お試しください。",reopen:"再読み込み",example:"例題：自分で考える",showSolution:"解き方を見る",pitfall:"誤解しやすい点",bridge:"知識のつながり・後からの再解釈",inquiry:"自分で問いを立てる",note:"考えが変わったことや新しい疑問（記録は任意）",save:"気づきを保存",saved:"端末内に記録しました。",failedSave:"保存できませんでした。ブラウザの保存領域を確認してください。",previous:"以前の気づき",delete:"削除",draft:"詳細教材（編集初稿）",extensions:"発展・横断：他の分野から読み直す",extensionReason:"ここでつながる知識",extensionQuestion:"考えてみる"},
+ en:{heading:"Study in depth",subtitle:"There is no required order. Expand each section as needed; the first is open by default.",loading:"Loading extended explanations…",failed:"Could not load the extended lesson. Check your connection or try again.",reopen:"Retry",example:"Worked example: think first",showSolution:"Reveal a worked solution",pitfall:"Common misconception",bridge:"Connection and later reinterpretation",inquiry:"Investigate further",note:"An observation, changed idea or open question (optional)",save:"Save reflection",saved:"Saved on this device.",failedSave:"Unable to save to device storage.",previous:"Earlier reflections",delete:"Delete",draft:"Expanded curriculum (editorial draft)",extensions:"Further connections and advanced perspectives",extensionReason:"Why this connection matters",extensionQuestion:"Think about it"}
 };
 const escapeHTML=x=>String(x).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const safeRead=()=>{try{const a=JSON.parse(localStorage.getItem(KEY)||"[]");return Array.isArray(a)?a.filter(n=>n&&typeof n==="object"&&typeof n.chapter==="string"&&typeof n.note==="string"&&n.note.length<=1200).slice(-500):[]}catch{return []}};
@@ -36,6 +38,17 @@ function renderLogs(mount,id,lang){
  out.innerHTML=notes.length?'<h4>'+t.previous+'</h4>'+notes.map(n=>'<div class="depth-log"><small>'+escapeHTML((n.date||"").slice(0,10))+'</small><p>'+escapeHTML(n.note)+'</p><button type="button" data-depth-delete="'+escapeHTML(n.id)+'">'+t.delete+'</button></div>').join(""):"";
  out.querySelectorAll("[data-depth-delete]").forEach(b=>b.addEventListener("click",()=>{const next=records.filter(n=>n.id!==b.dataset.depthDelete);try{localStorage.setItem(KEY,JSON.stringify(next));records=next;renderLogs(mount,id,lang)}catch{const status=mount.querySelector(".depth-status");if(status)status.textContent=t.failedSave}}));
 }
+function appendExtensions(host,id,lang,topics){
+ if(!host.isConnected||host.dataset.chapter!==id)return;
+ const selected=topics.filter(x=>Array.isArray(x.chapters)&&x.chapters.includes(id));
+ if(!selected.length)return;
+ const t=COPY[lang],key=lang==="ja"?"ja":"en",body=lang==="ja"?"bodyJa":"bodyEn",reason=lang==="ja"?"reasonJa":"reasonEn",question=lang==="ja"?"questionJa":"questionEn";
+ const container=host.querySelector(".depth-area");
+ if(!container)return;
+ const section=document.createElement("section");section.className="depth-extensions";
+ section.innerHTML='<h3>'+escapeHTML(t.extensions)+'</h3>'+selected.map(item=>'<details><summary>'+escapeHTML(item[key])+'</summary><p class="depth-text">'+escapeHTML(item[body])+'</p><h4>'+escapeHTML(t.extensionReason)+'</h4><p class="depth-text">'+escapeHTML(item[reason])+'</p><div class="depth-box"><strong>'+escapeHTML(t.extensionQuestion)+'</strong><p>'+escapeHTML(item[question])+'</p></div></details>').join("");
+ container.appendChild(section);
+}
 function renderLesson(host,id,lang,lesson){
  if(!host.isConnected||host.dataset.chapter!==id)return;
  styles();const t=COPY[lang];
@@ -56,7 +69,7 @@ function renderLesson(host,id,lang,lesson){
 async function render(id,lang,host){
  if(!host)return;lang=lang==="en"?"en":"ja";const t=COPY[lang];const group=String(id).split("-")[0];host.dataset.chapter=id;host.innerHTML='<div class="depth-area" role="status">'+escapeHTML(t.loading)+'</div>';
  try{const value=await groupData(group),lesson=value.chapters.find(x=>x.id===id);
- if(!lesson)throw Error("Missing chapter "+id);renderLesson(host,id,lang,lesson)}
+ if(!lesson)throw Error("Missing chapter "+id);renderLesson(host,id,lang,lesson);try{const topics=await loadExtensions();appendExtensions(host,id,lang,topics)}catch{ /* Optional extension data is non-blocking. */ }}
  catch(error){if(!host.isConnected||host.dataset.chapter!==id)return;host.innerHTML='<div class="depth-area"><p>'+escapeHTML(t.failed)+'</p><button type="button" class="depth-retry">'+escapeHTML(t.reopen)+'</button></div>';host.querySelector(".depth-retry").onclick=()=>render(id,lang,host);}
 }
 window.ChemistryDepth={render};
