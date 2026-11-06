@@ -5,6 +5,12 @@ on:
     paths:
       - 'data/chemistry-knowledge-atlas-v1.json'
       - 'tests/validate-atlas.mjs'
+      - 'tests/validate-depth.mjs'
+      - 'data/chemistry-depth-*.json'
+      - 'chemistry-depth-viewer.js'
+      - 'high-school-chemistry*.html'
+      - 'sw.js'
+      - 'learning-interchange.html'
       - 'tests/validate-equilibrium.mjs'
       - 'equilibrium-experiment.html'
       - '.github/workflows/validate-knowledge-atlas.yml'
@@ -12,6 +18,12 @@ on:
     paths:
       - 'data/chemistry-knowledge-atlas-v1.json'
       - 'tests/validate-atlas.mjs'
+      - 'tests/validate-depth.mjs'
+      - 'data/chemistry-depth-*.json'
+      - 'chemistry-depth-viewer.js'
+      - 'high-school-chemistry*.html'
+      - 'sw.js'
+      - 'learning-interchange.html'
       - '.github/workflows/validate-knowledge-atlas.yml'
 permissions:
   contents: read
@@ -27,3 +39,4 @@ jobs:
         run: |
           node tests/validate-atlas.mjs
           node tests/validate-equilibrium.mjs
+          node tests/validate-depth.mjs
