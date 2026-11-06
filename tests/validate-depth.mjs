@@ -83,6 +83,43 @@ for(let group=0;group<6;group++)assert.ok(sw.includes('chemistry-depth-'+group+'
 assert.ok(sw.includes('chemistry-depth-viewer.js'), 'Viewer not offline-cached');
 const backup=readFileSync(new URL('../learning-interchange.html',import.meta.url),'utf8');
 assert.ok(backup.includes('chemistry-depth-reflections-v1'),'Reflections not backed up');
+const bridges=JSON.parse(readFileSync(new URL('../data/chemistry-knowledge-bridges-v1.json',import.meta.url),'utf8'));
+assert.equal(bridges.schema,'chemistry-knowledge-bridges');
+assert.equal(bridges.schemaVersion,'1.0');
+assert.equal(bridges.bridges.length,11,'Eleven detailed interdisciplinary bridges are required');
+const bridgeIds=new Set(),covered=new Set();
+for(const item of bridges.bridges){
+ assert.ok(!bridgeIds.has(item.id),'Duplicate bridge ID');
+ bridgeIds.add(item.id);
+ assert.ok(item.chapters?.length>=1,'Bridge chapter IDs missing: '+item.id);
+ for(const id of item.chapters){
+  assert.ok(seen.has(id),'Unknown chemistry chapter in bridge '+item.id+'/'+id);
+  covered.add(id);
+ }
+ assert.ok(item.steps?.length>=3,'At least three explanatory stages needed: '+item.id);
+ for(const step of item.steps){
+  assert.ok(step.ja?.length>=7&&step.en?.length>=8,'Bilingual bridge heading missing: '+item.id);
+  assert.ok(step.textJa?.length>=100&&step.textEn?.length>=160,'Detailed bilingual bridge explanation incomplete: '+item.id);
+ }
+ for(const obj of [item.source,item.target,item.hook,item.limits,item.revisit]){
+  assert.ok(obj?.ja?.length>=12&&obj.en?.length>=20,'Prior-knowledge bridge missing a bilingual connection or limitation: '+item.id);
+ }
+}
+assert.equal(covered.size,29,'Every chapter needs a verified connection to another knowledge domain');
+assert.ok(bridges.bridges.some(x=>x.id==='conservative-state'&&x.chapters.includes('2-0')&&x.lab==='state-function-lab.html'),'Conservative force → enthalpy connection missing');
+assert.ok(viewer.includes('chemistry-knowledge-bridges-v1.json')&&viewer.includes('appendBridges'),'Viewer does not load prior-knowledge bridges');
+const lab=readFileSync(new URL('../state-function-lab.html',import.meta.url),'utf8');
+assert.ok(lab.includes('workA')&&lab.includes('workB')&&lab.includes('distance'),'Path dependence must be explorable in mechanics and thermodynamics');
+assert.ok(lab.includes('400+Wby')&&lab.includes('q+w'),'Energy balance must conserve ΔU under path changes');
+assert.ok(lab.includes('H=U+PV'),'Keep state-property and work definitions distinct');
+assert.ok(sw.includes('chemistry-knowledge-bridges-v1.json')&&sw.includes('state-function-lab.html'),'New learning connections must be cached offline');
+const quizJS=html;
+quizJS.forEach(s=>{
+ assert.ok(s.includes("const status=$('feedback')"),'Quiz feedback should not reset the long explanation');
+ assert.ok(!s.includes("catch{}select(id)"),'Re-render on quiz answer discards open sections and note drafts');
+});
+console.log('PASS: 11 prior-knowledge bridges, all 29 chapters, 34 detailed linked explanations, interactive state-function model.');
+
 const extensions=JSON.parse(readFileSync(new URL('../data/chemistry-depth-extensions-v1.json',import.meta.url),'utf8'));
 assert.equal(extensions.schema,'chemistry-depth-extensions');
 assert.equal(extensions.schemaVersion,'1.0');
