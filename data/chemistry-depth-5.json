@@ -49,7 +49,37 @@
         "ja": "同じポリエチレンでも硬いものと柔らかいものがあるのはなぜだろう。",
         "en": "Why can products made of polyethylene differ in stiffness?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "ポリエチレンの袋と硬いプラスチック容器は、どちらも有機高分子なのに物性が異なります。分子が長い鎖としてつながることに加え、枝分かれ、分子量、結晶性、架橋などの違いが関係します。『高分子の化学式を覚えたら材料の性質がすべて決まる』とはいえません。構造を何段階かの尺度で考える必要があります。",
+            "en": "Plastic films and rigid polymer objects can have very different properties despite both being long-chain organic materials. Chain length, branching, crystallinity and crosslinks matter. Knowing a repeat-unit formula alone is not enough to predict a material's behavior. Structure must be examined across several length scales."
+          },
+          {
+            "type": "particles",
+            "ja": "エテンの二重結合から高分子の鎖が成長すると、π結合が変化して炭素同士のσ結合の連なりができます。縮合型では単量体の官能基が反応してエステルやアミドなどの結合を形成し、水などが副生成物として出る場合があります。鎖の長さが均一でなくても、材料として一定の性質を示すことがあります。",
+            "en": "During polyethylene formation, alkene π bonds participate in creating a long carbon–carbon backbone. In condensation pathways, functional groups react to form links such as esters or amides, sometimes eliminating small molecules. A polymer sample usually contains molecules of varying lengths yet can exhibit useful bulk properties."
+          },
+          {
+            "type": "model",
+            "ja": "エテンの付加重合はnCH₂=CH₂→(−CH₂−CH₂−)ₙと表せます。ここでnは重合度を概念的に示す数で、実際の試料には分子量分布があります。平均分子量も数平均Mn、重量平均Mwなど定義が複数あります。繰り返し単位のモル質量に重合度を掛ければ鎖の分子量の近似が得られますが、末端基の寄与などを無視する条件に注意します。",
+            "en": "A simple representation is nCH₂=CH₂→(−CH₂−CH₂−)ₙ. The symbol n describes degree of polymerization, not necessarily a single value for every chain in a real sample. Number-average and weight-average molecular masses are different measures of a distribution. Repeat-unit mass times chain length is an approximation that may neglect end groups."
+          },
+          {
+            "type": "limits",
+            "ja": "付加重合と連鎖重合は同義ではなく、縮合重合と段階成長も厳密には同義ではありません。前者は化学変化の種類、後者は鎖がどのように成長するかという機構の分類です。また『高分子は溶けない』『加熱すると必ず融ける』という一般化は成立しません。架橋や結晶性、溶媒との相互作用が重要です。",
+            "en": "Addition versus condensation describes the chemical transformation; chain-growth versus step-growth describes how chains grow. These categories correlate but are not identical. Polymers are not universally insoluble, and heating does not always produce a melt. Crosslinking, crystallinity and solvent interactions are decisive."
+          },
+          {
+            "type": "revisit",
+            "ja": "有機化学のπ結合を学んだあとで重合へ戻ると、単量体の結合が鎖全体へ変化する仕組みを理解できます。分子間力を学んでから材料へ戻ると、同じ高分子でも鎖が密に並ぶかどうかで物性が変わるとわかります。環境科学ではこれが分解・回収・再利用の選択へつながります。",
+            "en": "Alkene chemistry provides the microscopic origin of chain formation. Intermolecular forces and chain packing explain why the same chemistry can yield different bulk properties. Environmental science then uses these structural differences to evaluate degradation, collection and recycling routes."
+          }
+        ]
+      }
     },
     {
       "id": "5-1",
@@ -93,7 +123,37 @@
         "ja": "同じ分子量の高分子で、架橋を増やすと何が変わると予想するか。",
         "en": "How might adding crosslinks change a polymer's response to stress and heating?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "PETボトルは透明で比較的強く、ナイロン繊維は引っ張りに強いことが多く、ゴムは大きく伸びて戻ります。どれも高分子なのに性質が違うのは、主鎖の結合、鎖の配向、結晶部分、架橋などの構造が異なるためです。材料名を覚えるのではなく『どの運動を分子構造が許すか』を考えます。",
+            "en": "PET bottles, nylon fibers and rubber have very different mechanical responses despite all being polymer materials. Backbone chemistry, chain alignment, crystalline regions and crosslinks determine how molecules rearrange under force. Material behavior is best understood by asking which molecular motions and rearrangements are possible."
+          },
+          {
+            "type": "particles",
+            "ja": "PETはエステル結合を含むポリエステル、ナイロンはアミド結合を含むポリアミドです。アミド基は分子間水素結合に関わりやすく、鎖の並び方や物性へ影響します。ゴムの弾性は伸ばす前の高分子鎖の乱れた配置と、伸ばして配向させた状態のエントロピー差から説明することができます。架橋は鎖が自由にずれることを制限します。",
+            "en": "PET is a polyester containing ester linkages, while nylon is a polyamide containing amide bonds that often support strong intermolecular interactions. Rubber elasticity is closely related to the entropy change when flexible chains are stretched and aligned. Crosslinks prevent chains from sliding freely past one another and modify recovery after deformation."
+          },
+          {
+            "type": "model",
+            "ja": "ポリエステルの代表的な結合は−CO−O−、ポリアミドは−CO−NH−です。加水分解への感受性や分子間相互作用を比較する入口になります。架橋密度が増えれば一般に流動や溶解が抑えられ、材料は硬くなる場合があります。ただし弾性率や破断伸びは温度・配合・結晶性にも影響され、式一つで決定できません。",
+            "en": "A characteristic polyester linkage is −CO−O− and a polyamide linkage is −CO−NH−. These groups affect hydrolysis and intermolecular interactions. Greater crosslink density often restricts flow and swelling and can increase stiffness, although elasticity, strength and fracture behavior also depend on formulation, crystallinity and temperature."
+          },
+          {
+            "type": "limits",
+            "ja": "『熱可塑性＝どんな温度でも何度でも安全に再成形できる』わけではありません。加工による分解や添加剤の影響があります。熱硬化性樹脂は架橋網目によって溶融流動しにくく、加熱しすぎると分解します。材料の耐熱性は融点だけでなくガラス転移温度、熱分解温度、使用時間などを区別して評価します。",
+            "en": "Thermoplastic materials are not indefinitely recyclable without degradation; repeated processing can alter chains or additives. Crosslinked thermosets resist flow and often decompose rather than melt. Heat resistance may involve glass transition, melting, degradation temperature and exposure duration, which are different properties."
+          },
+          {
+            "type": "revisit",
+            "ja": "有機化学のエステル化・アミド形成を学んでから戻れば、PETやナイロンの主鎖を反応式として読めます。熱力学・分子間力を学べば、ゴムの弾性や繊維の強さが電子結合だけでは説明できないとわかります。リサイクルでは、結合の種類が化学的な再資源化方法を左右します。",
+            "en": "Esterification and amide formation explain how polymer backbones are built. Thermodynamics and intermolecular forces illuminate rubber elasticity and fiber strength beyond covalent bonding alone. Recycling chemistry then uses differences between ester and carbon–carbon backbones to choose feasible processing methods."
+          }
+        ]
+      }
     },
     {
       "id": "5-2",
@@ -137,7 +197,37 @@
         "ja": "使い捨て容器の素材を選ぶ際、分子構造以外にどんな条件を比べるべきだろう。",
         "en": "Besides chemistry, which conditions would matter when comparing single-use container materials?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "セルロース繊維やデンプンはどちらも糖由来ですが、触ったときの性質や消化されやすさは違います。『天然物なら同じ』『同じ単糖からできていれば同じ性質』という予想は成り立ちません。単糖同士の結合位置や立体配置、鎖の長さ、分子間の結びつきが、大きな材料特性の差を生みます。",
+            "en": "Cellulose fibers and starch are both glucose-based yet differ in texture and digestibility. Natural origin and shared building blocks do not guarantee identical behavior. Linkage geometry, chain length and intermolecular organization lead to different structures and materials."
+          },
+          {
+            "type": "particles",
+            "ja": "デンプンでは主にα-1,4結合やα-1,6結合、セルロースではβ-1,4結合が重要です。後者は伸びた鎖として並びやすく、水素結合を介して強い繊維構造をつくります。多くの人はセルロースのβ結合を分解する酵素をもたない一方、デンプンのα結合には消化酵素が働きます。タンパク質でも配列と折り畳みが機能を左右します。",
+            "en": "Starch contains mainly α-1,4 and α-1,6 linkages, whereas cellulose has β-1,4 bonds. Cellulose chains can organize into strong fiber structures supported by hydrogen bonding. Humans lack the enzymes to efficiently hydrolyze these cellulose linkages, while amylases hydrolyze starch linkages. Protein sequence and folding similarly control function."
+          },
+          {
+            "type": "model",
+            "ja": "多糖の結合をグリコシド結合といい、立体配置や結合位置を表すためにα-1,4、β-1,4などと記します。これは『何番の炭素から何番の炭素へ』『どんな立体配置で』つながるかを示します。タンパク質はペプチド結合−CO−NH−の繰り返しであり、加水分解によって構成単位へ戻せますが、適切な酵素や反応条件が必要です。",
+            "en": "Glycosidic notation such as α-1,4 and β-1,4 specifies both linkage positions and stereochemistry. Protein chains contain repeated amide (peptide) bonds −CO−NH−. These bonds can be hydrolyzed under suitable chemical or enzymatic conditions, but macromolecules do not automatically disassemble simply because water is present."
+          },
+          {
+            "type": "limits",
+            "ja": "天然由来と生分解性は別概念です。セルロースでも結晶性・表面積・化学修飾・環境条件によって分解速度は違います。『生分解性樹脂』も、土壌や海水と工業的な堆肥化施設では分解条件が異なります。環境影響を判断するには素材だけでなく製造から使用・回収までを考える必要があります。",
+            "en": "Natural origin is not the same as biodegradability. Crystallinity, chemical modifications and exposure conditions influence cellulose decomposition. A material that biodegrades under industrial composting conditions may not do so quickly in soil or seawater. Environmental assessment must consider the entire product life cycle."
+          },
+          {
+            "type": "revisit",
+            "ja": "分子の立体構造と水素結合を学んだ後で戻ると、セルロースの強さやデンプンの消化性を説明できます。生化学で酵素の活性部位を学べば、なぜ微妙な結合の違いが生体反応を選別するのか理解できます。材料の環境評価まで進むと、化学構造が社会の選択に関わることも見えてきます。",
+            "en": "Stereochemistry and hydrogen bonding later explain cellulose strength and starch digestibility. Enzyme active-site specificity makes small linkage differences biologically decisive. Environmental assessment extends the same structural reasoning into decisions about sustainable materials and waste treatment."
+          }
+        ]
+      }
     }
   ]
 }
