@@ -49,7 +49,37 @@
         "ja": "清涼飲料を分離するとしたら、どの成分を何の差で分けたいだろうか。",
         "en": "If you wanted to separate a soft drink, which component and physical difference would you target?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "見た目が同じでも、中身は同じとは限りません。透明な食塩水には水分子のほかにNa⁺やCl⁻が存在します。濁った泥水では粒子が大きく、ろ紙などに捕らえられます。まず「何がどの大きさで存在するか」を想像すると、分離法を合理的に選べます。",
+            "en": "Appearance is not composition. Transparent saltwater contains water molecules together with hydrated Na⁺ and Cl⁻ ions. Muddy water also contains suspended particles that can be physically retained by a filter. Before choosing a technique, ask what entities are present and at what size and in which phase."
+          },
+          {
+            "type": "particles",
+            "ja": "水に溶けた食塩では、結晶中のイオンを水分子が取り囲み、溶液の中へ分散させます。ろ過で分けられないのは、イオンがすでに分子程度の尺度にまで分散しているからです。蒸留では水分子が液体から気体へ移り、冷却器で再び液体になります。食塩は通常の条件で水と同じようには揮発しません。",
+            "en": "Dissolving NaCl disperses its ions as hydrated species. Because these ions are on a molecular scale, ordinary filter paper does not retain them. In distillation, more volatile water molecules enter the vapor and later condense. Dissolved salt does not evaporate comparably under ordinary conditions."
+          },
+          {
+            "type": "model",
+            "ja": "分離は『特性の違い→選択的な移動→成分を別々に回収』という筋道で考えます。ろ過では粒子径、蒸留では気液の平衡と揮発性、再結晶では溶解度の温度依存、抽出では分配平衡を利用します。食塩水をろ過する案が不適切なのは、溶存イオンとろ紙の孔径との比較から説明できます。",
+            "en": "Separation follows a general logic: identify a difference in properties, selectively transfer or retain components, and collect separated fractions. Filtration depends on particle size, distillation on vapor–liquid equilibrium, recrystallization on solubility changes, and extraction on partition equilibria. The particle-size model explains why filtering saltwater is ineffective."
+          },
+          {
+            "type": "limits",
+            "ja": "一つの方法だけで必ず純粋になるとは限りません。例えば水とエタノールはどちらも揮発するため、単純な蒸留だけでは厳密な完全分離にならない場合があります。加熱中の分解・共沸・不純物の混入などの条件も考える必要があります。『沸点が違えば必ず完全に分かれる』という説明は近似です。",
+            "en": "A single method may not yield pure components. Both ethanol and water are volatile, so simple distillation may not produce complete separation; vapor–liquid equilibrium and azeotropic behavior matter. Decomposition, carryover, and contamination also affect results. Different boiling temperatures do not guarantee perfect separation."
+          },
+          {
+            "type": "revisit",
+            "ja": "後に分子間力を学んだら『揮発しやすさの差がなぜ生じるか』へ戻れます。溶解平衡を学ぶと再結晶の理屈が深まり、分析化学を学ぶと混合物を分けることが、物質を同定するための測定操作として見えるようになります。分離操作を単なる実験手順から粒子と平衡の応用へ読み直してください。",
+            "en": "Return to this chapter after studying intermolecular forces to explain differences in volatility. Solution equilibria help explain recrystallization, and analytical chemistry transforms separation into a way to identify and quantify substances. A list of laboratory procedures becomes a network of particle-level mechanisms."
+          }
+        ]
+      }
     },
     {
       "id": "0-1",
@@ -93,7 +123,37 @@
         "ja": "同じ元素の二つの同位体を区別する測定法にはどんなものがあるだろうか。",
         "en": "What kind of measurement could distinguish two isotopes of one element?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "同じ元素でも原子の質量が異なることがあります。炭素12と炭素13はどちらも陽子が6個ですが、中性子が6個か7個かで異なります。電気的に中性なら電子は6個です。一方、炭素のイオンになった場合に変わるのは通常電子数です。この区別は『何を変えると何が変わるのか』を考える練習になります。",
+            "en": "Carbon-12 and carbon-13 are both carbon because each has six protons, but they differ in neutron number. A neutral atom has six electrons; a charged carbon ion changes its electron count without changing its elemental identity. This distinguishes changes to nuclear composition from changes to the electron cloud."
+          },
+          {
+            "type": "particles",
+            "ja": "原子核には正電荷をもつ陽子と電荷をもたない中性子が存在し、電子は原子核の周囲の量子状態に分布します。陽子数が元素を定義しますが、電子の数と状態が化学反応に直接関係する場合が多いです。同位体の化学反応性は似ていますが、原子核質量の違いが振動や反応速度に影響する場合があります。",
+            "en": "The nucleus contains positive protons and neutral neutrons; electrons occupy quantum states around it. Proton count fixes elemental identity while electron number and arrangement govern much ordinary chemistry. Isotopes often behave similarly, yet different nuclear masses can affect vibrational motion and certain reaction rates."
+          },
+          {
+            "type": "model",
+            "ja": "原子番号Z、質量数A、中性子数NにはA=Z+Nという保存の関係があります。例えば27Al（Z=13）ならN=27−13=14です。Al³⁺では電子が13−3=10個になります。『質量数27は質量27gを意味する』わけではありません。質量数は核子の個数であり、実際の同位体質量は結合エネルギーなどのため整数に一致しません。",
+            "en": "The bookkeeping relations are A=Z+N and, for an ion of charge +q, electron count Z−q. Aluminum-27 has 13 protons and 14 neutrons; Al³⁺ has 10 electrons. A mass number of 27 is a count of nucleons, not a claim that one atom has mass 27 grams or even exactly 27 atomic mass units."
+          },
+          {
+            "type": "limits",
+            "ja": "質量数と相対原子質量を区別してください。相対原子質量は自然界の同位体存在比に依存する平均であり、試料の同位体組成が変われば値も変わり得ます。電離や化学反応では核子数は通常変わらない一方、核反応では元素そのものが変化し得ます。これらは扱うエネルギー規模が異なります。",
+            "en": "Mass number is an integer for a specified nuclide, whereas relative atomic mass reflects isotopic abundances and varies with sample composition. Ordinary chemical reactions and ionization do not generally alter nuclei, but nuclear reactions can change element identities. Do not merge these categories of processes."
+          },
+          {
+            "type": "revisit",
+            "ja": "後にモルを学ぶと、微小な粒子数を質量と結びつけられます。電子配置を学ぶと、なぜNaがNa⁺になりやすいかの説明が深まります。同位体は質量分析、放射年代測定、植物の栄養輸送の追跡など、全く別分野に見える研究でも重要な道具になります。",
+            "en": "The mole later connects particle counts to measured mass. Electron configurations explain typical ion formation. Isotopic labels and mass spectrometry are powerful tools in geochemistry, radiometric dating and tracing nutrient pathways in plants. Atomic structure becomes a method for asking where matter came from and where it went."
+          }
+        ]
+      }
     },
     {
       "id": "0-2",
@@ -137,7 +197,37 @@
         "ja": "周期表で同じ族なのに反応性が違う場合、その理由をどう推測するか。",
         "en": "If elements share a group but differ in reactivity, what factors might explain the difference?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "周期表の縦の並びは単なる暗記表ではありません。同じ族の典型元素は価電子の配置が似ているため、反応性に共通点が現れます。例えばNaとKはいずれも一価の陽イオンを形成しやすいものの、反応の速さや水との反応の激しさは同一ではありません。周期表は『性質を予測するための地図』として使います。",
+            "en": "The periodic table is a map of recurring electronic structures, not just a list of symbols. Sodium and potassium both readily form +1 ions, yet their observable reactivity is not identical. Their shared group makes a useful prediction, while differences in electron attraction, hydration and kinetic conditions refine it."
+          },
+          {
+            "type": "particles",
+            "ja": "原子核の正電荷は電子を引き寄せますが、内側の電子は外側の電子に対する引力を部分的に遮蔽します。周期が進むと同じ主殻の電子に対する有効核電荷が大きくなる傾向があり、原子半径やイオン化エネルギーに影響します。電子は決められた円を回るのではなく、軌道に対応する確率分布として扱います。",
+            "en": "Positive nuclear charge attracts electrons, while inner electrons partly shield outer electrons. Trends in effective nuclear charge and shell occupation help explain changes in atomic size and ionization energy. Atomic orbitals are quantum probability distributions, not little circular tracks."
+          },
+          {
+            "type": "model",
+            "ja": "Naの基底状態電子配置は1s²2s²2p⁶3s¹です。末尾の3s¹がKの4s¹と似た価電子の特徴を示します。ただし軌道のエネルギー順は単純な規則だけで全原子に通用せず、遷移金属の電子配置には例外があります。量子数n、l、m、sは状態を区別する道具であり、『何番目の円軌道か』を直接意味しません。",
+            "en": "The ground-state configuration of Na is 1s²2s²2p⁶3s¹; K ends in 4s¹. This shared valence pattern underlies many similarities. However, energy ordering is not a universal simple sequence, especially for transition metals. Quantum numbers label orbital and spin states rather than classical trajectories."
+          },
+          {
+            "type": "limits",
+            "ja": "『周期表で右へ進めばすべての性質が単調に変化する』わけではありません。半充填・閉殻配置、電子間反発、遷移元素のd電子などが例外に関与します。イオン化エネルギーの傾向と、実際に水溶液中で酸化されやすいかも同じ量ではありません。水和・結晶・溶媒の効果まで含めて判断します。",
+            "en": "Periodic trends have exceptions because subshell stability, electron pairing and d-electron effects matter. Gas-phase ionization energy is also not equivalent to the overall free-energy change for oxidation in water; hydration and other reaction steps must be included."
+          },
+          {
+            "type": "revisit",
+            "ja": "共有結合・イオン結合を学んだら価電子の意味へ戻ってください。分光学を学べば、電子が決まったエネルギー差で遷移することを観測として理解できます。量子化学では周期表の経験則が、電子の波動関数と電子間相互作用という深い理論へつながります。",
+            "en": "Bonding turns valence electrons into a predictive idea; spectroscopy provides evidence for quantized energy differences. Quantum chemistry then rebuilds periodic trends from wavefunctions and electron interactions. These connections give familiar trends a more explanatory meaning."
+          }
+        ]
+      }
     },
     {
       "id": "0-3",
@@ -181,7 +271,37 @@
         "ja": "氷とダイヤモンドはどちらも固体なのに、どこが構造的に違うだろうか。",
         "en": "Ice and diamond are both solids. How do their structural units and interactions differ?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "同じ炭素からできてもダイヤモンドと黒鉛は性質が大きく違います。ダイヤモンドは三次元の共有結合網目、黒鉛は平面状の炭素層と層間の比較的弱い相互作用をもちます。物性の違いを元素名だけで説明できず、結合と空間配置に注目する必要があります。NaCl結晶でも分子1個という見方は適しません。",
+            "en": "Diamond and graphite both consist of carbon but exhibit very different properties because atoms connect differently. Diamond has a three-dimensional covalent network, while graphite contains strongly bonded layers with weaker interactions between layers. The identity of the element alone is insufficient to predict material properties; crystal structure matters."
+          },
+          {
+            "type": "particles",
+            "ja": "イオン結晶では正負のイオンが多数の隣接イオンと相互作用して結晶全体を安定化します。共有結合では核間の電子密度が重要ですが、実際の電子分布はイオン性と共有性を連続的に示す場合があります。金属内の電子は多くの原子にわたって広がり、金属結合・導電性の理解に役立ちます。",
+            "en": "An ionic lattice is stabilized by many ion–ion electrostatic interactions rather than isolated ion pairs. Covalent bonds depend on electron density shared between nuclei, and many real bonds have both ionic and covalent character. Delocalized electron states contribute to metallic cohesion and conductivity."
+          },
+          {
+            "type": "model",
+            "ja": "結晶密度を考える場合、単位格子の体積とその中に含まれる粒子の物質量を関係づけます。例えば体心立方格子には慣用単位格子当たり2個に相当する格子点があり、質量は2M/NAと表せます。格子長をaとすると密度はρ=2M/(NAa³)（単一元素の体心立方格子、整合単位）になります。",
+            "en": "For a monatomic body-centered cubic lattice, a conventional unit cell contains an effective two atoms. Its mass is 2M/NA and its volume a³, giving density ρ=2M/(NAa³), with consistent units. This links nanoscopic lattice geometry to macroscopic mass per volume."
+          },
+          {
+            "type": "limits",
+            "ja": "『結晶の粒子が動けないから絶対に電流が流れない』とも言い切れません。イオン結晶は通常の条件で電子的な導電性が低くても、欠陥を介したイオン伝導を示す材料もあります。また共有結合性の黒鉛は導電性を示します。分類から必ず一つの物性が決まるのではなく、どの担体が動けるかで考えます。",
+            "en": "A crystal is not always electrically insulating simply because atoms occupy lattice positions. Some solids conduct via mobile defects or ions; graphite conducts through electronic states. Conductivity depends on available charge carriers and their mobility, not only on a bonding label."
+          },
+          {
+            "type": "revisit",
+            "ja": "次に溶解性や電気分解を学ぶと、固体の結晶格子から水中の溶媒和イオンへの変化としてNaClを捉え直せます。高分子の物性と比較すると、固体の硬さ・強度・融点には、原子間結合だけでなく欠陥や階層構造も影響することが見えてきます。",
+            "en": "Solvation and electrolysis transform the view of NaCl from a solid lattice into mobile hydrated ions. Comparing crystals with polymers reveals that mechanical properties depend not only on bond strength but also on structural hierarchy, defects and organization."
+          }
+        ]
+      }
     },
     {
       "id": "0-4",
@@ -225,7 +345,37 @@
         "ja": "エタノールと水が混ざることを、どんな相互作用で説明できるだろうか。",
         "en": "Which interactions help explain why ethanol and water mix?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "水は常温で液体ですが、同程度の分子量をもつ物質が気体である例は少なくありません。理由を『水分子が重いから』だけでは説明できません。水分子の折れ曲がった形と極性、水素結合などの相互作用が蒸発のしにくさに関係します。分子内部の結合と分子同士の相互作用を区別することが出発点です。",
+            "en": "Water remains liquid under conditions where many similarly sized substances are gases. Molecular mass alone cannot explain this. Bent geometry and polarity permit hydrogen-bonding interactions, which influence vaporization. A crucial distinction is between covalent bonds within molecules and interactions among molecules."
+          },
+          {
+            "type": "particles",
+            "ja": "H₂OのO−H結合は分子内で電子密度が酸素側へ偏っています。水分子は折れ線形なので二つの結合双極子は打ち消されず、全体として電気双極子をもつ。一方CO₂は直線形で二つのC=O結合双極子の向きが反対になるため、分子全体の双極子はゼロです。結合の極性だけでは分子全体は予測できません。",
+            "en": "Each O−H bond in water is polar, and the bent shape prevents its bond dipoles from canceling. CO₂ also has polar bonds, but its linear symmetry makes the two C=O dipoles cancel. Geometry therefore changes how bond-level polarity translates into whole-molecule behavior."
+          },
+          {
+            "type": "model",
+            "ja": "分子の双極子は電荷の偏りと距離のベクトルとして扱えます。分子の極性を考えるときは①ルイス構造を描く、②分子形状を推定する、③各結合の双極子の向きを描く、④ベクトルとして合成する、という順番が便利です。沸点を比較する際は分散力、双極子間相互作用、水素結合、分子サイズを総合します。",
+            "en": "A useful reasoning sequence is to draw a Lewis structure, predict geometry, mark bond dipoles, and add them as vectors. Predicting boiling behavior then requires considering dispersion, dipole interactions, hydrogen bonding, molecular size and shape, not simply polar versus nonpolar."
+          },
+          {
+            "type": "limits",
+            "ja": "VSEPRは主に電子領域の反発を使った近似モデルであり、遷移金属錯体や電子の非局在化が大きい系には十分でない場合があります。『水素結合があるならいつでも沸点が高い』とも限りません。異なる分子量・表面積・混合条件を比較するときは因子を整理し、単一原因で断定しないことが大切です。",
+            "en": "VSEPR is a useful model with a limited domain of applicability, especially for some coordination complexes and strongly delocalized systems. Hydrogen bonding does not guarantee the highest boiling point in every comparison; size, surface area and other interactions also matter."
+          },
+          {
+            "type": "revisit",
+            "ja": "蒸留を学んだあと分子間力へ戻ると、なぜ沸点差が生じるのかが見えます。生化学を学んだ後ならタンパク質の折り畳み、DNAの塩基対、膜の構造を、個々の分子間相互作用が集まった結果として読み直せます。分子の形と相互作用は生命現象まで通じる橋です。",
+            "en": "Intermolecular forces reinterpret the earlier topic of distillation by explaining volatility. Later, protein folding, DNA base pairing and membrane organization can all be revisited as outcomes of multiple molecular interactions acting together. Molecular geometry becomes a bridge to life science."
+          }
+        ]
+      }
     }
   ]
 }
