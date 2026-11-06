@@ -1,0 +1,231 @@
+{
+  "schema": "chemistry-depth-textbook",
+  "schemaVersion": "1.0",
+  "group": "1",
+  "locale": [
+    "ja",
+    "en"
+  ],
+  "chapters": [
+    {
+      "id": "1-0",
+      "ja": "物質量と化学式",
+      "en": "The mole and chemical formulas",
+      "sections": [
+        {
+          "ja": "物質量は数えるための単位",
+          "en": "The mole counts entities",
+          "textJa": "原子や分子は非常に小さいため、個数を直接数える代わりに物質量を用いる。1 molは正確に6.02214076×10²³個の指定粒子を含む。『何を1個と数えるか』は明示する必要がある。1 molの水分子と1 molの水素原子は、物質量は等しいが粒子の種類や質量は異なる。",
+          "textEn": "Atoms and molecules are too small to count individually in routine laboratory work. One mole contains exactly 6.02214076×10²³ specified elementary entities. You must specify whether you are counting atoms, ions, molecules or formula units. A mole is an amount of substance, not a mass unit."
+        },
+        {
+          "ja": "式量・モル質量・質量",
+          "en": "Formula mass and molar mass",
+          "textJa": "物質の化学式から式量を求め、1 molあたりの質量（モル質量）Mをg/molなどで表す。質量mの試料の物質量はn=m/M。原子量の相対値と、モル質量という単位つきの量を区別しよう。例えばH₂Oのモル質量を18 g/molと近似すれば、9 gの水は0.5 molである。",
+          "textEn": "Molar mass M, often in g/mol, connects amount n to sample mass m through n=m/M. The relative molecular or formula mass is dimensionless, whereas molar mass carries units. Using M≈18 g/mol for H₂O, a 9 g sample contains approximately 0.5 mol."
+        },
+        {
+          "ja": "化学式は比も表す",
+          "en": "Formula subscripts encode ratios",
+          "textJa": "H₂Oは水分子1個に水素原子2個と酸素原子1個が含まれることを示す。CaCl₂のようなイオン結晶の化学式は、独立した分子ではなくイオンの最簡整数比を表す。したがってCaCl₂ 1 molに含まれる塩化物イオンの物質量は、理想的に電離した場合2 molに対応する。粒子の単位を明示すると計算の混乱が減る。",
+          "textEn": "The formula H₂O describes two H atoms and one O atom per water molecule. In ionic crystals, CaCl₂ represents a formula-unit ratio rather than an isolated molecule. One mole of CaCl₂ formula units corresponds to two moles of chloride ions when completely dissociated."
+        }
+      ],
+      "example": {
+        "ja": "36 gの水（M=18 g/mol）は何mol、分子何個か。",
+        "en": "How many moles and molecules are in 36 g of water if M≈18 g/mol?",
+        "solutionJa": "n=36/18=2.0 mol。分子数は2.0×6.02214076×10²³≈1.20×10²⁴個。水素原子としては、その2倍の約2.41×10²⁴個である。",
+        "solutionEn": "n=36/18=2.0 mol. Molecule count ≈2.0×6.02214076×10²³=1.20×10²⁴. The number of hydrogen atoms is twice that count."
+      },
+      "pitfall": {
+        "ja": "『1 mol=6.02×10²³ g』ではない。アボガドロ定数の単位はmol⁻¹である。",
+        "en": "The mole does not mean 6.02×10²³ grams. Avogadro's constant has units of mol⁻¹."
+      },
+      "bridge": {
+        "ja": "粒子の個数→化学反応式→気体・溶液の量、さらに分析化学の定量へ。",
+        "en": "Moles link particle counts to stoichiometry, gas behavior, solution composition and quantitative analysis."
+      },
+      "inquiry": {
+        "ja": "砂糖1粒に含まれる分子の個数を知るには、何を測定すればよいか。",
+        "en": "What must you measure to estimate the number of sugar molecules in a grain?"
+      },
+      "status": "editorial-draft"
+    },
+    {
+      "id": "1-1",
+      "ja": "化学反応式と量的関係",
+      "en": "Reaction equations and stoichiometry",
+      "sections": [
+        {
+          "ja": "係数は反応する粒子の比",
+          "en": "Coefficients give reacting ratios",
+          "textJa": "化学反応式は反応前後の各元素の原子数を一致させて書く。係数は分子などの粒子数の比であり、物質量の比でもある。2H₂+O₂→2H₂OはH₂ 2 molとO₂ 1 molからH₂O 2 molができる理論的対応を示す。温度や条件によって反応が完全に進むとは限らない。",
+          "textEn": "A balanced reaction equation conserves the number of atoms of each element. Coefficients represent ratios of particles and amounts of substance. For 2H₂+O₂→2H₂O, two moles of H₂ require one mole of O₂ and can form two moles of water if the reaction goes to completion."
+        },
+        {
+          "ja": "制限試薬を見つける",
+          "en": "Find the limiting reactant",
+          "textJa": "複数の反応物があるときは、反応式の係数比と比べてどちらが先に不足するかを考える。H₂ 3 molとO₂ 1 molならO₂が制限試薬となり、水の理論生成量は2 molである。使われずに残ったH₂は1 mol。試料の不純物や副反応がある場合、理論値と実測値は異なる。",
+          "textEn": "A limiting reactant is consumed first according to the balanced coefficients. With 3 mol H₂ and 1 mol O₂, oxygen limits formation to 2 mol H₂O, leaving 1 mol H₂ unreacted. Real yields can be lower because reactions are incomplete or produce side products."
+        },
+        {
+          "ja": "実際の収率を評価する",
+          "en": "Evaluate chemical yield",
+          "textJa": "収率は実際に得られた生成量を理論生成量で割り、百分率で表す。質量を比較する場合、同じ生成物を同じ単位で比較しなければならない。収率が低い理由には平衡、副反応、操作中の損失などがある。単純に『失敗した』という評価では原因分析にならない。",
+          "textEn": "Percent yield is actual amount divided by theoretical amount, expressed as a percentage. Compare the same product in compatible units. Equilibrium, side reactions and isolation losses can each lower yield; identifying the cause is scientifically more informative than simply labeling the run a failure."
+        }
+      ],
+      "example": {
+        "ja": "H₂ 3 molとO₂ 1 molから生成する水の最大物質量は？",
+        "en": "What is the maximum water formed from 3 mol H₂ and 1 mol O₂?",
+        "solutionJa": "反応式2H₂+O₂→2H₂O。O₂ 1 molにはH₂ 2 molが必要で、H₂は余る。H₂Oの理論生成量は2 mol。O₂が制限試薬である。",
+        "solutionEn": "The 2:1:2 stoichiometric ratio means 1 mol O₂ consumes 2 mol H₂ and produces 2 mol H₂O. Oxygen is limiting; 1 mol H₂ remains."
+      },
+      "pitfall": {
+        "ja": "係数は質量比ではない。係数比は物質量の比であり、質量にはモル質量を掛ける。",
+        "en": "Stoichiometric coefficients are mole ratios, not mass ratios."
+      },
+      "bridge": {
+        "ja": "物質量の保存、酸化還元の電子収支、反応速度や平衡での収率の変化へ。",
+        "en": "Connect mole ratios to electron balance, limiting reagents, kinetics and equilibrium-limited yields."
+      },
+      "inquiry": {
+        "ja": "生成物が理論値より少なかったとき、どんな説明があり得るだろうか。",
+        "en": "What distinct explanations might account for a yield below the theoretical value?"
+      },
+      "status": "editorial-draft"
+    },
+    {
+      "id": "1-2",
+      "ja": "気体の性質",
+      "en": "Properties of gases",
+      "sections": [
+        {
+          "ja": "圧力と温度の粒子モデル",
+          "en": "Microscopic view of gases",
+          "textJa": "気体の圧力は多数の粒子が壁と運動量を交換することと関係する。温度は粒子の平均的な並進運動エネルギーに関係する（理想気体では平均3/2kBT）。同じ温度なら質量の違う気体でも平均並進エネルギーは等しいが、典型的な速さは異なる。気体が膨張したときの温度変化は熱の出入りと仕事の条件で変わる。",
+          "textEn": "Gas pressure arises from molecular momentum transfer to container walls. In an ideal gas, mean translational kinetic energy is 3/2 kBT. Gases at the same temperature have the same average translational energy, not necessarily the same molecular speeds. Expansion cooling depends on heat and work conditions."
+        },
+        {
+          "ja": "気体の法則を一つの式に",
+          "en": "Unify the gas laws",
+          "textJa": "一定の物質量ならボイルの法則PV=一定（温度一定）やシャルルの法則V/T=一定（圧力一定）などが成り立つ。理想気体の状態方程式PV=nRTは圧力P、体積V、物質量n、絶対温度Tを結ぶ。Tにはケルビンを使い、圧力と気体定数Rの単位を揃える。実在気体は高圧・低温などで理想式からずれる。",
+          "textEn": "Boyle's law (PV constant at fixed T and n) and Charles's law (V/T constant at fixed P and n) are special cases of PV=nRT. Use kelvin and compatible units for P, V and R. Real gases deviate from ideal behavior particularly at high pressure or low temperature."
+        },
+        {
+          "ja": "混合気体と分圧",
+          "en": "Mixtures and partial pressure",
+          "textJa": "理想気体の混合では全圧が各成分の分圧の和になる（ドルトンの法則）。分圧は全圧×モル分率として計算できる。反応の平衡を考える場合、気体の分圧や活量を用いることがある。湿った気体を集めるとき、水蒸気圧の寄与を無視すると測定がずれる。",
+          "textEn": "For ideal-gas mixtures, total pressure equals the sum of partial pressures, each given by mole fraction times total pressure. Partial pressures matter in gas equilibria. When gas is collected over water, water vapor contributes to the measured pressure."
+        }
+      ],
+      "example": {
+        "ja": "1.0 molの理想気体を300 K、約1.0×10⁵ Paに置いたときの体積は？",
+        "en": "Find the volume of 1.0 mol ideal gas at 300 K and about 1.0×10⁵ Pa.",
+        "solutionJa": "V=nRT/P=1.0×8.314×300/(1.0×10⁵)≈0.0249 m³≈24.9 L。式の各単位がSIで整合しているか確認しよう。",
+        "solutionEn": "V=nRT/P≈1.0×8.314×300/(1.0×10⁵)=0.0249 m³=24.9 L. Unit consistency is essential."
+      },
+      "pitfall": {
+        "ja": "『気体1 molの体積は常に22.4 L』ではない。特定の標準状態・理想近似に対応する値である。",
+        "en": "One mole of gas is not always 22.4 L; its volume depends on pressure and temperature."
+      },
+      "bridge": {
+        "ja": "分子運動論から圧力を考え、熱力学から仕事・状態変化を再解釈する。",
+        "en": "Relate kinetic theory and gas laws to thermodynamics and work."
+      },
+      "inquiry": {
+        "ja": "高山で袋が膨らむのは何が変わったためか。袋の温度も変わるとどうなるか。",
+        "en": "Why might a sealed bag expand at altitude, and how would temperature change the result?"
+      },
+      "status": "editorial-draft"
+    },
+    {
+      "id": "1-3",
+      "ja": "溶液の濃度と溶解度",
+      "en": "Solutions: concentration and solubility",
+      "sections": [
+        {
+          "ja": "溶けるとはどんな変化か",
+          "en": "What happens during dissolution?",
+          "textJa": "食塩が水に溶けると、結晶中のNa⁺とCl⁻が水分子に囲まれて分散する。溶ける前後でイオンの種類や電荷は保たれるが、周囲との相互作用が変化する。砂糖は主に分子のまま水に分散するので、溶解しても電離するとは限らない。溶解は粒子の相互作用だけでなくエントロピーの寄与も関係する。",
+          "textEn": "When NaCl dissolves, ions separate from the lattice and become hydrated. Sucrose, by contrast, disperses mainly as neutral molecules. Dissolution does not always involve ionization. Energetics and entropy both matter for solubility."
+        },
+        {
+          "ja": "濃度を目的に合わせて表す",
+          "en": "Different concentration measures",
+          "textJa": "モル濃度c=n/Vは溶液の体積1 Lあたりの溶質の物質量で、単位mol/Lなどを使う。質量パーセント濃度は溶液質量に対する溶質質量の割合である。希釈では溶質が失われないならc₁V₁=c₂V₂を利用できる。ただし混合時に体積が単純加算できない場合には注意する。",
+          "textEn": "Molarity c=n/V measures moles per volume of solution. Mass percent uses solute mass divided by solution mass. A simple dilution conserves solute amount, giving c₁V₁=c₂V₂, assuming no losses or reactions. The volumes of mixtures are not always additive."
+        },
+        {
+          "ja": "溶解度と飽和状態",
+          "en": "Solubility and saturation",
+          "textJa": "溶解度はある温度・圧力などの条件下で溶けることのできる量を表す。飽和溶液では固体が存在する場合、溶解と析出の速度が釣り合う動的状態になり得る。温度により溶解度がどう変化するかは物質によって異なるため、『高温なら必ずよく溶ける』とは限らない。気体の溶解度は圧力にも強く影響される。",
+          "textEn": "Solubility is an equilibrium-related maximum under specified conditions. If excess solid is present at saturation, dissolution and crystallization can occur at equal rates. Temperature effects vary by substance; gas solubility also depends strongly on gas pressure."
+        }
+      ],
+      "example": {
+        "ja": "1.0 mol/Lの溶液100 mLを250 mLに希釈する。新しいモル濃度は？",
+        "en": "Dilute 100 mL of a 1.0 mol/L solution to a final volume of 250 mL.",
+        "solutionJa": "溶質の物質量は0.100 molのまま。新しい濃度は0.100 mol/0.250 L=0.40 mol/L。濃度を薄めても溶質の量そのものが減ったわけではない。",
+        "solutionEn": "Solute amount remains 0.100 mol. The new molarity is 0.100/0.250=0.40 mol/L."
+      },
+      "pitfall": {
+        "ja": "『溶けたから物質が消えた』わけではない。粒子は溶液内に分散している。",
+        "en": "Dissolved solute is not destroyed; its particles are dispersed in the solvent."
+      },
+      "bridge": {
+        "ja": "分子間力、溶解平衡、分析化学の希釈操作、体内の浸透圧へ。",
+        "en": "Connect solvation to equilibrium, laboratory dilutions and osmosis."
+      },
+      "inquiry": {
+        "ja": "温度を上げて結晶が析出する物質があったとしたら、その溶解度曲線はどうなるだろう。",
+        "en": "What would a solubility curve look like for a substance that crystallizes upon heating?"
+      },
+      "status": "editorial-draft"
+    },
+    {
+      "id": "1-4",
+      "ja": "希薄溶液・浸透圧",
+      "en": "Dilute solutions and osmotic pressure",
+      "sections": [
+        {
+          "ja": "束一的性質は粒子数に注目する",
+          "en": "Colligative properties count particles",
+          "textJa": "理想的な希薄溶液の蒸気圧降下・沸点上昇・凝固点降下・浸透圧は、主に溶質粒子の数に依存する。凝固点降下はΔTf=Kf m（非電解質・理想条件）などで近似できる。電解質は電離によって粒子数が変化するため、ファントホッフ係数などを考慮する必要がある。実在溶液では粒子間相互作用が理想からのずれを生む。",
+          "textEn": "For ideal dilute solutions, vapor-pressure lowering, boiling-point elevation, freezing-point depression and osmosis depend mainly on solute particle number. One approximation is ΔTf=Kf m for a non-electrolyte. Electrolytes require a van 't Hoff factor or a more detailed treatment. Real interactions cause deviations."
+        },
+        {
+          "ja": "浸透圧は膜を通した水の移動に関係する",
+          "en": "Osmosis through membranes",
+          "textJa": "半透膜が溶媒は通し溶質を通さない場合、溶媒の化学ポテンシャルの違いによって水が移動する。希薄な理想溶液の浸透圧はπ≈cRTで近似できる（非電解質）。『溶質が膜を押している』というイメージだけでは分子機構を説明できない。細胞の形態や食品の保存にも関係する。",
+          "textEn": "If a membrane passes solvent but not solute, water can move because of a chemical-potential difference. For ideal dilute non-electrolyte solutions, π≈cRT. Osmosis is not literally solute molecules mechanically pushing a membrane; it is a thermodynamic phenomenon with biological consequences."
+        },
+        {
+          "ja": "濃度勾配と化学ポテンシャル",
+          "en": "From concentration to chemical potential",
+          "textJa": "濃度の高低を覚えるだけでは、圧力や膜の性質が関わる場合を説明できない。水の化学ポテンシャルは温度・圧力・組成で変わり、平衡では移動可能な成分の化学ポテンシャルが釣り合う。これは大学熱力学で高校の浸透圧を再解釈する入口である。植物細胞の膨圧や水ポテンシャルを考える場合にもつながる。",
+          "textEn": "Concentration alone is not always enough: pressure and membrane selectivity matter. Chemical potential incorporates temperature, pressure and composition, and equilibrium requires equality of the solvent's chemical potential across a permeable membrane. This connects osmosis to cell turgor and plant water potential."
+        }
+      ],
+      "example": {
+        "ja": "0.10 mol/Lの理想希薄な非電解質溶液を300 Kとすると浸透圧は？",
+        "en": "Estimate osmotic pressure for 0.10 mol/L ideal non-electrolyte at 300 K.",
+        "solutionJa": "濃度をSI単位に直すと100 mol/m³。π=cRT≈100×8.314×300≈2.49×10⁵ Pa=約249 kPa。浸透圧はかなり大きな圧力となる。",
+        "solutionEn": "Use c=100 mol/m³. Then π≈100×8.314×300=2.49×10⁵ Pa, or 249 kPa."
+      },
+      "pitfall": {
+        "ja": "すべての物質で『同じモル濃度なら浸透圧が同じ』ではない。電離・解離と非理想性を考慮する。",
+        "en": "Equal formula-unit molarity does not always mean equal osmotic pressure; dissociation and nonideality matter."
+      },
+      "bridge": {
+        "ja": "物理の圧力→化学の溶液平衡→生物の細胞・植物の水ポテンシャルへ。",
+        "en": "Connect pressure and solution thermodynamics to cells and plant water potential."
+      },
+      "inquiry": {
+        "ja": "植物の根に濃い塩水を与えたとき、水の移動はどう予測できるか。",
+        "en": "How would concentrated saltwater around plant roots affect water movement?"
+      },
+      "status": "editorial-draft"
+    }
+  ]
+}
