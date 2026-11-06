@@ -90,4 +90,5 @@ $("findPath").onclick=()=>{
 
 $("export").onclick=()=>{const data={schema:"chemistry-atlas-notes",schemaVersion:"1.0",sourceApp:"chemistry-structure-lab",exportedAt:new Date().toISOString(),payload:notes};const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:"application/json"})),a=document.createElement("a");a.href=url;a.download="chemistry-atlas-notes.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
 fetch(DATA_URL).then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(data=>{if(data.schema!=="chemistry-knowledge-atlas"||data.schemaVersion!=="1.0"||!Array.isArray(data.nodes)||!Array.isArray(data.edges))throw Error("invalid curriculum");atlas=data;if(!find(selected))selected=atlas.nodes[0].id;redraw()}).catch(()=>{$("nodes").textContent=t().loadError});
+if("serviceWorker"in navigator&&location.protocol.startsWith("http"))window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
 </script></body></html>
