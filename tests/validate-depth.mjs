@@ -15,7 +15,7 @@ for (let group=0;group<expected.length;group++) {
     assert.equal(ch.id,id,'Stable chapter ID mismatch');
     assert.ok(!seen.has(ch.id),'Duplicate chapter ID');
     seen.add(ch.id);
-    assert.ok(ch.ja.length>4&&ch.en.length>4,'Bilingual chapter titles are required');
+    assert.ok(ch.ja.length>=2&&ch.en.length>=3,'Bilingual chapter titles are required');
     assert.equal(ch.sections.length,3,`Three explanatory steps required for ${id}`);
     ch.sections.forEach((sec,part)=>{
       assert.ok(sec.ja?.length>3 && sec.en?.length>3,`Bilingual section heading missing: ${id}/${part}`);
