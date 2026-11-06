@@ -31,8 +31,31 @@ for (let group=0;group<expected.length;group++) {
   });
 }
 assert.equal(seen.size,29);
+const requiredLenses=['observation','particles','model','limits','revisit'];
+let guidedCount=0,reasoningCount=0;
+for(const ch of all) {
+ assert.equal(ch.reasoning?.schemaVersion,'1.0','Reasoning schema missing: '+ch.id);
+ assert.deepEqual(ch.reasoning.lenses.map(x=>x.type),requiredLenses,'Five conceptual perspectives missing: '+ch.id);
+ for(const lens of ch.reasoning.lenses){
+   assert.ok(lens.ja?.length>=100,'Five-perspective Japanese explanation incomplete: '+ch.id+'/'+lens.type);
+   assert.ok(lens.en?.length>=160,'Five-perspective English explanation incomplete: '+ch.id+'/'+lens.type);
+   reasoningCount++;
+ }
+ if(ch.guidedExample){
+   guidedCount++;
+   assert.ok(ch.guidedExample.titleJa?.length>10&&ch.guidedExample.titleEn?.length>15,'Bilingual guided example title missing: '+ch.id);
+   assert.equal(ch.guidedExample.steps.length,5,'Guided calculation must have five steps: '+ch.id);
+   for(const step of ch.guidedExample.steps){
+     assert.ok(Array.isArray(step)&&step[0]?.length>=50&&step[1]?.length>=60,'Incomplete guided calculation step: '+ch.id);
+   }
+ }
+}
+assert.equal(reasoningCount,145,'29 chapters × five perspectives');
+assert.equal(guidedCount,16,'Expected sixteen cross-curriculum guided problems');
 const viewer=readFileSync(new URL('../chemistry-depth-viewer.js',import.meta.url),'utf8');
 assert.ok(viewer.includes('chemistry-depth-reflections-v1'));
+assert.ok(viewer.includes('depth-deep')&&viewer.includes('data-depth-section="reasoning"'),'Five-lens viewer controls missing');
+assert.ok(viewer.includes('depth-guided')&&viewer.includes('data-depth-section="guided"'),'Guided calculations not rendered');
 const html=['high-school-chemistry.html','high-school-chemistry-en.html'].map(p=>readFileSync(new URL('../'+p,import.meta.url),'utf8'));
 html.forEach(s=>{
  assert.ok(s.includes('src="./chemistry-depth-viewer.js"'),'Viewer missing');
@@ -60,4 +83,4 @@ assert.ok(viewer.includes('chemistry-depth-extensions-v1.json'),'Viewer does not
 assert.ok(sw.includes('chemistry-depth-extensions-v1.json'),'Extensions must be included in offline cache');
 console.log('PASS: '+extensions.topics.length+' supplemental explanations with mapped bilingual inquiry prompts.');
 
-console.log('PASS: 29 chapters, 87 bilingual explanation sections, worked examples, misconceptions, cross-links and optional inquiries. Offline and backup integration checked.');
+console.log('PASS: 29 chapters, 87 core sections, 145 bilingual causal explanations and 16 five-step guided calculations. Offline and backup integration checked.');
