@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#174f4a"><title>経路と状態量 | Chemistry Structure Lab</title>
+<style>
+:root{color-scheme:light;--ink:#183f39;--soft:#eff8f2;--line:#d3e5da;--muted:#596f66}
+*{box-sizing:border-box}body{margin:0;background:#f5f8f6;color:#283b35;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",sans-serif;line-height:1.85}
+header{background:#174f4a;color:white;padding:17px 18px}header a{color:#e1f4e9}header .inner{max-width:980px;margin:auto}
+main{max-width:980px;margin:auto;padding:17px 13px 80px}
+h1{font-size:clamp(22px,4vw,32px);margin:4px 0}h2{font-size:21px;line-height:1.45;color:var(--ink)}h3{font-size:16px;color:var(--ink)}
+p{margin:10px 0;white-space:pre-line}
+.card{background:white;border:1px solid var(--line);border-radius:17px;padding:clamp(14px,3vw,23px);margin:14px 0}
+.notice{background:#eff8f2;border-left:4px solid #3b9a76;border-radius:8px;padding:11px 15px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.example{padding:14px;border-radius:11px;border:1px solid var(--line);background:#f8fbf9}
+.example:nth-child(2){background:#fbf9f3}
+strong{color:#194f46}small{color:var(--muted)}
+.value{font-size:24px;font-weight:800;font-variant-numeric:tabular-nums}
+label{display:block;font-weight:750;color:var(--ink);margin:6px 0}input[type=range]{display:block;cursor:pointer;width:100%;accent-color:#28775a;min-height:32px}
+.output{padding:9px 10px;background:#eaf5ee;border-radius:8px;font-size:14px}
+.link{display:inline-block;color:#176c57;padding:9px 0;font-weight:750}
+button{font:inherit;border:1px solid #8fb9a6;border-radius:10px;padding:8px 14px;background:#e6f4eb;color:#174f4a;cursor:pointer;min-height:42px}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #267657;outline-offset:3px}
+.math{display:block;padding:12px 13px;background:#edf6ef;border-radius:10px;overflow-wrap:anywhere;font-weight:650}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;border-bottom:1px solid #d9e7de;padding:8px;vertical-align:top}th{color:var(--ink)}
+details{margin:11px 0;border:1px solid var(--line);border-radius:12px;padding:2px 13px;background:#fcfefd}
+summary{cursor:pointer;font-weight:800;min-height:49px;padding:11px 0;color:#174f4a}
+.diag{display:flex;justify-content:space-around;gap:12px;align-items:center;text-align:center}
+.dot{display:inline-block;border:2px solid #36815b;background:#e1f3e9;width:38px;height:38px;border-radius:50%;line-height:34px;font-weight:800}
+.line{flex:1;height:3px;background:#36815b;max-width:250px}
+.arcs{border-top:3px solid #be8955;border-radius:80% 80% 0 0;height:45px;margin:0 auto;max-width:290px}
+.footer{color:var(--muted);font-size:13px}
+@media(max-width:680px){.grid{grid-template-columns:1fr}.value{font-size:22px}table{font-size:13px}h2{font-size:19px}}
+</style></head>
+<body><header><div class="inner"><a id="back" href="./high-school-chemistry.html#chapter=2-0">← Chemistry Structure Lab</a>
+<h1 id="pageTitle">経路と状態量</h1>
+<button type="button" id="language" aria-label="Switch language">English</button></div></header>
+<main>
+<section class="card"><h2 id="introTitle"></h2><p id="introBody"></p><p class="notice" id="introKey"></p></section>
+<section class="card"><h2 id="mechanicsTitle"></h2><p id="mechanicsBody"></p>
+<div class="diag" aria-hidden="true"><span class="dot">A</span><span class="line"></span><span class="dot">B</span></div>
+<div class="arcs" aria-hidden="true"></div>
+<div class="grid">
+<div class="example"><h3 id="gravTitle"></h3><div class="value" id="gravValue">+9.8 J</div><p id="gravExplanation"></p></div>
+<div class="example"><label for="distance" id="distanceLabel"></label><input id="distance" type="range" min="2" max="6" step="0.5" value="4" aria-describedby="distanceStatus"><div class="value" id="distanceStatus" aria-live="polite"></div><p id="frictionExplanation"></p></div>
+</div><p class="notice" id="mechanicsKey"></p></section>
+<section class="card"><h2 id="thermoTitle"></h2><p id="thermoBody"></p>
+<p class="math" id="firstLaw"></p>
+<div class="grid">
+<div class="example"><label for="workA" id="routeALabel"></label><input id="workA" type="range" min="-200" max="300" step="25" value="100"><div class="value" id="routeAValue"></div><p class="output" id="routeAResult" aria-live="polite"></p></div>
+<div class="example"><label for="workB" id="routeBLabel"></label><input id="workB" type="range" min="-200" max="300" step="25" value="-100"><div class="value" id="routeBValue"></div><p class="output" id="routeBResult" aria-live="polite"></p></div>
+</div>
+<p class="notice" id="thermoKey"></p></section>
+<section class="card"><h2 id="whatTitle"></h2><p id="whatBody"></p>
+<table><thead><tr><th id="tableTerm"></th><th id="tableClass"></th><th id="tableWhy"></th></tr></thead><tbody id="tableBody"></tbody></table>
+<details><summary id="limitsTitle"></summary><p id="limitsBody"></p></details>
+<details><summary id="enthalpyTitle"></summary><p id="enthalpyBody"></p></details>
+</section>
+<section class="card"><h2 id="reflectTitle"></h2><p id="reflectBody"></p><p id="reflectNote"></p><a id="lessonLink" class="link" href="./high-school-chemistry.html#chapter=2-0"></a></section>
+<p class="footer" id="footer"></p>
+</main>
+<script>
+(function(){
+"use strict";
+const $=id=>document.getElementById(id);
+const COPY={
+ja:{
+pageTitle:"経路が変わると、何が変わる？",back:"← 高校化学・熱化学へ戻る",language:"English",
+introTitle:"物理で知っていることを、化学へ持ち込む",
+introBody:"重力の仕事が経路に依存しないという知識は、熱力学の『状態量』を理解する土台になります。力学と化学を別々の暗記事項にせず、同じ構図と、異なる部分を丁寧に比べてみましょう。\n以下のモデルは、数値を変えて比較する補助教材です。定義と成立条件は各章の詳しい説明も参照してください。",
+introKey:"考える核心：同じ出発状態Aと到着状態Bでも、途中の経路によって変わる量と変わらない量があります。",
+mechanicsTitle:"1. 力学：重力の仕事と摩擦の仕事",
+mechanicsBody:"物体1 kgを、高さが1 m下がるようにAからBへ動かすとします。重力加速度は9.8 m/s²で一定とします。経路の長さが変わっても、重力がする仕事は+9.8 Jです。\n一方、どの経路でも動摩擦力の大きさが2 Nで一定とする単純なモデルなら、摩擦の仕事は移動した距離によって変わります。",
+gravTitle:"重力のする仕事（経路に依存しない）",
+gravExplanation:"Wg = mg(hA−hB) = 1×9.8×1 = +9.8 J。どちらの経路でも同じです。",
+distanceLabel:"遠回りする経路の長さを変える",
+frictionExplanation:"摩擦力を2 Nで一定と仮定すると Wf=−2×L となります。短い経路（2 m）では−4 J。遠回りする経路では移動距離により変わります。",
+mechanicsKey:"重力は保存力で、対応する位置エネルギーの差は経路に依存しません。一方、この模型の摩擦の仕事は経路長に依存します。",
+thermoTitle:"2. 熱力学：熱と仕事の分け方は経路で変わる",
+thermoBody:"今度は、ある熱力学系が同じ初状態Aから同じ終状態Bへ変化し、内部エネルギーが400 J増えたとします。系が周囲へする仕事を Wby と書き、熱として系に入る量を q とします。熱力学第一法則から q = ΔU + Wby です。\nそれぞれの経路について『系が周囲にする仕事』の値を動かしてください。すると、その経路で必要な熱量が変わっても、内部エネルギー変化は同じ400 Jのままです。",
+firstLaw:"ΔU = q + w = q − Wby = 400 J　（w は周囲が系にする仕事）",
+routeALabel:"経路A：系が周囲にする仕事 Wby",
+routeBLabel:"経路B：系が周囲にする仕事 Wby",
+thermoKey:"q と w は経路ごとに異なり得ます。しかし初状態と終状態を同一にしたなら、ΔU は同じです。熱が保存力に相当するという意味ではありません。",
+whatTitle:"3. 何が状態量で、何が経路に依存する量なのか",
+whatBody:"状態量は、系の状態を指定すれば値が決まる量です。熱と仕事は状態そのものに『蓄えられている』ものではなく、状態を変える途中のエネルギー移動を表します。",
+tableTerm:"物理量",tableClass:"分類",tableWhy:"考えるポイント",
+limitsTitle:"この対応関係の限界は？",
+limitsBody:"重力と摩擦の例を、熱と仕事にそのまま一対一対応させることはできません。熱は非保存力ではなく、温度差に伴うエネルギー移動です。\nまた摩擦で機械的エネルギーが減っても、全エネルギーが消えるわけではありません。周囲も含めれば内部エネルギーなどへ移ります。\nこの熱力学の模型はエネルギー収支の違いを示すための仮想的な数値例です。選んだどの仕事量も、特定の実在気体の同じ端点間で必ず実現できる、と主張するものではありません。過程の物理的実現可能性には別の条件があります。",
+enthalpyTitle:"では、エンタルピー H はどうつながる？",
+enthalpyBody:"Uは状態量です。平衡状態の圧力Pと体積Vも状態量です。そこで H=U+PV と定義した量も状態量になります。\nこの定義では、PVは『これまでに行った仕事』ではありません。その状態の圧力と体積の積です。圧力一定で、圧力・体積仕事だけという条件のもとでは、ΔH=ΔU+PΔVとなり、系が受け取った熱 qP と一致します。\nしたがって反応前後のΔHも経路に依存せず、ヘスの法則で反応のエンタルピー変化を加算できます。",
+reflectTitle:"4. 既知の知識へ戻る",
+reflectBody:"物理で学んだ保存力から状態量を説明できるようになると、化学でのヘスの法則も別の暗記事項ではなくなります。さらに、化学で熱と仕事を学んだ後で物理の摩擦へ戻ると、『失われた』力学的エネルギーはどこへ移ったのか、より深く考えられます。",
+reflectNote:"疑問を書き出すことも、問題を解くことも必須ではありません。詳しい説明を読み、別の知識と照らし合わせて理解を育ててください。",
+lessonLink:"熱化学・エンタルピーの詳しい説明へ戻る",
+footer:"Chemistry Structure Lab ｜ 数値は学習用の理想化した模型です。",
+gravityRow:["重力の位置エネルギー","状態量","高さなどの状態で差が決まる"],
+frictionRow:["摩擦がした仕事","経路依存","この単純モデルでは距離Lで変わる"],
+uRow:["内部エネルギー U","状態量","初状態と終状態でΔUが定まる"],
+hRow:["エンタルピー H","状態量","H=U+PVから定義される"],
+qRow:["熱 q と仕事 w","経路依存","途中でエネルギーがどのように移ったかを表す"],
+distShort:"遠回りの経路",routeWork:"仕事",routeHeat:"受け取る熱",routeW:"系への仕事 w",delta:"内部エネルギー変化 ΔU"
+},
+en:{
+pageTitle:"What changes when the path changes?",back:"← Return to thermochemistry",language:"日本語",
+introTitle:"Use what you know from mechanics to understand chemistry",
+introBody:"The fact that gravitational work is path independent provides a foundation for the thermodynamic idea of a state function. Rather than memorize separate rules, compare the same structural feature—and where the analogy stops.\nThe controls below are illustrative numerical models. See the full chapter for definitions and conditions.",
+introKey:"The key question: for the same starting state A and final state B, which quantities can depend on the route taken?",
+mechanicsTitle:"1. Mechanics: gravity versus friction",
+mechanicsBody:"Move a 1 kg object from A to B with a net height decrease of 1 m and uniform g=9.8 m/s². Gravity does +9.8 J of work regardless of the path. For a simplified model with kinetic friction force of constant magnitude 2 N, frictional work changes with path length.",
+gravTitle:"Work done by gravity (path independent)",
+gravExplanation:"Wg = mg(hA−hB) = 1×9.8×1 = +9.8 J for either route.",
+distanceLabel:"Change the length of the longer route",
+frictionExplanation:"Assuming constant kinetic friction magnitude 2 N, Wf=−2×L. A 2 m path gives −4 J; a longer route has a different magnitude.",
+mechanicsKey:"Gravity is conservative and supports a position-dependent potential energy. Frictional work in this model depends on route length.",
+thermoTitle:"2. Thermodynamics: heat and work depend on the process",
+thermoBody:"Suppose a thermodynamic system goes from the same initial state A to the same final state B, and ΔU=+400 J. Let Wby be work done by the system, and q be heat received by it. The first law yields q=ΔU+Wby.\nMove the work sliders for the two illustrative routes. The required heat changes while the internal-energy difference remains 400 J.",
+firstLaw:"ΔU = q + w = q − Wby = 400 J　(w is work on the system)",
+routeALabel:"Route A: work Wby done by the system",
+routeBLabel:"Route B: work Wby done by the system",
+thermoKey:"Heat q and work w can depend on the process, even though ΔU is fixed by the same endpoints. This does not make heat a nonconservative force.",
+whatTitle:"3. State functions versus process-dependent quantities",
+whatBody:"State functions are fixed by the state of the system. Heat and work are not amounts stored in a state; they describe energy transfers during a process.",
+tableTerm:"Quantity",tableClass:"Type",tableWhy:"Meaning",
+limitsTitle:"Where does the analogy break?",
+limitsBody:"Gravity and friction do not correspond one-to-one with heat and work. Heat is not a nonconservative force: it is energy transferred because of a temperature difference.\nMechanical energy lost to friction is not destroyed; it is redistributed to internal energy and other forms.\nThe thermodynamic sliders illustrate energy bookkeeping with hypothetical numbers. They do not assert that every selected work value can be realized between any specific real-gas states; physical feasibility imposes further conditions.",
+enthalpyTitle:"How does enthalpy H connect?",
+enthalpyBody:"U, P and V are state properties. Therefore H=U+PV is a state function. PV is not the work already performed; it is a product of pressure and volume for a state.\nAt constant pressure and with only pressure–volume work, ΔH=ΔU+PΔV equals the heat qP absorbed by the system. Because ΔH depends on endpoints, enthalpy changes may be added along alternative reaction pathways in Hess's law.",
+reflectTitle:"4. Return to earlier knowledge",
+reflectBody:"When conservative forces help you understand state functions, Hess's law becomes a consequence rather than an isolated rule. Thermodynamics also sends you back to mechanics to ask where the mechanical energy dissipated by friction goes.",
+reflectNote:"Neither written reflection nor a quiz is mandatory. Detailed explanations provide material for making connections.",
+lessonLink:"Return to the detailed enthalpy chapter",
+footer:"Chemistry Structure Lab | Illustrative idealized numerical models, not literal experiments.",
+gravityRow:["Gravitational potential energy","State function","Difference is determined by positions"],
+frictionRow:["Work done by friction","Path dependent","Depends on L in this simple model"],
+uRow:["Internal energy U","State function","ΔU depends on endpoints"],
+hRow:["Enthalpy H","State function","Defined through H=U+PV"],
+qRow:["Heat q and work w","Path dependent","Describe energy crossing a boundary"],
+distShort:"Length of longer route",routeWork:"work",routeHeat:"heat received",routeW:"work on system w",delta:"internal-energy change ΔU"
+}
+};
+const params=new URLSearchParams(location.search);
+let lang=params.get("lang")==="en"?"en":"ja";
+const show=()=>{
+ const t=COPY[lang];document.documentElement.lang=lang;document.title=t.pageTitle+" | Chemistry Structure Lab";
+ for(const key of ["pageTitle","back","language","introTitle","introBody","introKey","mechanicsTitle","mechanicsBody","gravTitle","gravExplanation","distanceLabel","frictionExplanation","mechanicsKey","thermoTitle","thermoBody","firstLaw","routeALabel","routeBLabel","thermoKey","whatTitle","whatBody","tableTerm","tableClass","tableWhy","limitsTitle","limitsBody","enthalpyTitle","enthalpyBody","reflectTitle","reflectBody","reflectNote","lessonLink","footer"]){$(key).textContent=t[key]}
+ $("back").href="./high-school-chemistry"+(lang==="en"?"-en":"")+".html#chapter=2-0";
+ $("lessonLink").href=$("back").href;
+ const rows=["gravityRow","frictionRow","uRow","hRow","qRow"].map(k=>"<tr>"+t[k].map(v=>"<td>"+v.replace(/&/g,"&amp;").replace(/</g,"&lt;")+"</td>").join("")+"</tr>").join("");
+ $("tableBody").innerHTML=rows;
+ $("workA").setAttribute("aria-label",t.routeALabel);
+ $("workB").setAttribute("aria-label",t.routeBLabel);
+ recalc();
+};
+const signed=n=>(n>0?"+":"")+String(n);
+const recalc=()=>{
+ const t=COPY[lang],L=+$("distance").value;
+ $("distanceStatus").textContent=t.distShort+": "+L.toFixed(1)+" m ｜ Wf = "+signed(-2*L)+" J";
+ for(const suffix of ["A","B"]){
+  const Wby=+$("work"+suffix).value;
+  const q=400+Wby,w=-Wby;
+  $("route"+suffix+"Value").textContent="Wby = "+signed(Wby)+" J";
+  $("route"+suffix+"Result").textContent=t.routeHeat+" q = "+signed(q)+" J ｜ "+t.routeW+" = "+signed(w)+" J ｜ "+t.delta+" = "+signed(q+w)+" J";
+ }
+};
+for(const id of ["distance","workA","workB"])$(id).addEventListener("input",recalc);
+$("language").addEventListener("click",()=>{lang=lang==="ja"?"en":"ja";const u=new URL(location.href);if(lang==="en")u.searchParams.set("lang","en");else u.searchParams.delete("lang");history.replaceState(null,"",u);show()});
+show();
+if("serviceWorker"in navigator&&location.protocol.startsWith("http"))window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
+})();
+</script></body></html>
