@@ -35,7 +35,7 @@ function mobileSwitch(mode,scroll=false){
  $("readConcept").classList.toggle("selected",mode==="detail");
  $("chooseConcept").setAttribute("aria-pressed",String(mode==="list"));
  $("readConcept").setAttribute("aria-pressed",String(mode==="detail"));
- if(scroll&&window.matchMedia("(max-width:730px)").matches)$("mobileSwitch").scrollIntoView({block:"start",behavior:"instant"});
+ if(scroll&&window.matchMedia("(max-width:730px)").matches)$("mobileSwitch").scrollIntoView({block:"start",behavior:"auto"});
 }
 let lang=q.get("lang")==="en"?"en":"ja", domain=DATA.find(d=>d.id===q.get("domain"))||DATA[0], node=domain.nodes.find(n=>n[0]===q.get("concept"))?.[0]||domain.nodes[0][0], notes=[];
 try{let old=JSON.parse(localStorage.getItem(KEY)||"[]");if(Array.isArray(old))notes=old.filter(n=>n&&DATA.some(d=>d.id===n.domain&&d.nodes.some(v=>v[0]===n.concept))&&typeof n.text==="string").slice(-500)}catch{}
