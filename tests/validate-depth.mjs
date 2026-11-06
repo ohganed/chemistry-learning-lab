@@ -44,4 +44,19 @@ for(let group=0;group<6;group++)assert.ok(sw.includes('chemistry-depth-'+group+'
 assert.ok(sw.includes('chemistry-depth-viewer.js'), 'Viewer not offline-cached');
 const backup=readFileSync(new URL('../learning-interchange.html',import.meta.url),'utf8');
 assert.ok(backup.includes('chemistry-depth-reflections-v1'),'Reflections not backed up');
+const extensions=JSON.parse(readFileSync(new URL('../data/chemistry-depth-extensions-v1.json',import.meta.url),'utf8'));
+assert.equal(extensions.schema,'chemistry-depth-extensions');
+assert.equal(extensions.schemaVersion,'1.0');
+assert.ok(extensions.topics.length>=18,'Expected 18 supplementary cross-topic lessons');
+const extensionIds=new Set();
+for(const ext of extensions.topics){
+  assert.ok(!extensionIds.has(ext.id),'Duplicate extension ID');
+  extensionIds.add(ext.id);
+  assert.ok(ext.chapters?.length>0 && ext.chapters.every(id=>seen.has(id)),'Every extension must link to existing high-school chapter IDs');
+  for(const key of ['ja','en','bodyJa','bodyEn','reasonJa','reasonEn','questionJa','questionEn'])assert.ok(ext[key]?.length>15,'Incomplete bilingual supplemental field: '+ext.id+'/'+key);
+}
+assert.ok(viewer.includes('chemistry-depth-extensions-v1.json'),'Viewer does not load optional extensions');
+assert.ok(sw.includes('chemistry-depth-extensions-v1.json'),'Extensions must be included in offline cache');
+console.log('PASS: '+extensions.topics.length+' supplemental explanations with mapped bilingual inquiry prompts.');
+
 console.log('PASS: 29 chapters, 87 bilingual explanation sections, worked examples, misconceptions, cross-links and optional inquiries. Offline and backup integration checked.');
