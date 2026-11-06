@@ -1,0 +1,282 @@
+{
+  "schema": "chemistry-depth-extensions",
+  "schemaVersion": "1.0",
+  "language": [
+    "ja",
+    "en"
+  ],
+  "status": "editorial-draft",
+  "topics": [
+    {
+      "id": "x01",
+      "chapters": [
+        "0-4",
+        "1-2"
+      ],
+      "ja": "状態変化と状態図",
+      "en": "Phase changes and phase diagrams",
+      "bodyJa": "融解・蒸発・昇華は粒子の結合や相互作用と温度・圧力に関係する。同じ物質でも固体・液体・気体で安定な状態は条件によって変わる。状態図はこれを温度−圧力の面上に表し、三重点では三相が共存できる。液体が沸騰するのは液体の蒸気圧が外圧に達するときである。沸点が物質固有の数字に見えても、外圧に依存する点が重要。",
+      "bodyEn": "Melting, vaporization and sublimation reflect changing stability of phases with temperature and pressure. Phase diagrams show the regions where solid, liquid or gas is thermodynamically favored. At a triple point, three phases can coexist. Boiling occurs when vapor pressure equals external pressure, so boiling point depends on pressure.",
+      "reasonJa": "分子間相互作用を学ぶと沸点を説明できるが、気体の圧力を学ぶと沸点が外圧によって変わる理由までつながる。",
+      "reasonEn": "Intermolecular forces inform boiling behavior, while pressure and phase equilibrium explain why boiling temperatures change.",
+      "questionJa": "高山では水の沸点がどうなるか。圧力と蒸気圧の交点を使って説明できるか。",
+      "questionEn": "Why does water boil at a different temperature at high altitude? Use vapor pressure and external pressure."
+    },
+    {
+      "id": "x02",
+      "chapters": [
+        "0-3",
+        "0-4"
+      ],
+      "ja": "単位格子と結晶の計算",
+      "en": "Unit cells and crystal calculations",
+      "bodyJa": "単位格子の頂点の粒子は8個の格子に共有されるため、一つの単位格子への寄与は1/8個である。面心の粒子は2個の格子に共有されるため1/2個、格子内部の粒子は1個を数える。単純立方格子は1個、体心立方格子は2個、面心立方格子は4個に相当する。粒子の種類や結晶構造を確認すれば、格子長と密度を結びつけられる。",
+      "bodyEn": "A corner atom contributes one-eighth to a unit cell, a face-centered atom one-half and an interior atom one. Thus simple cubic, body-centered cubic and face-centered cubic elemental lattices have effective counts of 1, 2 and 4 lattice points per conventional cell. With composition and lattice dimensions, density can be estimated.",
+      "reasonJa": "物質量とモル質量を知ると、nm程度の格子寸法からg/cm³程度の密度を予測できる。",
+      "reasonEn": "Moles and molar mass connect nanometer-scale unit cells with macroscopic density.",
+      "questionJa": "面心立方格子の角8個と面6個を、単位格子1個の粒子数に直すとどうなるか。",
+      "questionEn": "How many effective lattice points belong to a face-centered cubic conventional cell?"
+    },
+    {
+      "id": "x03",
+      "chapters": [
+        "1-2",
+        "1-3"
+      ],
+      "ja": "実在気体と蒸気圧",
+      "en": "Real gases and vapor pressure",
+      "bodyJa": "理想気体では分子の体積や分子間相互作用を無視するが、実在気体は圧力が高く温度が低い条件で大きくずれることがある。蒸気圧はある温度で液体と蒸気が動的平衡にあるときの気体の圧力である。密閉容器に液体が残る場合、蒸発量が増え続けても永久に圧力が増加するわけではない。相平衡と理想気体式を混同しない。",
+      "bodyEn": "Ideal gas models neglect molecular volume and interactions. Real gases depart from this approximation, especially at high pressures and low temperatures. Vapor pressure is the gas pressure of a vapor in equilibrium with its liquid at a specified temperature. A sealed vessel containing liquid can establish evaporation–condensation equilibrium.",
+      "reasonJa": "化学平衡で『濃度が一定でも反応する』と学ぶと、蒸発と凝縮の釣合いを同じ動的平衡として捉え直せる。",
+      "reasonEn": "Evaporation–condensation equilibrium is another example of balanced forward and reverse processes.",
+      "questionJa": "密閉容器中の水の水面が変わらなくなったとき、水分子の移動が止まったといえるか。",
+      "questionEn": "If the water level stays constant in a closed vessel, have molecules stopped exchanging phases?"
+    },
+    {
+      "id": "x04",
+      "chapters": [
+        "1-3",
+        "2-2"
+      ],
+      "ja": "ヘンリーの法則と気体の溶解",
+      "en": "Henry's law and gas solubility",
+      "bodyJa": "一定温度の希薄な溶液で、溶存気体の濃度はその気体の分圧に比例することがある（ヘンリーの法則の一つの表現）。炭酸飲料では圧力を下げるとCO₂が抜けやすくなる。気体が水中で化学反応する場合、単純な物理溶解だけの関係では全濃度を表せないこともある。法則の適用範囲を区別する。",
+      "bodyEn": "For some gases in dilute solutions at fixed temperature, dissolved concentration is proportional to the gas's partial pressure (one form of Henry's law). Lowering pressure makes CO₂ escape from a carbonated drink. When the gas reacts chemically in water, the total dissolved concentration may not follow the simplest physical-dissolution model.",
+      "reasonJa": "圧力の学習を溶解平衡に結び直すと、飲料・水環境・血液中の気体輸送の考え方が変わる。",
+      "reasonEn": "Connect gas pressure with dissolution equilibrium in drinks, aquatic environments and gas transport.",
+      "questionJa": "開栓した炭酸飲料から泡が出るのは、容器のどの条件が変わったからか。",
+      "questionEn": "Which change on opening a fizzy drink causes dissolved gas to escape?"
+    },
+    {
+      "id": "x05",
+      "chapters": [
+        "2-1",
+        "2-2"
+      ],
+      "ja": "活性化エネルギーと反応経路",
+      "en": "Activation barriers and reaction pathways",
+      "bodyJa": "粒子が衝突しても必ず反応するわけではなく、適切な配置と十分なエネルギーを要する場合が多い。アレニウス式k=A exp(−Ea/RT)は多くの反応の温度依存の近似となる。反応熱ΔHは始状態と終状態の差、活性化障壁は途中で越えるべき反応経路に関係する。触媒の働きを理解するにはこの二つを区別する。",
+      "bodyEn": "Collisions do not always produce reactions; orientation and energy barriers can matter. The Arrhenius equation k=Aexp(−Ea/RT) approximates temperature dependence for many reactions. Reaction enthalpy describes the difference between endpoints, whereas an activation barrier concerns the pathway. Catalysts alter pathways, not simply the enthalpy difference.",
+      "reasonJa": "熱化学で学んだΔHと、速度論のEaが違う量だと理解すると『発熱する反応が遅い』ことを説明できる。",
+      "reasonEn": "Distinguishing ΔH from an activation barrier explains how an exothermic reaction can be slow.",
+      "questionJa": "燃料が酸素と反応して発熱するのに、常温で自然発火しないのはなぜか。",
+      "questionEn": "Why does a fuel not necessarily ignite spontaneously at room temperature?"
+    },
+    {
+      "id": "x06",
+      "chapters": [
+        "2-2",
+        "3-3"
+      ],
+      "ja": "溶解度積と共通イオン効果",
+      "en": "Solubility products and common-ion effects",
+      "bodyJa": "AgCl(s)⇌Ag⁺+Cl⁻のような難溶性塩では、溶解度積Ksp=a(Ag⁺)a(Cl⁻)を用いて平衡を表す。溶存イオンを追加すると反応商Qが変わり、析出や溶解へ向かう場合がある。高校の計算では濃度の積で近似するが、濃い溶液では活量を考慮する。錯体形成があると単純なKspだけでは観察を予測できないこともある。",
+      "bodyEn": "For a sparingly soluble salt such as AgCl, Ksp=a(Ag⁺)a(Cl⁻) describes the dissolution equilibrium. Adding a common ion can change Q and promote precipitation. Concentration products are useful approximations in dilute conditions; activities and complex formation matter in more demanding cases.",
+      "reasonJa": "化学平衡のQとKを理解すると、無機物質の沈殿・識別を単なる反応暗記ではなく予測問題として捉えられる。",
+      "reasonEn": "The Q-versus-K framework turns precipitation observations into predictions rather than isolated facts.",
+      "questionJa": "AgClの飽和水溶液へ塩化物イオンを加えると何が起こりやすいか。",
+      "questionEn": "What is the likely effect of adding chloride to a saturated AgCl solution?"
+    },
+    {
+      "id": "x07",
+      "chapters": [
+        "2-3",
+        "2-4"
+      ],
+      "ja": "水の電離と水素イオンの尺度",
+      "en": "Water autoionization and hydrogen-ion scales",
+      "bodyJa": "水中では2H₂O⇌H₃O⁺+OH⁻の平衡があり、25℃付近でKw≈1.0×10⁻¹⁴と近似できる。pH+pOH≈14はその温度での希薄溶液近似であり、すべての温度や高濃度溶液で厳密に成り立つわけではない。非常に希薄な強酸では水自身からのH⁺を無視すると誤ったpHが得られる。測定値と近似条件を確認する。",
+      "bodyEn": "Water undergoes autoionization: 2H₂O⇌H₃O⁺+OH⁻. Near 25°C, Kw≈1.0×10⁻¹⁴, and pH+pOH≈14 in suitable dilute approximations. The relation is temperature-dependent, and water's own contribution matters when a strong acid is extremely dilute. Activity effects can also be significant.",
+      "reasonJa": "pHの単純計算を学んだ後で水の電離平衡へ戻ると、近似の限界を自分で判断できる。",
+      "reasonEn": "Revisiting pH through water autoionization helps learners judge when a simple approximation fails.",
+      "questionJa": "極端に薄い塩酸を作ったとき、pHが10になってしまう計算はどこが誤りだろうか。",
+      "questionEn": "If a very dilute HCl calculation predicts pH 10, what assumption failed?"
+    },
+    {
+      "id": "x08",
+      "chapters": [
+        "2-4",
+        "3-3"
+      ],
+      "ja": "滴定曲線・終点・測定誤差",
+      "en": "Titration curves, endpoints and error",
+      "bodyJa": "滴定の当量点は反応式に従う量的な釣合いの点だが、色が変わった時点は観察上の終点である。適切な指示薬を選ぶには予想される滴定曲線と変色範囲を比較する。標準溶液濃度、器具の読み取り、終点判定はそれぞれ誤差の原因になる。測定のくり返しや対照実験で結果の信頼性を確認する。",
+      "bodyEn": "A titration's equivalence point is stoichiometric; an indicator endpoint is observational. Indicator choice depends on the expected titration curve. Standard-solution concentration, volumetric readings and endpoint judgment each introduce uncertainty. Replicates and checks help distinguish random variability from systematic bias.",
+      "reasonJa": "中和の計算を分析化学の測定へ広げると、答えが『一つの数』でなく不確かさをもつことに気づく。",
+      "reasonEn": "Turning neutralization stoichiometry into measurement reveals why real results have uncertainty.",
+      "questionJa": "当量点と終点が少し異なったら、濃度計算はどの方向にずれるだろうか。",
+      "questionEn": "How would a delayed endpoint bias a calculated analyte concentration?"
+    },
+    {
+      "id": "x09",
+      "chapters": [
+        "2-5",
+        "3-1"
+      ],
+      "ja": "金属の腐食と電気化学",
+      "en": "Corrosion as electrochemistry",
+      "bodyJa": "鉄の腐食は、金属の酸化反応と酸素などの還元反応が別の場所で進む局部電池として考えられる。水分や電解質は電荷の移動を助け、腐食の条件を変える。亜鉛めっきが鉄を守る仕組みには、物理的な被覆だけでなく犠牲防食もある。金属の反応性と実際の腐食速度を区別する。",
+      "bodyEn": "Iron corrosion can be understood as coupled anodic metal oxidation and cathodic reduction processes. Moisture and dissolved electrolytes affect charge transport. Zinc coatings can protect iron through barriers and sacrificial action. Thermodynamic tendency and actual corrosion rate are not identical.",
+      "reasonJa": "酸化還元→電池→材料の耐久性をつなぐと、身近な腐食も電子とイオンの移動として説明できる。",
+      "reasonEn": "The same redox concepts used for batteries help explain corrosion and material durability.",
+      "questionJa": "鉄に亜鉛を接触させた場合、どの条件で鉄を守れるだろうか。",
+      "questionEn": "Under what conditions does contact with zinc protect iron?"
+    },
+    {
+      "id": "x10",
+      "chapters": [
+        "3-0",
+        "3-1"
+      ],
+      "ja": "工業化学と化学肥料",
+      "en": "Industrial chemistry and fertilizers",
+      "bodyJa": "アンモニア合成N₂+3H₂⇌2NH₃は発熱性の可逆反応であり、圧力・温度・触媒がそれぞれ異なる意味で重要である。高圧は気体の物質量の少ない側を有利にしやすく、低温は熱力学的にNH₃生成側を有利にするが、速度との兼ね合いがある。アンモニアは窒素肥料の基礎原料として農業と結びつく。工業条件は安全・装置・エネルギー消費も考慮して選ばれる。",
+      "bodyEn": "Ammonia synthesis N₂+3H₂⇌2NH₃ is an exothermic reversible process. Higher pressure tends to favor the side with fewer gas molecules, while lower temperature favors ammonia thermodynamically but may slow the rate. Catalysts improve kinetics without changing equilibrium. Ammonia underpins nitrogen fertilizers, and industrial choices balance yield, speed, energy, safety and cost.",
+      "reasonJa": "化学平衡を工業生産に適用すると『最も生成量が多い条件』と『現実的に運転できる条件』が違うとわかる。",
+      "reasonEn": "Industrial chemistry distinguishes conditions maximizing equilibrium yield from practical production conditions.",
+      "questionJa": "触媒を使い高温・高圧で合成するのはなぜか。低温の方が平衡上有利なのに？",
+      "questionEn": "Why might industry use elevated temperature despite equilibrium favoring ammonia at lower temperature?"
+    },
+    {
+      "id": "x11",
+      "chapters": [
+        "3-0",
+        "5-2"
+      ],
+      "ja": "大気化学と酸性雨",
+      "en": "Atmospheric chemistry and acid deposition",
+      "bodyJa": "硫黄酸化物や窒素酸化物の一部は大気中で酸化され、硫酸や硝酸などを生じる反応に関与する。大気中の濃度だけでなく反応速度、光、湿度、輸送、降水過程が沈着の程度を左右する。酸性雨の原因を『CO₂が水に溶けたから』だけで説明するのは不十分である。環境問題では物質収支と観測・因果の検証が必要である。",
+      "bodyEn": "Some sulfur and nitrogen oxides undergo atmospheric reactions leading to sulfuric and nitric acids. Light, humidity, transport and deposition influence observed impacts. Dissolved CO₂ contributes to natural rainwater acidity but cannot by itself explain all acid-deposition episodes. Environmental interpretation requires measurements and mass balances.",
+      "reasonJa": "無機物の性質を大気反応・測定・政策評価へ結びつけると、学校の化学知識が社会の問題へつながる。",
+      "reasonEn": "Inorganic chemistry connects to atmospheric reaction networks, measurement and policy evaluation.",
+      "questionJa": "ある地域の降水が酸性だったとして、原因物質を確かめるには何を測る必要があるか。",
+      "questionEn": "Which measurements would help identify the causes of acidic precipitation?"
+    },
+    {
+      "id": "x12",
+      "chapters": [
+        "4-0",
+        "4-2"
+      ],
+      "ja": "有機化合物の構造決定",
+      "en": "Organic structure determination",
+      "bodyJa": "元素分析・分子量・赤外吸収・核磁気共鳴などは分子構造を推定するための異なる証拠を与える。例えば分子式だけではエタノールとジメチルエーテルを区別できないが、O−H伸縮に由来する赤外吸収やNMRの情報を組み合わせれば候補を絞れる。スペクトルの一つのピークだけで全構造を断定しない。実験結果を競合する構造仮説と照合する姿勢が重要である。",
+      "bodyEn": "Elemental composition, molar mass, IR spectroscopy and NMR provide complementary evidence about molecular structure. A formula alone cannot distinguish ethanol from dimethyl ether, but O−H absorption and NMR data help separate candidates. A single spectral peak is seldom sufficient for an unambiguous complete structure. Structure determination is hypothesis testing.",
+      "reasonJa": "異性体を学んでから分析機器の原理を知ると、化学式と構造式が異なる情報だと再認識できる。",
+      "reasonEn": "Spectroscopic evidence makes the difference between formula and connectivity concrete.",
+      "questionJa": "分子式C₂H₆Oの二つの候補を区別するには、どの構造的特徴を検出したいか。",
+      "questionEn": "What structural feature would you test to distinguish ethanol from dimethyl ether?"
+    },
+    {
+      "id": "x13",
+      "chapters": [
+        "4-0",
+        "4-5"
+      ],
+      "ja": "立体異性・鏡像異性と生命",
+      "en": "Stereoisomerism and life",
+      "bodyJa": "分子の原子のつながりが同じでも、三次元的な配置が異なると立体異性体になる。鏡像異性体の対は、平面偏光を回す向きやキラルな環境での相互作用が異なる。生命の受容体や酵素はキラルな環境をもつため、鏡像異性体が違う生物学的作用を示す場合がある。平面の構造式では読み取れない情報が存在する。",
+      "bodyEn": "Stereoisomers can share connectivity but differ in three-dimensional arrangement. Enantiomers may rotate polarized light oppositely and interact differently with chiral environments. Biological receptors and enzymes are chiral, so mirror-image molecules can have different biological effects. Two-dimensional structures can hide these differences.",
+      "reasonJa": "有機化合物の『分子式→結合順→立体配置』という段階を理解すると生化学への橋ができる。",
+      "reasonEn": "Moving from formula to connectivity to stereochemistry provides a route into biochemistry.",
+      "questionJa": "鏡像異性体が同じ分子式なのに酵素への結合が違う理由は何か。",
+      "questionEn": "Why might mirror-image molecules bind differently to one enzyme?"
+    },
+    {
+      "id": "x14",
+      "chapters": [
+        "4-1",
+        "4-3"
+      ],
+      "ja": "燃焼分析から組成を求める",
+      "en": "Combustion analysis and composition",
+      "bodyJa": "有機化合物の燃焼では炭素がCO₂、水素がH₂Oとして回収される条件を利用し、元素の物質量を計算できる。CO₂の物質量が炭素原子の物質量、H₂Oの物質量の2倍が水素原子の物質量である。酸素含有量は試料の全質量からCとHの質量を引いて求める場合がある。不完全燃焼や試料の不純物があれば結果がずれる。",
+      "bodyEn": "Complete combustion to CO₂ and H₂O can be used to deduce carbon and hydrogen amounts in an organic sample. Moles of CO₂ give moles of C atoms; twice the moles of H₂O give moles of H atoms. Oxygen can sometimes be estimated by mass difference. Incomplete combustion and impurities limit accuracy.",
+      "reasonJa": "化学量論を学んだあと有機化合物に戻ると、分子式を『測定から推定する』ことができる。",
+      "reasonEn": "Stoichiometry becomes a tool for inferring empirical formulas from measurements.",
+      "questionJa": "0.10 molのある炭化水素の完全燃焼でCO₂が0.30 mol、H₂Oが0.40 molなら分子式は？",
+      "questionEn": "If 0.10 mol of a hydrocarbon yields 0.30 mol CO₂ and 0.40 mol H₂O, what is its formula?"
+    },
+    {
+      "id": "x15",
+      "chapters": [
+        "4-5",
+        "5-2"
+      ],
+      "ja": "酵素・代謝と化学平衡",
+      "en": "Enzymes, metabolism and equilibrium",
+      "bodyJa": "酵素は反応の活性化障壁を下げ、特定の反応を速めることがあるが、熱力学的な平衡定数は変えない。細胞では生成物を別の経路で消費したり、ATP加水分解などと反応を共役させたりして、単純な閉鎖系平衡と異なる流れが維持される。生体は常に平衡にあるわけではなく、エネルギーを利用する非平衡系である。学校の反応速度と平衡を、生命現象の理解に拡張できる。",
+      "bodyEn": "Enzymes accelerate reactions without changing their thermodynamic equilibrium constants. Living cells maintain fluxes by consuming products and coupling processes to energy-releasing reactions such as ATP hydrolysis. Cells are generally non-equilibrium systems rather than simple closed vessels at equilibrium. Kinetics and thermodynamics illuminate metabolism.",
+      "reasonJa": "触媒の学習に酵素を、化学平衡の学習に細胞内の物質流を結びつけると『生きていること』を非平衡として捉えられる。",
+      "reasonEn": "Enzymes and metabolic flux reveal how life operates away from equilibrium while obeying thermodynamics.",
+      "questionJa": "酵素を増やしても反応全体の熱力学的なΔGを変えられないのはなぜか。",
+      "questionEn": "Why does adding more enzyme not by itself change the overall thermodynamic ΔG?"
+    },
+    {
+      "id": "x16",
+      "chapters": [
+        "5-0",
+        "5-1",
+        "5-2"
+      ],
+      "ja": "高分子材料と資源循環",
+      "en": "Polymers and material life cycles",
+      "bodyJa": "プラスチックの再利用法には機械的リサイクル、化学的分解・再合成、熱回収などがあり、材料や汚染の程度によって適否が異なる。PETのようにエステル結合をもつ高分子と、C−C主鎖をもつポリエチレンでは化学的な分解方法が異なる。評価には製造・輸送・使用・回収・廃棄までを含める必要がある。『生分解性』という言葉だけでは環境への影響の大小を断定できない。",
+      "bodyEn": "Polymer waste management includes mechanical recycling, chemical depolymerization and energy recovery, each with constraints. PET's ester bonds offer different chemical recycling routes from polyethylene's carbon–carbon backbone. Evaluating environmental impact requires considering production, transport, use and disposal. Biodegradability alone does not settle the environmental comparison.",
+      "reasonJa": "高分子の結合と構造を学んでから材料の社会利用へ戻ると、環境負荷を化学的根拠で比較する視点ができる。",
+      "reasonEn": "Revisiting materials after learning polymer bonding supports evidence-based environmental comparisons.",
+      "questionJa": "PETとポリエチレンで同じ再生法が常に適切とは限らない理由は何か。",
+      "questionEn": "Why might the same recycling method not suit both PET and polyethylene?"
+    },
+    {
+      "id": "x17",
+      "chapters": [
+        "0-0",
+        "3-3"
+      ],
+      "ja": "測定・不確かさ・科学的検証",
+      "en": "Measurement, uncertainty and scientific verification",
+      "bodyJa": "数値は実験条件と測定方法があって初めて意味をもつ。有効数字は表示上の規則だが、不確かさや系統誤差を完全に表しているわけではない。測定値のばらつきが小さくても装置の校正に問題があれば、真値からずれる可能性がある。化学実験では対照試料・空試験・標準液・繰り返し測定を用い、観察・推論・仮説を区別する。",
+      "bodyEn": "A measurement has meaning only with stated conditions and methods. Significant figures are notation, not a full uncertainty analysis. Repeated values can be precise yet inaccurate if calibration is biased. Controls, blanks, standards and replicates support valid inference. Observations should be distinguished from hypotheses and conclusions.",
+      "reasonJa": "どんな単元でも『その数値をどう測り、どんな前提で解釈したか』に戻る習慣が、科学的思考の土台になる。",
+      "reasonEn": "Across chemistry, asking how a value was measured and under what assumptions cultivates scientific reasoning.",
+      "questionJa": "同じ濃度を3回測ってほぼ同じ結果が出た。正しい値だと断定できるだろうか。",
+      "questionEn": "If three concentration measurements agree closely, does that prove accuracy?"
+    },
+    {
+      "id": "x18",
+      "chapters": [
+        "3-3",
+        "2-5"
+      ],
+      "ja": "実験安全と科学的な責任",
+      "en": "Laboratory safety and responsible inquiry",
+      "bodyJa": "化学の実験では危険性の把握とリスクの管理を区別する。試薬の性質だけでなく濃度、量、加熱、換気、廃液処理が危険性を変える。塩素や強酸・強塩基、可燃性溶媒などを扱う実験は、適切な設備と指導者の管理下で実施すべきであり、独学者が試してよいという意味ではない。アプリでは観察から問いを作り、既存データや安全なシミュレーションで検証する選択肢も重視する。",
+      "bodyEn": "Chemical safety distinguishes inherent hazards from risk under particular exposure conditions. Concentration, quantity, heating, ventilation and waste disposal matter. Experiments with chlorine, concentrated acids or bases, flammable solvents and other hazardous reagents belong in appropriately equipped and supervised settings, not as unsupervised home activities. Simulations and existing data can also support inquiry.",
+      "reasonJa": "科学的に考えるとは実験することだけではなく、リスクを評価して適切な検証方法を選べることでもある。",
+      "reasonEn": "Scientific thinking also means choosing appropriate tests and managing risks, not necessarily conducting every experiment personally.",
+      "questionJa": "未知の液体を調べるとき、安全な観察から何を確認し、どの段階で専門家へ相談すべきか。",
+      "questionEn": "When examining an unknown liquid, which low-risk observations are suitable and when is expert help needed?"
+    }
+  ]
+}
