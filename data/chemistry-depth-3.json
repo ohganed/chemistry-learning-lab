@@ -1,0 +1,187 @@
+{
+  "schema": "chemistry-depth-textbook",
+  "schemaVersion": "1.0",
+  "group": "3",
+  "locale": [
+    "ja",
+    "en"
+  ],
+  "chapters": [
+    {
+      "id": "3-0",
+      "ja": "非金属元素の性質",
+      "en": "Nonmetal elements and their chemistry",
+      "sections": [
+        {
+          "ja": "非金属を電子配置から整理する",
+          "en": "Organize nonmetals by electron structure",
+          "textJa": "非金属元素は一般に共有結合を形成しやすいが、反応相手によってイオンにもなる。17族のハロゲンは単体でX₂の二原子分子をつくることが多く、反応性には周期的な傾向がある。酸素・硫黄・窒素・炭素・ケイ素などは酸化物や水素化物の性質が大きく異なる。分類の暗記だけでなく、価電子・結合・酸化数から性質を予測する。",
+          "textEn": "Nonmetals often form covalent bonds but can become ions depending on their partners. Halogens commonly form X₂ molecules and show periodic reactivity trends. Oxides and hydrides of oxygen, sulfur, nitrogen, carbon and silicon behave quite differently. Electron configuration, bonding and oxidation states offer a deeper explanation than rote classification."
+        },
+        {
+          "ja": "ハロゲンの酸化力",
+          "en": "Halogens as oxidants",
+          "textJa": "塩素や臭素などは電子を受け取ってハロゲン化物イオンになる反応を示す。例えばCl₂+2Br⁻→2Cl⁻+Br₂ではCl₂が酸化剤、Br⁻が還元剤である。置換反応の起こりやすさを金属・非金属の酸化還元の一種として考える。反応性の順序は標準条件の還元電位などの根拠と結びつけられる。",
+          "textEn": "Halogens can act as oxidants by accepting electrons to form halide ions. In Cl₂+2Br⁻→2Cl⁻+Br₂, chlorine is reduced and bromide oxidized. The displacement reaction is a redox process; standard reduction potentials explain the thermodynamic trend under stated conditions."
+        },
+        {
+          "ja": "酸化物・水素化物と生活",
+          "en": "Oxides, hydrides and daily life",
+          "textJa": "CO₂が水に溶けると炭酸系の平衡が生じる。SO₂や窒素酸化物の一部は大気化学や酸性雨に関連する。NH₃は水中で塩基として働き、HClは水中で強酸としてふるまう。単体の性質と化合物の性質を混同せず、環境中での反応や濃度の違いにも注意する。",
+          "textEn": "Dissolved CO₂ participates in carbonate equilibria. SO₂ and some nitrogen oxides are relevant to atmospheric chemistry and acid deposition. NH₃ acts as a base in water, while dissolved HCl behaves as a strong acid. Elemental behavior should not be confused with that of compounds."
+        }
+      ],
+      "example": {
+        "ja": "Cl₂をBr⁻を含む水溶液へ加えるとき、電子の収支をどう書くか。",
+        "en": "Write electron balance for chlorine reacting with bromide ions.",
+        "solutionJa": "還元：Cl₂+2e⁻→2Cl⁻、酸化：2Br⁻→Br₂+2e⁻。電子2個が打ち消され、Cl₂+2Br⁻→2Cl⁻+Br₂。酸化数の変化も確認できる。",
+        "solutionEn": "Reduction: Cl₂+2e⁻→2Cl⁻. Oxidation: 2Br⁻→Br₂+2e⁻. Adding gives Cl₂+2Br⁻→2Cl⁻+Br₂."
+      },
+      "pitfall": {
+        "ja": "元素名が同じでも単体と化合物の毒性・反応性は大きく異なる。一般化しない。",
+        "en": "A chemical element and its different compounds can have very different properties and hazards."
+      },
+      "bridge": {
+        "ja": "周期表→電子配置→酸化還元→環境化学・酸塩基平衡へつなげる。",
+        "en": "Connect periodic trends with redox, aqueous acid–base chemistry and environmental processes."
+      },
+      "inquiry": {
+        "ja": "炭酸飲料のCO₂と石灰石の炭酸塩を、共通する化学平衡で説明できるだろうか。",
+        "en": "Can dissolved CO₂ in soda and carbonate minerals be connected through equilibria?"
+      },
+      "status": "editorial-draft"
+    },
+    {
+      "id": "3-1",
+      "ja": "典型金属元素",
+      "en": "Main-group metals",
+      "sections": [
+        {
+          "ja": "金属がイオンになりやすい理由",
+          "en": "Why metals form cations",
+          "textJa": "典型金属は価電子の配置から陽イオンを形成する場合が多い。アルカリ金属は通常+1、アルカリ土類金属は通常+2の酸化数をとることが多い。しかし反応の起こりやすさは原子のイオン化エネルギーだけで決まらず、水和エネルギーや生成物の安定性なども関係する。水や酸との反応も一律ではない。",
+          "textEn": "Many main-group metals form cations consistent with their valence configurations: alkali metals often +1, alkaline-earth metals often +2. Ionization energy alone does not predict the outcome of a reaction in solution. Hydration and product formation also contribute to overall energetics."
+        },
+        {
+          "ja": "酸化物・水酸化物",
+          "en": "Metal oxides and hydroxides",
+          "textJa": "Na₂OやCaOのような典型金属酸化物の一部は水と反応して塩基性を示す。Al(OH)₃やZn(OH)₂などの両性水酸化物は、酸にも強塩基にも反応し得る。錯イオン形成や溶解平衡が関係するため、『金属水酸化物はすべて強塩基』という整理は誤る。溶解度と塩基性の強さも別概念である。",
+          "textEn": "Some main-group metal oxides give basic solutions on reaction with water. Amphoteric hydroxides such as Al(OH)₃ and Zn(OH)₂ can react with both acids and strong bases, often involving complex ions. Solubility and intrinsic basicity are separate concepts."
+        },
+        {
+          "ja": "金属の利用と表面保護",
+          "en": "Metals, corrosion and passivation",
+          "textJa": "鉄やアルミニウムなどの金属は酸素や水との反応で表面に酸化物を形成することがある。酸化物膜が緻密で反応を抑える場合は不動態化とよばれる。アルミニウムは反応性が高い一方、常温の空気中では表面の酸化物膜によって保護される。金属の『反応しやすい』と『日常で腐食しやすい』を同一視しない。",
+          "textEn": "Metals can form oxide layers that alter subsequent corrosion. A protective passivating film can slow further reaction. Aluminum is reactive thermodynamically but can be protected by a stable surface oxide. Reactivity and everyday corrosion rate must not be conflated."
+        }
+      ],
+      "example": {
+        "ja": "Al(OH)₃が酸にも強塩基にも溶ける場合をどう理解するか。",
+        "en": "Why can Al(OH)₃ dissolve in both acid and strong base?",
+        "solutionJa": "酸中ではAl(OH)₃+3H⁺→Al³⁺+3H₂Oと表すことができる（実際には水和）。強塩基中では錯イオン[Al(OH)₄]⁻などを形成する。両性と錯体の関係が見える。",
+        "solutionEn": "In acid one may write Al(OH)₃+3H⁺→Al³⁺+3H₂O, with hydration understood. In strong base, species such as [Al(OH)₄]⁻ form. This connects amphoterism to complexation."
+      },
+      "pitfall": {
+        "ja": "イオン化傾向は反応速度表ではない。不動態などで見かけの反応は遅くなる。",
+        "en": "An activity series does not directly predict reaction rates; passivation can slow observed reactions."
+      },
+      "bridge": {
+        "ja": "イオン化エネルギー→水和→溶解平衡→錯形成→腐食の科学へ。",
+        "en": "Connect ionization, hydration, solubility equilibria, complexation and corrosion."
+      },
+      "inquiry": {
+        "ja": "Alはイオン化しやすいのにアルミ缶がすぐ崩れないのはなぜか。",
+        "en": "Why does an aluminum can survive despite aluminum's chemical reactivity?"
+      },
+      "status": "editorial-draft"
+    },
+    {
+      "id": "3-2",
+      "ja": "遷移元素と錯イオン",
+      "en": "Transition metals and coordination chemistry",
+      "sections": [
+        {
+          "ja": "遷移金属の多様な酸化状態",
+          "en": "Variable oxidation states",
+          "textJa": "遷移金属ではd電子の状態が結合や酸化状態に影響する。Fe²⁺とFe³⁺のように同じ元素が複数の酸化数をとる場合が多い。ただしすべての遷移金属がどんな酸化数でも安定というわけではない。溶液の色もd軌道の電子状態や配位子との相互作用によって変わり得る。",
+          "textEn": "Many transition metals exhibit multiple oxidation states, as with Fe²⁺ and Fe³⁺. d-electron configurations influence bonding and reactivity, but not every oxidation state is equally stable. Colors often depend on electronic transitions and ligand environments."
+        },
+        {
+          "ja": "配位子と錯体の構造",
+          "en": "Ligands and complex ions",
+          "textJa": "配位子は金属中心へ電子対を供与して配位結合を形成することがある。アンモニアや水、塩化物イオンなどが典型例であり、錯イオンの形や配位数によって物性が変化する。[Cu(NH₃)₄]²⁺のような表記は配位子と金属の数を示す。配位結合は『できた後も必ず他の共有結合と本質的に異なる』ものではない。",
+          "textEn": "Ligands donate electron pairs to a metal center. Water, ammonia and chloride are common ligands, and coordination number and geometry influence properties. A formula such as [Cu(NH₃)₄]²⁺ identifies a complex composition. Once formed, coordinate bonds are not necessarily fundamentally distinct from other covalent bonds."
+        },
+        {
+          "ja": "錯形成平衡と分析",
+          "en": "Complexation equilibria",
+          "textJa": "錯体の生成はしばしば可逆的であり、配位子濃度やpHにより存在比が変わる。沈殿反応と錯形成が競合すると、沈殿が溶けたり色が変わったりすることがある。この仕組みを理解すると無機物質の定性分析に応用できる。錯体の平衡定数や分光学が大学無機化学につながる。",
+          "textEn": "Complex formation is often an equilibrium process affected by ligand concentration and pH. Complexation may compete with precipitation, dissolve solids or change solution color. These effects are central to qualitative analysis and link onward to formation constants and spectroscopy."
+        }
+      ],
+      "example": {
+        "ja": "Cu²⁺水溶液にアンモニアを少量・過剰と加えると観察が変わるのはなぜか。",
+        "en": "Why can observations change as a little, then excess, ammonia is added to Cu²⁺ solution?",
+        "solutionJa": "条件によってCu(OH)₂の沈殿形成と、アンモニア配位子をもつ錯イオン形成が競合する。過剰アンモニアでは深青色の錯体が優勢となる場合がある。正確な生成種はpH・濃度に依存する。",
+        "solutionEn": "Precipitation of Cu(OH)₂ can compete with formation of ammonia complexes. Excess ammonia can favor a deep-blue complex, depending on concentration and pH."
+      },
+      "pitfall": {
+        "ja": "『配位結合は普通の共有結合より必ず弱い』といった固定的なイメージは適切でない。",
+        "en": "Coordinate bonds are not categorically weaker than ordinary covalent bonds."
+      },
+      "bridge": {
+        "ja": "電子軌道→配位子場→錯体の色、また溶解平衡と分析化学へ。",
+        "en": "Connect electronic orbitals and ligand fields to complex color and analytical equilibria."
+      },
+      "inquiry": {
+        "ja": "錯体の色が配位子を替えると変わるのは、どんな電子状態の変化を示唆するか。",
+        "en": "What changes in electronic structure could explain ligand-dependent complex colors?"
+      },
+      "status": "editorial-draft"
+    },
+    {
+      "id": "3-3",
+      "ja": "無機物質の識別",
+      "en": "Inorganic qualitative analysis",
+      "sections": [
+        {
+          "ja": "識別は仮説の絞り込み",
+          "en": "Identification as hypothesis testing",
+          "textJa": "未知試料を識別するとは、候補物質の予測される性質と実際の観察を比較することである。炎色反応、沈殿の生成、溶解性、色の変化などを組み合わせ、複数の可能性を除外する。単一の現象が一つの物質を必ず証明するとは限らない。対照実験や既知試料との比較が重要である。",
+          "textEn": "Identifying an unknown means comparing competing hypotheses with measured evidence. Flame colors, precipitates, solubility and color changes can narrow possibilities. A single observation seldom proves a unique identity. Controls and standards help distinguish alternatives."
+        },
+        {
+          "ja": "沈殿反応と溶解度積",
+          "en": "Precipitation and solubility products",
+          "textJa": "難溶性塩は固体と溶存イオンとの間に溶解平衡をもつ。例えばAgCl(s)⇌Ag⁺+Cl⁻ではKsp=a(Ag⁺)a(Cl⁻)と表される。イオンの供給や錯形成によって溶解・析出の平衡が変化する。沈殿が観察された事実と、濃度や反応機構についての推論を区別する。",
+          "textEn": "Sparingly soluble salts establish dissolution equilibria. For AgCl(s)⇌Ag⁺+Cl⁻, Ksp is the product of ion activities. Common ions and complexation can shift the balance between precipitation and dissolution. Observations should be distinguished from inferred mechanisms."
+        },
+        {
+          "ja": "分析の信頼性を考える",
+          "en": "Assess reliability",
+          "textJa": "化学的な検出反応には妨害イオンや感度の限界がある。分析結果が陰性でも、濃度が検出限界より低い可能性がある。確認反応を複数用いたり、標準液・空試験・再測定で検証したりすることが科学的な態度になる。定量分析では測定誤差や不確かさも重要である。",
+          "textEn": "Detection tests have interferences and sensitivity limits. A negative result does not always mean absence; concentration may lie below the detection limit. Standards, blanks, repeat measurements and independent confirmatory tests strengthen evidence. Quantitative analysis also requires uncertainty assessment."
+        }
+      ],
+      "example": {
+        "ja": "白色沈殿ができたからAgClと断定してよいか。",
+        "en": "Does forming a white precipitate prove that it is AgCl?",
+        "solutionJa": "白色沈殿をつくる物質は複数ある。候補の溶解性、添加した試薬、共存イオンなどを考え、別の確認反応で検証する必要がある。『観察』と『同定』を区別する。",
+        "solutionEn": "Many substances form white precipitates. Consider possible ions, reagents, solubility and confirmatory tests. Observation is not identical to identification."
+      },
+      "pitfall": {
+        "ja": "色だけで物質を確定してはいけない。濃度・光・妨害物質でも見え方は変わる。",
+        "en": "Color alone is rarely definitive; conditions and interfering substances matter."
+      },
+      "bridge": {
+        "ja": "溶解平衡→錯体形成→分析法→測定の不確かさ、そして科学的推論へ。",
+        "en": "Connect solution equilibria and complexation to analytical methods, uncertainty and scientific inference."
+      },
+      "inquiry": {
+        "ja": "一つの実験結果に複数の説明があるとき、次の実験をどう選ぶか。",
+        "en": "How would you choose the next test when one observation supports multiple explanations?"
+      },
+      "status": "editorial-draft"
+    }
+  ]
+}
