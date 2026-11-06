@@ -79,6 +79,32 @@
             "en": "Revisiting thermochemistry after kinetics explains why energetic fuels do not necessarily react rapidly at room temperature. Equilibrium and Gibbs energy reveal why heat release alone does not decide reaction direction. Electrochemical work connects to the same thermodynamic description."
           }
         ]
+      },
+      "guidedExample": {
+        "titleJa": "測定した温度変化から反応エンタルピーを推定する",
+        "titleEn": "Estimate reaction enthalpy from an observed temperature rise",
+        "steps": [
+          [
+            "ある反応で水に近い液体100.0 gが20.0℃から23.0℃へ上昇しました。0.0100 molの反応が進んだと仮定し、1 molあたりの反応エンタルピーを求めます。まず熱の受け手を決めます。",
+            "Suppose a reaction warms 100.0 g of a water-like solution from 20.0 to 23.0°C. If 0.0100 mol of reaction occurs, estimate the reaction enthalpy per mole. First specify which part is the thermal surroundings."
+          ],
+          [
+            "液体の比熱容量を4.18 J g⁻¹ K⁻¹とし、容器や外界への熱損失は無視、定圧で圧力体積仕事のみと仮定します。この条件が実際には理想化であることを先に確認します。",
+            "Approximate the solution's specific heat as 4.18 J g⁻¹ K⁻¹, neglect vessel heat capacity and heat loss, and assume constant pressure with only pressure–volume work. These are simplifying assumptions."
+          ],
+          [
+            "温度差はΔT=3.0 K。液体が受け取った熱はq=mcΔT=100.0×4.18×3.0=1254 Jです。液体が温まったため、反応系は約1254 Jを放出したと解釈します。",
+            "ΔT=3.0 K. The solution absorbs q=mcΔT=100.0×4.18×3.0=1254 J. Therefore the chemical reaction releases approximately 1254 J under the stated assumptions."
+          ],
+          [
+            "0.0100 molの反応に対しΔH≈−1.254 kJなので、反応エンタルピーはΔrH≈−125 kJ/molです（適切に丸める）。符号は化学反応を『系』としたため負になります。",
+            "Dividing the released energy by 0.0100 mol gives ΔrH≈−125.4 kJ/mol, appropriately reported as about −125 kJ/mol. The negative sign refers to the reacting system."
+          ],
+          [
+            "実験で容器の熱容量や断熱の不完全さがあれば、測定した液体温度だけから真のΔHを決められません。校正と不確かさ評価が必要です。反応速度が速いかどうかも別問題です。",
+            "If the vessel absorbs heat or the system loses heat to the environment, the observed solution rise does not capture the full energy change. Calibration and uncertainty matter; reaction speed is a separate issue."
+          ]
+        ]
       }
     },
     {
@@ -152,6 +178,32 @@
             "ja": "化学平衡を学んだ後には、可逆反応の正逆速度が等しくてもゼロではないと理解できます。酵素を学ぶと、触媒の反応経路と選択性が生体の代謝へ広がります。熱化学の反応エンタルピーと速度論の活性化エネルギーを並べると、反応の全体の利得と途中の障壁を区別できます。",
             "en": "Equilibrium later clarifies why both forward and reverse reactions continue at equal rates. Enzymes connect catalysis to biology. Comparing reaction enthalpy with kinetic activation barriers distinguishes the energetic difference between endpoints from the hurdle along a reaction pathway."
           }
+        ]
+      },
+      "guidedExample": {
+        "titleJa": "一次反応の半減期から速度定数を推定する",
+        "titleEn": "Determine a first-order rate constant from half-life",
+        "steps": [
+          [
+            "ある反応物の濃度が100秒ごとに半分になると観測しました。『半分になる時間』と『速度定数』の関係を知りたいという問題です。",
+            "A reactant concentration is observed to halve every 100 seconds. The goal is to relate the measured half-life to a rate constant."
+          ],
+          [
+            "一次反応−d[A]/dt=k[A]が成り立つと仮定します。この仮定がないと半減期が一定とは限らず、どんな反応にも同じ式は使えません。",
+            "Assume first-order kinetics, −d[A]/dt=k[A]. The constant half-life relation is not valid for every reaction order."
+          ],
+          [
+            "一次反応の積分式[A]=[A]₀e⁻ᵏᵗに半減時の[A]=[A]₀/2を代入すると、1/2=e⁻ᵏᵗ¹⸍²となります。両辺の自然対数を取ると−ln2=−kt₁/₂です。",
+            "Substitute [A]=[A]₀/2 into [A]=[A]₀e⁻ᵏᵗ to obtain 1/2=e⁻ᵏᵗ¹⁄². Taking natural logarithms yields k=ln2/t₁/₂."
+          ],
+          [
+            "k=ln2/100 s≈0.00693 s⁻¹です。時間の逆数の単位になるのは、指数の中のktが無次元でなければならないためです。",
+            "k=ln2/(100 s)≈0.00693 s⁻¹. The reciprocal-time units ensure the exponential argument kt is dimensionless."
+          ],
+          [
+            "100秒後は50%、200秒後は25%が残る予測です。もし実測データがこの比から大きくずれるなら、一次反応の仮定、温度一定の条件や他の反応経路を再検討します。",
+            "The model predicts 50% remaining after 100 s and 25% after 200 s. Large deviations suggest that the first-order assumption, constant temperature or absence of competing reactions should be reconsidered."
+          ]
         ]
       }
     },
@@ -227,6 +279,32 @@
             "en": "Prior knowledge of kinetics makes dynamic equilibrium a balance of forward and reverse rates. Acid dissociation and solubility products reuse the same Q/K framework in other contexts. Chemical potential later grounds Le Châtelier's heuristic in a more general thermodynamic principle."
           }
         ]
+      },
+      "guidedExample": {
+        "titleJa": "反応商Qと平衡定数Kから進む向きを判断する",
+        "titleEn": "Use reaction quotient Q and equilibrium constant K to predict direction",
+        "steps": [
+          [
+            "仮想反応A⇌BでK=4.0、ある時点で[A]=0.30 mol/L、[B]=0.60 mol/Lです。まず何を知りたいかを確認します。答えは『その時点からどちらへ正味に進むか』であり、反応速度の大きさではありません。",
+            "For the illustrative reaction A⇌B with K=4.0, current concentrations [A]=0.30 mol/L and [B]=0.60 mol/L, we seek the thermodynamically favored net direction—not the reaction speed."
+          ],
+          [
+            "定温・理想希薄溶液の近似を仮定し、活量の比を濃度比で表します。一般にはQとKは無次元化した活量で定義することに注意します。",
+            "Assume fixed temperature and sufficiently dilute ideal behavior so that concentration ratios approximate activity ratios. The thermodynamic Q and K are defined using dimensionless activities."
+          ],
+          [
+            "Q≈[B]/[A]=0.60/0.30=2.0。Q<Kなので、正方向への正味の変化が有利です。これは『Aの濃度とBの濃度が等しくなる』という意味ではありません。",
+            "Q≈[B]/[A]=0.60/0.30=2.0. Since Q<K, net forward progress is favorable. This does not imply that equilibrium requires equal concentrations."
+          ],
+          [
+            "A+Bの総濃度0.90 mol/Lが保存される単純モデルなら、平衡時は[B]eq=4[A]eqと[A]eq+[B]eq=0.90。よって[A]eq=0.18、[B]eq=0.72 mol/Lです。",
+            "For a simple closed A⇌B system conserving [A]+[B]=0.90 mol/L, equilibrium obeys [B]eq=4[A]eq. Solving gives [A]eq=0.18 and [B]eq=0.72 mol/L."
+          ],
+          [
+            "濃度変化はAが0.12減少しBが0.12増加します。平衡での濃度は等しくありません。触媒は到達時間を変えても、温度を同じにすればこの平衡値は変えません。",
+            "The net change is −0.12 mol/L A and +0.12 mol/L B. Equilibrium concentrations are unequal. An ideal catalyst can change the approach time but not these equilibrium values at fixed temperature."
+          ]
+        ]
       }
     },
     {
@@ -300,6 +378,32 @@
             "ja": "化学平衡を知っていると、酸解離を新しい特別な現象ではなく可逆反応として理解できます。生化学へ進むとタンパク質の電荷、酵素反応、血液の緩衝作用に同じ考えを使えます。農学では土壌pHが栄養素の溶解や吸収を左右するため、酸塩基が植物の栄養にも直結します。",
             "en": "Acid dissociation is another chemical equilibrium. Later, the same reasoning explains protein charge, enzyme catalysis and blood buffering. Soil pH in agricultural chemistry affects nutrient availability and uptake, connecting a familiar classroom scale to plant nutrition."
           }
+        ]
+      },
+      "guidedExample": {
+        "titleJa": "0.10 mol/L酢酸のpHをKaから推定する",
+        "titleEn": "Estimate pH of 0.10 mol/L acetic acid from Ka",
+        "steps": [
+          [
+            "0.10 mol/Lの酢酸HAが水中でどれほど電離するかを考えます。単純に0.10 mol/LすべてがH₃O⁺になると考えると弱酸の性質を無視してしまいます。",
+            "For 0.10 mol/L acetic acid HA, we must estimate the amount dissociated. Treating all 0.10 mol/L as H₃O⁺ would wrongly assume full dissociation."
+          ],
+          [
+            "25℃付近でKa≈1.8×10⁻⁵、希薄理想近似とし、水自身の自己電離を無視できる条件とします。HA⇌H₃O⁺+A⁻で電離した濃度をx mol/Lとおきます。",
+            "Use Ka≈1.8×10⁻⁵ near 25°C in a dilute ideal approximation and neglect water autoionization. Write HA⇌H₃O⁺+A⁻ and let x mol/L be the dissociated amount."
+          ],
+          [
+            "電離前は[HA]=0.10、[H₃O⁺]≈0、[A⁻]≈0。平衡では[HA]≈0.10−x、[H₃O⁺]≈x、[A⁻]≈x。したがってKa≈x²/(0.10−x)です。",
+            "Initially [HA]=0.10 and the dissociation products are negligible. At equilibrium, [HA]=0.10−x and [H₃O⁺]≈[A⁻]≈x. Therefore Ka≈x²/(0.10−x)."
+          ],
+          [
+            "x≪0.10と仮定するとx≈√(Ka×0.10)=√(1.8×10⁻⁶)=1.34×10⁻³ mol/L。pH≈−log₁₀(1.34×10⁻³)=2.87です。",
+            "If x≪0.10, x≈√(Ka×0.10)=√(1.8×10⁻⁶)=1.34×10⁻³ mol/L, yielding pH≈−log₁₀(1.34×10⁻³)=2.87."
+          ],
+          [
+            "x/0.10≈1.34%なので、今回の『x≪0.10』近似は概ね妥当と評価できます。濃度が非常に薄い場合やKaが大きい場合には、近似せず二次方程式や水の電離まで含めて解き直します。",
+            "The dissociation fraction x/0.10≈1.34%, supporting the small-x approximation here. For much more dilute solutions or larger Ka, solve the quadratic relation and possibly include water autoionization."
+          ]
         ]
       }
     },
@@ -375,6 +479,32 @@
             "en": "A pH formula becomes a measurement technique in titration. Buffer concepts then help explain physiological acid–base regulation. Analytical chemistry adds uncertainty, calibration and endpoint selection, showing that calculating a number and measuring a chemical quantity are distinct tasks."
           }
         ]
+      },
+      "guidedExample": {
+        "titleJa": "中和滴定で未知のHCl濃度を求める",
+        "titleEn": "Determine unknown HCl concentration by titration",
+        "steps": [
+          [
+            "未知濃度の塩酸を25.0 mL取り、0.125 mol/LのNaOHを20.0 mL加えると当量点に達したとします。求めるのはHClのモル濃度です。",
+            "An unknown HCl sample of 25.0 mL reaches equivalence after 20.0 mL of 0.125 mol/L NaOH is added. The goal is the HCl molarity."
+          ],
+          [
+            "HClとNaOHが完全に1:1で反応し、副反応なく当量点を正確に測れたと仮定します。反応式HCl+NaOH→NaCl+H₂Oの係数をまず確認します。",
+            "Assume complete 1:1 reaction and an accurately measured equivalence point. Begin with HCl+NaOH→NaCl+H₂O."
+          ],
+          [
+            "加えたNaOHの物質量は0.125 mol/L×0.0200 L=0.00250 mol。1:1なのでHClも試料中に0.00250 mol含まれていました。",
+            "n(NaOH)=0.125 mol/L×0.0200 L=0.00250 mol. The 1:1 stoichiometry means the HCl aliquot contained 0.00250 mol."
+          ],
+          [
+            "塩酸の濃度はc=0.00250 mol÷0.0250 L=0.100 mol/Lです。試料体積と滴定液体積を逆にすると答えが変わってしまいます。",
+            "c(HCl)=0.00250 mol/0.0250 L=0.100 mol/L. Pay careful attention to which volume belongs to the analyte."
+          ],
+          [
+            "指示薬の色が変わった点と当量点は少しずれる可能性があります。弱酸を測るときは当量点のpHが7であるとも限りません。計算の正しさと測定の妥当性を別々に評価します。",
+            "An indicator endpoint may not exactly match the equivalence point. For weak acids, equivalence-point pH is not necessarily seven. Evaluate mathematical calculations and measurement validity separately."
+          ]
+        ]
       }
     },
     {
@@ -448,6 +578,32 @@
             "ja": "化学結合で電子を学んだことが、酸化数・半反応式・電池へつながります。熱化学とギブズエネルギーを学んだら、ΔrG=−nFEから起電力を自由エネルギーの変化として読み直せます。腐食、電気めっき、蓄電池、電極を利用する分析測定にも同じ考えが広がります。",
             "en": "Electronic structure supports oxidation-state accounting, half-reactions and cells. Gibbs energy later explains reversible cell voltage through ΔrG=−nFE. The same principles connect corrosion, electroplating, batteries and electroanalytical measurements."
           }
+        ]
+      },
+      "guidedExample": {
+        "titleJa": "銅めっきの電流・時間から析出質量を求める",
+        "titleEn": "Determine copper mass deposited from current and time",
+        "steps": [
+          [
+            "Cu²⁺+2e⁻→Cuの電極反応で1.93 Aの電流を1000 s流したとき、析出するCuの質量を求めます。まず電気量を求め、電子のmolに換算する道筋を作ります。",
+            "For Cu²⁺+2e⁻→Cu, a current of 1.93 A flows for 1000 s. Find the deposited copper mass by first converting current and time to charge, then to moles of electrons."
+          ],
+          [
+            "電流効率100%、他の電極反応なし、F≈96500 C/mol、Cuのモル質量63.5 g/molと仮定します。実際の電気分解では副反応や電流効率低下が起こる場合があります。",
+            "Assume 100% current efficiency, no competing reactions, F≈96500 C/mol and copper molar mass 63.5 g/mol. Real electrolysis may have side reactions and lower efficiency."
+          ],
+          [
+            "電気量はQ=It=1.93 A×1000 s=1930 C。電子の物質量はn(e⁻)=1930 C÷(96500 C/mol)=0.0200 molです。",
+            "Q=It=1.93 A×1000 s=1930 C. The electron amount is n(e⁻)=1930 C/(96500 C/mol)=0.0200 mol."
+          ],
+          [
+            "Cu²⁺がCu 1 molになるには電子2 molが必要なので、n(Cu)=0.0200/2=0.0100 mol。質量m=0.0100×63.5=0.635 gとなります。",
+            "Cu²⁺ reduction requires two moles of electrons per mole Cu. Therefore n(Cu)=0.0200/2=0.0100 mol and m(Cu)=0.0100×63.5=0.635 g."
+          ],
+          [
+            "電流を2倍、時間を同じにすれば理論上の析出量も2倍です。ただし実測質量が異なるなら電流効率、電極の状態、反応液の条件などを調べます。理論量と実験量の違いは検証する価値のある情報です。",
+            "Doubling current at the same time doubles theoretical deposit mass. If the measured result differs, investigate current efficiency, electrode condition and electrolyte composition. Disagreement between model and experiment is useful evidence."
+          ]
         ]
       }
     }
