@@ -180,118 +180,41 @@
             "en": "10  What new ideas will change this understanding?",
             "textJa": "H=U+PVを理解しても、まだ『発熱する反応は必ず自然に進むのか』『発熱するのに反応しないことがあるのはなぜか』という疑問が残ります。この先、反応が進む熱力学的な方向はギブズエネルギー、反応の速さは反応速度論によって考えます。二つは同じではありません。\n\nまた、圧力が一定でない過程や、電気的な仕事をする電池では、熱量とΔHを単純に同一視できません。内部エネルギーの第一法則へ戻る必要があります。\n\nつまり、エンタルピーを理解したことで学習は終わりません。気体の圧力、力学の仕事、化学結合、酸化還元、反応速度、平衡へつながる新しい問いが生まれます。これは説明が足りないためではなく、十分な説明を通して別の知識との関係が見えるようになるからです。",
             "textEn": "Understanding H=U+PV still leaves important questions. Does an exothermic reaction always proceed spontaneously? Why can an energetically favorable process be slow? Gibbs energy addresses thermodynamic favorability, while kinetics addresses speed; the two are not interchangeable.\n\nIf external pressure is not constant, or a battery performs electrical work, heat cannot simply be identified with ΔH. Return to the first law and inspect the actual work terms.\n\nLearning enthalpy is therefore a connection point rather than an endpoint. Pressure, mechanical work, bonding, redox, kinetics and equilibrium acquire new meaning when considered together. Those questions arise from richer explanations, not from an intentional lack of explanation."
-          }
-        ]
-      },
-      "conceptGenesis": {
-        "schemaVersion": "1.0",
-        "premiseJa": "なぜ、化学反応の熱を考えるために、わざわざ「エンタルピー」という量を作る必要があったのでしょうか。まず、その問題から調べます。定義や公式は、必要になったところで登場します。",
-        "premiseEn": "Why did chemists introduce a quantity called enthalpy to understand reaction heat? Begin with the problem it solves. Definitions and equations follow when they become necessary.",
-        "sections": [
-          {
-            "id": "question",
-            "titleJa": "1. 化学反応のエネルギーを、どうすれば測れるのか",
-            "titleEn": "1. How can the energy change of a chemical reaction be measured?",
-            "bodyJa": "燃料が燃えると周囲が温まります。氷が融けると、氷は周囲からエネルギーを受け取ります。こうした現象を観察すると、まず「どれだけのエネルギーが移動したのか」を知りたくなります。\n水の温度が何度上がったか測れば、その水が受け取った熱量を推定できます。しかし、ここで重要な疑問が生じます。化学反応で変化したエネルギーは、必ずすべて熱として周囲へ渡るのでしょうか。\n例えば、反応で気体が発生して容器のピストンを押し上げた場合、エネルギーの一部は物体を動かす仕事にもなります。熱を測った数字だけでは、反応前後のエネルギーの差と必ず一致するとは限りません。これが、エンタルピーを必要とする背景の一つです。",
-            "bodyEn": "Burning fuel warms its surroundings; melting ice absorbs energy from its surroundings. We naturally want to know how much energy was transferred. A rise in a water sample's temperature can help estimate heat transfer, but that raises a deeper question: does every change of a reacting system's energy appear entirely as heat?\nIf a reaction produces a gas that pushes a piston upward, the system also transfers energy by doing mechanical work. Measured heat and the system's change in internal energy need not be identical. This is one important motivation for introducing enthalpy."
-          },
-          {
-            "id": "boundary",
-            "titleJa": "2. 最初に決めるのは「何を調べるか」— 系と周囲",
-            "titleEn": "2. Define the system and the surroundings",
-            "bodyJa": "熱力学では、いま考える対象を「系」、それ以外を「周囲」と呼びます。例えば、水の中で反応する物質を系とし、水や容器を周囲として扱うことができます。あるいは、水まで含めた全体を系とすることもできます。ただし途中で区切り方を変えてはいけません。\n系が周囲から熱を受け取れば q は正、系が周囲へ熱を渡せば q は負と決めます。仕事 w も、周囲が系にした仕事を正、系が周囲にした仕事を負とします。\nこの符号は熱に善悪の意味があるからではありません。何を系としたかを明示し、エネルギー収支を一貫して計算するための約束です。発熱反応で化学反応系の q が負になるのは、エネルギーが系から周囲へ移るためです。",
-            "bodyEn": "Thermodynamics calls the chosen object of study the *system* and everything else the *surroundings*. Reacting chemicals could be the system, with the solution and container treated as surroundings. A different boundary is also possible, but it must remain consistent.\nHeat q is positive when the system receives energy as heat and negative when it releases heat. Work w is positive when the surroundings do work on the system and negative when the system does work on its surroundings. These signs are bookkeeping conventions that depend on the chosen boundary."
-          },
-          {
-            "id": "energy",
-            "titleJa": "3. 内部エネルギー U とは何か",
-            "titleEn": "3. What is internal energy U?",
-            "bodyJa": "気体を容器に入れ、容器そのものは静止していると考えます。それでも分子は絶えず運動しています。分子や原子の並進・回転・振動、分子間の相互作用、化学結合など、系を構成する微視的な自由度と関係するエネルギーがあります。\nこれらをまとめて扱う熱力学的な状態量が「内部エネルギー U」です。容器全体が棚から落下する運動エネルギーや、容器全体が高い位置にあることによる重力位置エネルギーなどは、普通、内部エネルギーとは分けて考えます。\n内部エネルギーの絶対的な値を化学反応ごとに一つずつ測ることは通常困難ですが、反応前後の差である ΔU はエネルギー収支から求められます。重要なのは U が「いまどんな状態か」で決まる状態量だということです。",
-            "bodyEn": "Molecules in a stationary container still translate, rotate and vibrate, and they interact with one another through chemical bonding and intermolecular forces. The total energy associated with the system's microscopic degrees of freedom is represented by the state function *internal energy U*. Macroscopic motion or elevation of the whole container is normally accounted for separately.\nAbsolute internal energies are not usually measured directly, but differences ΔU can be inferred from energy balances. U is a property of the system's state rather than a record of how it reached that state."
-          },
-          {
-            "id": "heatwork",
-            "titleJa": "4. 「熱」と「仕事」は、系に蓄えられた二種類の物質ではない",
-            "titleEn": "4. Heat and work are ways energy crosses the boundary",
-            "bodyJa": "ここで混同しやすいのが「熱」です。熱は、物質が内部に貯蔵している物の名前ではありません。系と周囲の間で、温度差を原因として移動するエネルギーを熱と呼びます。一方、力が物体を動かすことや電気的な作用などで境界を越えるエネルギー移動を仕事として扱います。\n内部エネルギー U は状態を表しますが、熱 q や仕事 w は、どのような過程を通ったかによって変わります。同じ初状態と終状態でも、熱と仕事の配分が違うことがあります。\nしたがって「物質が500 Jの熱を持っている」という表現を、エンタルピーの定義として使うのは不正確です。物質は内部エネルギーをもち、過程の途中で熱や仕事としてエネルギーをやりとりします。",
-            "bodyEn": "Heat is not a substance or a stock of energy stored inside an object. In thermodynamics, it is energy transferred across a boundary because of a temperature difference. Work is another mode of energy transfer, for example through mechanical force and displacement or electrical interactions.\nInternal energy U is a state function; heat q and work w depend on the process. Two processes connecting the same initial and final states can transfer different amounts of heat and work. Saying that a system 'contains 500 J of heat' is therefore misleading."
           },
           {
             "id": "conditions",
-            "titleJa": "5. 密閉された硬い容器と、動くピストンのある容器",
-            "titleEn": "5. A rigid container versus a movable piston",
-            "bodyJa": "反応する気体を、体積が変わらない硬い容器に入れる場合を考えます。体積変化 ΔV はゼロなので、圧力・体積仕事はありません。ほかの仕事もなければ、熱力学第一法則から定積での熱量 qV は ΔU に等しくなります。\n今度はピストンが自由に動く容器を考えます。気体が膨張するとピストンを押し上げ、周囲へ仕事をする可能性があります。同じ「反応で熱が出る」という現象でも、容器の条件によって熱として移動する量が違うことがあるのです。\nこの違いは物質の性質が突然変わったからではなく、エネルギーが熱として移るか、仕事としても移るかという過程の条件が違うためです。",
-            "bodyEn": "In a rigid sealed vessel, volume does not change. With no other work, the first law gives qV=ΔU for a constant-volume process. With a movable piston, expanding gas may push the piston and perform work on the surroundings.\nThus two experiments involving the same chemistry can involve different heat transfers because their mechanical constraints differ. The distinction is between a state change and the energy-transfer pathway."
-          },
-          {
-            "id": "piston",
-            "titleJa": "6. 気体が押しのける仕事を式にする",
-            "titleEn": "6. Derive pressure–volume work",
-            "bodyJa": "ピストンの断面積を A、周囲の圧力を Pext とします。周囲の圧力によってピストンにかかる力の大きさは F=Pext A です。ピストンが距離 x だけ動くと、気体の体積変化は ΔV=Ax になります。\n周囲の圧力が一定の場合、気体が周囲へ行う仕事の大きさは F×x=Pext A x=Pext ΔV です。先に決めた符号規約では、系が周囲へ行う仕事は負なので、w=−Pext ΔV となります。\nこの関係は、外圧一定での圧力・体積仕事を扱う式です。外圧が変わるときには、各段階を足し合わせる積分が必要です。また、ピストンが動くために摩擦がある場合など、理想的な模型との違いも考える必要があります。",
-            "bodyEn": "For a piston of area A against constant external pressure Pext, the resisting force is F=Pext A. A displacement x produces volume change ΔV=Ax. The magnitude of expansion work is Fx=Pext ΔV. Because work performed *by* the system is negative in our convention, w=−PextΔV.\nThis simple formula assumes constant external pressure. A changing pressure calls for integration, and friction or other nonideal processes may introduce further complications."
-          },
-          {
-            "id": "law",
-            "titleJa": "7. 熱力学第一法則に戻ると、問題がはっきりする",
-            "titleEn": "7. The first law reveals the missing term",
-            "bodyJa": "エネルギーは消えてなくなるわけではありません。系に流れ込む熱と、周囲から系へ行われる仕事が、内部エネルギーの変化になります。式では ΔU=q+w です。\n膨張仕事だけを考え、外圧一定で w=−PextΔV を代入すると、ΔU=q−PextΔV、したがって q=ΔU+PextΔV となります。\nここが大切です。反応に伴う熱を求めようとしたら、内部エネルギーの変化 ΔU だけでは足りず、「周囲を押しのける仕事」PextΔV も必要になる場合があります。この二つの量を、定圧の問題でまとめて扱う方法が欲しくなります。",
-            "bodyEn": "Energy conservation is expressed by the first law, ΔU=q+w, when macroscopic kinetic and potential energy changes are not separately at issue. With only constant-external-pressure expansion work, w=−PextΔV. Consequently, q=ΔU+PextΔV.\nIf we want to infer the heat transferred in a constant-pressure reaction, internal-energy change alone can be insufficient. We also need the pressure–volume work. This combination motivates enthalpy."
-          },
-          {
-            "id": "enthalpy",
-            "titleJa": "8. ここで初めて「エンタルピー H」を定義する",
-            "titleEn": "8. Now define enthalpy H",
-            "bodyJa": "圧力と体積は、その状態を指定すれば決まる量です。内部エネルギー U も状態量です。そこで U と PV を合わせて新しい状態量 H=U+PV と定義します。これがエンタルピーです。\nなぜ PV なのでしょうか。圧力の単位 Pa は N/m²、体積の単位は m³ なので、Pa×m³=N×m=J となります。PV はエネルギーと同じ次元をもちます。そして定圧では Δ(PV)=PΔV です。\n最初と最後が同じ圧力 P にあり、外圧 Pext もその圧力に等しい条件では、ΔH=ΔU+PΔV となるので、先ほど求めた q=ΔU+PextΔV と一致します。こうして、特定の条件で「熱とエンタルピー変化が一致する」という関係が導かれます。",
-            "bodyEn": "Pressure P, volume V and internal energy U are state properties. We therefore define a new state function H=U+PV, called *enthalpy*. The product PV has units Pa·m³ = N·m = J, so it has the dimensions of energy.\nAt constant pressure Δ(PV)=PΔV. For a process with only pressure–volume work, at constant pressure with appropriate mechanical conditions, ΔH=ΔU+PΔV=qP. The equality with heat is a derived relation under stated conditions—not the definition of enthalpy."
-          },
-          {
-            "id": "notheat",
-            "titleJa": "9. エンタルピーは「熱の入れ物」ではない",
-            "titleEn": "9. Enthalpy is not stored heat",
-            "bodyJa": "H=U+PV は、どのような状態の系にも定義できる量です。化学反応中だけに存在するものでも、定圧のときしか使えないものでもありません。\n一方、q はある過程で系と周囲の間を移動した熱量です。「Hそのものが熱」と言ってしまうと、状態量とエネルギーの移動を混同します。正確には、定圧で、ほかの仕事がなく圧力・体積仕事だけがある場合に、qP=ΔH が成り立つのです。\n例えば電池のように、外部へ電気的な仕事をする装置を考えると、定圧でも一般に熱の移動だけが ΔH のすべてにはなりません。この条件の確認が、公式を意味のある道具として使うために欠かせません。",
-            "bodyEn": "Enthalpy H is a state function defined for any state to which U, P and V apply. It is not restricted to reactions or constant-pressure processes. Heat q is energy transferred during a particular process.\nThe useful identity qP=ΔH requires constant pressure and only pressure–volume work under appropriate conditions. A cell performing electrical work, for example, need not transfer heat equal to ΔH even at constant pressure. Enthalpy is not a literal container of heat."
+            "ja": "11　密閉された硬い容器と、動くピストンのある容器",
+            "en": "11  A rigid container versus a movable piston",
+            "textJa": "反応する気体を、体積が変わらない硬い容器に入れる場合を考えます。体積変化 ΔV はゼロなので、圧力・体積仕事はありません。ほかの仕事もなければ、熱力学第一法則から定積での熱量 qV は ΔU に等しくなります。\n今度はピストンが自由に動く容器を考えます。気体が膨張するとピストンを押し上げ、周囲へ仕事をする可能性があります。同じ「反応で熱が出る」という現象でも、容器の条件によって熱として移動する量が違うことがあるのです。\nこの違いは物質の性質が突然変わったからではなく、エネルギーが熱として移るか、仕事としても移るかという過程の条件が違うためです。",
+            "textEn": "In a rigid sealed vessel, volume does not change. With no other work, the first law gives qV=ΔU for a constant-volume process. With a movable piston, expanding gas may push the piston and perform work on the surroundings.\nThus two experiments involving the same chemistry can involve different heat transfers because their mechanical constraints differ. The distinction is between a state change and the energy-transfer pathway."
           },
           {
             "id": "worked",
-            "titleJa": "10. 300 J と 100 J の例で、何が足し合わされるかを見る",
-            "titleEn": "10. Work through 300 J of internal energy and 100 J of work",
-            "bodyJa": "ある気体を定圧で加熱し、内部エネルギーが300 J増えたとします。同時に気体が膨張し、周囲を押しのける仕事を100 Jしたとしましょう。ほかの仕事やエネルギー移動はありません。\n系がした仕事なので w=−100 J です。ΔU=q+w に代入すると、300 J=q−100 J。したがって、与えられた熱は q=400 J です。\nこの過程で ΔH=ΔU+PΔV=300 J+100 J=400 J となり、qP と一致します。もし内部エネルギーの増加だけを見て「与えた熱は300 J」と答えれば、膨張の仕事を見落としています。計算の目的は、何が移動したのかを数で確かめることです。",
-            "bodyEn": "Suppose an idealized gas gains 300 J of internal energy while expanding against constant external pressure, doing 100 J of mechanical work on the surroundings. With our sign convention, w=−100 J. The first law gives 300=q−100, so q=400 J.\nFor this constant-pressure process with only PV work, ΔH=ΔU+PΔV=300+100=400 J. Using only ΔU as the supplied heat would omit the expansion work. The calculation is meaningful because the terms have already been identified physically."
-          },
-          {
-            "id": "reaction",
-            "titleJa": "11. 化学反応では何と何のエンタルピーを比較するのか",
-            "titleEn": "11. What does reaction enthalpy compare?",
-            "bodyJa": "化学反応では、反応前の系と反応後の系を比べます。物質の種類、物質量、温度、圧力、固体・液体・気体といった状態を指定すると、それぞれの状態にエンタルピーがあります。\n反応に伴うエンタルピー変化は ΔH=H(反応後)−H(反応前) です。定圧で圧力・体積仕事だけという条件なら、この差が反応系が受け取る熱に一致します。反応系が熱を放出すれば ΔH<0、吸収すれば ΔH>0 となります。\nただし、化学反応式の係数が変われば、対応する反応量も変わります。例えば「水を1 mol生成する反応」と「2 mol生成する反応」では、反応エンタルピーの数値も2倍違います。反応式と単位を一緒に記す必要があります。",
-            "bodyEn": "Reaction enthalpy compares a specified initial chemical state with a specified final chemical state. Chemical species, amounts, temperature, pressure and physical phases matter. The total enthalpy change is H(final)−H(initial). Under suitable constant-pressure conditions with only PV work, this equals heat absorbed by the reacting system.\nAn exothermic reaction then has negative ΔH and an endothermic reaction positive ΔH. The reaction equation matters: doubling all stoichiometric coefficients doubles the enthalpy change for the written reaction."
+            "ja": "12　300 J と 100 J の例で、何が足し合わされるかを見る",
+            "en": "12  Work through 300 J of internal energy and 100 J of work",
+            "textJa": "ある気体を定圧で加熱し、内部エネルギーが300 J増えたとします。同時に気体が膨張し、周囲を押しのける仕事を100 Jしたとしましょう。ほかの仕事やエネルギー移動はありません。\n系がした仕事なので w=−100 J です。ΔU=q+w に代入すると、300 J=q−100 J。したがって、与えられた熱は q=400 J です。\nこの過程で ΔH=ΔU+PΔV=300 J+100 J=400 J となり、qP と一致します。もし内部エネルギーの増加だけを見て「与えた熱は300 J」と答えれば、膨張の仕事を見落としています。計算の目的は、何が移動したのかを数で確かめることです。",
+            "textEn": "Suppose an idealized gas gains 300 J of internal energy while expanding against constant external pressure, doing 100 J of mechanical work on the surroundings. With our sign convention, w=−100 J. The first law gives 300=q−100, so q=400 J.\nFor this constant-pressure process with only PV work, ΔH=ΔU+PΔV=300+100=400 J. Using only ΔU as the supplied heat would omit the expansion work. The calculation is meaningful because the terms have already been identified physically."
           },
           {
             "id": "states",
-            "titleJa": "12. 同じ化学式でも、液体と気体を区別する理由",
-            "titleEn": "12. Why physical state labels matter",
-            "bodyJa": "例えば水ができる反応を考えるとき、水が液体としてできるか、水蒸気としてできるかでエンタルピー変化が違います。水蒸気が液体になるときには凝縮に伴う熱の移動があるためです。\n化学反応式で H₂O(l) と H₂O(g) を区別するのは、細かい記号の決まりではありません。反応後の状態が本当に異なるからです。同様に、温度や圧力が違えばエンタルピー差も変わる場合があります。\n標準反応エンタルピーは、指定した標準状態に対応する反応エンタルピーです。『どの物質が、どんな状態で、どれだけ反応したのか』を確かめることが、数字を意味あるものにします。",
-            "bodyEn": "The enthalpy change for forming liquid water differs from that for forming gaseous water because condensation or vaporization involves enthalpy changes. Writing H₂O(l) instead of H₂O(g) therefore specifies a different final state, not merely a typographical detail.\nReaction enthalpies also depend on temperature and can depend on pressure. Standard reaction enthalpies refer to appropriately defined standard states. A reported number needs a reaction equation, phase labels and conditions."
-          },
-          {
-            "id": "hess",
-            "titleJa": "13. ヘスの法則は、なぜ反応式を足し引きしてよいのか",
-            "titleEn": "13. Why does Hess's law permit adding reaction equations?",
-            "bodyJa": "ある山のふもとから頂上まで登ることを想像してください。途中にどの道を通っても、出発点と到着点が同じなら高度の差は同じです。エンタルピーも同様に、状態が決まれば値が定まる状態関数です。\n炭素が二酸化炭素になる場合、直接反応する経路と、一酸化炭素を経る仮想的な経路を考えられます。始状態と終状態が同じなら、エンタルピー変化の合計は必ず同じです。\nこれがヘスの法則です。『反応式を足したら熱量も足す』という暗記ではなく、状態量の差を途中で分割して計算できる、という性質です。途中に生じる物質の状態や反応の向きをそろえることが重要になります。",
-            "bodyEn": "Imagine hiking between two elevations: the change in elevation depends only on the endpoints, not the path. Enthalpy is likewise a state function. For a carbon combustion reaction, we can compare a direct route with a hypothetical sequence involving carbon monoxide.\nThe enthalpy changes of intermediate steps add to the same overall difference because the initial and final states are identical. Hess's law is a consequence of state-function behavior, not an arbitrary rule for manipulating equations."
+            "ja": "13　同じ化学式でも、液体と気体を区別する理由",
+            "en": "13  Why physical state labels matter",
+            "textJa": "例えば水ができる反応を考えるとき、水が液体としてできるか、水蒸気としてできるかでエンタルピー変化が違います。水蒸気が液体になるときには凝縮に伴う熱の移動があるためです。\n化学反応式で H₂O(l) と H₂O(g) を区別するのは、細かい記号の決まりではありません。反応後の状態が本当に異なるからです。同様に、温度や圧力が違えばエンタルピー差も変わる場合があります。\n標準反応エンタルピーは、指定した標準状態に対応する反応エンタルピーです。『どの物質が、どんな状態で、どれだけ反応したのか』を確かめることが、数字を意味あるものにします。",
+            "textEn": "The enthalpy change for forming liquid water differs from that for forming gaseous water because condensation or vaporization involves enthalpy changes. Writing H₂O(l) instead of H₂O(g) therefore specifies a different final state, not merely a typographical detail.\nReaction enthalpies also depend on temperature and can depend on pressure. Standard reaction enthalpies refer to appropriately defined standard states. A reported number needs a reaction equation, phase labels and conditions."
           },
           {
             "id": "hessworked",
-            "titleJa": "14. ヘスの法則を、意味を確認しながら計算する",
-            "titleEn": "14. Use Hess's law with physically meaningful steps",
-            "bodyJa": "標準状態付近の例として、C(黒鉛)+O₂(g)→CO₂(g) の ΔH を−393.5 kJ、CO(g)+½O₂(g)→CO₂(g) の ΔH を−283.0 kJ とします。\n求めたいのは C(黒鉛)+½O₂(g)→CO(g) の反応エンタルピーです。前者から後者を引けば、右辺のCO₂が消え、COが生成物として残ります。\nΔH=−393.5−(−283.0)=−110.5 kJ（書いた反応式1回分）。これは未知の反応を直接測らなくても、同じ始状態と終状態へ至る既知のエンタルピー差で求められることを示しています。数式を操作する前に、反応式の原子数・物質の状態・反応の向きを確認してください。",
-            "bodyEn": "At approximately standard conditions, take C(graphite)+O₂(g)→CO₂(g), ΔH=−393.5 kJ, and CO(g)+½O₂(g)→CO₂(g), ΔH=−283.0 kJ for the equations as written.\nTo obtain C(graphite)+½O₂(g)→CO(g), subtract the second reaction from the first. The CO₂ terms cancel and CO becomes a product. The enthalpy is −393.5−(−283.0)=−110.5 kJ per reaction as written. Conservation, phase labels and reaction directions explain the algebra."
+            "ja": "14　ヘスの法則を、意味を確認しながら計算する",
+            "en": "14  Use Hess's law with physically meaningful steps",
+            "textJa": "標準状態付近の例として、C(黒鉛)+O₂(g)→CO₂(g) の ΔH を−393.5 kJ、CO(g)+½O₂(g)→CO₂(g) の ΔH を−283.0 kJ とします。\n求めたいのは C(黒鉛)+½O₂(g)→CO(g) の反応エンタルピーです。前者から後者を引けば、右辺のCO₂が消え、COが生成物として残ります。\nΔH=−393.5−(−283.0)=−110.5 kJ（書いた反応式1回分）。これは未知の反応を直接測らなくても、同じ始状態と終状態へ至る既知のエンタルピー差で求められることを示しています。数式を操作する前に、反応式の原子数・物質の状態・反応の向きを確認してください。",
+            "textEn": "At approximately standard conditions, take C(graphite)+O₂(g)→CO₂(g), ΔH=−393.5 kJ, and CO(g)+½O₂(g)→CO₂(g), ΔH=−283.0 kJ for the equations as written.\nTo obtain C(graphite)+½O₂(g)→CO(g), subtract the second reaction from the first. The CO₂ terms cancel and CO becomes a product. The enthalpy is −393.5−(−283.0)=−110.5 kJ per reaction as written. Conservation, phase labels and reaction directions explain the algebra."
           },
           {
             "id": "limits",
-            "titleJa": "15. エンタルピーがわかっても、まだ答えられない問いがある",
-            "titleEn": "15. What enthalpy does not tell us",
-            "bodyJa": "発熱反応ならすべて自然に進むでしょうか。そうではありません。氷が融けるような吸熱過程でも、温度によっては自発的に進みます。反応が自然に進む条件にはエントロピーも関係し、定温定圧ではギブズエネルギー G=H−TS という別の状態量が重要になります。\nまた、発熱する反応でも活性化障壁が大きければ、室温で非常にゆっくりしか進まない場合があります。反応エンタルピーは反応前後の差を表しますが、反応が進む速さを直接決める量ではありません。\nこうしてエンタルピーを理解したことで、「なぜ反応は速く進んだり遅く進んだりするのか」「平衡では何が決まるのか」という次の問題が生まれます。説明が理解を終わらせるのではなく、新しい問いをつくるのです。",
-            "bodyEn": "An exothermic reaction need not be spontaneous under every condition, and an endothermic process such as ice melting can be spontaneous at suitable temperatures. Entropy matters; at constant T and P, Gibbs energy G=H−TS is central to predicting equilibrium and spontaneity.\nNor does reaction enthalpy determine speed. A reaction with favorable overall energetics can remain slow because of an activation barrier. Understanding enthalpy creates new questions about kinetics, entropy and equilibrium rather than closing the subject."
+            "ja": "15　エンタルピーがわかっても、まだ答えられない問いがある",
+            "en": "15  What enthalpy does not tell us",
+            "textJa": "発熱反応ならすべて自然に進むでしょうか。そうではありません。氷が融けるような吸熱過程でも、温度によっては自発的に進みます。反応が自然に進む条件にはエントロピーも関係し、定温定圧ではギブズエネルギー G=H−TS という別の状態量が重要になります。\nまた、発熱する反応でも活性化障壁が大きければ、室温で非常にゆっくりしか進まない場合があります。反応エンタルピーは反応前後の差を表しますが、反応が進む速さを直接決める量ではありません。\nこうしてエンタルピーを理解したことで、「なぜ反応は速く進んだり遅く進んだりするのか」「平衡では何が決まるのか」という次の問題が生まれます。説明が理解を終わらせるのではなく、新しい問いをつくるのです。",
+            "textEn": "An exothermic reaction need not be spontaneous under every condition, and an endothermic process such as ice melting can be spontaneous at suitable temperatures. Entropy matters; at constant T and P, Gibbs energy G=H−TS is central to predicting equilibrium and spontaneity.\nNor does reaction enthalpy determine speed. A reaction with favorable overall energetics can remain slow because of an activation barrier. Understanding enthalpy creates new questions about kinetics, entropy and equilibrium rather than closing the subject."
           }
         ]
       }
