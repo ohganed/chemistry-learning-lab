@@ -1,0 +1,504 @@
+{
+  "schema": "chemistry-knowledge-bridges",
+  "schemaVersion": "1.0",
+  "status": "editorial-draft",
+  "bridges": [
+    {
+      "id": "conservative-state",
+      "chapters": [
+        "2-0",
+        "2-2",
+        "2-1"
+      ],
+      "source": {
+        "ja": "物理：保存力と位置エネルギー",
+        "en": "Physics: conservative forces and potential energy"
+      },
+      "target": {
+        "ja": "化学：状態量・エンタルピー・熱と仕事",
+        "en": "Chemistry: state functions, enthalpy, heat and work"
+      },
+      "hook": {
+        "ja": "途中の道筋に依存しない量は、なぜ便利なのか。力学で理解した性質を熱力学に持ち込む。",
+        "en": "Why is a quantity independent of the route so useful? Bring a familiar principle from mechanics into thermodynamics."
+      },
+      "steps": [
+        {
+          "ja": "保存力を思い出す",
+          "en": "Recall conservative forces",
+          "textJa": "重力のする仕事は、地表付近でgが一定なら Wg=mg(h始−h終) と書けます。途中の道が直線でも曲がっていても、始点と終点の高さが同じなら重力の仕事は同じです。そこで位置エネルギー Ep=mgh を用意でき、重力の仕事は Wg=−ΔEp と表せます。これは公式を覚えるための性質ではなく、「位置という状態だけで差を説明できる」という発見です。",
+          "textEn": "Near Earth with approximately constant g, gravity does work Wg=mg(h_initial−h_final). Whether the path is straight or curved, the work by gravity depends on the heights of the endpoints. We can define potential energy Ep=mgh, so Wg=−ΔEp. The important insight is that a difference is determined by the endpoint states rather than the travelled route."
+        },
+        {
+          "ja": "非保存力を比較する",
+          "en": "Contrast friction and path dependence",
+          "textJa": "一定の動摩擦力が働く単純な条件では、摩擦力のする仕事は Wf=−fL です。到着点が同じでも、移動距離Lが違えば仕事が異なります。したがって一般の摩擦力に対して、位置だけで決まる通常の位置エネルギーを定義できません。出発点と終点だけでは計算できず、どの経路を通ったかが必要になるからです。",
+          "textEn": "For a simple model with constant kinetic friction magnitude f, the work of friction is Wf=−fL. Paths with the same endpoints but different lengths can have different frictional work. Thus, unlike gravity, ordinary friction cannot generally be represented by a potential energy determined solely by position. The process itself matters."
+        },
+        {
+          "ja": "熱力学で同じ構図を見る",
+          "en": "Use the analogy in thermodynamics",
+          "textJa": "熱力学でも、内部エネルギーUは系の状態量です。同じ初状態・終状態ならΔUは同じです。しかし過程の熱qと仕事wは、それぞれ途中の操作に依存し、異なる場合があります。第一法則ΔU=q+wにより、熱と仕事の内訳が変わっても、その和は同じΔUになります。保存力の仕事が位置エネルギーの差と結びつく構図と、「経路への依存」という観点で対応します。",
+          "textEn": "Internal energy U is a thermodynamic state function, so ΔU is fixed by the initial and final states. Heat q and work w can differ between processes, while their sum ΔU=q+w remains fixed by the first law. This resembles the distinction between conservative-force work and path-dependent work, but it is a structural analogy about path independence, not a claim that heat is a mechanical force."
+        },
+        {
+          "ja": "エンタルピーにつながる理由",
+          "en": "Why this matters for enthalpy",
+          "textJa": "圧力P、体積V、内部エネルギーUが状態を指定する量なら、H=U+PVも状態量になります。したがってΔHも始状態と終状態で決まります。これが、経路の違う反応式のエンタルピー変化を足し合わせられるヘスの法則の基礎です。ただし定圧でqP=ΔHとなるには、圧力体積仕事以外の仕事がないなどの条件が必要です。エンタルピーは熱を保存した箱ではありません。",
+          "textEn": "Pressure P, volume V and internal energy U are state properties; hence H=U+PV is also a state function. Its difference ΔH depends only on specified endpoints, providing the foundation for Hess's law. However, identifying constant-pressure heat qP with ΔH requires conditions such as the absence of non-PV work. Enthalpy is not a box storing heat."
+        }
+      ],
+      "limits": {
+        "ja": "対応するのは『始状態と終状態だけで差が決まるか』という性質です。熱そのものが非保存力なのではなく、熱は温度差によるエネルギー移動です。また、摩擦で失われた力学的エネルギーが消滅するわけではなく、周囲も含めると内部エネルギーなどへ移り、全エネルギーは保存されます。",
+        "en": "The analogy concerns dependence on endpoints versus path. Heat is not literally a nonconservative force; it is energy transferred by a temperature difference. Friction does not destroy total energy: it redistributes mechanical energy into internal energy and other forms."
+      },
+      "revisit": {
+        "ja": "保存力で理解した『経路によらない差』を、ΔUとΔHへ読み替えたあと、ヘスの法則に戻ってください。",
+        "en": "Use the endpoint-versus-path distinction to revisit ΔU, ΔH and Hess's law."
+      },
+      "lab": "state-function-lab.html"
+    },
+    {
+      "id": "force-pressure-work",
+      "chapters": [
+        "1-2",
+        "2-0",
+        "0-4"
+      ],
+      "source": {
+        "ja": "物理：力・圧力・仕事",
+        "en": "Physics: force, pressure and work"
+      },
+      "target": {
+        "ja": "化学：気体の膨張と熱力学第一法則",
+        "en": "Chemistry: gas expansion and the first law"
+      },
+      "hook": {
+        "ja": "圧力×体積がなぜJになるのか。気体の式と力学の式は別の公式ではありません。",
+        "en": "Why does pressure times volume have units of joules? Gas thermodynamics connects directly to mechanics."
+      },
+      "steps": [
+        {
+          "ja": "力学の定義を出発点にする",
+          "en": "Start with the mechanics definition",
+          "textJa": "圧力とは単位面積あたりの力で、P=F/Aです。断面積Aのピストンに一様な外圧Pextがかかっていれば、ピストンを押し戻す力の大きさはF=PextAです。ピストンが距離xだけ動けば、体積の増加はΔV=Axになります。ここまでは化学の新しい法則ではなく、高校物理の力と幾何の組み合わせです。",
+          "textEn": "Pressure is force per area, P=F/A. An external pressure Pext acting uniformly on a piston of cross-sectional area A exerts force F=Pext A. Displacement x of that piston changes the gas volume by ΔV=Ax. These relations follow from mechanics and geometry."
+        },
+        {
+          "ja": "仕事の式へ結びつける",
+          "en": "Connect to mechanical work",
+          "textJa": "一定の外圧に逆らって気体が膨張すると、気体が周囲にした仕事の大きさはFx=PextAx=PextΔVです。気体を系にして『周囲が系にした仕事を正』とすれば、w=−PextΔVとなります。Pa×m³=(N/m²)×m³=N·m=Jという単位の整合も確認できます。",
+          "textEn": "When gas expands against a constant external pressure, the magnitude of work done on the surroundings is Fx=PextAx=PextΔV. With work done on the system defined positive, w=−PextΔV. Units confirm the connection: Pa·m³=(N/m²)·m³=N·m=J."
+        },
+        {
+          "ja": "エネルギー保存の式へ戻す",
+          "en": "Use energy conservation",
+          "textJa": "系が熱を受け取ればqは正、系が周囲へ仕事をすればwは負です。第一法則ΔU=q+wへ代入するとq=ΔU+PextΔVが現れます。外圧と系の圧力が始状態・終状態で等しく、一定で、ほかの仕事がなければ、ΔH=ΔU+PΔVと一致し、qP=ΔHが導かれます。ここで初めてエンタルピーの利用価値が具体的になります。",
+          "textEn": "Using the first law ΔU=q+w and the constant-external-pressure work relation gives q=ΔU+PextΔV. If the initial and final system pressures equal the constant external pressure and only PV work occurs, ΔH=ΔU+PΔV=qP. The use of enthalpy follows from the mechanics, rather than being introduced as an isolated formula."
+        }
+      ],
+      "limits": {
+        "ja": "Pextが途中で変わるなら仕事は単純なPΔVではなく積分で考えます。またPVはその瞬間の状態で定まる積であり、仕事そのものと同一ではありません。膨張仕事に対応するのは、条件を明示した場合のPΔVです。",
+        "en": "If external pressure varies, work requires integration rather than a single PΔV product. PV itself is a state-property product, not actual work performed; PΔV corresponds to expansion work only under specified conditions."
+      },
+      "revisit": {
+        "ja": "気体の状態方程式PV=nRTも、圧力・体積が『状態を指定する量』であることを思い出して読むと意味が変わります。",
+        "en": "Revisit PV=nRT as a relation among state variables rather than a detached algebraic rule."
+      }
+    },
+    {
+      "id": "mole-count",
+      "chapters": [
+        "0-1",
+        "1-0",
+        "1-1",
+        "3-3"
+      ],
+      "source": {
+        "ja": "数学：比例と個数をまとめる単位",
+        "en": "Math: proportionality and grouped counting"
+      },
+      "target": {
+        "ja": "化学：モル・反応式の係数・測定",
+        "en": "Chemistry: moles, stoichiometry and measurement"
+      },
+      "hook": {
+        "ja": "個数で反応する粒子を、なぜ質量で測れるのか。ダースからモルへの接続。",
+        "en": "How can a reaction between individual particles be studied by weighing? Extend grouped counting from dozens to moles."
+      },
+      "steps": [
+        {
+          "ja": "数をまとめるという既知の考え",
+          "en": "Reuse grouped counting",
+          "textJa": "卵を12個まとめて1ダースと呼んでも、卵の中身や重さは変わりません。『12個』という個数を数える便利なまとまりができただけです。molも同じ発想ですが、単位はSIであり1 molの要素数は正確に6.02214076×10²³個と定義されます。何を数えるか（分子、原子、イオン、式単位など）も指定します。",
+          "textEn": "A dozen is a convenient count of twelve objects; it does not change their nature. A mole similarly counts specified elementary entities, but one mole is exactly 6.02214076×10²³ entities by SI definition. We must specify whether the entities are molecules, atoms, ions or formula units."
+        },
+        {
+          "ja": "なぜ重さへ接続できるか",
+          "en": "Why mass becomes measurable",
+          "textJa": "原子・分子1個の質量は非常に小さいため直接数えるのは困難ですが、大量に集めれば天秤で測れます。1 molあたりの質量をモル質量M（g/mol）とすれば、測定した質量mからn=m/Mで物質量nを求められます。反応式が与える粒子数の比を、実験で測れる質量につなぐ橋ができるのです。",
+          "textEn": "Individual atoms and molecules are far too small to count conveniently in ordinary experiments. The molar mass M converts measured mass m into amount of substance n=m/M. Equation coefficients give ratios of particle numbers and therefore mole ratios; mass measurement now connects to reaction stoichiometry."
+        },
+        {
+          "ja": "係数と質量保存を再解釈する",
+          "en": "Reinterpret reaction coefficients",
+          "textJa": "2H₂+O₂→2H₂Oでは水素分子2個と酸素分子1個から水分子2個という比です。そのまま2 mol:1 mol:2 molと読めます。『係数の比』が反応の粒子モデルから生まれていることがわかれば、制限試薬を単なる割り算としてでなく、どの反応物が先に不足するかという問題として考えられます。",
+          "textEn": "In 2H₂+O₂→2H₂O, the stoichiometric ratio is two hydrogen molecules to one oxygen molecule to two water molecules, or 2 mol:1 mol:2 mol. Limiting-reagent calculations then become an investigation of which necessary ingredient runs out first, rather than an arbitrary algebraic trick."
+        }
+      ],
+      "limits": {
+        "ja": "molとgは同じ単位ではありません。1 molあたりの質量は物質で異なります。NaCl固体では独立したNaCl分子が集まっていると考えず、式単位を数えます。",
+        "en": "Moles and grams are different quantities. Mass per mole varies by substance. For solid NaCl we count formula units rather than isolated NaCl molecules."
+      },
+      "revisit": {
+        "ja": "モルを理解したあと、溶液濃度や気体の状態方程式へ戻ると、『測っているものは何の個数に対応するか』が見えてきます。",
+        "en": "Revisit solutions and gas laws by asking what counted entities the measurements represent."
+      }
+    },
+    {
+      "id": "vectors-molecular-polarity",
+      "chapters": [
+        "0-2",
+        "0-4",
+        "4-0",
+        "4-4"
+      ],
+      "source": {
+        "ja": "物理・数学：ベクトルと対称性",
+        "en": "Physics and math: vectors and symmetry"
+      },
+      "target": {
+        "ja": "化学：分子の形と極性",
+        "en": "Chemistry: molecular shape and polarity"
+      },
+      "hook": {
+        "ja": "結合が極性をもつのに、分子全体は極性をもたないことがある。なぜか。",
+        "en": "How can a molecule contain polar bonds but have no overall dipole moment?"
+      },
+      "steps": [
+        {
+          "ja": "矢印を足し合わせる",
+          "en": "Add directional quantities",
+          "textJa": "速度や力を考えるとき、同じ大きさでも向きが反対ならベクトルの和がゼロになります。分子の結合双極子にも向きがあります。結合の極性は原子間で電子が偏ることに由来しますが、分子全体の極性は各結合の双極子の向きと立体配置に依存します。",
+          "textEn": "In mechanics, two equal and opposite vectors cancel. Bond dipoles also have directions determined by uneven electron distribution. Molecular polarity depends on the vector sum of contributions and the geometry in which bonds are arranged."
+        },
+        {
+          "ja": "CO₂とH₂Oを比較する",
+          "en": "Compare carbon dioxide and water",
+          "textJa": "CO₂ではC=O結合がそれぞれ極性をもちますが、分子はほぼ直線形で、等しい大きさの結合双極子が反対向きになり打ち消し合います。一方、H₂Oは折れ線形なのでO−H結合の双極子が完全に打ち消されず、分子として極性をもちます。『極性結合がある＝分子全体に双極子がある』とは限りません。",
+          "textEn": "Both C=O bonds in CO₂ are polar, but the linear symmetrical geometry causes their dipole contributions to cancel. Water is bent, so its O−H bond dipoles do not cancel completely, making water a polar molecule. Polar bonds are not sufficient by themselves to infer a net molecular dipole."
+        },
+        {
+          "ja": "別の章へ戻る",
+          "en": "Return with a new tool",
+          "textJa": "このベクトルの理解を使うと、水の分子間相互作用、溶質の溶けやすさ、カルボニル基の反応性などを、単なる物質ごとの暗記から構造による説明へ変えられます。分子形状を理解するためには電子対の配置や量子状態を別途考える必要がありますが、極性の合成は既知のベクトルで扱えるのです。",
+          "textEn": "Vector reasoning turns molecular polarity into a structural prediction, improving explanations of solubility, intermolecular forces and carbonyl reactivity. Geometry itself also depends on electronic structure, but its effect on dipole cancellation uses familiar vector ideas."
+        }
+      ],
+      "limits": {
+        "ja": "実際の分子双極子は単純な結合双極子の足し算だけで厳密に求まるものではありません。非共有電子対や電子の非局在化なども影響し、ベクトル図は説明用のモデルです。",
+        "en": "Exact molecular dipoles are not always obtainable by adding idealized bond dipoles; lone pairs and delocalized electron density matter. The vector picture is an explanatory model."
+      },
+      "revisit": {
+        "ja": "極性の説明から分子間力、さらに水の沸点やタンパク質の折り畳みへ理解を広げられます。",
+        "en": "Extend molecular polarity into intermolecular forces, water's properties and protein folding."
+      }
+    },
+    {
+      "id": "dynamic-equilibrium-rate",
+      "chapters": [
+        "2-1",
+        "2-2",
+        "1-3",
+        "3-3"
+      ],
+      "source": {
+        "ja": "物理：動いていても平均は変わらない状態",
+        "en": "Physics: moving systems with constant averages"
+      },
+      "target": {
+        "ja": "化学：動的平衡と正逆反応速度",
+        "en": "Chemistry: dynamic equilibrium and forward/reverse rates"
+      },
+      "hook": {
+        "ja": "見た目が変わらないことと、内部で何も起きていないことは違う。",
+        "en": "A stable observation does not imply that nothing is happening microscopically."
+      },
+      "steps": [
+        {
+          "ja": "水槽を使って考える",
+          "en": "Imagine a tank with inflow and outflow",
+          "textJa": "水槽へ毎分2 Lの水が入り、同じ2 Lが流れ出ると、水槽の水量は一定です。しかし水の移動は止まっていません。『量が一定』とは『出入りがない』ではなく『出入りがつり合っている』ことです。この見方は化学平衡へのよい土台になります。",
+          "textEn": "Imagine a tank receiving two liters per minute while two liters per minute flow out. Its water level remains steady although water continues moving. Constant amount does not mean no movement; it means balanced flows. This is a useful conceptual entry to chemical equilibrium."
+        },
+        {
+          "ja": "分子の反応へ置き換える",
+          "en": "Transfer to reversible reactions",
+          "textJa": "A⇌Bという可逆反応ではA→BとB→Aが同時に進むことがあります。平衡では正反応速度と逆反応速度が等しく、濃度が一定に保たれます。AとBの濃度そのものが等しくなる必要はありません。反応速度の等しさと濃度の等しさは、別の問いだからです。",
+          "textEn": "In a reversible reaction A⇌B, both A→B and B→A may proceed simultaneously. At equilibrium, the forward and reverse rates are equal, so concentrations are steady; the concentrations of A and B need not be equal. Equal rates are not equal amounts."
+        },
+        {
+          "ja": "定数Kが登場する背景",
+          "en": "Understand why K enters",
+          "textJa": "速度のつり合いだけでなく、特定の温度でどの組成が平衡になるかも知りたい。そこで活量の比から定義される平衡定数Kを導入します。実際の組成から計算したQとKを比較すると、正味の変化の方向を考えられます。見た目の現象、微視的な反応速度、熱力学の平衡という三つの層が接続します。",
+          "textEn": "Besides knowing that rates balance, we want to know the equilibrium composition at a specified temperature. The equilibrium constant K is defined through activities. Comparing a reaction quotient Q with K predicts the thermodynamically favored net direction. The visible state, reaction rates and thermodynamics are linked but distinct explanatory layers."
+        }
+      ],
+      "limits": {
+        "ja": "水槽は流入・流出のある非平衡の定常状態であり、化学の熱力学的平衡そのものではありません。似ているのは『正味の変化がゼロでも個々の過程は続く』という部分だけです。",
+        "en": "The flowing tank is a nonequilibrium steady state, not a thermodynamic equilibrium. The analogy only concerns the possibility of ongoing processes with zero net macroscopic change."
+      },
+      "revisit": {
+        "ja": "酸解離や沈殿の溶解平衡を学んだあと、平衡とは単なる『停止』ではないという理解へ戻ってみてください。",
+        "en": "Revisit acid dissociation and precipitation with the idea that equilibrium is not simply a halted process."
+      }
+    },
+    {
+      "id": "electrical-circuit-redox",
+      "chapters": [
+        "2-5",
+        "3-1",
+        "3-2"
+      ],
+      "source": {
+        "ja": "物理：電気回路と電荷保存",
+        "en": "Physics: circuits and charge conservation"
+      },
+      "target": {
+        "ja": "化学：電池・電極反応・イオンの移動",
+        "en": "Chemistry: cells, electrode reactions and ion migration"
+      },
+      "hook": {
+        "ja": "回路で電荷が流れることと、化学反応で電子が移ることはどうつながるのか。",
+        "en": "How does charge flow in a circuit connect to electron-transfer chemistry?"
+      },
+      "steps": [
+        {
+          "ja": "閉じた回路を思い出す",
+          "en": "Recall a closed circuit",
+          "textJa": "電流が流れるには電荷の流れる経路が必要です。導線では主に電子が電荷を運びますが、水溶液中では陽イオンや陰イオンが電荷を運びます。電池を考える際、導線の電子が電解液中をそのまま自由電子として通過するとイメージすると誤解につながります。",
+          "textEn": "Current requires charge transport through a complete circuit. In metallic wires, electrons carry charge, whereas ions commonly carry current through an electrolyte. Imagining free metallic electrons moving through the bulk electrolyte usually gives the wrong picture of a galvanic cell."
+        },
+        {
+          "ja": "酸化・還元を接続する",
+          "en": "Connect oxidation and reduction",
+          "textJa": "亜鉛がZn²⁺になるとき電子を放出し、銅イオンCu²⁺は電子を受け取ってCuになります。この二つの半反応を離れた電極で行わせると、外部導線を通る電子の流れから電流を取り出せます。電解液中ではイオンの移動が電荷の偏りを調整します。反応式と回路の図がここで一つにつながります。",
+          "textEn": "Zinc oxidation releases electrons and copper-ion reduction consumes them. Separating the half-reactions allows electron flow through an external wire to perform electrical work. Ion movement through electrolyte maintains charge balance. A balanced redox equation and a circuit diagram describe complementary aspects of the same system."
+        },
+        {
+          "ja": "仕事の大きさへ結ぶ",
+          "en": "Connect to electrical work",
+          "textJa": "電荷Qと電位差Eから電気的な仕事の大きさの関係を考えられます。電子n molが移動する場合、電荷の大きさはnFです。可逆条件でのギブズエネルギー変化はΔrG=−nFEと結びつきます。これは化学反応のエネルギーが電気的仕事へ変換される仕組みの一つの表現です。",
+          "textEn": "Electrical work connects charge and voltage. Transferring n moles of electrons corresponds to charge magnitude nF, and reversible cell operation relates Gibbs energy and cell potential through ΔrG=−nFE. This is a thermodynamic description of chemical energy converted into electrical work."
+        }
+      ],
+      "limits": {
+        "ja": "電子は酸化・還元を考える便利な帳簿ですが、酸化数は実際の電子が整数個完全に移ることを常に意味しません。また起電力から実際の電流や反応速度は直接求まりません。内部抵抗と過電圧などの要素も必要です。",
+        "en": "Oxidation-state bookkeeping does not always represent literal transfer of whole electrons. Cell potential alone does not determine actual current or reaction rate; resistance and overpotentials also matter."
+      },
+      "revisit": {
+        "ja": "酸化還元を力学のエネルギー保存、電気回路、熱力学の仕事と結びつけると、電池の説明が一層深まります。",
+        "en": "Return to redox by connecting energy conservation, electric circuits and thermodynamic work."
+      }
+    },
+    {
+      "id": "osmotic-potential",
+      "chapters": [
+        "1-3",
+        "1-4",
+        "2-3",
+        "4-5"
+      ],
+      "source": {
+        "ja": "物理：圧力差と移動",
+        "en": "Physics: pressure differences and transport"
+      },
+      "target": {
+        "ja": "化学・生物：浸透と水ポテンシャル",
+        "en": "Chemistry and biology: osmosis and water potential"
+      },
+      "hook": {
+        "ja": "『水は濃い方へ動く』だけでは、圧力に逆らう浸透を説明できない。",
+        "en": "The slogan 'water moves toward higher solute concentration' cannot explain every osmotic situation."
+      },
+      "steps": [
+        {
+          "ja": "膜と水の動きを観察する",
+          "en": "Observe water across a membrane",
+          "textJa": "水が通るが特定の溶質は通れない膜をはさんで溶液を置くと、条件によって水が片側へ正味移動します。水分子自体は両方向に動き続けます。最初に知りたいのは『何が水の正味移動を決めるのか』です。溶質濃度は重要ですが、それだけが決定要因とは限りません。",
+          "textEn": "With a membrane that passes water but restricts particular solutes, water may flow net to one side. Individual water molecules still move in both directions. The key scientific question is what determines the *net* transfer. Solute concentration is important, but pressure and membrane properties can also matter."
+        },
+        {
+          "ja": "水の化学ポテンシャルへ結ぶ",
+          "en": "Connect to chemical potential",
+          "textJa": "溶質が存在すると、溶媒としての水の化学ポテンシャルが変わります。圧力も水の化学ポテンシャルに影響します。水がどちらへ正味移動するかは、水の化学ポテンシャルの差で考えると統一的に説明できます。植物細胞では細胞壁が支える膨圧も関係し、水ポテンシャルの考え方が便利になります。",
+          "textEn": "Adding solute changes the chemical potential of water; pressure also changes it. The direction of net solvent transport can be understood through differences in water's chemical potential. In plants, a cell wall supports turgor pressure, making water potential especially useful."
+        },
+        {
+          "ja": "浸透圧の式の位置づけ",
+          "en": "See what the osmotic formula approximates",
+          "textJa": "十分希薄で理想的な非電解質の溶液なら、浸透圧は近似的にπ=cRTです。これは『溶液中の水の状態を、外から圧力を加えることでつり合わせる』際の圧力差を与えます。圧力と温度を学んだ物理、溶液を学んだ化学、細胞を学ぶ生物が、同じ現象へ異なる説明を与えているのです。",
+          "textEn": "For an ideal dilute nonelectrolyte solution, π≈cRT estimates the pressure difference needed to balance the osmotic tendency. Physics supplies pressure, chemistry supplies solution behavior, and biology supplies selectively permeable membranes. Their combination is more informative than a one-line mnemonic."
+        }
+      ],
+      "limits": {
+        "ja": "現実の生体膜では溶質の透過性や能動輸送があり、単純な半透膜モデルから外れることがあります。π=cRTは条件付きの近似であり、すべての細胞にそのまま当てはめる式ではありません。",
+        "en": "Real membranes may pass some solutes and actively transport others. The ideal π=cRT model is conditional and should not be applied blindly to every cell."
+      },
+      "revisit": {
+        "ja": "物理の圧力をもう一度読み直すと、浸透圧は単なる『濃度が高い方へ水が動く』という話ではなくなります。",
+        "en": "Revisit pressure and solution equilibria to reinterpret osmosis beyond the standard slogan."
+      }
+    },
+    {
+      "id": "structure-material",
+      "chapters": [
+        "0-3",
+        "4-1",
+        "4-2",
+        "4-3",
+        "5-0",
+        "5-1",
+        "5-2"
+      ],
+      "source": {
+        "ja": "幾何：同じ材料でも並べ方が変わる",
+        "en": "Geometry: arrangement changes properties"
+      },
+      "target": {
+        "ja": "化学：結晶・有機分子・高分子材料",
+        "en": "Chemistry: crystals, molecules and polymer materials"
+      },
+      "hook": {
+        "ja": "同じ原子でできていても、つながり方と並び方で別の物性が生まれる。",
+        "en": "Identical atoms can produce different materials through connectivity and arrangement."
+      },
+      "steps": [
+        {
+          "ja": "構成元素だけで決まらない",
+          "en": "Elemental composition is not enough",
+          "textJa": "ダイヤモンドと黒鉛はどちらも炭素でできていますが、結合の網目と層の構造が異なるため、硬さや電気的性質が違います。これは『材料を構成する粒子』だけでは性質が決まらず、粒子がどう結合し空間にどう並ぶかが重要だという例です。",
+          "textEn": "Diamond and graphite both consist of carbon yet have different mechanical and electronic properties because their bonding networks and layered arrangements differ. Chemical composition alone does not fully specify material properties."
+        },
+        {
+          "ja": "分子から高分子へつなぐ",
+          "en": "Extend from molecules to polymers",
+          "textJa": "エタノールとジメチルエーテルは分子式が同じでも結合の順序が異なります。ポリエチレンでも分子量、枝分かれ、結晶性が異なると、同じ繰り返し単位でも柔らかさや強度が変わります。分子の構造と、高分子鎖の集まりとしての構造を階層的に考えると、異なる章の内容がつながります。",
+          "textEn": "Ethanol and dimethyl ether share a molecular formula but differ in atom connectivity. Polyethylene samples can share repeat units while differing in chain lengths, branching and crystallinity, which alter mechanical properties. Structural reasoning extends from molecules to assemblies of macromolecular chains."
+        },
+        {
+          "ja": "性質を説明する変数が増える",
+          "en": "Introduce more explanatory variables",
+          "textJa": "原子の種類だけを原因と考えると例外が増えます。しかし結合、立体配置、分子間相互作用、結晶性、欠陥を順に考えれば、同じ元素や分子式でも異なる物性になる理由を説明できます。『新しい知識が以前の知識の説明力を増やす』ことを意識してください。",
+          "textEn": "Adding bonding, three-dimensional geometry, intermolecular forces, crystallinity and defects turns apparent exceptions into explainable differences. Each new scale of structure adds variables that improve earlier predictions."
+        }
+      ],
+      "limits": {
+        "ja": "構造から性質を予測するには、温度、圧力、純度、製造条件なども必要です。分子構造が同じなら材料特性も必ず同じという意味ではありません。",
+        "en": "Material properties also depend on temperature, pressure, purity and processing history. Identical molecular structures do not imply identical bulk properties."
+      },
+      "revisit": {
+        "ja": "結晶→異性体→高分子へ進んだ後、最初の『元素の種類で性質が決まる』という説明を読み直してみてください。",
+        "en": "After studying isomers and polymers, return to the earlier question of how much composition alone can predict."
+      }
+    },
+    {
+      "id": "weakacid-equilibrium",
+      "chapters": [
+        "2-2",
+        "2-3",
+        "2-4",
+        "4-3"
+      ],
+      "source": {
+        "ja": "数学：比・対数・平衡",
+        "en": "Math: ratios, logarithms and equilibrium"
+      },
+      "target": {
+        "ja": "化学：酸解離・pH・緩衝液",
+        "en": "Chemistry: dissociation, pH and buffers"
+      },
+      "hook": {
+        "ja": "弱酸のpH式は暗記するものではなく、平衡と比の考えから必要になる。",
+        "en": "The weak-acid pH formula follows from a need to describe equilibria and ratios."
+      },
+      "steps": [
+        {
+          "ja": "酸は全部電離するのか",
+          "en": "Does every acid dissociate completely?",
+          "textJa": "酸を水に溶かしたとき、すべての分子が必ずイオンになるわけではありません。例えば酢酸では、電離している酢酸分子と電離していない酢酸分子が共存します。すると濃度だけではH₃O⁺の量を決められず、電離平衡を考える必要が生まれます。",
+          "textEn": "Not every dissolved acid molecule dissociates. Weak acids such as acetic acid coexist with their conjugate base in water. Nominal acid concentration alone therefore cannot tell us hydronium concentration; an equilibrium model is required."
+        },
+        {
+          "ja": "平衡定数を使う理由",
+          "en": "Why the acid equilibrium constant is useful",
+          "textJa": "HA+H₂O⇌H₃O⁺+A⁻を考えると、酸解離定数Kaは平衡での活量の比として定義されます。希薄溶液では濃度による近似を使うことがあります。すでに学んだ平衡定数の考えを、酸にだけ特別なものとして覚え直す必要はありません。",
+          "textEn": "For HA+H₂O⇌H₃O⁺+A⁻, the acid dissociation constant Ka is an equilibrium activity ratio (with water as the solvent reference). Concentration approximations are useful in dilute solutions. This is the same equilibrium reasoning used elsewhere in chemistry."
+        },
+        {
+          "ja": "pHはなぜ対数なのか",
+          "en": "Why pH uses a logarithm",
+          "textJa": "H₃O⁺の活量は大きな桁の範囲で変化します。それを扱いやすい尺度にするためpH=−log₁₀ a(H⁺)を用います。10倍の差がpHで1だけの差に対応します。滴定や緩衝液の式は、この対数と平衡の比が結びついたものです。変形手順を理解すれば、独立した公式を大量に覚える必要は減ります。",
+          "textEn": "Hydrogen-ion activity spans large orders of magnitude, so pH=−log₁₀ a(H⁺) compresses the scale. A factor of ten corresponds to one pH unit. Titration and buffer equations combine equilibrium ratios with logarithms; their relationships explain the formulas."
+        }
+      ],
+      "limits": {
+        "ja": "pHは厳密には単なるH⁺のモル濃度の負の対数ではありません。活量を用いる量であり、強い電解質・高濃度では濃度による近似の精度が低くなります。",
+        "en": "pH is defined in terms of hydrogen-ion activity rather than merely the negative logarithm of concentration. Concentration approximations become less reliable in nonideal solutions."
+      },
+      "revisit": {
+        "ja": "平衡の章から酸塩基・滴定へ進んだあと、再び平衡定数とは何を測っているのかへ戻ると理解が深まります。",
+        "en": "After studying acid–base reactions, revisit the meaning of equilibrium constants."
+      }
+    },
+    {
+      "id": "stereochemistry-biological-specificity",
+      "chapters": [
+        "4-0",
+        "4-4",
+        "4-5",
+        "5-2"
+      ],
+      "source": {
+        "ja": "幾何：鏡像と三次元配置",
+        "en": "Geometry: mirror images and three-dimensional form"
+      },
+      "target": {
+        "ja": "化学・生物：異性体と酵素の選択性",
+        "en": "Chemistry and biology: isomers and enzyme specificity"
+      },
+      "hook": {
+        "ja": "原子の種類と数が同じでも、生物の反応は別の物質として区別する。",
+        "en": "Biology can distinguish molecules with the same formula because three-dimensional structure matters."
+      },
+      "steps": [
+        {
+          "ja": "平面図から立体へ",
+          "en": "Go beyond flat structural drawings",
+          "textJa": "分子式C₆H₁₂O₆で同じ数の原子を含んでも、糖の結合の順序や立体配置は一つとは限りません。鏡像関係の分子でも重ね合わせられないものがあります。分子の働きを考えるには、紙面上の化学式だけでなく三次元の構造を意識する必要があります。",
+          "textEn": "A molecular formula such as C₆H₁₂O₆ does not uniquely determine connectivity or stereochemistry. Some molecules are non-superimposable mirror images. Understanding their function requires considering three-dimensional geometry, not just a flat chemical formula."
+        },
+        {
+          "ja": "酵素という相手がいる",
+          "en": "Consider a chiral biological partner",
+          "textJa": "酵素の活性部位は立体的な構造をもちます。基質となる分子がその場所へ近づくとき、結合の位置や向きが反応できるかどうかに影響します。デンプンのα結合とセルロースのβ結合の違いは、消化酵素による加水分解の違いにもつながります。",
+          "textEn": "Enzyme active sites are three-dimensional. The orientation and linkage of substrates affect binding and catalysis. Differences between starch α-linkages and cellulose β-linkages help explain why human digestive enzymes process them differently."
+        },
+        {
+          "ja": "新しい知識で古い分類を読み直す",
+          "en": "Revisit simple classifications",
+          "textJa": "『同じ分子式なら同じ物質』という仮説は異性体によって修正されます。さらに『同じ官能基なら同じ働き』という仮説も、生体内での立体選択性を知ると不十分だとわかります。説明できる範囲が広がったことが学習の成果です。",
+          "textEn": "Isomerism challenges the claim that identical formulas imply identical substances. Biological stereoselectivity then challenges the claim that identical functional groups imply identical functions. A useful sign of learning is an expanded and more precise scope of explanation."
+        }
+      ],
+      "limits": {
+        "ja": "鏡像異性体は非キラルな環境では多くの物性が同じこともあります。すべての生物作用が必ず異なるわけではなく、相手分子や環境が重要です。",
+        "en": "Enantiomers often share many properties in achiral environments. Their biological effects do not universally differ; the chiral environment and interacting partner matter."
+      },
+      "revisit": {
+        "ja": "糖・アミノ酸・高分子へ進んだあと、有機化学の『構造式』の意味へ戻ってください。",
+        "en": "Return to structural formulas after studying carbohydrates, amino acids and polymers."
+      }
+    }
+  ]
+}
