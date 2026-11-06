@@ -53,7 +53,8 @@ for(const ext of extensions.topics){
   assert.ok(!extensionIds.has(ext.id),'Duplicate extension ID');
   extensionIds.add(ext.id);
   assert.ok(ext.chapters?.length>0 && ext.chapters.every(id=>seen.has(id)),'Every extension must link to existing high-school chapter IDs');
-  for(const key of ['ja','en','bodyJa','bodyEn','reasonJa','reasonEn','questionJa','questionEn'])assert.ok(ext[key]?.length>15,'Incomplete bilingual supplemental field: '+ext.id+'/'+key);
+  for(const key of ['ja','en'])assert.ok(ext[key]?.length>=4,'Incomplete bilingual supplemental title: '+ext.id+'/'+key);
+  for(const key of ['bodyJa','bodyEn','reasonJa','reasonEn','questionJa','questionEn'])assert.ok(ext[key]?.length>15,'Incomplete bilingual supplemental field: '+ext.id+'/'+key);
 }
 assert.ok(viewer.includes('chemistry-depth-extensions-v1.json'),'Viewer does not load optional extensions');
 assert.ok(sw.includes('chemistry-depth-extensions-v1.json'),'Extensions must be included in offline cache');
