@@ -79,6 +79,32 @@
             "en": "Alcohol oxidation reveals how local connectivity changes products even within one functional group. IR and NMR later provide experimental evidence for different molecular structures. Biochemistry extends stereochemical reasoning to enzyme recognition and molecular function."
           }
         ]
+      },
+      "guidedExample": {
+        "titleJa": "炭化水素C₆H₆の不飽和度を構造の可能性へつなげる",
+        "titleEn": "Relate the formula C₆H₆ to degrees of unsaturation",
+        "steps": [
+          [
+            "分子式C₆H₆は炭素6個、水素6個を示しますが、構造は一つに決まりません。まず飽和した鎖式炭化水素に比べて水素がどれだけ少ないかを数えます。",
+            "The formula C₆H₆ specifies six carbons and six hydrogens, not a unique structure. Compare its hydrogen count with the corresponding saturated acyclic hydrocarbon."
+          ],
+          [
+            "炭素6個の鎖式アルカンでは一般式CnH₂n+₂からC₆H₁₄です。ここではC、Hのみからなる中性分子を仮定して不飽和度（DBE）を考えます。",
+            "A saturated acyclic alkane with six carbons has formula C₆H₁₄. Assume a neutral hydrocarbon and use degree of unsaturation (double-bond equivalents, DBE)."
+          ],
+          [
+            "DBE=(2C+2−H)/2なのでC=6、H=6を代入し、DBE=(12+2−6)/2=4となります。水素原子8個分の不足はH₂の4組分に対応します。",
+            "Use DBE=(2C+2−H)/2. Substitution gives (12+2−6)/2=4, corresponding to four pairs of missing hydrogens relative to the saturated reference."
+          ],
+          [
+            "環1つ、二重結合3つという構造ならDBE=4を満たし、ベンゼンもこの条件に合います。しかしDBE=4という数字だけではベンゼンと確定できません。三重結合は1つでDBEを2増やすため、別の組み合わせも可能です。",
+            "One ring plus three double bonds yields DBE 4, consistent with benzene. But the numerical DBE does not prove benzene. One triple bond contributes two DBE, and other structures can share the same value."
+          ],
+          [
+            "この式は分子構造を絞り込む道具です。次にスペクトルや反応性の情報を加えると、どの構造がもっとも妥当か考えられます。『公式で答えが一意に出る』という思い込みに注意します。",
+            "DBE narrows structural possibilities but does not uniquely identify the compound. Spectroscopy and reactivity provide further evidence. A calculated constraint is not the same as a fully determined structure."
+          ]
+        ]
       }
     },
     {
