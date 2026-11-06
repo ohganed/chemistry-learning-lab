@@ -31,6 +31,19 @@ for (let group=0;group<expected.length;group++) {
   });
 }
 assert.equal(seen.size,29);
+const enthalpy=all.find(x=>x.id==='2-0');
+assert.ok(enthalpy.originJourney?.version==='1.0','Enthalpy motivation course must be versioned');
+assert.equal(enthalpy.originJourney.sections.length,10,'Ten progressive enthalpy explanations are required');
+const journeyIds=['question','system','internal','firstlaw','piston','why','distinction','reaction','hess','boundaries'];
+assert.deepEqual(enthalpy.originJourney.sections.map(x=>x.id),journeyIds);
+for(const block of enthalpy.originJourney.sections){
+ assert.ok(block.ja?.length>10 && block.en?.length>10,'Missing bilingual headings for '+block.id);
+ assert.ok(block.textJa?.length>=140 && block.textEn?.length>=220,'Enthalpy explanation too short for '+block.id);
+}
+assert.ok(enthalpy.originJourney.sections.find(x=>x.id==='why').textJa.includes('H = U + PV'),'Enthalpy definition is derived');
+assert.ok(enthalpy.originJourney.sections.find(x=>x.id==='firstlaw').textJa.includes('ΔU = q + w'),'The first law must precede enthalpy');
+assert.ok(enthalpy.originJourney.sections.find(x=>x.id==='piston').textJa.includes('P_ext ΔV'),'Expansion work must be explained');
+
 const requiredLenses=['observation','particles','model','limits','revisit'];
 let guidedCount=0,reasoningCount=0;
 for(const ch of all) {
