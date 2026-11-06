@@ -49,7 +49,37 @@
         "ja": "氷が融けるのは吸熱なのに、なぜ高温では自然に起こるのだろうか。",
         "en": "Why can ice melt spontaneously at high temperature even though melting absorbs heat?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "燃料を燃やすと熱が出る一方、氷が融けると周囲から熱を吸収します。これらを単に『熱い・冷たい』で整理するのではなく、物質の前後の状態とエネルギーの移動として考えます。温度が上がることと反応エンタルピーが大きいことは同じではなく、物質の量や熱容量、断熱条件によって温度変化は異なります。",
+            "en": "Combustion can release heat while melting ice absorbs heat, but temperature change is not identical to reaction enthalpy. Observed temperature also depends on sample amount, heat capacity, energy losses and experimental conditions. Begin by defining the system and surroundings, then identify which energy transfer you measure."
+          },
+          {
+            "type": "particles",
+            "ja": "化学反応では既存の結合を切り、別の結合を形成することがあります。結合を切るためには一般にエネルギーを要し、結合が形成されるとエネルギーが放出されます。生成物全体が反応物より低いエンタルピーにあると、その差に応じて発熱する場合があります。ただし反応が実際に進む速さはエネルギーの途中の障壁にも関係します。",
+            "en": "A reaction often requires breaking some bonds and making others. Breaking bonds generally costs energy; forming bonds releases it. Exothermic reactions have products with lower enthalpy than reactants under the specified conditions. This overall difference does not tell us the size of the kinetic barrier or how quickly products form."
+          },
+          {
+            "type": "model",
+            "ja": "定圧下で圧力体積仕事以外を無視できる場合、系が受け取る熱qₚ=ΔHです。例えば断熱に近い条件で液体100 gが2.0 K温まったなら、比熱容量を4.18 J g⁻¹ K⁻¹としてq≈100×4.18×2.0=836 Jです。これが発熱反応によるものなら反応系からの熱移動は約−836 Jと表します。符号は『どちらを系にするか』から判断します。",
+            "en": "At constant pressure, if only pressure–volume work is considered, heat absorbed by the system equals ΔH. If 100 g of a water-like liquid warms by 2.0 K, q≈100×4.18×2.0=836 J enters that liquid. With the reacting chemicals defined as the system and negligible losses, the reaction releases about 836 J. Sign conventions follow the chosen system."
+          },
+          {
+            "type": "limits",
+            "ja": "ヘスの法則が使えるのはエンタルピーが状態関数だからです。どんな経路でも始状態と終状態が同じならΔHは同じですが、熱容量の温度依存や相転移を含めるなら状態を指定しなければなりません。またΔHが負でも反応が自発的とは限らず、ΔG=ΔH−TΔS（定温定圧の条件）から判断する場合があります。",
+            "en": "Hess's law relies on enthalpy being a state function: identical initial and final states imply the same ΔH. Physical phases and temperatures must be specified. A negative enthalpy change is not sufficient to prove spontaneity; Gibbs energy and entropy must be considered under suitable constant-temperature and constant-pressure conditions."
+          },
+          {
+            "type": "revisit",
+            "ja": "反応速度を学んだ後で熱化学に戻ると、発熱する燃料が常温でただちに燃えない理由を説明できます。化学平衡を学べば、発熱・吸熱からの平衡移動を考え、大学の自由エネルギーを学べばなぜΔHだけで反応の方向を判断できないかが明確になります。電池の仕事も同じ熱力学につながります。",
+            "en": "Revisiting thermochemistry after kinetics explains why energetic fuels do not necessarily react rapidly at room temperature. Equilibrium and Gibbs energy reveal why heat release alone does not decide reaction direction. Electrochemical work connects to the same thermodynamic description."
+          }
+        ]
+      }
     },
     {
       "id": "2-1",
@@ -93,7 +123,37 @@
         "ja": "反応を速くする方法と、最終的な生成量を増す方法は同じだろうか。",
         "en": "Are the best ways to speed a reaction the same as those that increase final yield?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "鉄は空気中で比較的ゆっくり腐食しますが、鉄粉は条件によって激しく反応する場合があります。反応の速さには表面積、温度、濃度などが影響します。しかし速い反応が必ず生成物の多い反応というわけではありません。時間とともに組成がどう変わったかを測るのが速度論の出発点です。",
+            "en": "Iron can corrode slowly while finely divided metal may react much faster under suitable conditions. Surface area, concentration and temperature influence rates, but a faster process does not necessarily end with more product. Kinetics begins by measuring changes in composition over time."
+          },
+          {
+            "type": "particles",
+            "ja": "反応する粒子は衝突する必要があることがありますが、衝突のすべてが化学反応になるわけではありません。分子の向き、電子状態、反応経路の活性化障壁などが関係します。触媒は別の反応経路を提供して障壁を下げる場合があり、触媒自身が途中で反応しても全体として再生されます。",
+            "en": "Many reactions require molecular encounters, yet not every collision is effective. Relative orientation, electronic rearrangements and activation free-energy barriers affect the chance of reaction. A catalyst can provide a different pathway with a lower barrier and is regenerated in the overall catalytic cycle."
+          },
+          {
+            "type": "model",
+            "ja": "A→Bの単純な一次反応なら−d[A]/dt=k[A]であり、積分すると[A](t)=[A]₀e⁻ᵏᵗとなります。半減期t₁/₂=ln2/kが濃度に依存しないことも導けます。一方、二次反応では時間変化の形が異なります。速度式の指数は実験から求めるもので、複雑な反応では化学反応式の係数をそのまま使えません。",
+            "en": "For a simple first-order A→B reaction, −d[A]/dt=k[A] and [A](t)=[A]₀e⁻ᵏᵗ. Its half-life is ln2/k. Second-order reactions have different time dependencies. Rate-law exponents are experimentally determined, not simply copied from stoichiometric coefficients in a complex overall reaction."
+          },
+          {
+            "type": "limits",
+            "ja": "速度定数kの単位は反応次数によって異なります。一次反応ならs⁻¹、二次反応なら通常L mol⁻¹ s⁻¹などです。アレニウス式k=Aexp(−Ea/RT)も一定の適用範囲があり、温度で反応機構自体が変わる場合には単純な直線関係が成り立たないこともあります。触媒が平衡定数を変えると考えるのは誤りです。",
+            "en": "The units of k depend on reaction order: s⁻¹ for first-order and often L mol⁻¹ s⁻¹ for second-order kinetics. Arrhenius behavior is an approximation over a relevant temperature range. Changes in mechanism can spoil simple patterns. Catalysts alter rates without changing thermodynamic equilibrium constants at fixed temperature."
+          },
+          {
+            "type": "revisit",
+            "ja": "化学平衡を学んだ後には、可逆反応の正逆速度が等しくてもゼロではないと理解できます。酵素を学ぶと、触媒の反応経路と選択性が生体の代謝へ広がります。熱化学の反応エンタルピーと速度論の活性化エネルギーを並べると、反応の全体の利得と途中の障壁を区別できます。",
+            "en": "Equilibrium later clarifies why both forward and reverse reactions continue at equal rates. Enzymes connect catalysis to biology. Comparing reaction enthalpy with kinetic activation barriers distinguishes the energetic difference between endpoints from the hurdle along a reaction pathway."
+          }
+        ]
+      }
     },
     {
       "id": "2-2",
@@ -137,7 +197,37 @@
         "ja": "閉じた容器で反応の色が一定になったとき、反応停止と動的平衡をどう区別できるだろうか。",
         "en": "How could one distinguish dynamic equilibrium from a stopped reaction when the color stays constant?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "密閉容器の中で反応の色が一定になっても、反応が止まったとは限りません。可逆反応では正反応と逆反応が同じ速さになれば、見かけの濃度は一定になります。反応途中で濃度が変わっている状態と、動的平衡にある状態は別です。『変化が観察されない』ことだけから分子の動きを決めつけないことが科学的思考の訓練になります。",
+            "en": "A constant color in a closed reacting system does not necessarily mean that reactions have stopped. In a reversible reaction, bulk concentrations can remain constant when forward and reverse rates balance. We must distinguish a changing transient composition from dynamic equilibrium, and avoid inferring microscopic inactivity from a static observation."
+          },
+          {
+            "type": "particles",
+            "ja": "分子レベルではA→BとB→Aが同時に起こり得ます。Aが多いと正反応が速い場合があり、Bが増えるにつれて逆反応も進みます。平衡では微視的な反応が続いていても正味の変化はゼロです。濃度が同じになる必要はなく、等しいのは正逆反応速度である点が重要です。",
+            "en": "At the particle level, A→B and B→A can proceed at the same time. As the mixture composition evolves, the relative rates may shift. Equilibrium means the net macroscopic change vanishes, not that the two concentrations must be equal. The equal quantities are the forward and reverse rates."
+          },
+          {
+            "type": "model",
+            "ja": "A⇌Bの簡単なモデルではQ=a(B)/a(A)とし、平衡ではQ=Kです。例えば理想希薄近似でK=4、[A]=0.20、[B]=0.40ならQ=2<Kなので正方向の変化が熱力学的に有利です。大学ではΔrG=RTln(Q/K)と書け、Q=KでΔrG=0になります。『なぜその向きに進むか』を自由エネルギーで説明できます。",
+            "en": "For the simple reaction A⇌B, Q=a(B)/a(A), and equilibrium requires Q=K. In an ideal-dilute example, K=4, [A]=0.20 and [B]=0.40 give Q=2<K, so net forward change is favorable. The deeper thermodynamic relation ΔrG=RTln(Q/K) shows that ΔrG=0 when Q=K."
+          },
+          {
+            "type": "limits",
+            "ja": "平衡定数Kは指定した反応式の書き方と温度に依存します。反応式を逆向きにするとKは逆数になり、係数を全体で2倍すれば対応するKは二乗されます。濃度を変えた直後にKが変わるのではなくQが変わり、組成が再調整されます。温度が変わった場合はK自体が変化し得ます。触媒だけではKは変わりません。",
+            "en": "K depends on temperature and how the reaction is written. Reversing a reaction inverts K; multiplying coefficients by two squares K. A concentration perturbation changes Q rather than K at fixed temperature, followed by re-equilibration. Temperature can change K, while an ideal catalyst at fixed temperature cannot."
+          },
+          {
+            "type": "revisit",
+            "ja": "反応速度を先に学んでいると、正逆速度の等しさとして平衡を理解できます。酸・塩基の電離と溶解度積を学ぶと、同じQ/Kの考え方が全く別の現象に使えるとわかります。大学で化学ポテンシャルを学んだ後には、ルシャトリエの原理の経験的な説明を熱力学へ置き換えられます。",
+            "en": "Prior knowledge of kinetics makes dynamic equilibrium a balance of forward and reverse rates. Acid dissociation and solubility products reuse the same Q/K framework in other contexts. Chemical potential later grounds Le Châtelier's heuristic in a more general thermodynamic principle."
+          }
+        ]
+      }
     },
     {
       "id": "2-3",
@@ -181,7 +271,37 @@
         "ja": "酢とレモン果汁の酸性度を比べるなら、どんな量と測定が必要だろうか。",
         "en": "Which measurements would fairly compare acidity of vinegar and lemon juice?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "レモン汁は酸性、石けん水は塩基性という観察は出発点にすぎません。酸性の強さを調べるにはpHを測ることがありますが、pHは濃度と同じ量ではありません。酢酸水溶液のような弱酸では電離の程度が関係し、同じ濃度でも酸によってpHは異なります。定義から測定値への道筋を確認しましょう。",
+            "en": "Lemon juice and many cleaning solutions have different acid–base behaviors, but labels such as 'acidic' do not quantify them. pH is not simply the same as acid concentration. In a weak acid solution, partial dissociation and equilibrium affect measured hydrogen-ion activity, so solutions with equal nominal concentrations can have different pH."
+          },
+          {
+            "type": "particles",
+            "ja": "ブレンステッドの酸はプロトンを渡す物質、塩基は受け取る物質です。酢酸HAが水へH⁺を渡すとA⁻とH₃O⁺を生じます。水も相手によって酸にも塩基にもなります。ある酸がH⁺を渡した後のA⁻は共役塩基であり、酸と共役塩基の相対的な安定性が電離の平衡に関係します。",
+            "en": "In the Brønsted framework an acid donates a proton and a base accepts it. A weak acid HA transfers a proton to water, yielding A⁻ and H₃O⁺. Water can behave as either acid or base, depending on its partner. The resulting A⁻ is the conjugate base, and the stability of these species helps determine equilibrium."
+          },
+          {
+            "type": "model",
+            "ja": "pH=−log₁₀a(H⁺)が基本定義であり、理想的な希薄溶液では−log₁₀([H₃O⁺]/(1 mol L⁻¹))と近似します。例えば濃度が1.0×10⁻³ mol/LならpH≈3です。対数は『10倍変わると1だけ変わる』という変換です。弱酸の電離定数KaはKa≈[H₃O⁺][A⁻]/[HA]と近似できますが、活量を使うのが熱力学的な形です。",
+            "en": "The basic definition is pH=−log₁₀a(H⁺). For a sufficiently dilute solution, a common approximation is −log₁₀([H₃O⁺]/(1 mol L⁻¹)); 1.0×10⁻³ mol/L then gives pH≈3. The logarithm converts a factor of ten into one pH unit. Weak-acid Ka may be approximated using concentrations, but activities are the thermodynamic quantities."
+          },
+          {
+            "type": "limits",
+            "ja": "『強い酸』と『濃い酸』は別の分類です。強い酸を極端に希釈すればpHが中性に近づく場合があります。25℃の純水のpHは近似的に7ですが、温度が違えば中性のpHも変わります。極端な希薄溶液では水の自己電離を無視できず、単純にpH=−logcだけを使うと不合理な結果になります。",
+            "en": "Acid strength and concentration are distinct. Diluting a strong acid can bring pH near neutrality. At 25°C neutral water has pH near seven, but neutral pH changes with temperature. For extremely dilute acid, water autoionization cannot be neglected, and a naïve −log c calculation may produce nonsense."
+          },
+          {
+            "type": "revisit",
+            "ja": "化学平衡を知っていると、酸解離を新しい特別な現象ではなく可逆反応として理解できます。生化学へ進むとタンパク質の電荷、酵素反応、血液の緩衝作用に同じ考えを使えます。農学では土壌pHが栄養素の溶解や吸収を左右するため、酸塩基が植物の栄養にも直結します。",
+            "en": "Acid dissociation is another chemical equilibrium. Later, the same reasoning explains protein charge, enzyme catalysis and blood buffering. Soil pH in agricultural chemistry affects nutrient availability and uptake, connecting a familiar classroom scale to plant nutrition."
+          }
+        ]
+      }
     },
     {
       "id": "2-4",
@@ -225,7 +345,37 @@
         "ja": "水道水の酸性度を測りたいとき、pHと酸を中和するのに必要な量は同じ情報だろうか。",
         "en": "Are pH and the amount of base needed to neutralize a sample the same kind of information?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "同じ量の酸を中和しても、滴定の終点付近のpHが違うことがあります。強酸と強塩基では当量点のpHが25℃で7付近になりやすい一方、弱酸と強塩基では塩の加水分解のため7より高くなる場合があります。ここから『中和＝pH7』という覚え方の限界に気づけます。",
+            "en": "Two titrations can consume the same amount of base but have different pH values near equivalence. Strong-acid/strong-base equivalence is near pH seven at 25°C, whereas weak-acid/strong-base equivalence is usually above seven due to conjugate-base hydrolysis. Neutralization is a stoichiometric concept, not automatically a pH claim."
+          },
+          {
+            "type": "particles",
+            "ja": "緩衝液では弱酸HAと共役塩基A⁻が共存します。少量の強酸を加えるとA⁻がH⁺を受け取り、少量の強塩基を加えるとHAがH⁺を与えます。添加物が全部消えるわけではなく、平衡組成が変化してpH変化が抑えられます。緩衝能はHAとA⁻の総量に依存するので、無限に耐えることはできません。",
+            "en": "A buffer contains a weak acid HA and its conjugate base A⁻. Added strong acid is largely consumed by A⁻, whereas added strong base is largely consumed by HA. The equilibrium composition shifts, moderating pH changes; the buffer has finite capacity and can be exhausted."
+          },
+          {
+            "type": "model",
+            "ja": "一価の酸・塩基で中和する量はn(acid)=n(base)が基本となります。例えばHCl 0.10 mol/Lを20.0 mL用い、NaOH 0.20 mol/Lで中和するならNaOHは10.0 mL必要です。弱酸緩衝液では適切な近似条件下でpH≈pKa+log₁₀([A⁻]/[HA])が使えます。比が1ならpH≈pKaという意味が見えてきます。",
+            "en": "For a monoprotic acid reacting 1:1 with base, n(acid)=n(base) at equivalence. Thus 20.0 mL of 0.10 mol/L HCl requires 10.0 mL of 0.20 mol/L NaOH. A weak-acid buffer under appropriate assumptions obeys pH≈pKa+log₁₀([A⁻]/[HA]); equal concentrations yield pH≈pKa."
+          },
+          {
+            "type": "limits",
+            "ja": "『当量点』は反応式の必要量が一致する状態で、『終点』は測定法や指示薬で判定した観察です。両者はずれる可能性があります。緩衝式も非常に濃い溶液、極端なpH、弱酸がほとんど残っていない条件などでは近似の精度が落ちます。測定の不確かさと化学平衡の近似を同時に考えましょう。",
+            "en": "The equivalence point is defined by stoichiometry; the endpoint is an observed indicator or instrumental response, and the two may differ. Buffer approximations can fail at high ionic strength, extreme dilution or when one component is nearly depleted. Both equilibrium assumptions and measurement uncertainty matter."
+          },
+          {
+            "type": "revisit",
+            "ja": "pHを学んだ直後には単なる計算問題に見えたことが、滴定では実験から濃度を推定する仕事へ変わります。緩衝液を通して生命科学に進めば、血液や細胞がpH変化を抑える仕組みとして再理解できます。分析化学では、値の不確かさと標準液の校正も不可欠です。",
+            "en": "A pH formula becomes a measurement technique in titration. Buffer concepts then help explain physiological acid–base regulation. Analytical chemistry adds uncertainty, calibration and endpoint selection, showing that calculating a number and measuring a chemical quantity are distinct tasks."
+          }
+        ]
+      }
     },
     {
       "id": "2-5",
@@ -269,7 +419,37 @@
         "ja": "金属のイオン化傾向と電池の起電力が一致しない場合、何を調べる必要があるか。",
         "en": "If a simple activity series does not predict cell performance, what conditions or potentials should be considered?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "電池の中で亜鉛が溶け、別の電極に銅が析出する現象を見ると、化学反応によって電気的な仕事が得られることがわかります。ところが電子が電解液をそのまま通り抜けると考えると仕組みを誤ります。外部回路では電子が電流を担い、内部ではイオンの移動が電荷の偏りを調整します。",
+            "en": "In a galvanic cell, zinc can dissolve while copper deposits elsewhere, allowing a chemical reaction to deliver electrical work. However, electrons do not normally travel through the electrolyte as free metallic electrons. They move in the external conductor while ions inside the cell maintain charge balance."
+          },
+          {
+            "type": "particles",
+            "ja": "酸化では電子を失い、還元では電子を受け取ります。Zn→Zn²⁺+2e⁻が酸化、Cu²⁺+2e⁻→Cuが還元です。電池の陽極では酸化、陰極では還元が起こります。電気分解でも酸化は陽極、還元は陰極ですが、電極の正負は装置の種類で変わり得ます。酸化数は実際の電子の完全移動を表すとは限らない形式的な数です。",
+            "en": "Oxidation loses electrons and reduction gains them: Zn→Zn²⁺+2e⁻ and Cu²⁺+2e⁻→Cu. Oxidation occurs at the anode and reduction at the cathode in both galvanic and electrolytic systems. Electrode signs differ with operating mode. Oxidation states are formal bookkeeping numbers, not always literal full-electron transfers."
+          },
+          {
+            "type": "model",
+            "ja": "通過した電荷Q=It、電子の物質量nₑ=Q/Fと考えると、析出量が求められます。Cu²⁺+2e⁻→Cuでは電子2 molにつき銅が1 mol析出します。約96500 Cが電子1 molの電荷に相当するので、193000 Cでは理論的にCuが1 mol析出します。単位はA×s=C、C÷(C/mol)=molとなります。",
+            "en": "Use Q=It for electric charge and nₑ=Q/F for electron amount. Depositing Cu via Cu²⁺+2e⁻→Cu needs two moles of electrons per mole of copper. Since F≈96500 C/mol, 193000 C corresponds to about two moles of electrons and a theoretical one mole of copper. Dimensional analysis confirms the units."
+          },
+          {
+            "type": "limits",
+            "ja": "電極電位は反応の熱力学的な傾向に関係しますが、どれほど速く反応するかを単独で予測しません。実際の電気分解では過電圧、電極表面、温度、副反応が必要電圧や収率を変えます。標準電極電位は基準条件での相対的な値であり、反応物濃度が変わればネルンスト式により電位も変化します。",
+            "en": "Electrode potential expresses thermodynamic tendency, not reaction rate. Actual electrolysis requires accounting for overpotential, electrode surfaces, temperature and competing reactions. Standard electrode potentials are relative values under defined conditions; nonstandard activities alter potentials according to the Nernst equation."
+          },
+          {
+            "type": "revisit",
+            "ja": "化学結合で電子を学んだことが、酸化数・半反応式・電池へつながります。熱化学とギブズエネルギーを学んだら、ΔrG=−nFEから起電力を自由エネルギーの変化として読み直せます。腐食、電気めっき、蓄電池、電極を利用する分析測定にも同じ考えが広がります。",
+            "en": "Electronic structure supports oxidation-state accounting, half-reactions and cells. Gibbs energy later explains reversible cell voltage through ΔrG=−nFE. The same principles connect corrosion, electroplating, batteries and electroanalytical measurements."
+          }
+        ]
+      }
     }
   ]
 }
