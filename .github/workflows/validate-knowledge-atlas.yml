@@ -1,0 +1,25 @@
+name: Validate Chemistry Knowledge Atlas
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/chemistry-knowledge-atlas-v1.json'
+      - 'tests/validate-atlas.mjs'
+      - '.github/workflows/validate-knowledge-atlas.yml'
+  pull_request:
+    paths:
+      - 'data/chemistry-knowledge-atlas-v1.json'
+      - 'tests/validate-atlas.mjs'
+      - '.github/workflows/validate-knowledge-atlas.yml'
+permissions:
+  contents: read
+jobs:
+  validate-atlas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate bilingual concept graph and chapter coverage
+        run: node tests/validate-atlas.mjs
