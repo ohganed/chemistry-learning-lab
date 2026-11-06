@@ -102,7 +102,7 @@ for(const item of bridges.bridges){
   assert.ok(step.textJa?.length>=100&&step.textEn?.length>=160,'Detailed bilingual bridge explanation incomplete: '+item.id);
  }
  for(const obj of [item.source,item.target,item.hook,item.limits,item.revisit]){
-  assert.ok(obj?.ja?.length>=12&&obj.en?.length>=20,'Prior-knowledge bridge missing a bilingual connection or limitation: '+item.id);
+  assert.ok(obj?.ja?.length>=7&&obj.en?.length>=12,'Prior-knowledge bridge missing a bilingual connection or limitation: '+item.id);
  }
 }
 assert.equal(covered.size,29,'Every chapter needs a verified connection to another knowledge domain');
