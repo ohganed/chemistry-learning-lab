@@ -1,0 +1,275 @@
+{
+  "schema": "chemistry-depth-textbook",
+  "schemaVersion": "1.0",
+  "group": "4",
+  "locale": [
+    "ja",
+    "en"
+  ],
+  "chapters": [
+    {
+      "id": "4-0",
+      "ja": "有機化合物の構造と異性体",
+      "en": "Organic structure and isomerism",
+      "sections": [
+        {
+          "ja": "炭素の結び方を読む",
+          "en": "Read carbon connectivity",
+          "textJa": "炭素は4本程度の結合をつくる性質があり、鎖状・環状など多様な骨格を形成する。分子式は元素と個数を示すが、原子の結び方までは示さない。構造式・示性式・骨格式の表現方法を使い分け、どの原子がどこにつながっているかを読む。骨格式では線の端点や折れ目に炭素があり、多くの場合炭素に結合する水素が省略される。",
+          "textEn": "Carbon commonly forms four bonds and can make chains, branches and rings. Molecular formulas state elemental composition but do not fully determine connectivity. Structural, condensed and skeletal formulas communicate progressively different details. In skeletal structures, line ends and vertices usually represent carbon atoms with many attached hydrogens omitted."
+        },
+        {
+          "ja": "異性体の種類",
+          "en": "Types of isomerism",
+          "textJa": "同じ分子式でも結合順序が異なれば構造異性体となる。分子式C₂H₆Oにはエタノールとジメチルエーテルがあり、性質は異なる。原子のつながりが同じでも空間配置が異なる立体異性体がある。二重結合の幾何異性や鏡像異性は分子の形を考える入口になる。",
+          "textEn": "Constitutional isomers share a molecular formula but differ in connectivity, as ethanol and dimethyl ether do for C₂H₆O. Stereoisomers share connectivity but differ in spatial arrangement. Geometric and optical isomerism show why three-dimensional structure matters."
+        },
+        {
+          "ja": "官能基は性質の手がかり",
+          "en": "Functional groups predict reactivity",
+          "textJa": "−OH、−CHO、>C=O、−COOH、−NH₂などの官能基は反応性や分子間相互作用を理解する手掛かりとなる。同じ官能基をもっても炭素骨格や置換基が異なれば反応性は同じとは限らない。分子の構造と反応条件を組み合わせて考える。『分類名を覚えたら性質もすべてわかる』わけではない。",
+          "textEn": "Functional groups such as hydroxyl, carbonyl, carboxyl and amino groups guide predictions of reactivity and intermolecular forces. Their behavior also depends on substituents, molecular framework and conditions. A category name is a starting hypothesis, not a complete explanation."
+        }
+      ],
+      "example": {
+        "ja": "分子式C₂H₆Oの二つの代表的な構造を示す。",
+        "en": "Give two structures with molecular formula C₂H₆O.",
+        "solutionJa": "CH₃CH₂OHはエタノールでO−Hをもち、CH₃OCH₃はジメチルエーテルでC−O−Cをもつ。組成は同じでも沸点や反応性が異なる。",
+        "solutionEn": "CH₃CH₂OH (ethanol) has an O−H group; CH₃OCH₃ (dimethyl ether) has a C−O−C linkage. They have the same formula but different properties."
+      },
+      "pitfall": {
+        "ja": "分子式だけでは物質を一意に決定できない。異性体を考える。",
+        "en": "A molecular formula does not necessarily uniquely identify a substance."
+      },
+      "bridge": {
+        "ja": "化学結合→立体構造→有機反応・生体分子の鏡像異性まで理解が拡張する。",
+        "en": "Connect bonding to three-dimensional organic structures and biological chirality."
+      },
+      "inquiry": {
+        "ja": "医薬品の二つの鏡像異性体が生体で異なる作用をする場合、なぜだろう。",
+        "en": "Why might two mirror-image molecules have different biological effects?"
+      },
+      "status": "editorial-draft"
+    },
+    {
+      "id": "4-1",
+      "ja": "炭化水素・芳香族",
+      "en": "Hydrocarbons and aromaticity",
+      "sections": [
+        {
+          "ja": "アルカン・アルケン・アルキン",
+          "en": "Saturated and unsaturated hydrocarbons",
+          "textJa": "アルカンは主にC−C単結合をもち、鎖式飽和炭化水素の分子式は一般にCnH₂n+₂。アルケンはC=C、アルキンはC≡Cを含む。π結合は付加反応の反応性を理解する手掛かりになる。燃焼は炭化水素の典型的酸化反応であり、酸素不足ならCOやすすが生じる場合がある。",
+          "textEn": "Alkanes contain single C−C bonds; acyclic saturated alkanes have formula CnH₂n+₂. Alkenes contain C=C and alkynes C≡C bonds. π bonding is central to many addition reactions. Combustion is an oxidation process and may produce CO or soot when oxygen is insufficient."
+        },
+        {
+          "ja": "二重結合の反応",
+          "en": "Addition reactions",
+          "textJa": "エテンCH₂=CH₂は臭素などと付加反応し、二重結合のπ成分を使って新しいσ結合を形成する。臭素水の脱色は不飽和結合の検出に利用される場合があるが、他の還元性物質も反応し得るため絶対的な証拠ではない。付加反応では原子がどこに結合したかを構造式で考える。触媒や反応条件で生成物は変化する。",
+          "textEn": "Ethene can add bromine across its double bond as a π bond is transformed into new σ bonds. Bromine decolorization can indicate unsaturation but is not uniquely diagnostic. Product connectivity and reaction conditions matter."
+        },
+        {
+          "ja": "ベンゼンは普通の三重結合の集まりではない",
+          "en": "Aromaticity changes the picture",
+          "textJa": "ベンゼンのπ電子は環全体に非局在化しており、同じ長さに近い炭素−炭素結合を示す。単純な三つの独立したC=C二重結合の集まりとしては性質を説明しきれない。ベンゼンでは芳香族性を保ちやすい置換反応が代表的である。芳香族性という概念は分子軌道を学んで再解釈すると深まる。",
+          "textEn": "Benzene has delocalized π electrons and nearly equivalent carbon–carbon bonds. Its behavior is not that of three isolated alkene double bonds. Aromatic substitution often preserves the aromatic ring, a fact explained more deeply by molecular orbitals."
+        }
+      ],
+      "example": {
+        "ja": "エテンC₂H₄に水素が1 mol付加すると何ができるか。",
+        "en": "What forms when one mole of H₂ adds to one mole of ethene?",
+        "solutionJa": "C₂H₄+H₂→C₂H₆でエタンが生成する（適切な触媒などの条件が必要）。二重結合部分に水素原子が加わる。",
+        "solutionEn": "C₂H₄+H₂→C₂H₆ forms ethane under suitable catalytic conditions. Hydrogen atoms add across the double bond."
+      },
+      "pitfall": {
+        "ja": "ベンゼンのケクレ式は便利な構造表現だが、独立した単結合と二重結合が固定されているわけではない。",
+        "en": "A Kekulé drawing is a representation; benzene does not contain three permanently localized double bonds."
+      },
+      "bridge": {
+        "ja": "π結合の反応→非局在化・共鳴→分子軌道・有機反応機構へつなげる。",
+        "en": "Move from π-bond reactivity to resonance, delocalization and orbital-based mechanisms."
+      },
+      "inquiry": {
+        "ja": "ベンゼンとシクロヘキセンの反応が異なることを、どんな構造的要因で説明できるか。",
+        "en": "Which structural features explain differences between benzene and cyclohexene chemistry?"
+      },
+      "status": "editorial-draft"
+    },
+    {
+      "id": "4-2",
+      "ja": "アルコール・エーテル・カルボニル",
+      "en": "Alcohols, ethers and carbonyls",
+      "sections": [
+        {
+          "ja": "アルコールとエーテル",
+          "en": "Alcohols and ethers",
+          "textJa": "アルコールは一般に炭素につながる−OH基をもち、エーテルはR−O−R′の構造をもつ。アルコールはO−Hを介した水素結合により、同程度の分子量のエーテルより沸点が高い場合が多い。ただし分子の大きさや形、異性体も影響する。水への溶解性は極性基と非極性炭化水素部分のバランスで変化する。",
+          "textEn": "Alcohols generally contain an O−H group, while ethers have an R−O−R′ linkage. Hydrogen bonding often raises alcohol boiling points relative to comparably sized ethers. Solubility in water depends on the balance between polar functionality and nonpolar carbon framework."
+        },
+        {
+          "ja": "アルコールの酸化",
+          "en": "Oxidation of alcohols",
+          "textJa": "第一級アルコールは適切な酸化条件でアルデヒドを経てカルボン酸へ変化し得る。第二級アルコールはケトンへ酸化されることが多い。第三級アルコールは同様の穏やかな酸化でカルボニル化合物へ変わりにくい。実際の反応は試薬や条件で結果が異なるため、機構を無視した丸暗記を避ける。",
+          "textEn": "Primary alcohols can oxidize to aldehydes and further to carboxylic acids under suitable conditions. Secondary alcohols commonly yield ketones. Tertiary alcohols do not undergo the same mild oxidation pathway because the alcohol-bearing carbon lacks the required hydrogen. Reagents and conditions matter."
+        },
+        {
+          "ja": "カルボニル基の反応性",
+          "en": "Carbonyl polarity and reactions",
+          "textJa": "C=O結合は酸素側に電子密度が偏り、カルボニル炭素は求電子性を示す。アルデヒドは一部の試薬で酸化されやすく、銀鏡反応などの識別に利用される。ケトンは同じ条件では酸化されにくいものが多いが、反応性を絶対的に区別することはできない。C=Oの極性を理解すると付加反応の機構が見えやすくなる。",
+          "textEn": "The C=O bond is polarized toward oxygen, making the carbon electrophilic. Aldehydes can often be oxidized with selective reagents and may give characteristic tests. Ketones are commonly more resistant under the same mild conditions, but reactivity is not absolute. Carbonyl polarity helps explain nucleophilic addition."
+        }
+      ],
+      "example": {
+        "ja": "エタノールの酸化経路を官能基で表す。",
+        "en": "Describe a possible oxidation sequence starting from ethanol.",
+        "solutionJa": "CH₃CH₂OH→CH₃CHO→CH₃COOH。第一級アルコール→アルデヒド→カルボン酸である。反応条件によって途中段階で止められる場合がある。",
+        "solutionEn": "CH₃CH₂OH→CH₃CHO→CH₃COOH gives a primary alcohol, an aldehyde and a carboxylic acid. Conditions can determine how far oxidation proceeds."
+      },
+      "pitfall": {
+        "ja": "『すべてのアルコールは同じ生成物へ酸化される』わけではない。第一級・第二級・第三級を比較する。",
+        "en": "Not all alcohols oxidize to the same product; degree of substitution matters."
+      },
+      "bridge": {
+        "ja": "電気陰性度→結合の極性→カルボニル炭素への求核攻撃→生化学の代謝反応へ。",
+        "en": "Connect bond polarization to nucleophilic carbonyl chemistry and metabolic transformations."
+      },
+      "inquiry": {
+        "ja": "アルコールと同じ分子式のエーテルの沸点が違うなら、何を調べるか。",
+        "en": "Which intermolecular interactions explain boiling-point differences between an alcohol and its ether isomer?"
+      },
+      "status": "editorial-draft"
+    },
+    {
+      "id": "4-3",
+      "ja": "カルボン酸・エステル・油脂",
+      "en": "Carboxylic acids, esters and fats",
+      "sections": [
+        {
+          "ja": "カルボン酸の酸性",
+          "en": "Carboxylic acid behavior",
+          "textJa": "カルボン酸は−COOH基をもち、水中でH⁺を供与してカルボキシラートイオンを生じる。共役塩基の電子が複数の酸素原子に分散できることは、アルコールと比べた酸性の違いを理解する手掛かりとなる。炭酸水素塩との反応でCO₂を発生する例もある。酸としての性質は濃度だけでなく電離平衡に関係する。",
+          "textEn": "Carboxylic acids contain −COOH groups and can dissociate to carboxylate ions. Delocalization in the conjugate base helps explain why typical carboxylic acids are stronger acids than corresponding alcohols. Many react with hydrogencarbonates to release CO₂."
+        },
+        {
+          "ja": "エステル化と加水分解",
+          "en": "Esterification and hydrolysis",
+          "textJa": "カルボン酸とアルコールは適切な酸触媒条件でエステルと水を生じることがある。RCOOH+R′OH⇌RCOOR′+H₂Oという反応は可逆であり、平衡と反応速度の双方を考える。エステルを加水分解するとカルボン酸とアルコールに戻る場合があり、塩基性条件ではカルボン酸塩が生成する。香料・樹脂の化学にも使われる。",
+          "textEn": "A carboxylic acid and alcohol can undergo acid-catalyzed esterification: RCOOH+R′OH⇌RCOOR′+H₂O. Equilibrium and kinetics both matter. Esters can hydrolyze; basic hydrolysis commonly yields carboxylate salts. These transformations connect fragrances and polymer materials."
+        },
+        {
+          "ja": "油脂の構造とけん化",
+          "en": "Triacylglycerols and saponification",
+          "textJa": "油脂はグリセリンと脂肪酸がエステル結合でつながったトリアシルグリセロールを主成分とする。脂肪酸の不飽和度や鎖長が融点などに影響する。塩基性条件でエステルを加水分解するけん化では脂肪酸塩が生成し、石けんとして働くことがある。石けんの界面活性作用は親水性部分と疎水性部分の両立から説明できる。",
+          "textEn": "Fats and oils mainly consist of triacylglycerols: glycerol joined to three fatty acids by ester bonds. Chain length and unsaturation influence melting behavior. Saponification produces fatty-acid salts that can act as soaps, owing to hydrophilic and hydrophobic regions."
+        }
+      ],
+      "example": {
+        "ja": "酢酸とエタノールのエステル化を式で書く。",
+        "en": "Write the esterification of acetic acid with ethanol.",
+        "solutionJa": "CH₃COOH+C₂H₅OH⇌CH₃COOC₂H₅+H₂O。酢酸エチルが生成する。水の除去や一方の反応物の過剰添加で平衡組成を動かせる場合がある。",
+        "solutionEn": "CH₃COOH+C₂H₅OH⇌CH₃COOC₂H₅+H₂O gives ethyl acetate. Removing water or using excess reactant can shift equilibrium under suitable conditions."
+      },
+      "pitfall": {
+        "ja": "『油はすべて不飽和、脂肪はすべて飽和』という二分法は不正確。脂肪酸組成は混合物として考える。",
+        "en": "Oils are not entirely unsaturated, nor fats entirely saturated; they contain mixtures of fatty acids."
+      },
+      "bridge": {
+        "ja": "弱酸の電離、可逆平衡、ポリエステル、細胞膜の脂質を同じ官能基から考える。",
+        "en": "Link weak-acid equilibria and ester chemistry with polyesters and biological lipids."
+      },
+      "inquiry": {
+        "ja": "石けんと合成洗剤は、どんな分子構造の共通点と違いがあるだろうか。",
+        "en": "What structural similarities and differences do soaps and synthetic detergents have?"
+      },
+      "status": "editorial-draft"
+    },
+    {
+      "id": "4-4",
+      "ja": "芳香族化合物",
+      "en": "Aromatic compounds",
+      "sections": [
+        {
+          "ja": "芳香族性と置換基",
+          "en": "Aromatic rings and substituents",
+          "textJa": "ベンゼン環を含む化合物は、π電子の非局在化により特有の安定性や反応性を示す。ベンゼン環に−OHがついたフェノール、−NH₂がついたアニリン、−CH₃がついたトルエンなどは反応性が異なる。置換基の電子供与性・求引性が芳香環の電子密度に影響する。化合物名より電子の分布に着目する。",
+          "textEn": "Aromatic rings have delocalized π electrons and characteristic reactivity. Phenol, aniline and toluene differ because −OH, −NH₂ and −CH₃ groups influence electron density. Substituent electronic effects help predict reactions."
+        },
+        {
+          "ja": "フェノールとアニリン",
+          "en": "Phenol and aniline",
+          "textJa": "フェノールは一般的な脂肪族アルコールより酸性を示し、水酸化ナトリウム水溶液でフェノキシドイオンを形成する。アニリンは窒素の孤立電子対により塩基性を示すが、芳香環との共鳴によって通常の脂肪族アミンとは塩基性が異なる。酸塩基の定義と共役酸塩基対を芳香族でも応用できる。条件による存在形態の違いを忘れない。",
+          "textEn": "Phenol is appreciably more acidic than a typical aliphatic alcohol and can form phenoxide with hydroxide. Aniline is a base due to its nitrogen lone pair, but resonance with the aromatic ring affects basicity. Acid–base concepts carry into aromatic chemistry."
+        },
+        {
+          "ja": "芳香族の置換反応",
+          "en": "Electrophilic aromatic substitution",
+          "textJa": "芳香環に求電子剤が反応する置換反応では、反応の途中で芳香族性が一時的に失われ、その後回復する経路をとることが多い。置換基の種類によって反応速度や置換位置が変化する。高校では代表的なニトロ化・スルホン化などの反応を概念として理解する。反応性の詳細は大学の反応機構で深化する。",
+          "textEn": "Electrophilic aromatic substitution often proceeds through an intermediate with temporarily disrupted aromaticity, followed by rearomatization. Existing substituents affect rates and regioselectivity. Nitration and sulfonation are representative examples, while detailed pathways are studied in organic mechanism courses."
+        }
+      ],
+      "example": {
+        "ja": "フェノールとエタノールは、どちらも−OHをもつのになぜ性質が違うか。",
+        "en": "Why do phenol and ethanol behave differently despite both having −OH?",
+        "solutionJa": "フェノールからH⁺が離れたフェノキシドでは負電荷が芳香環と共鳴によって分散する。この安定化がフェノールの酸性を高める要因となる。エタノールのエトキシドでは同じ共鳴安定化がない。",
+        "solutionEn": "Phenoxide is resonance-stabilized through its aromatic system, which contributes to phenol's higher acidity. Ethoxide lacks the same stabilization."
+      },
+      "pitfall": {
+        "ja": "芳香族化合物が必ず香りをもつわけではない。『芳香族』は電子構造の分類である。",
+        "en": "Aromatic does not mean having a smell; it refers to electronic structure."
+      },
+      "bridge": {
+        "ja": "化学結合→共鳴→酸性・塩基性→有機反応の位置選択性をつなぐ。",
+        "en": "Connect bonding, resonance, acid–base behavior and organic regioselectivity."
+      },
+      "inquiry": {
+        "ja": "置換基を変えたとき反応位置が変わる理由を、電子密度の観点から考えられるか。",
+        "en": "Can you explain substituent-dependent reaction positions using electron density?"
+      },
+      "status": "editorial-draft"
+    },
+    {
+      "id": "4-5",
+      "ja": "糖類・アミノ酸",
+      "en": "Carbohydrates and amino acids",
+      "sections": [
+        {
+          "ja": "糖類は結合と立体構造で違う",
+          "en": "Sugars differ in connectivity and geometry",
+          "textJa": "グルコースやフルクトースは同じ分子式C₆H₁₂O₆でも構造が異なる。単糖は溶液中で鎖状構造と環状構造の平衡をとることがある。糖同士はグリコシド結合で二糖・多糖をつくり、結合位置や立体配置の違いで消化性や材料特性が大きく変わる。デンプンとセルロースの違いも結合様式で理解できる。",
+          "textEn": "Glucose and fructose share formula C₆H₁₂O₆ but differ structurally. Monosaccharides can equilibrate between open-chain and cyclic forms in solution. Glycosidic linkage positions and configurations determine much of the behavior of disaccharides and polysaccharides, including starch and cellulose."
+        },
+        {
+          "ja": "アミノ酸は酸性も塩基性ももつ",
+          "en": "Amino acids are amphoteric",
+          "textJa": "多くのα-アミノ酸はアミノ基とカルボキシ基を同じ分子にもつ。水溶液中では条件に応じて双性イオンなどの状態となり、pHにより電荷の分布が変わる。等電点は平均電荷がゼロとなるpHのことで、全分子が非荷電になるという意味ではない。側鎖の違いはタンパク質の性質にも影響する。",
+          "textEn": "Most α-amino acids contain amino and carboxyl groups. Depending on pH they can occur as zwitterions and other protonation states. The isoelectric point is the pH at which net average charge is zero, not a state where every molecule lacks local charges. Side chains affect protein properties."
+        },
+        {
+          "ja": "ペプチド結合とタンパク質",
+          "en": "Peptide bonding and proteins",
+          "textJa": "アミノ酸のカルボキシ基とアミノ基が結びつくとアミド結合であるペプチド結合ができる。タンパク質では一次構造の並びが、水素結合・疎水性相互作用・イオン相互作用などを通じて高次構造に影響する。酵素の機能は立体構造と反応部位の性質に関係する。熱変性では通常、一次構造がそのまま保たれる場合も多い。",
+          "textEn": "Peptide bonds are amide linkages connecting amino acids. Protein sequence influences folding through hydrogen bonding, hydrophobic and ionic interactions. Enzyme activity depends on three-dimensional structure and active-site chemistry. Denaturation often disrupts higher-order structure without breaking all peptide bonds."
+        }
+      ],
+      "example": {
+        "ja": "グリシンH₂NCH₂COOHの酸性・塩基性部位はどこか。",
+        "en": "Identify acidic and basic sites in glycine H₂NCH₂COOH.",
+        "solutionJa": "−COOHはプロトンを放出し得る酸性部位、−NH₂はプロトンを受け取れる塩基性部位である。水中ではH₃N⁺CH₂COO⁻のような双性イオンの形が重要である。",
+        "solutionEn": "The −COOH can donate a proton and the amino group can accept one. In water the zwitterion H₃N⁺CH₂COO⁻ is important."
+      },
+      "pitfall": {
+        "ja": "『糖類は全部同じ甘さ』『タンパク質の変性=必ずペプチド結合の切断』ではない。",
+        "en": "Sugars are not interchangeable in sweetness or function, and protein denaturation does not always cleave peptide bonds."
+      },
+      "bridge": {
+        "ja": "有機構造の立体配置→酸塩基平衡→高分子の折り畳み→酵素・植物栄養へ。",
+        "en": "Link organic stereochemistry and acid–base equilibrium to protein folding, enzymes and plant biochemistry."
+      },
+      "inquiry": {
+        "ja": "セルロースとデンプンはグルコースからなるのに、なぜ性質が大きく違うのだろう。",
+        "en": "Why do starch and cellulose have such different properties despite both being built from glucose?"
+      },
+      "status": "editorial-draft"
+    }
+  ]
+}
