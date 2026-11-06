@@ -5,6 +5,8 @@ on:
     paths:
       - 'data/chemistry-knowledge-atlas-v1.json'
       - 'tests/validate-atlas.mjs'
+      - 'tests/validate-equilibrium.mjs'
+      - 'equilibrium-experiment.html'
       - '.github/workflows/validate-knowledge-atlas.yml'
   pull_request:
     paths:
@@ -22,4 +24,6 @@ jobs:
         with:
           node-version: '22'
       - name: Validate bilingual concept graph and chapter coverage
-        run: node tests/validate-atlas.mjs
+        run: |
+          node tests/validate-atlas.mjs
+          node tests/validate-equilibrium.mjs
