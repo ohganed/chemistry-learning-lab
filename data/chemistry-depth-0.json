@@ -1,0 +1,231 @@
+{
+  "schema": "chemistry-depth-textbook",
+  "schemaVersion": "1.0",
+  "group": "0",
+  "locale": [
+    "ja",
+    "en"
+  ],
+  "chapters": [
+    {
+      "id": "0-0",
+      "ja": "純物質・混合物と分離",
+      "en": "Pure substances, mixtures and separation",
+      "sections": [
+        {
+          "ja": "組成で見分ける",
+          "en": "Distinguish by composition",
+          "textJa": "純物質は、条件が変わっても成分の化学的組成が一定である物質を指す。水はH₂Oという組成をもち、食塩はNaClの比で結晶をつくる。空気は窒素・酸素などの混合物であり、その割合は変動する。海水は水に塩類などが溶けているため、透明に見えても純物質ではない。",
+          "textEn": "A pure substance has a fixed chemical composition: water has the formula H₂O, and sodium chloride contains sodium and chloride ions in a 1:1 ratio. Air and seawater are mixtures, even when their appearance is uniform. A uniform appearance does not prove chemical purity."
+        },
+        {
+          "ja": "均一と不均一",
+          "en": "Homogeneous and heterogeneous mixtures",
+          "textJa": "均一混合物では観察する尺度で組成がほぼ一様であり、食塩水や空気が例である。砂と食塩のように成分の偏りが見えるものは不均一混合物に分類する。『一様』は観察の尺度に依存することにも注意したい。水溶液は分子・イオンのレベルで混ざっていても、別の化学物質へ変化したわけではない。",
+          "textEn": "Homogeneous mixtures are approximately uniform on the scale being considered, as with air or dissolved salt. Heterogeneous mixtures show distinguishable regions or phases. Mixing does not necessarily create a new chemical substance, and the meaning of 'uniform' depends on the observation scale."
+        },
+        {
+          "ja": "何を利用して分けるか",
+          "en": "Choose the separation principle",
+          "textJa": "ろ過は粒子がろ材を通るかという大きさ・状態の違いを利用する。蒸留は蒸発しやすさの差、再結晶は温度などによる溶解度の差、抽出は二つの相への分配の差を利用する。クロマトグラフィーは移動相と固定相との相互作用の違いを利用する。手順を暗記するより、どんな物性差があるかを先に考える。",
+          "textEn": "Filtration retains particles too large to pass through a filter. Distillation exploits volatility; recrystallization exploits temperature-dependent solubility; extraction exploits partitioning between phases. Chromatography exploits different interactions with stationary and mobile phases. Choose a method by identifying the relevant physical difference."
+        }
+      ],
+      "example": {
+        "ja": "食塩水から食塩と水を別々に回収するには？",
+        "en": "How could you recover both salt and water from saltwater?",
+        "solutionJa": "食塩は通常ほとんど揮発せず、水は加熱によって蒸気になる。溶液を加熱し、出た水蒸気を冷却して液体として集めると水を回収できる。残液を濃縮して結晶化させれば食塩も回収できる。単なるろ過では溶けたNa⁺・Cl⁻は通過する。",
+        "solutionEn": "Heat the solution and condense the water vapor to collect water. Concentrating the remaining liquid can yield salt crystals. Ordinary filtration cannot separate dissolved sodium and chloride ions from water."
+      },
+      "pitfall": {
+        "ja": "『透明なら純物質』ではない。均一な溶液も複数成分からなる。",
+        "en": "Clear does not mean pure; homogeneous solutions can contain multiple substances."
+      },
+      "bridge": {
+        "ja": "分離できるかどうかは分子間相互作用、沸点、溶解平衡に戻って考えられる。",
+        "en": "Separation methods can later be reinterpreted through molecular interactions, boiling and solution equilibria."
+      },
+      "inquiry": {
+        "ja": "清涼飲料を分離するとしたら、どの成分を何の差で分けたいだろうか。",
+        "en": "If you wanted to separate a soft drink, which component and physical difference would you target?"
+      },
+      "status": "editorial-draft"
+    },
+    {
+      "id": "0-1",
+      "ja": "原子・同位体・イオン",
+      "en": "Atoms, isotopes and ions",
+      "sections": [
+        {
+          "ja": "原子番号が元素を決める",
+          "en": "Protons determine the element",
+          "textJa": "原子核内の陽子数Zが原子番号であり、元素の種類を決める。中性の原子では電子数もZであるが、イオンでは電子数が変わる。中性子数Nと陽子数Zの和A=Z+Nを質量数とよぶ。元素記号の左上にA、左下にZを記すことがある。",
+          "textEn": "Atomic number Z is the number of protons in the nucleus and determines the element. A neutral atom has Z electrons, while an ion can have more or fewer. Mass number A equals the sum of protons Z and neutrons N: A=Z+N."
+        },
+        {
+          "ja": "同位体と相対原子質量",
+          "en": "Isotopes and atomic mass",
+          "textJa": "同位体は陽子数が等しく中性子数が異なる原子で、¹²Cと¹³Cが例である。同位体の存在比に応じた平均が周期表に載る相対原子質量の理解につながる。化学的性質は通常よく似るが、質量差に由来する反応速度の違い（同位体効果）が生じる場合がある。放射性かどうかは同位体ごとの核の安定性の問題であり、『同位体=放射性』ではない。",
+          "textEn": "Isotopes of an element share the same proton number but differ in neutron number, such as carbon-12 and carbon-13. The relative atomic mass shown on a periodic table reflects the weighted average of naturally occurring isotopes. Isotopes often behave similarly chemically, but isotope effects can matter. Not every isotope is radioactive."
+        },
+        {
+          "ja": "イオンは電子の数が変わる",
+          "en": "Ions change electron count",
+          "textJa": "原子が電子を失うと正の電荷をもつ陽イオン、電子を受け取ると負の電荷をもつ陰イオンとなる。Na→Na⁺+e⁻のように陽子数は変わらない。原子核が変わる核反応とは区別する。イオンの電子配置と価電子の関係は、化学結合や電池を考える基盤になる。",
+          "textEn": "Loss of electrons creates a positively charged cation; gain creates a negatively charged anion. Na→Na⁺+e⁻ changes electron count but not proton count. This is not a nuclear reaction. Ion formation links electronic structure to chemical bonding and electrochemistry."
+        }
+      ],
+      "example": {
+        "ja": "¹⁶Oの原子番号が8なら陽子・中性子・中性原子の電子はいくつか。",
+        "en": "For neutral oxygen-16 (Z=8), how many protons, neutrons and electrons?",
+        "solutionJa": "陽子8、中性子16−8=8、電子8である。O²⁻の場合は陽子8、中性子8のまま、電子が10になる。",
+        "solutionEn": "It has 8 protons, 8 neutrons and 8 electrons. The oxide ion O²⁻ still has 8 protons and 8 neutrons, but has 10 electrons."
+      },
+      "pitfall": {
+        "ja": "イオンの電荷は核の陽子数が増減したためではない。変化したのは通常、電子数である。",
+        "en": "Ordinary ionization changes electrons, not the number of protons."
+      },
+      "bridge": {
+        "ja": "質量分析、同位体トレーサー、核化学、電子配置に同じ原子の知識がつながる。",
+        "en": "Atomic structure connects to mass spectrometry, isotope tracing, nuclear chemistry and electron configuration."
+      },
+      "inquiry": {
+        "ja": "同じ元素の二つの同位体を区別する測定法にはどんなものがあるだろうか。",
+        "en": "What kind of measurement could distinguish two isotopes of one element?"
+      },
+      "status": "editorial-draft"
+    },
+    {
+      "id": "0-2",
+      "ja": "電子配置と周期表",
+      "en": "Electron configuration and periodicity",
+      "sections": [
+        {
+          "ja": "電子はどこに存在するか",
+          "en": "Where are electrons?",
+          "textJa": "電子は古典的な惑星のような決まった円軌道を回る粒子としては表せない。原子中では量子状態（軌道）を用いて、存在確率やエネルギーを記述する。高校の電子殻モデルは見通しをつける近似であり、厳密な模型ではない。電子配置は軌道へ電子をどのように割り当てるかを示す。",
+          "textEn": "Electrons are not tiny planets in fixed circular tracks. Atomic orbitals describe quantum states with characteristic energies and probability distributions. Shell diagrams are useful approximations, not literal orbits. Electron configurations record occupancy of these states."
+        },
+        {
+          "ja": "電子配置の規則",
+          "en": "Rules for configurations",
+          "textJa": "電子は通常、エネルギーの低い状態から占有する。パウリの排他原理により一つの原子軌道にはスピンの異なる電子が最大2個入り、同じエネルギーの複数の軌道にはフントの規則に沿う配置が基本となる。原子番号が大きくなると単純な順序に例外もある。例えばCrやCuは電子間相互作用を考えた配置が必要である。",
+          "textEn": "Electrons generally occupy low-energy states first. The Pauli exclusion principle limits an orbital to two electrons of opposite spin; Hund's rule helps organize occupancy of degenerate orbitals. There are important exceptions to simple filling mnemonics, notably Cr and Cu."
+        },
+        {
+          "ja": "周期性の理由",
+          "en": "Why properties recur",
+          "textJa": "周期表で縦の族に属する典型元素には似た価電子配置が繰り返し現れる。原子半径、イオン化エネルギー、電気陰性度の傾向を原子核の引力・遮蔽・電子配置から説明できる。『右上ほど大きい』などを暗記するだけでは、例外や比較条件を見落とす。価電子の再配置は結合や酸化還元反応にもつながる。",
+          "textEn": "Main-group elements in the same column show recurring valence configurations. Trends in radius, ionization energy and electronegativity can be reasoned from nuclear attraction, screening and electron arrangement. These trends have exceptions and conditions; they are more than slogans about the top-right corner."
+        }
+      ],
+      "example": {
+        "ja": "Na（Z=11）の電子配置とNa⁺の電子配置を比較する。",
+        "en": "Compare Na (Z=11) with Na⁺.",
+        "solutionJa": "Naは1s²2s²2p⁶3s¹、Na⁺は3sの電子を失って1s²2s²2p⁶となる。この変化は、電子を1個失いやすいという反応傾向と関係する。ただし反応全体の起こりやすさは他のエネルギー項も考える必要がある。",
+        "solutionEn": "Na is 1s²2s²2p⁶3s¹. Removing its 3s electron gives Na⁺: 1s²2s²2p⁶. Electron configuration helps explain the tendency to form Na⁺, though total reaction energetics also matter."
+      },
+      "pitfall": {
+        "ja": "電子殻は電子が走る実在の線ではない。電子配置と軌道の量子数を混同しない。",
+        "en": "Electron shells are not literal tracks; a configuration is not a picture of electron trajectories."
+      },
+      "bridge": {
+        "ja": "化学結合、電池の酸化還元、分光学、量子化学をつなぐ中心概念。",
+        "en": "Electronic configuration connects to bonding, redox, spectroscopy and quantum chemistry."
+      },
+      "inquiry": {
+        "ja": "周期表で同じ族なのに反応性が違う場合、その理由をどう推測するか。",
+        "en": "If elements share a group but differ in reactivity, what factors might explain the difference?"
+      },
+      "status": "editorial-draft"
+    },
+    {
+      "id": "0-3",
+      "ja": "化学結合と結晶",
+      "en": "Bonding and crystal structures",
+      "sections": [
+        {
+          "ja": "結合の三つの典型",
+          "en": "Three common bonding models",
+          "textJa": "イオン結合では陽イオンと陰イオンの静電相互作用が結晶全体を安定化する。共有結合では原子の間の電子密度の分布が結合の成立に重要となる。金属では電子が多数の原子に広がる状態が導電性などを説明する。現実の結合はこの三分類に完全に分離できるとは限らず、結合の極性や電子の非局在化を連続的に考える。",
+          "textEn": "Ionic solids are stabilized by electrostatic interactions among ions. Covalent bonds involve electron density shared between nuclei. Delocalized electrons contribute to the electrical properties of metals. Actual bonding often falls between simplified categories."
+        },
+        {
+          "ja": "結晶は繰り返す構造",
+          "en": "Lattices repeat in space",
+          "textJa": "結晶では原子・イオン・分子などが三次元的に規則正しく配列する。単位格子はその繰り返しの最小構造を考える道具であり、配位数や密度を計算できる。NaClを固体の中の独立したNaCl分子の集まりと考えるのは不適切である。ダイヤモンドは炭素が共有結合で三次元網目構造をつくる。",
+          "textEn": "Crystalline solids have repeating three-dimensional arrangements. A unit cell is a bookkeeping tool for describing a lattice and calculating density or coordination. Solid sodium chloride is not a collection of isolated NaCl molecules, while diamond forms a covalent network."
+        },
+        {
+          "ja": "結合と物性をつなぐ",
+          "en": "Relate structures to properties",
+          "textJa": "結晶の融点や導電性は粒子の種類だけでなく、結合様式・構造・欠陥などに依存する。イオン結晶は固体では通常電気を通しにくいが、融解または水溶液では動けるイオンが電流を担う。金属は自由に動ける電子が導電性に寄与する。分子結晶は分子間相互作用に左右されることが多い。",
+          "textEn": "Melting and conductivity depend on bonding, lattice arrangement and defects. Many ionic solids conduct poorly while solid, but conduct when molten or dissolved because ions can move. Metals conduct through mobile electrons; molecular solids often reflect weaker intermolecular interactions."
+        }
+      ],
+      "example": {
+        "ja": "NaCl結晶とNaCl水溶液の電気伝導を比べよう。",
+        "en": "Compare conduction in crystalline NaCl and its aqueous solution.",
+        "solutionJa": "固体中ではイオンが格子位置に束縛され、電流を担いにくい。水に溶かすとNa⁺とCl⁻が溶媒和され、電場に応じて移動できる。単に『イオンがあるから必ず導電性』ではない。",
+        "solutionEn": "Ions are largely fixed in solid NaCl, so conduction is poor. In aqueous solution, solvated Na⁺ and Cl⁻ can move and carry charge. The presence of ions alone does not ensure conductivity."
+      },
+      "pitfall": {
+        "ja": "『共有結合=分子』ではない。ダイヤモンドやSiO₂のような共有結合網目構造もある。",
+        "en": "Covalent bonding does not always produce discrete molecules: diamond and silica are networks."
+      },
+      "bridge": {
+        "ja": "電子配置→結合→結晶→材料物性のつながりをたどれる。",
+        "en": "Trace a chain from electron configurations through bonding and lattices to material properties."
+      },
+      "inquiry": {
+        "ja": "氷とダイヤモンドはどちらも固体なのに、どこが構造的に違うだろうか。",
+        "en": "Ice and diamond are both solids. How do their structural units and interactions differ?"
+      },
+      "status": "editorial-draft"
+    },
+    {
+      "id": "0-4",
+      "ja": "分子の形と分子間力",
+      "en": "Molecular geometry and intermolecular forces",
+      "sections": [
+        {
+          "ja": "分子の形を考える",
+          "en": "Predict a shape",
+          "textJa": "ルイス構造を描き、中心原子の結合電子対と非共有電子対の領域数を数えるとVSEPRモデルで立体構造を近似できる。CH₄はほぼ正四面体、H₂Oは折れ線形、CO₂は直線形である。非共有電子対は結合角へ影響することがある。VSEPRは有用なモデルであって、すべての分子に適用できる厳密法則ではない。",
+          "textEn": "Lewis structures and VSEPR provide a useful way to predict molecular geometry from electron domains. CH₄ is approximately tetrahedral, H₂O bent and CO₂ linear. Lone pairs can change bond angles. VSEPR has limitations and does not replace quantitative molecular calculations."
+        },
+        {
+          "ja": "結合の極性と分子の極性",
+          "en": "Bond versus molecular polarity",
+          "textJa": "異なる元素間の共有結合では、電気陰性度の違いによって結合に極性が生じることがある。分子全体の極性は各結合双極子の方向も関係する。CO₂のC=O結合には極性があるが、直線形で双極子が打ち消され、分子全体としては無極性である。水は折れ線形のため打ち消しが不完全で、双極子をもつ。",
+          "textEn": "Electronegativity differences can make individual bonds polar, but overall molecular polarity also depends on geometry. The two C=O bond dipoles in linear CO₂ cancel, giving no permanent molecular dipole. Bent water has a net dipole."
+        },
+        {
+          "ja": "分子間相互作用は何を変えるか",
+          "en": "Interactions between molecules",
+          "textJa": "分散力はすべての原子・分子間に働く。極性分子には双極子間相互作用が生じ、水素結合は特定の原子や電子対が関与する比較的強い相互作用である。これらは融点・沸点・蒸気圧・溶解などの性質に影響する。しかし『水素結合があるから必ず沸点が最も高い』などの単純な一般化は危険で、分子サイズと構造も考える。",
+          "textEn": "Dispersion forces act between all atoms and molecules. Polar molecules also exhibit dipole–dipole interactions; hydrogen bonding is a particularly important directional interaction in suitable molecules. These interactions influence boiling points, vapor pressures and solubility, alongside molecular size and structure."
+        }
+      ],
+      "example": {
+        "ja": "H₂O、CO₂、CH₄の分子全体の極性を考える。",
+        "en": "Predict the polarity of H₂O, CO₂ and CH₄.",
+        "solutionJa": "H₂Oは折れ線形で極性分子。CO₂は直線形、CH₄は対称な正四面体形で、対称性により双極子が打ち消される（理想的な構造の場合）。",
+        "solutionEn": "H₂O is bent and polar. CO₂ is linear and CH₄ tetrahedral; their symmetric arrangements cancel bond dipoles, leaving no permanent molecular dipole."
+      },
+      "pitfall": {
+        "ja": "極性の有無は『元素の種類』だけで判定できない。分子の立体構造が必要。",
+        "en": "Polarity cannot be determined from element identities alone; three-dimensional geometry matters."
+      },
+      "bridge": {
+        "ja": "溶解性、蒸留、タンパク質の折り畳み、分子認識を分子間相互作用から再解釈できる。",
+        "en": "Molecular interactions connect solubility and distillation with protein folding and molecular recognition."
+      },
+      "inquiry": {
+        "ja": "エタノールと水が混ざることを、どんな相互作用で説明できるだろうか。",
+        "en": "Which interactions help explain why ethanol and water mix?"
+      },
+      "status": "editorial-draft"
+    }
+  ]
+}
