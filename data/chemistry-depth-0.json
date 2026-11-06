@@ -153,6 +153,32 @@
             "en": "The mole later connects particle counts to measured mass. Electron configurations explain typical ion formation. Isotopic labels and mass spectrometry are powerful tools in geochemistry, radiometric dating and tracing nutrient pathways in plants. Atomic structure becomes a method for asking where matter came from and where it went."
           }
         ]
+      },
+      "guidedExample": {
+        "titleJa": "同位体の割合から平均原子量を考える",
+        "titleEn": "Estimate average atomic mass from isotope abundances",
+        "steps": [
+          [
+            "仮想的な塩素試料で、質量数35の同位体が75%、37の同位体が25%存在すると仮定します。求めるのは『原子を多数集めたときの平均』です。",
+            "Consider a simplified chlorine sample containing 75% of an isotope with mass number 35 and 25% with mass number 37. We seek a weighted mean, not the mass number of one atom."
+          ],
+          [
+            "計算を簡単にするため、同位体の相対質量を35と37で近似します。厳密な計算では同位体の実測質量と、どの試料の存在比かを使います。",
+            "Approximate relative isotope masses by 35 and 37. An accurate calculation uses actual isotope masses and abundances for a specified sample."
+          ],
+          [
+            "100原子あると想像すると、35の原子が75個、37の原子が25個。平均は(35×75+37×25)/100と書けます。個数で重みづけしている点を確認します。",
+            "Imagine 100 atoms: 75 of mass-number 35 and 25 of mass-number 37. The weighted average is (35×75+37×25)/100."
+          ],
+          [
+            "計算すると35×0.75+37×0.25=35.5。これは試料全体の平均的な相対原子質量の近似値であり、質量数35.5という原子が存在する意味ではありません。",
+            "The result is 35×0.75+37×0.25=35.5. It approximates a sample-average relative atomic mass; it does not mean there is an individual atom with mass number 35.5."
+          ],
+          [
+            "存在比を半々に変えれば平均は36になります。周期表の値を整数の質量数だと思わず、『混合物の平均』を表すことがあると理解します。",
+            "If the abundances were 50% each, the average would be 36. The periodic-table value is often an isotope-weighted average, not the mass number of a single nuclide."
+          ]
+        ]
       }
     },
     {
@@ -300,6 +326,32 @@
             "ja": "次に溶解性や電気分解を学ぶと、固体の結晶格子から水中の溶媒和イオンへの変化としてNaClを捉え直せます。高分子の物性と比較すると、固体の硬さ・強度・融点には、原子間結合だけでなく欠陥や階層構造も影響することが見えてきます。",
             "en": "Solvation and electrolysis transform the view of NaCl from a solid lattice into mobile hydrated ions. Comparing crystals with polymers reveals that mechanical properties depend not only on bond strength but also on structural hierarchy, defects and organization."
           }
+        ]
+      },
+      "guidedExample": {
+        "titleJa": "体心立方格子の密度を格子の長さから求める",
+        "titleEn": "Find the density of a body-centered cubic metal from lattice spacing",
+        "steps": [
+          [
+            "単一元素の体心立方（BCC）格子で、一辺a=0.287 nm、モル質量M=55.85 g/molと仮定し、密度を求めます。微小な単位格子1個の質量を体積で割る方法を使います。",
+            "Assume a monatomic body-centered cubic (BCC) structure with cell edge a=0.287 nm and molar mass M=55.85 g/mol. Find density from the mass and volume of one conventional unit cell."
+          ],
+          [
+            "BCCの単位格子は角の8粒子がそれぞれ1/8個ずつ、中心の粒子が1個で合計2個です。原子の位置を数えるときは境界にある粒子の共有を考慮します。",
+            "A BCC conventional cell contains eight corner contributions of one-eighth each plus one body-center atom: two atoms per unit cell."
+          ],
+          [
+            "格子長は0.287 nm=2.87×10⁻⁸ cm。体積V=a³≈(2.87×10⁻⁸ cm)³≈2.36×10⁻²³ cm³です。",
+            "Convert a=0.287 nm=2.87×10⁻⁸ cm. The cell volume is a³≈2.36×10⁻²³ cm³."
+          ],
+          [
+            "単位格子の質量m=2M/NA≈2×55.85/(6.022×10²³) g≈1.85×10⁻²² g。密度ρ=m/V≈7.85 g/cm³となります。",
+            "Cell mass m=2M/NA≈1.85×10⁻²² g. Divide by V≈2.36×10⁻²³ cm³ to obtain ρ≈7.85 g/cm³."
+          ],
+          [
+            "原子番号だけから密度を決められないのは、モル質量のほかに格子構造と格子長が関係するためです。温度・欠陥・合金化によって測定値は変化します。",
+            "Density depends on lattice geometry and spacing as well as molar mass. Temperature, defects and alloying can shift measured values, so the ideal lattice calculation is a model."
+          ]
         ]
       }
     },
