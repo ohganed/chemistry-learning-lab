@@ -49,7 +49,37 @@
         "ja": "砂糖1粒に含まれる分子の個数を知るには、何を測定すればよいか。",
         "en": "What must you measure to estimate the number of sugar molecules in a grain?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "目に見える1 gの物質の中には、数えきれないほどの原子や分子があります。化学反応の式は原子・分子の個数比で書きますが、実験では天秤で質量を測ります。この二つの世界をつなぐのが物質量molです。『mol』は物質の種類でも質量の単位でもなく、粒子をまとめて数えるためのSI基本単位です。",
+            "en": "A one-gram sample contains an immense number of atoms or molecules. Reaction equations describe numbers of particles, yet chemists typically weigh samples. The mole connects particle counting to measurable quantities. It is an SI base unit for amount of substance, not a synonym for grams or a particular molecular mass."
+          },
+          {
+            "type": "particles",
+            "ja": "水分子1個にはH原子が2個、O原子が1個あります。したがって水分子1 molにはH原子2 molとO原子1 molが含まれます。NaCl結晶では独立したNaCl分子を数えるのではなく、式単位の数を考えます。『1 molに何が何個あるか』を必ず書くと、反応量の理解が安定します。",
+            "en": "Every H₂O molecule contains two hydrogen atoms and one oxygen atom. A mole of water molecules therefore contains two moles of hydrogen atoms and one mole of oxygen atoms. For solid NaCl, the counted units are formula units rather than isolated NaCl molecules. Identifying the entities being counted prevents many errors."
+          },
+          {
+            "type": "model",
+            "ja": "物質量n、質量m、モル質量M、粒子数Nにはn=m/MとN=nNAが成り立ちます。例えば水18.0 gをM=18.0 g/molで換算すると1.00 molです。次にN=1.00×6.02214076×10²³で水分子の個数が求まります。単位もg÷(g/mol)=molとなり、式が適切か確認できます。",
+            "en": "The key relations are n=m/M and N=nNA. For 18.0 g water and M≈18.0 g/mol, n=1.00 mol; the number of molecules is about 6.02×10²³. Dimensional analysis explains why dividing grams by grams per mole yields moles. Keep measured precision separate from the exact defined Avogadro constant."
+          },
+          {
+            "type": "limits",
+            "ja": "物質量1 molの質量は物質によって異なります。また『モル濃度が同じ』でも、電解質が何個のイオンに解離するかで粒子数は異なることがあります。希薄溶液の束一的性質や浸透圧の計算では、化学式単位と実際に分散した粒子の数を区別する必要があります。",
+            "en": "Different substances have different masses per mole. Equal formula-unit molarity does not necessarily mean equal numbers of dissolved particles: dissociation matters. In colligative-property problems, one must distinguish moles of dissolved formula units from the number of species present after dissociation."
+          },
+          {
+            "type": "revisit",
+            "ja": "反応式を学んだら、係数比をmolに読み替えられます。気体を学ぶとPV=nRTでmolと圧力・体積・温度がつながります。分析化学では、実際に測定した質量や吸光度から粒子数に対応する量へ戻す考え方が基礎となります。『粒子→物質量→実験で測れる量』を何度も往復してください。",
+            "en": "Stoichiometry turns equation coefficients into mole ratios. Gas laws connect amount of substance with P, V and T. Analytical chemistry works in reverse, using mass, titration, or signals to infer how much of a chemical species was present. The same conceptual bridge runs from microscopic particles to macroscopic measurement."
+          }
+        ]
+      }
     },
     {
       "id": "1-1",
@@ -93,7 +123,37 @@
         "ja": "生成物が理論値より少なかったとき、どんな説明があり得るだろうか。",
         "en": "What distinct explanations might account for a yield below the theoretical value?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "水素と酸素を混ぜて反応させると水が生じます。ただしH₂を3 mol、O₂を1 mol使った場合、反応できる量は反応式で制限されます。大量にある方が必ず制限試薬でない、という直感に注意してください。量論は『何が先に不足するか』を測定可能な物質量で判断する方法です。",
+            "en": "Hydrogen and oxygen react to form water, but the amount of water is limited by the balanced reaction. Starting with 3 mol H₂ and 1 mol O₂ does not mean the smaller count is automatically limiting in every reaction; the stoichiometric ratio matters. Limiting reagents are a question of proportional demand, not visual quantity."
+          },
+          {
+            "type": "particles",
+            "ja": "化学反応では原子が新たに生まれたり消えたりするのではなく、原子同士の結合や配置が変わります。2H₂+O₂→2H₂Oなら、左右のH原子は4個、O原子は2個で一致します。反応式の係数は反応に関与する粒子の比であり、これをmol比として読むことができます。電子の授受がある場合は電荷の保存も必要です。",
+            "en": "Chemical reactions rearrange atoms rather than creating or destroying them. In 2H₂+O₂→2H₂O, both sides contain four H atoms and two O atoms. The coefficients give ratios of reacting entities, equivalently mole ratios. Ionic reaction balancing must additionally respect charge conservation."
+          },
+          {
+            "type": "model",
+            "ja": "制限試薬を判定するときは、各反応物について物質量を係数で割り、最も小さい値を探す方法が便利です。例ではH₂:3/2=1.5、O₂:1/1=1ですからO₂が制限試薬になります。水の理論量は2×1=2 mol。残るH₂は3−2=1 molです。最後に原子数や質量が一致するか検算してください。",
+            "en": "An efficient method is to divide available moles by their stoichiometric coefficients. For 3 mol H₂ and 1 mol O₂, the extents are 3/2=1.5 versus 1/1=1, so oxygen limits the reaction extent to 1 mol. Theoretical water formed is 2 mol, with 1 mol H₂ remaining. Verify atom and mass conservation."
+          },
+          {
+            "type": "limits",
+            "ja": "理論収量は『反応が指定した式どおり完結し、他の損失がない場合』の上限です。実際には逆反応、競合反応、不完全混合、回収損失があり得ます。収率が低い場合は、反応が完了しなかったのか、別の生成物になったのか、回収に失敗したのかを区別すると改善策が違います。",
+            "en": "The theoretical yield assumes the specified reaction proceeds as intended without competing pathways or isolation losses. A low isolated yield may reflect incomplete conversion, equilibrium, side reactions or losses during purification. Identifying the cause determines what intervention could help."
+          },
+          {
+            "type": "revisit",
+            "ja": "有機合成を学ぶと、同じ量論でも副反応があるため収率を考える必要が出てきます。反応速度を学ぶと、制限試薬の計算が『最終的な上限』を与えるだけで、そこへ至る時間は教えないと気づけます。平衡を学ぶと、理論上の完全反応と現実の平衡組成が異なることを説明できます。",
+            "en": "Organic synthesis introduces competing pathways and isolated yields. Kinetics explains how fast reactants are consumed, while equilibrium determines whether complete conversion is thermodynamically expected. Stoichiometry sets a formal ceiling, but not the time or the actual composition achieved."
+          }
+        ]
+      }
     },
     {
       "id": "1-2",
@@ -137,7 +197,37 @@
         "ja": "高山で袋が膨らむのは何が変わったためか。袋の温度も変わるとどうなるか。",
         "en": "Why might a sealed bag expand at altitude, and how would temperature change the result?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "密閉された柔らかい袋が山の上で膨らむことがあります。外側の圧力が低下すると袋内部との圧力差が生じ、袋が伸びて体積が変わります。ここから『圧力と体積には関係がある』と気づけますが、温度も変化すれば単純な反比例になりません。測った条件を固定してから気体の法則を使います。",
+            "en": "A flexible sealed bag can expand at altitude because lower external pressure changes the balance of forces on the bag. It suggests a pressure–volume relation, but temperature and material elasticity also matter. Gas-law predictions require specifying which variables and mechanical constraints remain fixed."
+          },
+          {
+            "type": "particles",
+            "ja": "気体分子はランダムな方向へ運動し、容器壁との衝突で運動量を交換します。多数の衝突を平均すると圧力として観測されます。温度が高いと分子の平均並進運動エネルギーは大きくなり、一定体積で圧力が増える場合があります。異なる分子量の気体が同温度でも同じ平均速さであるとは限りません。",
+            "en": "Gas pressure arises from a vast number of molecular collisions with container walls. At fixed volume and particle amount, increasing absolute temperature raises average translational kinetic energy and pressure. Gases at the same temperature have equal mean translational kinetic energy in an ideal-gas model, not identical molecular speeds."
+          },
+          {
+            "type": "model",
+            "ja": "理想気体の式PV=nRTは『P×Vがn×Tに比例する』という整理です。体積を求めたいならV=nRT/P、物質量ならn=PV/RTに変形します。300 K、約100 kPa、1 molならV≈25 Lです。Paとm³を用いるR=8.314 J mol⁻¹ K⁻¹、またはLとkPaに合わせた単位系を使い、混用を避けます。",
+            "en": "The ideal gas equation PV=nRT organizes a proportional relationship among pressure, volume, amount and absolute temperature. Rearrange according to the unknown: V=nRT/P or n=PV/RT. At 300 K and about 100 kPa, one mole occupies roughly 25 L. Check units: 1 Pa·m³=1 J, while liter-based equations require compatible R units."
+          },
+          {
+            "type": "limits",
+            "ja": "PV=nRTは実在分子の体積や分子間相互作用を無視するモデルです。高圧・低温ではずれが大きくなる場合があります。また密閉容器に液体がある場合、水蒸気の量は液体との蒸発・凝縮平衡にも制限されます。理想気体の式だけから『何mol蒸発するか』を決めることはできません。",
+            "en": "PV=nRT neglects molecular volume and intermolecular interactions, so nonideal effects can grow under high pressure and low temperature. If liquid coexists with vapor, evaporation–condensation equilibrium also constrains vapor amount. The ideal gas law alone cannot determine how much liquid evaporates."
+          },
+          {
+            "type": "revisit",
+            "ja": "分子運動論と熱力学を学んだあとに気体の式へ戻ると、経験則が粒子の運動から導かれることがわかります。化学平衡では気体の分圧が反応商に登場し、気相反応の圧力効果を考える基礎になります。高地での沸騰、気象の気圧変化、呼吸のガス交換にも同じ量が現れます。",
+            "en": "Kinetic theory provides a microscopic route to gas laws. Later, gas partial pressures enter reaction quotients, linking PV=nRT with chemical equilibrium. The same variables also appear in boiling at altitude, atmospheric pressure and respiratory gas exchange."
+          }
+        ]
+      }
     },
     {
       "id": "1-3",
@@ -181,7 +271,37 @@
         "ja": "温度を上げて結晶が析出する物質があったとしたら、その溶解度曲線はどうなるだろう。",
         "en": "What would a solubility curve look like for a substance that crystallizes upon heating?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "砂糖を水に入れると見えなくなりますが、砂糖の分子が消えるわけではありません。水の中へ分散して均一に近い状態になるからです。食塩も透明な溶液になりますが、こちらはNa⁺とCl⁻として分散します。見た目が同じでも粒子の状態は異なるので、導電性などの実験で確かめることができます。",
+            "en": "Sugar seems to disappear when dissolved, yet sugar molecules remain dispersed in water. Sodium chloride can also form a clear solution, but dissolves as hydrated ions. Similar visual appearance does not imply identical microscopic species. Electrical conductivity can help distinguish these situations."
+          },
+          {
+            "type": "particles",
+            "ja": "水分子は極性をもち、イオンや極性のある分子と相互作用します。NaCl結晶が溶けるときは格子を崩すためのエネルギーが必要ですが、イオンが水和されることでエネルギー的な利得も生じます。さらに溶液中に分散することによるエントロピーの寄与もあり、溶けるかどうかは一つの相互作用だけでは決まりません。",
+            "en": "Polar water molecules interact with ions and polar solutes. Separating ions from a crystal requires energy, while hydration provides favorable interactions. The entropy of mixing also contributes. Whether dissolution is favorable depends on the balance of Gibbs energy rather than a single attraction."
+          },
+          {
+            "type": "model",
+            "ja": "モル濃度c=n/VではVは『溶液全体の体積』であり、溶媒として加えた水の体積だけではありません。0.2 molを最終体積0.5 Lにしたならc=0.4 mol/Lです。希釈で溶質の物質量nが保存されるならc₁V₁=c₂V₂が使えますが、混合時の化学反応や溶質の損失がないことを確認してください。",
+            "en": "In molarity c=n/V, V is the final volume of solution, not merely the volume of solvent added. Dissolving 0.2 mol to a final volume of 0.5 L gives 0.4 mol/L. The common dilution equation c₁V₁=c₂V₂ follows from conservation of solute amount and is invalid if reaction or solute loss occurs."
+          },
+          {
+            "type": "limits",
+            "ja": "『温度を上げれば溶解度が必ず増える』とは限りません。溶解のエンタルピーやエントロピーは物質ごとに違い、飽和状態は平衡条件で決まります。気体は水への溶解度が圧力の影響を受けやすく、酸素などの溶存量を考えるときは気相の分圧にも注目します。",
+            "en": "Solubility does not universally increase with temperature; enthalpy and entropy changes differ by system. Saturation is a thermodynamic condition. Gas solubility often responds strongly to partial pressure, so predicting dissolved oxygen, for example, requires attention to the surrounding gas phase."
+          },
+          {
+            "type": "revisit",
+            "ja": "反応量の計算を学ぶと、濃度と体積から反応した粒子数を推定できます。化学平衡の学習後には、溶ける・析出する過程を『溶解速度と析出速度が等しくなる状態』として捉え直せます。生化学では水中の塩やpHがタンパク質の形に影響するので、溶液を単なる均一な液体として扱わないことが大切です。",
+            "en": "Stoichiometry lets concentration and volume predict reacted amounts. Equilibrium then reinterprets saturation as a balance between dissolution and crystallization processes. Biochemistry adds another layer: ionic composition and pH can affect protein structure, so a solution is not merely an undifferentiated liquid."
+          }
+        ]
+      }
     },
     {
       "id": "1-4",
@@ -225,7 +345,37 @@
         "ja": "植物の根に濃い塩水を与えたとき、水の移動はどう予測できるか。",
         "en": "How would concentrated saltwater around plant roots affect water movement?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "塩漬けした野菜から水が出ることがあります。細胞の内外で溶質濃度や水の状態が異なり、膜を通して水が移動するからです。ただし『水は必ず濃度の高い側へ行く』だけでは、外圧や細胞の膨圧がある場合を説明できません。水の移動を駆動する量に注目する必要があります。",
+            "en": "Salting vegetables often causes water to leave their cells. A membrane separates solutions with differing solvent chemical potentials, allowing water transfer. The slogan 'water moves toward higher solute concentration' is only a simplified rule; pressure, membrane permeability and cellular turgor can alter the outcome."
+          },
+          {
+            "type": "particles",
+            "ja": "半透膜ではある粒子は通り、別の粒子は通らないという選択性があります。溶媒が通れると、水分子は両方向へ移動し続け、移動の釣り合いは化学ポテンシャルの条件で決まります。植物細胞では細胞壁が圧力を支え、浸透圧と膨圧を合わせた水ポテンシャルを考えます。微視的運動と巨視的な水位変化を分けて考えます。",
+            "en": "A semipermeable membrane allows certain species to cross while restricting others. Solvent molecules move in both directions, and net transfer depends on their chemical potential. In plant cells, the cell wall permits turgor pressure, so water potential incorporates both solute and pressure contributions. Microscopic exchange can continue when net flow is zero."
+          },
+          {
+            "type": "model",
+            "ja": "理想希薄な非電解質の近似では浸透圧π≈cRTです。cをmol/m³で表し、R=8.314 J mol⁻¹ K⁻¹を使えばπはPaになります。0.10 mol/Lは100 mol/m³であり、300 Kならπ≈249 kPaです。凝固点降下なども粒子数に依存しますが、電解質の解離により実効粒子数が変化する点を忘れないでください。",
+            "en": "For an ideal dilute nonelectrolyte, π≈cRT. Using concentration in mol/m³ and R in SI units produces pressure in pascals: 0.10 mol/L=100 mol/m³ gives about 249 kPa at 300 K. Freezing-point depression and other colligative effects also reflect solute particle count, modified by electrolyte dissociation and nonideality."
+          },
+          {
+            "type": "limits",
+            "ja": "π=cRTを何にでも当てはめるのは危険です。電離度、濃い溶液での活量、透過性のある溶質、膜の性質などが実際の浸透に影響します。人体に使う輸液や植物の生育を考える場合も、単純なモル濃度だけで水移動が決まるとは限りません。",
+            "en": "The simplest osmotic equation has limits. Dissociation, nonideal activities, permeant solutes and membrane properties can all matter. In physiology or plant science, equal nominal molarity does not guarantee identical osmotic effects or water flow."
+          },
+          {
+            "type": "revisit",
+            "ja": "物理で圧力を学び、化学で溶液を学び、生物で細胞を学んだ後に浸透へ戻ると、同じ現象が複数の説明体系に組み込まれます。大学の化学ポテンシャルを知ると、なぜ圧力も溶質も水の流れを変えるのか一つの原理で説明できます。これが知識の『熟成』の具体例です。",
+            "en": "Osmosis becomes richer when pressure from physics, solutions from chemistry and membrane function from biology are combined. Chemical potential later unifies the effects of solute composition and pressure on water transport. Reinterpreting an earlier idea through another discipline is the intended learning experience."
+          }
+        ]
+      }
     }
   ]
 }
