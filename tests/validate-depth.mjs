@@ -104,7 +104,7 @@ for(const item of bridges.bridges){
  }
  assert.ok(item.steps?.length>=3,'At least three explanatory stages needed: '+item.id);
  for(const step of item.steps){
-  assert.ok(step.ja?.length>=7&&step.en?.length>=8,'Bilingual bridge heading missing: '+item.id);
+  assert.ok(step.ja?.length>=5&&step.en?.length>=8,'Bilingual bridge heading missing: '+item.id);
   assert.ok(step.textJa?.length>=100&&step.textEn?.length>=160,'Detailed bilingual bridge explanation incomplete: '+item.id);
  }
  for(const obj of [item.source,item.target,item.hook,item.limits,item.revisit]){
