@@ -3,11 +3,12 @@
 (function(){
 "use strict";
 const CACHE=new Map(), KEY="chemistry-depth-reflections-v1";
-let extensionsPromise=null;
+let extensionsPromise=null,bridgesPromise=null;
+function loadBridges(){if(!bridgesPromise)bridgesPromise=fetch("./data/chemistry-knowledge-bridges-v1.json").then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(data=>{if(data.schema!=="chemistry-knowledge-bridges"||data.schemaVersion!=="1.0"||!Array.isArray(data.bridges))throw Error("Invalid knowledge bridges");return data.bridges}).catch(e=>{bridgesPromise=null;throw e});return bridgesPromise}
 function loadExtensions(){if(!extensionsPromise)extensionsPromise=fetch("./data/chemistry-depth-extensions-v1.json").then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(data=>{if(data.schema!=="chemistry-depth-extensions"||data.schemaVersion!=="1.0"||!Array.isArray(data.topics))throw Error("Invalid extension curriculum");return data.topics}).catch(e=>{extensionsPromise=null;throw e});return extensionsPromise}
 const COPY={
- ja:{heading:"詳しく学ぶ",subtitle:"順番は自由です。最初の節だけを開き、必要に応じて続きを読めます。",loading:"詳しい解説を読み込み中…",failed:"解説データを読み込めませんでした。接続をご確認いただくか、もう一度お試しください。",reopen:"再読み込み",example:"例題：自分で考える",showSolution:"解き方を見る",pitfall:"誤解しやすい点",bridge:"知識のつながり・後からの再解釈",inquiry:"自分で問いを立てる",note:"考えが変わったことや新しい疑問（記録は任意）",save:"気づきを保存",saved:"端末内に記録しました。",failedSave:"保存できませんでした。ブラウザの保存領域を確認してください。",previous:"以前の気づき",delete:"削除",draft:"詳細教材（編集初稿）",originTitle:"なぜ、この概念が必要だったのか",originIntro:"結論や公式を覚える前に、概念が生まれる理由から読む",entryOrigin:"最初から理由を読む",entryConcept:"原理から読む",entryExample:"例題から読む",entryBridge:"つながりから読む",entryReasoning:"徹底解説を読む",entryGuided:"計算を一歩ずつ",guidedTitle:"解法の思考を一段ずつ確認する",guidedStep:"考える手順",reasoningTitle:"なぜそうなる？ 5つの視点で徹底解説",reasoningIntro:"説明は順番に読む必要はありません。知りたい視点から読んで、学んだ後に戻ってきてください。",lenses:["まず現象を観察する","原子・分子の動きで説明する","式・モデルで考える","どんな条件で成り立つか","新しい知識から読み直す"],extensions:"発展・横断：他の分野から読み直す",extensionReason:"ここでつながる知識",extensionQuestion:"考えてみる"},
- en:{heading:"Study in depth",subtitle:"There is no required order. Expand each section as needed; the first is open by default.",loading:"Loading extended explanations…",failed:"Could not load the extended lesson. Check your connection or try again.",reopen:"Retry",example:"Worked example: think first",showSolution:"Reveal a worked solution",pitfall:"Common misconception",bridge:"Connection and later reinterpretation",inquiry:"Investigate further",note:"An observation, changed idea or open question (optional)",save:"Save reflection",saved:"Saved on this device.",failedSave:"Unable to save to device storage.",previous:"Earlier reflections",delete:"Delete",draft:"Expanded curriculum (editorial draft)",originTitle:"Why did scientists need this concept?",originIntro:"Start with the problem before learning definitions and formulas",entryOrigin:"Start with the reason",entryConcept:"Start with principles",entryExample:"Start with an example",entryBridge:"Start with connections",entryReasoning:"Explore why",entryGuided:"Guided calculation",guidedTitle:"Reason through a problem, one step at a time",guidedStep:"Reasoning step",reasoningTitle:"Why? Five connected perspectives",reasoningIntro:"No required reading order. Explore the perspective that matters, and return when another topic changes your understanding.",lenses:["Observe the phenomenon","Explain the particles","Build the mathematical or conceptual model","Check assumptions and limits","Revisit after learning something new"],extensions:"Further connections and advanced perspectives",extensionReason:"Why this connection matters",extensionQuestion:"Think about it"}
+ ja:{heading:"詳しく学ぶ",subtitle:"順番は自由です。最初の節だけを開き、必要に応じて続きを読めます。",loading:"詳しい解説を読み込み中…",failed:"解説データを読み込めませんでした。接続をご確認いただくか、もう一度お試しください。",reopen:"再読み込み",example:"例題：自分で考える",showSolution:"解き方を見る",pitfall:"誤解しやすい点",bridge:"知識のつながり・後からの再解釈",inquiry:"自分で問いを立てる",note:"考えが変わったことや新しい疑問（記録は任意）",save:"気づきを保存",saved:"端末内に記録しました。",failedSave:"保存できませんでした。ブラウザの保存領域を確認してください。",previous:"以前の気づき",delete:"削除",draft:"詳細教材（編集初稿）",originTitle:"なぜ、この概念が必要だったのか",originIntro:"結論や公式を覚える前に、概念が生まれる理由から読む",entryOrigin:"最初から理由を読む",entryConcept:"原理から読む",entryExample:"例題から読む",entryBridge:"つながりから読む",priorHeading:"前に学んだことから、もう一度考える",priorIntro:"別の分野で理解した知識が、今回の概念を説明する材料になります。共通点だけでなく、当てはまらない部分も確認しましょう。",priorSource:"すでに使える知識",priorTarget:"今の単元で説明できること",priorLimit:"似ているけれど、同じではない点",priorRevisit:"後で読み直す",priorExplore:"経路と状態量を操作して比較",entryBridge:"つながりから読む",entryReasoning:"徹底解説を読む",entryGuided:"計算を一歩ずつ",guidedTitle:"解法の思考を一段ずつ確認する",guidedStep:"考える手順",reasoningTitle:"なぜそうなる？ 5つの視点で徹底解説",reasoningIntro:"説明は順番に読む必要はありません。知りたい視点から読んで、学んだ後に戻ってきてください。",lenses:["まず現象を観察する","原子・分子の動きで説明する","式・モデルで考える","どんな条件で成り立つか","新しい知識から読み直す"],extensions:"発展・横断：他の分野から読み直す",extensionReason:"ここでつながる知識",extensionQuestion:"考えてみる"},
+ en:{heading:"Study in depth",subtitle:"There is no required order. Expand each section as needed; the first is open by default.",loading:"Loading extended explanations…",failed:"Could not load the extended lesson. Check your connection or try again.",reopen:"Retry",example:"Worked example: think first",showSolution:"Reveal a worked solution",pitfall:"Common misconception",bridge:"Connection and later reinterpretation",inquiry:"Investigate further",note:"An observation, changed idea or open question (optional)",save:"Save reflection",saved:"Saved on this device.",failedSave:"Unable to save to device storage.",previous:"Earlier reflections",delete:"Delete",draft:"Expanded curriculum (editorial draft)",originTitle:"Why did scientists need this concept?",originIntro:"Start with the problem before learning definitions and formulas",entryOrigin:"Start with the reason",entryConcept:"Start with principles",entryExample:"Start with an example",entryBridge:"Start with connections",priorHeading:"Revisit this topic through what you already know",priorIntro:"Prior knowledge from another discipline can explain a new chemical idea. Compare both the shared structure and the limits of the analogy.",priorSource:"Earlier knowledge",priorTarget:"New explanation",priorLimit:"Where the analogy stops",priorRevisit:"Revisit later",priorExplore:"Compare paths and state functions interactively",entryBridge:"Start with connections",entryReasoning:"Explore why",entryGuided:"Guided calculation",guidedTitle:"Reason through a problem, one step at a time",guidedStep:"Reasoning step",reasoningTitle:"Why? Five connected perspectives",reasoningIntro:"No required reading order. Explore the perspective that matters, and return when another topic changes your understanding.",lenses:["Observe the phenomenon","Explain the particles","Build the mathematical or conceptual model","Check assumptions and limits","Revisit after learning something new"],extensions:"Further connections and advanced perspectives",extensionReason:"Why this connection matters",extensionQuestion:"Think about it"}
 };
 const escapeHTML=x=>String(x).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const safeRead=()=>{try{const a=JSON.parse(localStorage.getItem(KEY)||"[]");return Array.isArray(a)?a.filter(n=>n&&typeof n==="object"&&typeof n.chapter==="string"&&typeof n.note==="string"&&n.note.length<=1200).slice(-500):[]}catch{return []}};
@@ -15,6 +16,18 @@ let records=safeRead();
 function styles(){if(document.getElementById("chemistryDepthStyle"))return;const style=document.createElement("style");style.id="chemistryDepthStyle";style.textContent=`
 .depth-area{border-top:2px solid #d5e7da;margin:24px 0;padding-top:16px}
 .depth-area .depth-caption{font-size:13px;color:#587468}
+.depth-prior{border:1px solid #c8ddcc;border-radius:14px;padding:13px;margin:12px 0 20px;background:#f8fcf9}
+.depth-prior h3{font-size:19px;line-height:1.5;color:#175844;margin:4px 0 8px}
+.depth-prior>p{font-size:14px;line-height:1.85;color:#566e60}
+.depth-prior article{margin:8px 0}
+.depth-prior summary{font-size:15px}
+.depth-prior .depth-prior-step summary{font-size:14px;font-weight:700;color:#315f50}
+.depth-prior .depth-prior-step p{white-space:pre-line;line-height:2.0;margin:9px 5px 16px}
+.depth-prior small{display:block;line-height:1.7}
+.depth-prior .depth-prior-hook{background:#edf7ef;border-radius:9px;padding:10px 13px;line-height:1.85}
+.depth-prior .depth-prior-note{border-left:3px solid #7f9f8d;padding:10px 12px;line-height:1.9}
+.depth-prior a{color:#176d57;text-decoration:underline;font-weight:700;display:inline-block;min-height:44px;padding:9px 4px}
+@media(max-width:730px){.depth-prior{padding:10px}.depth-prior .depth-prior-step p{font-size:15px}}
 .depth-origin{border:2px solid #90b8a1;border-radius:15px;padding:12px 13px;margin:13px 0;background:#f5faf7}
 .depth-origin h3{font-size:20px;color:#175844;margin:5px 4px 8px}
 .depth-origin>p{margin:8px 4px 13px;line-height:1.85}
@@ -75,6 +88,22 @@ function appendExtensions(host,id,lang,topics){
  section.innerHTML='<h3>'+escapeHTML(t.extensions)+'</h3>'+selected.map(item=>'<details><summary>'+escapeHTML(item[key])+'</summary><p class="depth-text">'+escapeHTML(item[body])+'</p><h4>'+escapeHTML(t.extensionReason)+'</h4><p class="depth-text">'+escapeHTML(item[reason])+'</p><div class="depth-box"><strong>'+escapeHTML(t.extensionQuestion)+'</strong><p>'+escapeHTML(item[question])+'</p></div></details>').join("");
  container.appendChild(section);
 }
+function appendBridges(host,id,lang,items){
+ if(!host.isConnected||host.dataset.chapter!==id||host.dataset.language!==lang)return;
+ const selected=items.filter(item=>Array.isArray(item.chapters)&&item.chapters.includes(id));
+ if(!selected.length)return;
+ const t=COPY[lang],title=lang==="ja"?"ja":"en",body=lang==="ja"?"textJa":"textEn";
+ const section=document.createElement("section");section.className="depth-prior";section.id="depthPrior";
+ section.innerHTML='<h3>'+escapeHTML(t.priorHeading)+'</h3><p>'+escapeHTML(t.priorIntro)+'</p>'+
+ selected.map((item,idx)=>{
+  const source=item.source[title],target=item.target[title],hook=item.hook[title];
+  const steps=item.steps.map((step,i)=>'<details class="depth-prior-step" '+(idx===0&&i===0?"open":"")+'><summary>'+escapeHTML(step[title])+'</summary><p>'+escapeHTML(step[body])+'</p></details>').join("");
+  const url=item.lab==="state-function-lab.html"?'./state-function-lab.html'+(lang==="en"?"?lang=en":""):null;
+  return '<article><details class="depth-prior-card" '+(id==="2-0"&&idx===0?"open":"")+'><summary>'+escapeHTML(source)+' → '+escapeHTML(target)+'</summary><div class="depth-prior-hook">'+escapeHTML(hook)+'</div><small><strong>'+escapeHTML(t.priorSource)+': </strong>'+escapeHTML(source)+' / <strong>'+escapeHTML(t.priorTarget)+': </strong>'+escapeHTML(target)+'</small>'+steps+'<p class="depth-prior-note"><strong>'+escapeHTML(t.priorLimit)+'</strong> '+escapeHTML(item.limits[title])+'</p><p class="depth-prior-note"><strong>'+escapeHTML(t.priorRevisit)+'</strong> '+escapeHTML(item.revisit[title])+'</p>'+(url?'<a href="'+url+'">'+escapeHTML(t.priorExplore)+'</a>':"")+'</details></article>';
+ }).join("");
+ const area=host.querySelector(".depth-area"),routes=area?.querySelector(".depth-routes");
+ if(routes)routes.insertAdjacentElement("afterend",section);else if(area)area.appendChild(section);
+}
 function renderLesson(host,id,lang,lesson){
  if(!host.isConnected||host.dataset.chapter!==id)return;
  styles();const t=COPY[lang];
@@ -106,9 +135,10 @@ function renderLesson(host,id,lang,lesson){
  });renderLogs(host,id,lang);
 }
 async function render(id,lang,host){
- if(!host)return;lang=lang==="en"?"en":"ja";const t=COPY[lang];const group=String(id).split("-")[0];host.dataset.chapter=id;host.innerHTML='<div class="depth-area" role="status">'+escapeHTML(t.loading)+'</div>';
+ if(!host)return;lang=lang==="en"?"en":"ja";const t=COPY[lang];const group=String(id).split("-")[0];host.dataset.chapter=id;host.dataset.language=lang;host.innerHTML='<div class="depth-area" role="status">'+escapeHTML(t.loading)+'</div>';
  try{const value=await groupData(group),lesson=value.chapters.find(x=>x.id===id);
- if(!lesson)throw Error("Missing chapter "+id);renderLesson(host,id,lang,lesson);try{const topics=await loadExtensions();appendExtensions(host,id,lang,topics)}catch{ /* Optional extension data is non-blocking. */ }}
+ if(!lesson)throw Error("Missing chapter "+id);renderLesson(host,id,lang,lesson);
+ await Promise.allSettled([loadBridges().then(items=>appendBridges(host,id,lang,items)),loadExtensions().then(topics=>appendExtensions(host,id,lang,topics))]);}
  catch(error){if(!host.isConnected||host.dataset.chapter!==id)return;host.innerHTML='<div class="depth-area"><p>'+escapeHTML(t.failed)+'</p><button type="button" class="depth-retry">'+escapeHTML(t.reopen)+'</button></div>';host.querySelector(".depth-retry").onclick=()=>render(id,lang,host);}
 }
 window.ChemistryDepth={render};
