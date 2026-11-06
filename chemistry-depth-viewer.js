@@ -1,0 +1,63 @@
+/* Chemistry Structure Lab bilingual depth viewer v1.0.
+   Read-only curriculum data; reflection notes remain local and optional. */
+(function(){
+"use strict";
+const CACHE=new Map(), KEY="chemistry-depth-reflections-v1";
+const COPY={
+ ja:{heading:"詳しく学ぶ",subtitle:"順番は自由です。最初の節だけを開き、必要に応じて続きを読めます。",loading:"詳しい解説を読み込み中…",failed:"解説データを読み込めませんでした。接続をご確認いただくか、もう一度お試しください。",reopen:"再読み込み",example:"例題：自分で考える",showSolution:"解き方を見る",pitfall:"誤解しやすい点",bridge:"知識のつながり・後からの再解釈",inquiry:"自分で問いを立てる",note:"考えが変わったことや新しい疑問（記録は任意）",save:"気づきを保存",saved:"端末内に記録しました。",failedSave:"保存できませんでした。ブラウザの保存領域を確認してください。",previous:"以前の気づき",delete:"削除",draft:"詳細教材（編集初稿）"},
+ en:{heading:"Study in depth",subtitle:"There is no required order. Expand each section as needed; the first is open by default.",loading:"Loading extended explanations…",failed:"Could not load the extended lesson. Check your connection or try again.",reopen:"Retry",example:"Worked example: think first",showSolution:"Reveal a worked solution",pitfall:"Common misconception",bridge:"Connection and later reinterpretation",inquiry:"Investigate further",note:"An observation, changed idea or open question (optional)",save:"Save reflection",saved:"Saved on this device.",failedSave:"Unable to save to device storage.",previous:"Earlier reflections",delete:"Delete",draft:"Expanded curriculum (editorial draft"}
+};
+const escapeHTML=x=>String(x).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safeRead=()=>{try{const a=JSON.parse(localStorage.getItem(KEY)||"[]");return Array.isArray(a)?a.filter(n=>n&&typeof n==="object"&&typeof n.chapter==="string"&&typeof n.note==="string"&&n.note.length<=1200).slice(-500):[]}catch{return []}};
+let records=safeRead();
+function styles(){if(document.getElementById("chemistryDepthStyle"))return;const style=document.createElement("style");style.id="chemistryDepthStyle";style.textContent=`
+.depth-area{border-top:2px solid #d5e7da;margin:24px 0;padding-top:16px}
+.depth-area .depth-caption{font-size:13px;color:#587468}
+.depth-area details{border:1px solid #d5e7df;border-radius:12px;margin:9px 0;background:#fcfefd;padding:0 13px}
+.depth-area summary{font-weight:800;color:#174f4a;cursor:pointer;padding:14px 5px;line-height:1.55;min-height:48px}
+.depth-area summary:focus-visible{outline:3px solid #6aa69b;outline-offset:2px}
+.depth-area details[open]>summary{border-bottom:1px solid #e0ece4;margin-bottom:9px}
+.depth-area .depth-text{white-space:pre-line;margin:9px 5px 17px;line-height:1.9}
+.depth-area .depth-box{background:#f0f7f2;border-left:4px solid #4b9b7f;padding:13px 15px;border-radius:10px;margin:11px 0}
+.depth-area .depth-hint{font-size:13px;color:#5a786d}
+.depth-area textarea{display:block;width:100%;min-height:78px;border:1px solid #b2cbbd;border-radius:10px;padding:12px;font:inherit;resize:vertical}
+.depth-area button{min-height:42px;cursor:pointer;margin:6px 0}
+.depth-area .depth-log{margin-top:10px;padding:10px 13px;border:1px solid #dbe9df;border-radius:10px}
+.depth-area .depth-log small{display:block;color:#6c7f72}
+@media(max-width:730px){.depth-area{margin:16px 0}.depth-area details{margin:7px 0;padding:0 10px}.depth-area summary{font-size:15px}.depth-area .depth-text{font-size:15px;line-height:1.85}.depth-area button{min-height:46px}}
+`;document.head.appendChild(style)}
+async function groupData(group){
+ if(!CACHE.has(group))CACHE.set(group,fetch("./data/chemistry-depth-"+group+".json").then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(v=>{if(v.schema!=="chemistry-depth-textbook"||v.schemaVersion!=="1.0"||String(v.group)!==group||!Array.isArray(v.chapters))throw Error("Invalid depth curriculum");return v}).catch(error=>{CACHE.delete(group);throw error}));
+ return CACHE.get(group);
+}
+function renderLogs(mount,id,lang){
+ const t=COPY[lang],out=mount.querySelector(".depth-logs");if(!out)return;
+ const notes=records.filter(x=>x.chapter===id).slice().reverse();
+ out.innerHTML=notes.length?'<h4>'+t.previous+'</h4>'+notes.map(n=>'<div class="depth-log"><small>'+escapeHTML((n.date||"").slice(0,10))+'</small><p>'+escapeHTML(n.note)+'</p><button type="button" data-depth-delete="'+escapeHTML(n.id)+'">'+t.delete+'</button></div>').join(""):"";
+ out.querySelectorAll("[data-depth-delete]").forEach(b=>b.addEventListener("click",()=>{const next=records.filter(n=>n.id!==b.dataset.depthDelete);try{localStorage.setItem(KEY,JSON.stringify(next));records=next;renderLogs(mount,id,lang)}catch{const status=mount.querySelector(".depth-status");if(status)status.textContent=t.failedSave}}));
+}
+function renderLesson(host,id,lang,lesson){
+ if(!host.isConnected||host.dataset.chapter!==id)return;
+ styles();const t=COPY[lang];
+ const title=lang==="ja"?"ja":"en",body=lang==="ja"?"textJa":"textEn",sol=lang==="ja"?"solutionJa":"solutionEn";
+ const block=lesson.sections.map((section,i)=>'<details '+(i===0?"open":"")+'><summary>'+escapeHTML((i+1)+". "+section[title])+'</summary><p class="depth-text">'+escapeHTML(section[body])+'</p></details>').join("");
+ host.innerHTML='<section class="depth-area" aria-label="'+escapeHTML(t.heading)+'"><h3>'+escapeHTML(t.heading)+'</h3><p class="depth-caption">'+escapeHTML(t.subtitle)+'</p><p class="depth-hint">'+escapeHTML(t.draft)+'</p>'+
+ block+
+ '<details><summary>'+escapeHTML(t.example)+'</summary><p class="depth-text">'+escapeHTML(lesson.example[title])+'</p><details><summary>'+escapeHTML(t.showSolution)+'</summary><p class="depth-text">'+escapeHTML(lesson.example[sol])+'</p></details></details>'+
+ '<details><summary>'+escapeHTML(t.pitfall)+'</summary><p class="depth-text">'+escapeHTML(lesson.pitfall[title])+'</p></details>'+
+ '<details><summary>'+escapeHTML(t.bridge)+'</summary><p class="depth-text">'+escapeHTML(lesson.bridge[title])+'</p></details>'+
+ '<details><summary>'+escapeHTML(t.inquiry)+'</summary><p class="depth-text">'+escapeHTML(lesson.inquiry[title])+'</p><label for="depthNote" class="depth-hint">'+escapeHTML(t.note)+'</label><textarea id="depthNote" maxlength="1200"></textarea><button type="button" class="depth-save">'+escapeHTML(t.save)+'</button><p class="depth-status" role="status"></p><div class="depth-logs"></div></details></section>';
+ const save=host.querySelector(".depth-save");save.addEventListener("click",()=>{
+ const note=host.querySelector("#depthNote").value.trim();if(!note)return;
+ const next=[...records,{id:"dn-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,8),chapter:id,note,date:new Date().toISOString(),provenance:"learner-reflection"}].slice(-500);
+ try{localStorage.setItem(KEY,JSON.stringify(next));records=next;host.querySelector("#depthNote").value="";host.querySelector(".depth-status").textContent=t.saved;renderLogs(host,id,lang)}catch{host.querySelector(".depth-status").textContent=t.failedSave}
+ });renderLogs(host,id,lang);
+}
+async function render(id,lang,host){
+ if(!host)return;lang=lang==="en"?"en":"ja";const t=COPY[lang];const group=String(id).split("-")[0];host.dataset.chapter=id;host.innerHTML='<div class="depth-area" role="status">'+escapeHTML(t.loading)+'</div>';
+ try{const value=await groupData(group),lesson=value.chapters.find(x=>x.id===id);
+ if(!lesson)throw Error("Missing chapter "+id);renderLesson(host,id,lang,lesson)}
+ catch(error){if(!host.isConnected||host.dataset.chapter!==id)return;host.innerHTML='<div class="depth-area"><p>'+escapeHTML(t.failed)+'</p><button type="button" class="depth-retry">'+escapeHTML(t.reopen)+'</button></div>';host.querySelector(".depth-retry").onclick=()=>render(id,lang,host);}
+}
+window.ChemistryDepth={render};
+})();
