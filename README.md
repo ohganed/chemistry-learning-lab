@@ -14,6 +14,10 @@
 - スマートフォン・タブレット・PC対応
 - Service Worker による初回オンライン表示後のオフライン閲覧
 
+## 日英バイリンガル教材
+
+[高校化学（日本語）](high-school-chemistry.html) と [High School Chemistry (English)](high-school-chemistry-en.html) は29章の説明・問題・解説をそれぞれの言語で持ち、共通の章ID・進捗記録を使用します。英語表示を追加したのは高校化学29章であり、他の専用ページの全訳は今後の課題です。国際的な大学で推薦されうる品質を長期目標として、英語の科学的正確性・アクセシビリティ・検証可能性を重視します。いかなる大学からも推薦・承認を受けたと主張しません。
+
 ## 大学化学の体系・他アプリ連携
 
 学習分野とデータ交換の設計書は [architecture/chemistry-curriculum-and-interop.md](architecture/chemistry-curriculum-and-interop.md) を参照。大学化学は9基幹分野と専門・学際タグで整理します。学習記録は [learning-interchange.html](learning-interchange.html) から共通JSON形式で書き出し・復元できます。現段階では手動でのファイル受け渡しで、自動同期ではありません。
