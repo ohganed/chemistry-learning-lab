@@ -1,0 +1,143 @@
+{
+  "schema": "chemistry-depth-textbook",
+  "schemaVersion": "1.0",
+  "group": "5",
+  "locale": [
+    "ja",
+    "en"
+  ],
+  "chapters": [
+    {
+      "id": "5-0",
+      "ja": "付加重合と縮合重合",
+      "en": "Addition and condensation polymerization",
+      "sections": [
+        {
+          "ja": "単量体から高分子へ",
+          "en": "From monomers to polymers",
+          "textJa": "高分子は比較的小さな構成単位が多数つながった分子であり、繰り返し単位と重合度を区別する。エテンCH₂=CH₂は付加型の連鎖重合でポリエチレンの−CH₂−CH₂−単位を生じる。分子が多数できるので実際の試料は分子量分布をもつことが多い。重合反応式のnは一つの高分子に何個の単位がつながるかを表す概念上の数である。",
+          "textEn": "Polymers are large molecules built from repeated units. Ethene can form polyethylene with −CH₂−CH₂− repeat units in chain-growth polymerization. Real samples usually contain a distribution of molecular sizes rather than a single degree of polymerization. A repeat unit is not always identical to the monomer molecule."
+        },
+        {
+          "ja": "付加と縮合の違いを反応で理解する",
+          "en": "Understand polymerization pathways",
+          "textJa": "エテン由来のポリエチレンの重合は一般に小分子の副生成物を出さない付加型である。ジカルボン酸とジオールからポリエステルができる場合は水などの小分子を除く縮合反応が含まれる。『付加重合=連鎖重合』『縮合重合=段階成長』という対応は典型的ではあるが、厳密な同義語ではない。重合機構と副生成物の有無は別の観点で整理できる。",
+          "textEn": "Ethene polymerization typically adds monomer units without losing small molecules, while making polyesters from diacids and diols can eliminate water. Addition versus condensation classifies the overall chemical transformation; chain-growth versus step-growth classifies the growth mechanism. They are related but not exact synonyms."
+        },
+        {
+          "ja": "高分子の形が物性を変える",
+          "en": "How architecture changes properties",
+          "textJa": "同じ単量体からできた高分子でも、枝分かれ、立体規則性、架橋の程度で密度・強さ・融点・溶解性が変わる。結晶性が高い材料と非晶性材料では力学的性質が異なることがある。高分子構造は化学結合だけでなく分子間相互作用とも深く関係する。材料の性質を『プラスチック』という名前だけから予測できない。",
+          "textEn": "Branching, tacticity and crosslinking influence density, strength, melting and solubility, even when repeat-unit chemistry is similar. Crystalline and amorphous regions affect mechanical behavior. Intermolecular forces and chain architecture matter as much as functional-group names."
+        }
+      ],
+      "example": {
+        "ja": "エテンがn個連結したときの繰り返し単位を書く。",
+        "en": "Write the repeat unit formed by n molecules of ethene.",
+        "solutionJa": "nCH₂=CH₂→(−CH₂−CH₂−)n。二重結合に由来する炭素間のつながりが鎖になり、繰り返し単位はC₂H₄である。",
+        "solutionEn": "nCH₂=CH₂→(−CH₂−CH₂−)n. The repeat unit has composition C₂H₄ and contains a single C−C connection along the chain."
+      },
+      "pitfall": {
+        "ja": "ポリエチレンを分子式C₂H₄の小さな分子と同一視しない。重合度と分子量分布が重要である。",
+        "en": "Polyethylene is not a small molecule C₂H₄; chain length and molecular-weight distribution matter."
+      },
+      "bridge": {
+        "ja": "有機反応→結合の繰り返し→材料物性→環境中での劣化・リサイクルへ。",
+        "en": "Connect organic bond formation with materials, degradation and recycling."
+      },
+      "inquiry": {
+        "ja": "同じポリエチレンでも硬いものと柔らかいものがあるのはなぜだろう。",
+        "en": "Why can products made of polyethylene differ in stiffness?"
+      },
+      "status": "editorial-draft"
+    },
+    {
+      "id": "5-1",
+      "ja": "合成繊維・樹脂・ゴム",
+      "en": "Synthetic fibers, plastics and rubber",
+      "sections": [
+        {
+          "ja": "繊維・樹脂の結合を見分ける",
+          "en": "Read bonds in materials",
+          "textJa": "ナイロンはポリアミドでアミド結合、PETなどのポリエステルはエステル結合を含む。原料と結合構造から耐熱性・水との相互作用・加水分解などの傾向を考える。繊維として使われるには高分子鎖の配向や結晶性も重要である。単に官能基が同じでも材料物性が一致するとは限らない。",
+          "textEn": "Nylon is a polyamide with amide bonds, and PET is a polyester with ester links. Bond types inform interactions with water, hydrolytic susceptibility and processing. Fiber strength also depends on orientation, crystallinity and chain length, not merely the functional-group label."
+        },
+        {
+          "ja": "熱可塑性と熱硬化性",
+          "en": "Thermoplastic versus thermosetting",
+          "textJa": "熱可塑性樹脂は加熱によって軟化し再成形できるものが多い。一方、密に架橋した熱硬化性樹脂は加熱しても流動しにくく、過度の加熱で分解する。架橋は鎖どうしを結びつけて変形や溶解のしやすさを変える。『加熱すると必ず融ける』のではなく、高分子の分解も考える必要がある。",
+          "textEn": "Thermoplastics can often soften and be reshaped on heating, whereas densely crosslinked thermosets resist flow and may decompose instead. Crosslinks connect chains and affect deformation and solubility. Heating a polymer does not always yield a simple melt."
+        },
+        {
+          "ja": "ゴムの弾性と加硫",
+          "en": "Rubber elasticity and vulcanization",
+          "textJa": "天然ゴムや合成ゴムは長い高分子鎖の配列とエントロピー効果により弾性を示す。適度な架橋を導入する加硫により弾性・強度・耐久性が改善することがある。架橋が多すぎると硬くなり伸びにくくなる。分子の構造と巨視的な弾性を結びつけるのは高分子物理の重要な考え方である。",
+          "textEn": "Rubber elasticity depends strongly on flexible chains and entropic effects. Vulcanization introduces crosslinks and can improve strength, elasticity and durability. Too many crosslinks may produce stiff, less extensible materials. This links microscopic polymer structure to macroscopic mechanics."
+        }
+      ],
+      "example": {
+        "ja": "PETとナイロンの代表的な結合を比較する。",
+        "en": "Compare characteristic linkages in PET and nylon.",
+        "solutionJa": "PETには−CO−O−のエステル結合、ナイロンには−CO−NH−のアミド結合がある。これらの違いは分子間相互作用や加水分解反応に影響する。",
+        "solutionEn": "PET contains ester links −CO−O−; nylon contains amide links −CO−NH−. This difference affects intermolecular interactions and hydrolysis."
+      },
+      "pitfall": {
+        "ja": "熱硬化性樹脂が『熱を加えれば再び流れる』とは限らない。架橋網目が関係する。",
+        "en": "Crosslinked thermosets do not generally remelt into a flowing material."
+      },
+      "bridge": {
+        "ja": "エステル化・アミド化→高分子→物性→資源循環や環境問題へ。",
+        "en": "Link ester/amide chemistry to macromolecular properties and environmental life cycles."
+      },
+      "inquiry": {
+        "ja": "同じ分子量の高分子で、架橋を増やすと何が変わると予想するか。",
+        "en": "How might adding crosslinks change a polymer's response to stress and heating?"
+      },
+      "status": "editorial-draft"
+    },
+    {
+      "id": "5-2",
+      "ja": "天然高分子と材料",
+      "en": "Natural macromolecules and materials",
+      "sections": [
+        {
+          "ja": "デンプンとセルロース",
+          "en": "Starch versus cellulose",
+          "textJa": "デンプンもセルロースもグルコースを構成単位とするが、結合の立体配置が異なる。デンプンは主にα-グリコシド結合、セルロースはβ-1,4-グリコシド結合を含む。これによって鎖の形・分子間水素結合・酵素による分解のされやすさが変わる。『同じ単量体だから同じ性質』とはならない。",
+          "textEn": "Starch and cellulose are both built from glucose units, yet differ in the stereochemistry of their glycosidic linkages. Starch uses mainly α-linkages while cellulose has β-1,4 linkages. Chain organization and enzyme accessibility differ dramatically, showing how small structural changes have major consequences."
+        },
+        {
+          "ja": "タンパク質の構造と機能",
+          "en": "Proteins as functional polymers",
+          "textJa": "タンパク質はアミノ酸がペプチド結合でつながる高分子であり、一次配列が折り畳み構造の基礎になる。水素結合・疎水性相互作用・電荷相互作用などが高次構造を支える。加熱などで変性して働きを失うことがあるが、必ずしもすべてのペプチド結合が切れるわけではない。酵素による分解では特定の結合が選択的に切断される。",
+          "textEn": "Proteins are amino-acid polymers linked by peptide bonds. Sequence affects higher-order folding stabilized by hydrogen bonds, hydrophobic effects and electrostatics. Denaturation may disrupt function without cleaving the whole backbone. Proteases can hydrolyze particular peptide bonds."
+        },
+        {
+          "ja": "天然由来と生分解性は別",
+          "en": "Origin versus biodegradability",
+          "textJa": "天然の物質でも分解の速さは温度・水分・微生物・材料形状などに左右される。合成高分子でも分解可能な設計がある一方、天然由来の成分を含む材料が必ず容易に分解するわけではない。環境中での寿命と、工業的な堆肥化条件での分解性を区別しなければならない。分子構造だけでなく使用環境や処理工程も評価する。",
+          "textEn": "Degradation rates depend on temperature, moisture, microorganisms and material geometry. Some synthetic polymers can biodegrade, while natural-origin content does not guarantee rapid decomposition. Environmental conditions, industrial composting and real-world disposal are different settings that must be evaluated separately."
+        }
+      ],
+      "example": {
+        "ja": "デンプンとセルロースは何が共通し、何が異なるか。",
+        "en": "How are starch and cellulose similar and different?",
+        "solutionJa": "ともにグルコース由来の高分子という点は共通。デンプンの主なα型結合とセルロースのβ-1,4結合の違いが鎖の形や酵素分解性を変える。",
+        "solutionEn": "Both are glucose-based polymers. Differences between predominantly α glycosidic linkages in starch and β-1,4 linkages in cellulose influence structure and digestibility."
+      },
+      "pitfall": {
+        "ja": "天然素材=必ず環境に無害、合成素材=必ず環境に有害、という二分法では評価できない。",
+        "en": "Natural does not automatically mean environmentally harmless, and synthetic does not automatically mean harmful."
+      },
+      "bridge": {
+        "ja": "化学結合と立体構造→酵素→材料科学→環境評価とライフサイクルへ。",
+        "en": "Connect bond stereochemistry to enzymes, materials science and environmental life-cycle assessment."
+      },
+      "inquiry": {
+        "ja": "使い捨て容器の素材を選ぶ際、分子構造以外にどんな条件を比べるべきだろう。",
+        "en": "Besides chemistry, which conditions would matter when comparing single-use container materials?"
+      },
+      "status": "editorial-draft"
+    }
+  ]
+}
