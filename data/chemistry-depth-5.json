@@ -79,6 +79,32 @@
             "en": "Alkene chemistry provides the microscopic origin of chain formation. Intermolecular forces and chain packing explain why the same chemistry can yield different bulk properties. Environmental science then uses these structural differences to evaluate degradation, collection and recycling routes."
           }
         ]
+      },
+      "guidedExample": {
+        "titleJa": "ポリエチレンの重合度と鎖の分子量を結びつける",
+        "titleEn": "Estimate polymer-chain molar mass from degree of polymerization",
+        "steps": [
+          [
+            "ポリエチレンの鎖にエテン由来の繰り返し単位が約1000個あるとします。求めたいのは、その鎖1 molあたりの質量を表す近似的なモル質量です。",
+            "Suppose a polyethylene chain contains about 1000 ethene-derived repeat units. We seek its approximate chain molar mass."
+          ],
+          [
+            "エテン由来の繰り返し単位は−CH₂−CH₂−で式量は約28.0、モル質量に換算すると28.0 g/molです。末端基の寄与は小さいとして無視します。",
+            "The repeat unit −CH₂−CH₂− has formula C₂H₄ and approximate molar mass 28.0 g/mol. Neglect small end-group contributions."
+          ],
+          [
+            "鎖1本に1000個の単位があるなら、繰り返し単位のモル質量に1000を掛けてM≈28.0×1000=28000 g/molと推定できます。",
+            "A chain with 1000 units has approximate molar mass M≈28.0×1000=28000 g/mol."
+          ],
+          [
+            "『この鎖を1 mol集めた質量』が約28 kgになるという意味です。試料全体が同じ長さの鎖だけでできているわけではないため、実際の高分子には分子量分布があります。",
+            "This means one mole of such polymer chains would have mass about 28 kg. Real polymer samples usually contain many different chain lengths."
+          ],
+          [
+            "鎖の長さが2倍になれば単純モデルでモル質量も約2倍ですが、材料の強度や融点が必ず2倍になるわけではありません。物性は枝分かれ、結晶性、分子間相互作用なども関係します。",
+            "Doubling chain length approximately doubles molar mass in this model, but it does not double strength or melting temperature. Polymer properties also depend on branching, crystallinity and intermolecular organization."
+          ]
+        ]
       }
     },
     {
