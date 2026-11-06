@@ -14,6 +14,10 @@
 - スマートフォン・タブレット・PC対応
 - Service Worker による初回オンライン表示後のオフライン閲覧
 
+## 大学化学の体系・他アプリ連携
+
+学習分野とデータ交換の設計書は [architecture/chemistry-curriculum-and-interop.md](architecture/chemistry-curriculum-and-interop.md) を参照。大学化学は9基幹分野と専門・学際タグで整理します。学習記録は [learning-interchange.html](learning-interchange.html) から共通JSON形式で書き出し・復元できます。現段階では手動でのファイル受け渡しで、自動同期ではありません。
+
 ## 公開
 
 GitHubをCloudflare Pagesに接続し、Production branchを `main`、Framework presetを `None`、Build commandを空欄、Build output directoryを `/` にして公開します。
@@ -24,4 +28,4 @@ GitHubをCloudflare Pagesに接続し、Production branchを `main`、Framework 
 
 ## 注意
 
-現段階は教科書全体の完成版ではなく、教材を順次拡張しています。確認問題の学習記録はブラウザのlocalStorageに保存され、端末間同期・エクスポートは未実装です。初回アクセス時はオンライン接続が必要です。オフラインにする前に一度ページを開いてください。
+現段階は教科書全体の完成版ではなく、教材を順次拡張しています。確認問題の学習記録はブラウザのlocalStorageに保存され、端末間の自動同期は未実装（JSONの手動エクスポートには対応）です。初回アクセス時はオンライン接続が必要です。オフラインにする前に一度ページを開いてください。
