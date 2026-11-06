@@ -49,7 +49,37 @@
         "ja": "炭酸飲料のCO₂と石灰石の炭酸塩を、共通する化学平衡で説明できるだろうか。",
         "en": "Can dissolved CO₂ in soda and carbonate minerals be connected through equilibria?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "塩素の単体は気体ですが、塩化物イオンは食塩の中にも含まれます。同じ元素を含むからといって、性質が同じとは限りません。単体・イオン・分子のどの状態にあるか、他の元素とどう結びついているかによって化学的な振る舞いが変わります。非金属は『暗記する物質の一覧』ではなく、電子と結合から性質を考える教材です。",
+            "en": "Elemental chlorine is a gas, while chloride ions are present in common salt. Sharing the same element does not mean sharing chemical behavior. The oxidation state, bonding environment and physical state strongly change properties. Nonmetal chemistry is better understood through electrons and reactions than as a memorized list of named substances."
+          },
+          {
+            "type": "particles",
+            "ja": "ハロゲンの単体X₂は電子を受け取ってX⁻となる場合があり、他の物質を酸化する働きを示します。酸素はO₂やO₃のような単体をつくり、窒素は安定なN₂三重結合をもつため常温では比較的反応しにくいです。CO₂の炭素とC単体の炭素も異なる電子状態・結合をもっています。電子配置からすべてを一発で決めるのではなく、結合エネルギーと反応経路も考えます。",
+            "en": "Halogens commonly accept electrons to form halides and act as oxidants. Oxygen exists in forms such as O₂ and O₃, while N₂ has a particularly strong triple bond and often reacts slowly near room temperature. Carbon in CO₂ and elemental carbon are not chemically equivalent. Valence structure matters, but bond energies and reaction pathways must also be considered."
+          },
+          {
+            "type": "model",
+            "ja": "Cl₂+2Br⁻→2Cl⁻+Br₂という反応は、Cl₂が電子2個を受け取る還元と、Br⁻が電子を失う酸化に分けて考えられます。正負の電荷は左右で一致し、原子数も保存されています。酸化力の比較には標準還元電位が使えますが、水溶液の条件や反応速度によって見かけの結果が変わることもあります。",
+            "en": "The reaction Cl₂+2Br⁻→2Cl⁻+Br₂ combines reduction of chlorine with oxidation of bromide. Atom and charge balances can be checked independently. Standard reduction potentials guide predictions under defined conditions, but solution activities and kinetics can affect observed behavior."
+          },
+          {
+            "type": "limits",
+            "ja": "『非金属だから酸性酸化物をつくる』という単純規則には例外があります。酸化物の酸性・塩基性は元素の種類だけでなく酸化数や結合構造にも関係します。また水溶液の酸性と物質そのものの危険性は別の問いです。理論から導いた予測は、どの物質・条件で成立するか確かめてください。",
+            "en": "Simple slogans such as 'all nonmetal oxides are acidic' have exceptions. Acid–base behavior depends on oxidation state, bonding and reaction partners. Likewise, whether a solution is acidic and whether a chemical is hazardous are distinct matters. A chemical prediction should always state its conditions."
+          },
+          {
+            "type": "revisit",
+            "ja": "酸化還元を学んだ後でハロゲン反応に戻ると、置換反応が電子移動としてわかります。大気化学を学ぶとNOₓやSO₂の酸化が環境の酸性化にどう関わるかが見えます。炭酸水素塩やCO₂の平衡を学ぶと、無機物と酸塩基平衡が同じ原理で扱えると気づけます。",
+            "en": "Redox concepts reinterpret halogen displacement in terms of electron transfer. Atmospheric chemistry shows how oxidation of sulfur and nitrogen species can contribute to acid deposition. Carbonate chemistry connects CO₂, acids and inorganic solids within a common equilibrium framework."
+          }
+        ]
+      }
     },
     {
       "id": "3-1",
@@ -93,7 +123,37 @@
         "ja": "Alはイオン化しやすいのにアルミ缶がすぐ崩れないのはなぜか。",
         "en": "Why does an aluminum can survive despite aluminum's chemical reactivity?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "アルミニウムは反応しやすい金属と学んでも、身の回りのアルミ缶が瞬時に壊れるわけではありません。空気中で表面にできる緻密な酸化物膜がさらなる反応を抑えています。これは『熱力学的には反応しやすい』と『反応速度が大きい』が違うという実例です。金属の分類だけで日常の見え方を決められません。",
+            "en": "Aluminum is chemically reactive yet aluminum cans do not quickly disintegrate in air. A protective oxide layer slows further attack. This illustrates a general distinction: thermodynamic tendency to react and the rate at which reaction proceeds are different properties. A metal's label alone does not predict everyday behavior."
+          },
+          {
+            "type": "particles",
+            "ja": "典型金属は価電子を失って陽イオンを形成することが多いですが、原子のイオン化だけを考えて反応全体を説明できません。水溶液中では金属イオンの水和、塩の生成、酸化物膜、溶解平衡などが同時に関係します。金属水酸化物の中には酸・塩基の両方と反応する両性のものがあり、Al(OH)₃やZn(OH)₂が代表例です。",
+            "en": "Many main-group metals form cations, but isolated-atom ionization energy is only one contribution to solution reactions. Hydration, salt formation, surface oxides and solubility equilibria all affect behavior. Amphoteric hydroxides such as Al(OH)₃ and Zn(OH)₂ can react with both acidic and strongly basic solutions."
+          },
+          {
+            "type": "model",
+            "ja": "例えばAl(OH)₃は酸中でAl³⁺などの水和イオンへ移り、強塩基中では[Al(OH)₄]⁻などの錯イオンを形成します。酸・塩基への両方の反応性を『一度は沈殿しても、条件によって別の化学種へ変わる』という形で考えます。式を使うときは溶液中の水和や濃度条件を省略した模式表現と実際の化学種を区別してください。",
+            "en": "Al(OH)₃ can dissolve in acid to form hydrated aluminum species, and in sufficiently strong base to form species such as [Al(OH)₄]⁻. This is easier to understand as chemical-species changes controlled by equilibrium than as a memorized exception. Simple equations often suppress hydration and speciation details."
+          },
+          {
+            "type": "limits",
+            "ja": "『同じ族なら金属の反応性はすべて単調に並ぶ』とは限りません。水への反応性は表面の不動態化や生成物の溶解性にも影響されます。また強塩基と難溶性金属水酸化物は別概念です。水酸化物を含むからといって溶液に大量のOH⁻を供給できるとは限りません。",
+            "en": "A single periodic trend cannot fully predict reaction rates in water: surface passivation and product solubility may dominate observations. 'Contains hydroxide' also does not imply a high dissolved OH⁻ concentration. Intrinsic basicity and solubility must be distinguished."
+          },
+          {
+            "type": "revisit",
+            "ja": "電子配置から金属の価数を考えた後、酸化還元や電池を学ぶと金属の反応が電子移動の系として読めます。錯体形成を学ぶと、水酸化物が酸にも塩基にも溶ける理由が整理できます。材料科学では、不動態膜を作る性質が腐食防止技術として利用されます。",
+            "en": "Electron configurations suggest common ionic charges; redox and electrochemistry put these charges into complete reactions. Complexation explains much amphoteric dissolution chemistry. Materials science turns passivation into a design principle for corrosion resistance."
+          }
+        ]
+      }
     },
     {
       "id": "3-2",
@@ -137,7 +197,37 @@
         "ja": "錯体の色が配位子を替えると変わるのは、どんな電子状態の変化を示唆するか。",
         "en": "What changes in electronic structure could explain ligand-dependent complex colors?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "銅(II)イオンを含む水溶液へアンモニア水を加えると、添加量によって沈殿ができたり深い青色が現れたりすることがあります。一つの金属イオンに対して、周囲の分子やイオンが変わると色や溶解性が変化する例です。単に『銅は青色』と覚えても、この変化は説明できません。どの化学種が主に存在するかを考えます。",
+            "en": "Adding ammonia to an aqueous copper(II) solution can cause precipitation followed by a deep-blue solution under suitable conditions. The metal center has not changed elemental identity, but its surrounding ligands and speciation may change dramatically. Memorizing 'copper is blue' does not explain these observations."
+          },
+          {
+            "type": "particles",
+            "ja": "配位子は金属中心へ電子対を与え、錯体をつくります。水、アンモニア、塩化物イオンなどが代表的な配位子です。金属のd軌道のエネルギー分裂は配位子と幾何構造によって変わり、可視光の吸収波長が変化すると色も変わる場合があります。すべての錯体の色がd−d遷移に由来するわけではなく、電荷移動遷移などもあります。",
+            "en": "Ligands donate electron density to a metal center to form coordination complexes. Water, ammonia and chloride are common ligands. Changes in geometry and ligand field can alter electronic energy levels and visible absorption, changing color. Not all coordination colors arise from d–d transitions; charge transfer also matters."
+          },
+          {
+            "type": "model",
+            "ja": "錯形成は金属Mと配位子Lの平衡M+nL⇌MLₙのように模式化できます。生成定数βₙは活量比で定義され、濃度条件により存在比を予測できます。錯体が多くなると遊離金属イオン濃度が下がるため、難溶性水酸化物や塩が溶解する場合があります。沈殿・溶解・色の変化を別々の暗記事項にせず、結びつけてみましょう。",
+            "en": "Complex formation can be represented as M+nL⇌MLₙ, with a formation constant defined using activities. A strong ligand may lower free metal-ion activity, shifting a competing precipitation–dissolution equilibrium. Thus precipitate formation, dissolution and color change may be aspects of one coupled equilibrium system."
+          },
+          {
+            "type": "limits",
+            "ja": "配位子の数をそのまま立体構造へ読み替えるだけでは不十分です。4配位でも正四面体形と平面四角形など複数の配置があり得ます。電子配置や配位子の性質が影響します。簡単な高校の構造式は錯体全体の電子状態や溶媒和を省略しているため、厳密な色の予測には分光学的な情報が必要です。",
+            "en": "Coordination number alone does not uniquely determine geometry: four-coordinate species may be tetrahedral or square planar, depending on electron count and ligand environment. Simple formulas omit electronic and solvation details, so precise color predictions often require spectroscopy or calculations."
+          },
+          {
+            "type": "revisit",
+            "ja": "化学結合を学んだときの『電子対を共有する』という説明が、配位子の電子供与へつながります。平衡を学ぶと錯体の生成定数が理解でき、分析化学では錯形成を金属イオンの分離や定量に利用できます。大学では分子軌道・配位子場理論を通じて、高校の色の暗記を電子遷移へ読み直せます。",
+            "en": "Electron donation from ligands extends earlier covalent-bond concepts. Equilibrium constants explain changing speciation, and analytical chemistry exploits complexation for selective detection and separation. Molecular orbital and ligand-field theories later turn observed colors into evidence about electronic transitions."
+          }
+        ]
+      }
     },
     {
       "id": "3-3",
@@ -181,7 +271,37 @@
         "ja": "一つの実験結果に複数の説明があるとき、次の実験をどう選ぶか。",
         "en": "How would you choose the next test when one observation supports multiple explanations?"
       },
-      "status": "editorial-draft"
+      "status": "editorial-draft",
+      "reasoning": {
+        "schemaVersion": "1.0",
+        "lenses": [
+          {
+            "type": "observation",
+            "ja": "白い沈殿が生じたという観察から、未知物質がAgClだと直ちに断定することはできません。白い沈殿をつくる組み合わせは複数あります。未知試料の同定では、候補ごとにどの実験結果を予測できるかを先に考え、その結果を区別できる追加実験を選びます。これは科学的推論そのものです。",
+            "en": "Observing a white precipitate does not automatically identify an unknown as AgCl. Many substances may produce white solids. Identification requires competing hypotheses, predicted observations and follow-up tests that discriminate between candidates. This is scientific reasoning, not just a list of laboratory colors."
+          },
+          {
+            "type": "particles",
+            "ja": "沈殿が生じるのは、溶液中のイオンが結晶をつくる方が有利になる条件があるからです。Ag⁺とCl⁻の反応ではAgCl(s)を形成できますが、水中に少量の溶存イオンも残ります。錯形成、pH、他のイオンの存在によって溶液中の化学種が変わります。ろ過で捕集した固体と母液には、それぞれ異なる量の成分が存在します。",
+            "en": "Precipitation occurs when conditions favor a solid phase over dissolved species. Even with AgCl(s) present, some Ag⁺ and Cl⁻ remain in solution. Complexation, pH and competing ions change speciation. The precipitate and mother liquor are chemically distinct fractions that can both retain relevant material."
+          },
+          {
+            "type": "model",
+            "ja": "AgCl(s)⇌Ag⁺+Cl⁻ならKsp=a(Ag⁺)a(Cl⁻)です。溶液のイオン積Qspを求め、Qsp>Kspであれば析出が熱力学的に有利と考えられます。濃度の積による近似は溶液条件を明示して使います。分析実験では標準溶液、空試験、再現性の確認も必要です。観察の有無を確率ゼロ・百パーセントの断定にしないでください。",
+            "en": "For AgCl(s)⇌Ag⁺+Cl⁻, Ksp=a(Ag⁺)a(Cl⁻). Compare the current ion activity product Qsp with Ksp to assess whether precipitation is favored. Concentration products are approximations. Analytical work also uses standards, blanks and repeat measurements; absence of a visible precipitate is not absolute proof of zero analyte."
+          },
+          {
+            "type": "limits",
+            "ja": "検出限界と定量限界は異なります。ある試薬で反応が見えない場合も、物質が存在しないのではなく濃度が低すぎる可能性があります。沈殿色は光の条件・粒径・不純物にも影響されます。試験手順の安全性や妨害物質の存在も含めて判断します。物質の同定には複数の独立した根拠を用意するのが望ましいです。",
+            "en": "Detection limits differ from quantitative limits. A negative test may reflect insufficient concentration rather than absence. Particle size, illumination and contamination can affect color; interferences and safe experimental handling matter. Reliable identification usually benefits from more than one independent line of evidence."
+          },
+          {
+            "type": "revisit",
+            "ja": "化学平衡を学ぶと、沈殿を単なる色変化でなくQ/Kの問題として読めます。錯体を学ぶと、なぜ沈殿が再び溶けるのか説明できます。測定の不確かさを学ぶと『どの程度確かに言えるか』まで判断できます。この章は、化学知識を科学的な証拠の扱いへ変える重要な接続点です。",
+            "en": "Equilibrium reframes precipitation as a Q-versus-K problem. Complexation explains why precipitates may redissolve. Measurement uncertainty adds the question 'how confidently can I infer the identity?' Qualitative analysis connects chemical knowledge to evidence-based scientific judgment."
+          }
+        ]
+      }
     }
   ]
 }
