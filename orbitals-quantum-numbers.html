@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#174f4a">
+<title>原子軌道・量子数・スピン | Chemistry Structure Lab</title>
+<style>
+:root{--ink:#174f4a;--accent:#176f62;--bg:#f5f8f5;--line:#d9e5df;--soft:#e8f3ed}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",sans-serif;color:#263d37;line-height:1.8}header{background:var(--ink);color:white;padding:19px clamp(16px,5vw,55px)}header a{color:#d9f2e6;text-decoration:none}h1{font-size:clamp(24px,3vw,35px);margin:6px 0}main{max-width:1080px;margin:auto;padding:22px 16px 65px}.lead{font-size:17px;color:#4e6960}.card{padding:clamp(18px,3vw,30px);background:white;border:1px solid var(--line);border-radius:18px;margin:18px 0;box-shadow:0 8px 25px #174f4a08}h2,h3{color:var(--ink)}.badge{display:inline-block;background:var(--soft);color:var(--accent);border-radius:99px;padding:2px 12px;font-weight:700;font-size:12px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.panel{border:1px solid var(--line);border-radius:13px;padding:15px;background:#fbfdfb}.math{font-family:Georgia,"Times New Roman",serif;font-size:23px;color:var(--ink)}.formula{text-align:center;background:var(--soft);border-radius:14px;padding:17px;font-family:Georgia,serif;font-size:clamp(19px,3vw,28px)}label{font-weight:700;display:block;margin:12px 0 6px}select,button{font:inherit;border:1px solid #a9c9bb;border-radius:11px;background:white;padding:10px 13px;color:var(--ink)}button{cursor:pointer}button:hover{background:#ecf6ef}.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:end}.controls>div{flex:1;min-width:140px}.controls select{width:100%}.viz{display:flex;flex-wrap:wrap;align-items:center;gap:20px}.viz svg{width:min(100%,365px);height:auto;background:#f8fbfa;border:1px solid #e2eae6;border-radius:15px}.viz .description{flex:1;min-width:240px}.note{font-size:13px;color:#647e75}.question{border-top:1px solid var(--line);padding:18px 0}.question:first-of-type{border-top:0}.answers{display:grid;gap:8px;margin:10px 0}.answers button{text-align:left}.answers button.selected{border:2px solid var(--accent);background:var(--soft)}.feedback{border-radius:12px;background:var(--soft);padding:11px;margin-top:10px}.status{font-weight:700;color:var(--accent)}table{border-collapse:collapse;width:100%}th,td{padding:9px;border-bottom:1px solid var(--line);text-align:left}th{background:#f0f7f2}small{color:#648076}@media(max-width:600px){.card{padding:17px}table{font-size:13px}}
+</style></head><body>
+<header><a href="./index.html">← Chemistry Structure Lab ホーム</a><h1>原子軌道・量子数・電子スピン</h1><div>電子配置を「なぜそうなるのか」から理解する</div></header>
+<main>
+<p><a href="./electron-configuration.html">← 電子配置を組み立てる教材に戻る</a></p>
+<div class="card"><span class="badge">高校化学 → 大学化学の橋渡し</span><h2>まず、軌道は「電子の軌跡」ではありません</h2>
+<p class="lead">電子を惑星のように固定された道で回る粒として描く模型は導入には便利ですが、量子力学でいう<strong>原子軌道（orbital）は電子の状態を表す波動関数</strong>です。図に描かれる雲や形は、その状態から得られる「電子を見いだす確率密度」の空間分布を模式的に示します。</p>
+<div class="formula">P(微小領域) ≈ |ψ(r)|² ΔV</div>
+<p class="note">正確には、確率はその領域で |ψ|² を積分して求めます。以下の図は規格化した波動関数の厳密な等値面ではなく、形と節面の理解に使う概念図です。</p>
+</div>
+<section class="card"><h2>1. 4つの量子数</h2>
+<p>水素原子の非相対論的模型では、軌道を <span class="math">n, ℓ, m<sub>ℓ</sub></span> で分類し、電子のスピンを <span class="math">m<sub>s</sub></span> で表します。多電子原子でも電子状態を整理する基本言語として使います。</p>
+<table><thead><tr><th>量子数</th><th>許される値</th><th>何を表すか</th></tr></thead><tbody>
+<tr><td>主量子数 n</td><td>1, 2, 3, …</td><td>殻、軌道の広がり・エネルギーに関係</td></tr>
+<tr><td>方位量子数 ℓ</td><td>0 ～ n−1</td><td>s(0), p(1), d(2), f(3)…</td></tr>
+<tr><td>磁気量子数 m<sub>ℓ</sub></td><td>−ℓ ～ +ℓ（整数）</td><td>同じ副殻内の異なる軌道</td></tr>
+<tr><td>スピン磁気量子数 m<sub>s</sub></td><td>+½, −½</td><td>スピン成分の2状態</td></tr></tbody></table>
+<p class="note">「s電子が自転している」という古典的な絵は誤解のもとです。スピンは電子の内在的な角運動量という量子力学的性質です。</p></section>
+<section class="card"><h2>2. 軌道の形を見比べる</h2><div class="controls">
+<div><label for="shell">主量子数 n</label><select id="shell"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
+<div><label for="subshell">軌道の種類</label><select id="subshell"></select></div>
+<div><label for="orientation">磁気量子数 mℓ</label><select id="orientation"></select></div></div>
+<div class="viz"><svg id="orbital" viewBox="0 0 360 290" role="img" aria-label="選択した軌道の模式図"></svg><div class="description">
+<div id="orbitalName" class="math"></div><p id="meaning"></p><p id="capacity" class="status"></p><p id="nodes" class="note"></p></div></div>
+<p class="note">p, d軌道の色分けは波動関数の位相（符号）の違いを示します。正負は電子の電荷や確率の正負ではありません。図の方向は模式的で、mℓ の値と描かれた実軌道の向きは一対一では対応しません（実軌道は複素球面調和関数の組み合わせです）。</p></section>
+<section class="card"><h2>3. どうして1つの軌道には最大2電子？</h2>
+<div class="grid"><div class="panel"><h3>パウリの排他原理</h3><p>同じ原子内の2電子が、<strong>4つの量子数をすべて同じ値</strong>にすることはできません。ひとつの空間軌道には逆向きのスピン成分をもつ2電子まで入れます。</p><div class="formula">1軌道：↑↓</div></div>
+<div class="panel"><h3>フントの規則</h3><p>等エネルギーの軌道が並ぶ副殻では、基底状態の電子は可能な範囲でまず別々の軌道へ平行スピンで入ります（一般的な近似規則）。</p><div class="formula">p²：↑　↑　□</div></div>
+<div class="panel"><h3>副殻の収容数</h3><p>mℓ の種類は <strong>2ℓ + 1</strong>。各軌道に2個なので、副殻の最大電子数は <strong>2(2ℓ + 1)</strong> です。</p><div class="formula">s:2　p:6　d:10　f:14</div></div></div>
+<p>構築原理による軌道充填順序は、多電子原子の基底状態を整理するための近似的な経験則です。実際の軌道エネルギーは電子間相互作用などに依存し、Cr・Cuをはじめ例外も生じます。</p></section>
+<section class="card"><h2>4. 自分で確認する</h2><p>回答すると解説が表示され、記録がこの端末に保存されます。</p><div id="quiz"></div><p id="score" class="status"></p></section>
+<section class="card"><h2>次の学習につなぐ</h2><p>電子配置と量子数から、周期表の各族の共通性や化学結合を説明できるようになります。</p><p><a href="./periodic-table.html">探索型周期表へ →</a>　/　<a href="./electron-configuration.html">電子配置へ →</a></p></section>
+</main>
+<script>
+const $=id=>document.getElementById(id),names=['s','p','d','f'],shell=$('shell'),sub=$('subshell'),orientation=$('orientation');
+function updateSubs(){const n=+shell.value;sub.innerHTML=names.slice(0,n).map((v,i)=>'<option value="'+i+'">'+v+' (ℓ='+i+')</option>').join('');updateOrient()}
+function updateOrient(){const l=+sub.value;orientation.innerHTML=Array.from({length:2*l+1},(_,i)=>'<option value="'+(i-l)+'">'+(i-l)+'</option>').join('');draw()}
+function lobe(x,y,angle,color){return '<ellipse cx="'+x+'" cy="'+y+'" rx="29" ry="52" transform="rotate('+angle+' '+x+' '+y+')" fill="'+color+'" opacity=".68"/>'}
+function draw(){const n=+shell.value,l=+sub.value,m=+orientation.value;let shape='',text='';
+if(l===0){shape='<circle cx="180" cy="145" r="80" fill="#68b7a1" opacity=".45"/><circle cx="180" cy="145" r="50" fill="#3d9c86" opacity=".30"/>';text='s軌道：球対称の分布。';}
+else if(l===1){let deg=m===-1?90:m===0?0:45;shape='<g transform="rotate('+deg+' 180 145)">'+lobe(180,85,0,'#4aa2a2')+lobe(180,205,0,'#dc976d')+'</g>';text='p軌道：核を通る節面をもち、2つの葉をもつ形として表される。';}
+else if(l===2){const deg=(m+2)*18;shape='<g transform="rotate('+deg+' 180 145)">'+lobe(135,100,-45,'#4aa2a2')+lobe(225,100,45,'#dc976d')+lobe(135,190,45,'#4aa2a2')+lobe(225,190,-45,'#dc976d')+'</g>';text='d軌道：5つの独立した状態。四葉形は代表例で、d(z²)は別の形をとる。';}
+else{shape='<g>'+Array.from({length:6},(_,i)=>{const a=i*60*Math.PI/180;return lobe(180+75*Math.cos(a),145+75*Math.sin(a),i*60,i%2?'#dc976d':'#4aa2a2')}).join('')+'</g>';text='f軌道：7つの独立した状態。実際の形は複雑で、ここでは多葉性のみ示す。';}
+$('orbital').innerHTML='<line x1="30" y1="145" x2="330" y2="145" stroke="#b4c9c0" stroke-dasharray="4 5"/><line x1="180" y1="18" x2="180" y2="272" stroke="#b4c9c0" stroke-dasharray="4 5"/>'+shape+'<circle cx="180" cy="145" r="6" fill="#254e48"/><text x="194" y="158" fill="#3b5e53" font-size="12">原子核</text>';
+$('orbitalName').textContent=n+names[l]+'　(n='+n+', ℓ='+l+', mℓ='+m+')';$('meaning').textContent=text;
+$('capacity').textContent=names[l]+'副殻：'+(2*l+1)+'軌道 × 2 = 最大'+(4*l+2)+'電子';
+$('nodes').textContent='軌道の節面・節球：角度方向の節の数 ℓ='+l+'、動径方向の節の数 n−ℓ−1='+(n-l-1)+'（水素型原子軌道の場合）。';
+}
+shell.addEventListener('change',updateSubs);sub.addEventListener('change',updateOrient);orientation.addEventListener('change',draw);
+const questions=[
+{q:'n = 3 のとき、許される ℓ は？',a:['0, 1, 2','1, 2, 3','0, 1, 2, 3'],correct:0,why:'ℓ は 0 から n−1 までです。n=3 なら s, p, d が許されます。'},
+{q:'p副殻の空間軌道は何個？',a:['2個','3個','6個'],correct:1,why:'ℓ=1 なので mℓ は −1, 0, +1 の3通りです。電子は最大6個です。'},
+{q:'スピン量子数 mₛ の許される値は？',a:['−1, 0, +1','0 または 1','+½ または −½'],correct:2,why:'電子のスピン成分は2通り。電子が古典的に自転するという意味ではありません。'},
+{q:'1つの空間軌道に電子が最大2個入る理由は？',a:['パウリの排他原理','電子が同じ速さで回るから','陽子が2個あるから'],correct:0,why:'同じ空間軌道の2電子は、4量子数のうちスピン量子数で区別される必要があります。'},
+{q:'原子軌道の雲は何を表す？',a:['電子が必ず通る道','位置の確率密度の模式図','電子自身の大きさ'],correct:1,why:'波動関数の絶対値二乗 |ψ|² が確率密度に対応します。'}
+];
+const key='chemistry-orbital-quiz-v1',answers={};try{Object.assign(answers,JSON.parse(localStorage.getItem(key)||'{}'))}catch{}
+function renderQuiz(){const root=$('quiz');root.innerHTML=questions.map((q,i)=>'<div class="question"><h3>問'+(i+1)+'　'+q.q+'</h3><div class="answers">'+q.a.map((x,j)=>'<button type="button" data-i="'+i+'" data-j="'+j+'" class="'+(answers[i]===j?'selected':'')+'">'+String.fromCharCode(65+j)+'. '+x+'</button>').join('')+'</div><div id="feedback-'+i+'">'+(answers[i]===undefined?'':'<div class="feedback">'+(answers[i]===q.correct?'✓ 正解。':'もう一度考えてみましょう。')+' '+q.why+'</div>')+'</div></div>').join('');
+root.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{answers[b.dataset.i]=+b.dataset.j;try{localStorage.setItem(key,JSON.stringify(answers))}catch{}renderQuiz()}));
+const answered=Object.keys(answers).length,correct=questions.filter((q,i)=>answers[i]===q.correct).length;$('score').textContent='回答済み '+answered+'/'+questions.length+' 問、正解 '+correct+' 問';}
+updateSubs();renderQuiz();
+</script></body></html>
