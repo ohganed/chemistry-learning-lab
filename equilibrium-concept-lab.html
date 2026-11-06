@@ -32,7 +32,7 @@ function mobileSwitch(mode,scroll=false){
  $("readConcept").classList.toggle("active",mode==="detail");
  $("chooseConcept").setAttribute("aria-pressed",String(mode==="list"));
  $("readConcept").setAttribute("aria-pressed",String(mode==="detail"));
- if(scroll&&window.matchMedia("(max-width:720px)").matches)$("mobileSwitch").scrollIntoView({block:"start",behavior:"instant"});
+ if(scroll&&window.matchMedia("(max-width:720px)").matches)$("mobileSwitch").scrollIntoView({block:"start",behavior:"auto"});
 }
 let lang=new URLSearchParams(location.search).get("lang")==="en"?"en":"ja",selected=new URLSearchParams(location.search).get("concept");if(!NODES.some(n=>n.id===selected))selected="dynamic";const $=id=>document.getElementById(id);const key="chemistry-fine-concept-insights-v1";let insights=[];try{const data=JSON.parse(localStorage.getItem(key)||"[]");if(Array.isArray(data))insights=data.filter(x=>x&&typeof x==="object"&&NODES.some(n=>n.id===x.concept)&&typeof x.note==="string").slice(-500)}catch{}function esc(v){return String(v).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
 function persist(){try{localStorage.setItem(key,JSON.stringify(insights))}catch{$("status").textContent=lang==="ja"?"保存できませんでした。容量をご確認ください。":"Could not save. Check device storage."}}
