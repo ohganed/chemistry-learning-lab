@@ -499,6 +499,55 @@
         "ja": "糖・アミノ酸・高分子へ進んだあと、有機化学の『構造式』の意味へ戻ってください。",
         "en": "Return to structural formulas after studying carbohydrates, amino acids and polymers."
       }
+    },
+    {
+      "id": "measurement-hypothesis",
+      "chapters": [
+        "0-0",
+        "3-0",
+        "3-3",
+        "0-1"
+      ],
+      "source": {
+        "ja": "科学の方法：観察と推論を区別する",
+        "en": "Scientific inquiry: distinguish observations from inference"
+      },
+      "target": {
+        "ja": "化学：物質の分離・同定・反応の根拠",
+        "en": "Chemistry: separation, identification and reaction evidence"
+      },
+      "hook": {
+        "ja": "目に見える事実だけから、物質の種類まで断定できるでしょうか。以前の実験が、新しい化学理論を理解する土壌になります。",
+        "en": "Can an observation alone establish chemical identity? Earlier laboratory practice becomes a foundation for chemical inference."
+      },
+      "steps": [
+        {
+          "ja": "透明な液体を見たとき、何がわかるか",
+          "en": "What can a clear liquid tell us?",
+          "textJa": "透明な液体を観察して、濁りが目立たないことは言えます。しかし純水か食塩水か、あるいは別の溶質を含むかは、それだけでは断定できません。観察は目に見えた特徴、推論はその特徴を説明する仮説です。同じ観察に複数の説明が可能だと知ることが、分離や分析の方法を学ぶ必要性につながります。",
+          "textEn": "A clear liquid may lack visible suspended particles, but that does not establish that it is pure water. It might contain dissolved salt or other solutes. An observation reports what is seen; an inference proposes what the observation means. Recognizing alternative explanations creates the need for chemical separation and analysis."
+        },
+        {
+          "ja": "分離操作は仮説を調べる方法になる",
+          "en": "Separation tests a hypothesis",
+          "textJa": "液体に溶けた粒子が小さいなら、普通のろ紙を使っても通過してしまいます。沸点、溶解度、粒子径、反応性といった性質の違いを利用して、成分を分けたり検出したりします。例えば蒸留で水を回収し残留物が生じれば、もとの試料に何らかの不揮発性成分があった可能性を示します。ただし、これだけでは残留物の物質名を決められません。",
+          "textEn": "Small dissolved species pass through ordinary filter paper. Chemists exploit differences in boiling behavior, solubility, particle size and reactivity to isolate or detect substances. Distillation that leaves a residue supports the presence of less volatile material, but the residue's chemical identity still requires further evidence."
+        },
+        {
+          "ja": "無機物質の色や沈殿も、証拠として考える",
+          "en": "Treat colors and precipitates as evidence",
+          "textJa": "塩化物イオンと銀イオンから白い沈殿が生じる実験は、候補となる化学種を絞り込めます。しかし白い沈殿はAgClに限らず、妨害イオンや別の反応も考慮する必要があります。ハロゲンの色、金属の沈殿、錯体の色は、『現象を説明する粒子の状態は何か』という問いに結びついています。物質名を暗記するより、観察からどの程度まで推論できるかが重要です。",
+          "textEn": "A white precipitate produced with silver ions can support the presence of chloride, but many conditions and competing ions may complicate identification. Colors of halogens, metal precipitates and complexes are clues to underlying species and electronic states. The scientific task is to determine what can be inferred, with what confidence, from the observations."
+        }
+      ],
+      "limits": {
+        "ja": "一つの反応が見えなかったことは、物質が絶対に存在しない証明ではありません。検出限界、妨害物質、濃度、測定条件を考慮します。観察と物質同定を結びつける際は、複数の証拠を求める必要があります。",
+        "en": "Failure to observe a reaction does not prove a species is absent. Detection limits, interfering substances, concentration and conditions matter. Identification generally requires converging evidence."
+      },
+      "revisit": {
+        "ja": "物質の分離を学んでから無機分析へ進み、再び最初の透明な液体の観察へ戻ると、以前は見えなかった推論の道筋がわかるようになります。",
+        "en": "Return to an early observation of a clear sample after studying inorganic analysis, and the reasoning behind identification becomes visible."
+      }
     }
   ]
 }
