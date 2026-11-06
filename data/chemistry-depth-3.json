@@ -301,6 +301,32 @@
             "en": "Equilibrium reframes precipitation as a Q-versus-K problem. Complexation explains why precipitates may redissolve. Measurement uncertainty adds the question 'how confidently can I infer the identity?' Qualitative analysis connects chemical knowledge to evidence-based scientific judgment."
           }
         ]
+      },
+      "guidedExample": {
+        "titleJa": "AgClの溶解度積から純水中の溶解度を求める",
+        "titleEn": "Find AgCl solubility in pure water from Ksp",
+        "steps": [
+          [
+            "AgClの溶解度積Ksp=1.8×10⁻¹⁰（25℃付近）とします。求めたいのは『純水1 Lに溶けて平衡になるAgClの物質量』に対応する濃度です。",
+            "Suppose Ksp for AgCl is 1.8×10⁻¹⁰ near 25°C. We seek the molar solubility in pure water, not the mass of an arbitrary solid sample."
+          ],
+          [
+            "AgCl(s)⇌Ag⁺+Cl⁻を使います。理想希薄近似で活量を濃度比に置き換え、錯形成と他の共通イオンを無視します。固体の活量は1と扱います。",
+            "Use AgCl(s)⇌Ag⁺+Cl⁻. Assume dilute ideal behavior, no competing complexes or added common ions, and activity one for the pure solid."
+          ],
+          [
+            "AgClがs mol/L溶けると[Ag⁺]≈s、[Cl⁻]≈s。したがってKsp≈s²となります。式の形は反応式の係数が1:1であることから出てきます。",
+            "If s mol/L dissolves, [Ag⁺]≈s and [Cl⁻]≈s. Hence Ksp≈s². The square follows from the 1:1 dissolution stoichiometry."
+          ],
+          [
+            "s≈√(1.8×10⁻¹⁰)=1.34×10⁻⁵ mol/L。数値を丸めて約1.3×10⁻⁵ mol/Lです。非常に少量でも、溶解しているイオンが完全にゼロではありません。",
+            "s≈√(1.8×10⁻¹⁰)=1.34×10⁻⁵ mol/L, or about 1.3×10⁻⁵ mol/L. Poor solubility does not mean zero dissolved ions."
+          ],
+          [
+            "Cl⁻を別途加えると[Cl⁻]はsだけでなく添加量を含むため、同じs²は使えません。錯形成によってAg⁺が減れば溶解度が増えることもあります。実験の条件に応じて再び平衡式を組み立てます。",
+            "Added chloride invalidates the simple [Cl⁻]=s assumption. Strong complexation can lower free Ag⁺ and increase total dissolved silver. Rebuild the equilibrium equations for the actual conditions."
+          ]
+        ]
       }
     }
   ]
