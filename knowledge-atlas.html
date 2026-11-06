@@ -76,7 +76,7 @@ function setMobileMode(mode,scroll=false){
  $("showStudy").classList.toggle("active",mode==="detail");
  $("showConcepts").setAttribute("aria-pressed",String(mode==="list"));
  $("showStudy").setAttribute("aria-pressed",String(mode==="detail"));
- if(scroll&&isNarrow()){$("mobileNav").scrollIntoView({block:"start",behavior:"instant"});}
+ if(scroll&&isNarrow()){$("mobileNav").scrollIntoView({block:"start",behavior:"auto"});}
 }
 function safe(x){return String(x).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 try{const saved=JSON.parse(localStorage.getItem(STORAGE)||"{}");if(Array.isArray(saved.connections))notes.connections=saved.connections.filter(x=>x&&typeof x.reason==="string").slice(-500);if(Array.isArray(saved.reflections))notes.reflections=saved.reflections.filter(x=>x&&typeof x.text==="string").slice(-500)}catch{}
