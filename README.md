@@ -1,0 +1,23 @@
+# Chemistry Structure Lab
+
+高校化学から大学化学へ段階的に進む、AIなしでも利用できるHTMLベースの化学学習アプリです。
+
+## v0.1 に含まれるもの
+
+- ホーム、学習分野マップ、導入教材4講
+- 原子・化学結合・物質量・化学反応式の説明
+- 各講の確認問題と正誤のローカル記録
+- スマートフォン・タブレット・PC対応
+- Service Worker による初回オンライン表示後のオフライン閲覧
+
+## 公開
+
+GitHubをCloudflare Pagesに接続し、Production branchを `main`、Framework presetを `None`、Build commandを空欄、Build output directoryを `/` にして公開します。
+
+## 教材の編集
+
+現在は `index.html` 内の `pages` と `quiz` に教材があります。今後教材量が増えたら章ごとのJSON等へ分離します。
+
+## 注意
+
+v0.1 は教科書全体の完成版ではなく基盤版です。確認問題の学習記録はブラウザのlocalStorageに保存され、端末間同期・エクスポートは未実装です。初回アクセス時はオンライン接続が必要です。オフラインにする前に一度ページを開いてください。
