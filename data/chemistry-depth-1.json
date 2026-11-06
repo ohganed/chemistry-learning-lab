@@ -79,6 +79,32 @@
             "en": "Stoichiometry turns equation coefficients into mole ratios. Gas laws connect amount of substance with P, V and T. Analytical chemistry works in reverse, using mass, titration, or signals to infer how much of a chemical species was present. The same conceptual bridge runs from microscopic particles to macroscopic measurement."
           }
         ]
+      },
+      "guidedExample": {
+        "titleJa": "マグネシウム4.86 gには原子が何個あるか",
+        "titleEn": "How many Mg atoms are in 4.86 g of magnesium?",
+        "steps": [
+          [
+            "求めたいのは原子数です。秤で測れるのは質量なので、「質量→mol→原子数」の順に変換すると道筋がはっきりします。",
+            "The target is a count of atoms, but the measured quantity is mass. Plan two conversions: grams → moles → number of atoms."
+          ],
+          [
+            "Mgのモル質量を24.3 g/molとします。試料は純粋なMgで、元素状のMg原子を数える条件です。モル質量の単位g/molを確認します。",
+            "Assume a pure magnesium sample with molar mass 24.3 g/mol. We are counting Mg atoms, and the mass and molar-mass units must agree."
+          ],
+          [
+            "物質量n=m/M=4.86 g÷(24.3 g/mol)=0.200 mol。単位もg÷(g/mol)=molとなるので、意味のある換算です。",
+            "Calculate n=m/M=4.86 g/(24.3 g/mol)=0.200 mol. The units reduce to mol, confirming the dimensional logic."
+          ],
+          [
+            "原子数N=nNA=0.200×6.02214076×10²³=1.20×10²³個（有効数字3桁）。Avogadro定数そのものは定義上正確ですが、試料質量とモル質量の精度で答えを丸めます。",
+            "N=nNA=0.200×6.02214076×10²³≈1.20×10²³ atoms (three significant figures). Although the defined Avogadro constant is exact, the input measurement limits the reported precision."
+          ],
+          [
+            "原子1個の質量は非常に小さいので、1.20×10²³個でも約5 gにしかならない結果は妥当です。もしMgO 4.86 gなら、分子ではなく式単位とMg原子を区別し、モル質量も変える必要があります。",
+            "The result is plausible because an enormous number of atoms can have a mass of only a few grams. For 4.86 g MgO instead, both the molar mass and the type of entity counted must change."
+          ]
+        ]
       }
     },
     {
@@ -152,6 +178,32 @@
             "ja": "有機合成を学ぶと、同じ量論でも副反応があるため収率を考える必要が出てきます。反応速度を学ぶと、制限試薬の計算が『最終的な上限』を与えるだけで、そこへ至る時間は教えないと気づけます。平衡を学ぶと、理論上の完全反応と現実の平衡組成が異なることを説明できます。",
             "en": "Organic synthesis introduces competing pathways and isolated yields. Kinetics explains how fast reactants are consumed, while equilibrium determines whether complete conversion is thermodynamically expected. Stoichiometry sets a formal ceiling, but not the time or the actual composition achieved."
           }
+        ]
+      },
+      "guidedExample": {
+        "titleJa": "CaCO₃ 10.0 gを過剰の塩酸と反応させるとCO₂は何gできるか",
+        "titleEn": "How much CO₂ forms when 10.0 g of CaCO₃ reacts with excess HCl?",
+        "steps": [
+          [
+            "目的はCO₂の質量です。「反応式を確認→CaCO₃のmol→CO₂のmol→CO₂の質量」という道筋を先に作ります。",
+            "We seek product mass. Plan a route: balance the reaction, convert CaCO₃ mass to moles, apply the mole ratio, then convert product moles to mass."
+          ],
+          [
+            "反応はCaCO₃+2HCl→CaCl₂+CO₂+H₂O。HClは過剰、反応は完全に進み、副反応なしと仮定します。CaCO₃のモル質量は約100 g/mol、CO₂は約44.0 g/molです。",
+            "The balanced reaction is CaCO₃+2HCl→CaCl₂+CO₂+H₂O. Assume HCl is in excess and conversion is complete with no side reactions. Use M(CaCO₃)≈100 g/mol and M(CO₂)≈44.0 g/mol."
+          ],
+          [
+            "CaCO₃の物質量は10.0÷100=0.100 mol。係数はCaCO₃:CO₂=1:1なので、生成するCO₂は理論上0.100 molです。係数2が付くHClと混同しないでください。",
+            "n(CaCO₃)=10.0/100=0.100 mol. Since the coefficient ratio CaCO₃:CO₂ is 1:1, the theoretical amount of CO₂ is 0.100 mol. The coefficient 2 applies to HCl, not CO₂."
+          ],
+          [
+            "CO₂の質量はm=nM=0.100×44.0=4.40 gです。CaCO₃ 10 gからCO₂ 4.40 gが生じ、残りの質量は別の生成物や反応物とのやりとりに含まれます。",
+            "m(CO₂)=0.100×44.0=4.40 g. The other reaction products and the consumed HCl account for the rest of the overall mass balance."
+          ],
+          [
+            "CO₂が3.96 gしか回収できなければ回収率は3.96/4.40×100=90.0%です。ただし回収損失と反応の不完全さは別の原因です。どちらかを判断するには追加の測定が必要です。",
+            "If only 3.96 g CO₂ is collected, the measured yield is 3.96/4.40×100=90.0%. Loss of gas during collection and incomplete reaction are different possible causes that require further evidence."
+          ]
         ]
       }
     },
@@ -227,6 +279,32 @@
             "en": "Kinetic theory provides a microscopic route to gas laws. Later, gas partial pressures enter reaction quotients, linking PV=nRT with chemical equilibrium. The same variables also appear in boiling at altitude, atmospheric pressure and respiratory gas exchange."
           }
         ]
+      },
+      "guidedExample": {
+        "titleJa": "体積が一定の気体を300 Kから330 Kへ温めると圧力はどう変わるか",
+        "titleEn": "How does pressure change when a constant-volume gas warms from 300 K to 330 K?",
+        "steps": [
+          [
+            "求めるのは温度を変えた後の圧力です。気体の量と体積が変わらないので、状態方程式のうちPとTだけに注目できます。",
+            "We need the final pressure. Given fixed gas amount and volume, focus on the P–T relation derived from the ideal gas law."
+          ],
+          [
+            "PV=nRTでV、n、R一定ならP/T=一定。温度は摂氏ではなく絶対温度Kを使います。ここでは容器が硬く、理想気体近似が妥当で、漏れ・凝縮・化学反応がないと仮定します。",
+            "From PV=nRT with fixed V and n, P/T is constant. Use kelvin rather than degrees Celsius. Assume a rigid container, negligible leakage, no condensation or chemical reaction, and approximately ideal gas behavior."
+          ],
+          [
+            "P₂=P₁(T₂/T₁)=P₁×330/300=1.10P₁。したがって圧力は10%増加します。もとの圧力が100 kPaなら新しい圧力は110 kPaです。",
+            "P₂=P₁(T₂/T₁)=P₁×330/300=1.10P₁. Pressure rises by 10%; if P₁=100 kPa, then P₂=110 kPa."
+          ],
+          [
+            "温度が30 K上がっても、圧力が30%増加するわけではありません。割合は絶対温度の比で決まります。330/300は1.10で無次元なので、圧力の単位がそのまま残ります。",
+            "A rise of 30 K does not mean a 30% pressure rise. The relevant ratio is 330/300=1.10, which is dimensionless; pressure units therefore remain unchanged."
+          ],
+          [
+            "容器が柔らかく自由に膨張できるなら体積が変わるので、同じ式でもPだけを求められません。条件を固定できているかどうかが、式を選ぶ前の最重要判断です。",
+            "If the container expands, V is no longer fixed and the result changes. Identifying the constraints is more fundamental than memorizing the proportionality."
+          ]
+        ]
       }
     },
     {
@@ -301,6 +379,32 @@
             "en": "Stoichiometry lets concentration and volume predict reacted amounts. Equilibrium then reinterprets saturation as a balance between dissolution and crystallization processes. Biochemistry adds another layer: ionic composition and pH can affect protein structure, so a solution is not merely an undifferentiated liquid."
           }
         ]
+      },
+      "guidedExample": {
+        "titleJa": "2.00 mol/LのNaCl水溶液から0.200 mol/Lを250 mL作る",
+        "titleEn": "Prepare 250 mL of 0.200 mol/L NaCl from a 2.00 mol/L stock",
+        "steps": [
+          [
+            "最初に目的量を確認します。最終体積250 mL、最終濃度0.200 mol/Lなので、必要なNaClの物質量を計算してから原液体積を求めるのが確実です。",
+            "Identify the target amount first: 250 mL at 0.200 mol/L. Calculate the required amount of NaCl, then infer how much stock solution contains that amount."
+          ],
+          [
+            "ここでは希釈中に溶質が失われず、体積は最終的に250 mLへ調整されると仮定します。『原液に水を250 mL加える』のではありません。",
+            "Assume no loss of solute and that the solution is diluted to a final total volume of 250 mL. Do not confuse this with adding 250 mL of water."
+          ],
+          [
+            "必要な溶質の量はn=c₂V₂=0.200 mol/L×0.250 L=0.0500 molです。体積をLへ換算することが重要です。",
+            "The required amount is n=c₂V₂=0.200 mol/L×0.250 L=0.0500 mol. Convert milliliters to liters before multiplying."
+          ],
+          [
+            "原液体積V₁=n/c₁=0.0500 mol÷(2.00 mol/L)=0.0250 L=25.0 mL。25.0 mLを採り、溶媒を加えて全量250 mLにします。",
+            "Take V₁=n/c₁=0.0500/(2.00)=0.0250 L=25.0 mL of stock, then dilute the entire solution to 250 mL."
+          ],
+          [
+            "濃度が10分の1になるため、原液体積は最終体積の10分の1という直感とも一致します。もし希釈途中で化学反応や沈殿が起こればc₁V₁=c₂V₂を単純に使えません。",
+            "The tenfold dilution matches the intuitive 25/250=0.10 ratio. If a reaction or precipitation consumes the solute, simple dilution conservation is no longer valid."
+          ]
+        ]
       }
     },
     {
@@ -374,6 +478,32 @@
             "ja": "物理で圧力を学び、化学で溶液を学び、生物で細胞を学んだ後に浸透へ戻ると、同じ現象が複数の説明体系に組み込まれます。大学の化学ポテンシャルを知ると、なぜ圧力も溶質も水の流れを変えるのか一つの原理で説明できます。これが知識の『熟成』の具体例です。",
             "en": "Osmosis becomes richer when pressure from physics, solutions from chemistry and membrane function from biology are combined. Chemical potential later unifies the effects of solute composition and pressure on water transport. Reinterpreting an earlier idea through another discipline is the intended learning experience."
           }
+        ]
+      },
+      "guidedExample": {
+        "titleJa": "0.050 mol/LのNaClとグルコースの浸透圧を比較する",
+        "titleEn": "Compare the osmotic pressures of 0.050 mol/L NaCl and glucose",
+        "steps": [
+          [
+            "求めるのは同じ温度での浸透圧の比です。大切なのは化学式単位のモル濃度だけではなく、水中に独立して存在する溶質粒子のおおよその数です。",
+            "We seek the ratio of osmotic pressures at equal temperature. The important quantity is the number of dissolved particles, not only the nominal molarity of formula units."
+          ],
+          [
+            "理想希薄溶液・完全解離・理想的な半透膜を仮定します。グルコースは主に1分子のまま、NaClはNa⁺とCl⁻の2粒子になると近似します。現実の溶液ではイオン間相互作用のため完全な2倍にはならない場合があります。",
+            "Assume ideal dilute behavior, complete NaCl dissociation and a selective membrane. Glucose stays mainly as individual molecules; NaCl yields approximately two ions per formula unit. In real solutions, interactions cause deviations."
+          ],
+          [
+            "π≈icRTを用います。グルコースはi≈1、NaClはi≈2。どちらもc=0.050 mol/Lなので、π(NaCl)/π(glucose)≈2です。温度が同じならRとTは比から消えます。",
+            "Use π≈icRT. For glucose i≈1, while for ideal NaCl i≈2. With equal c and T, their osmotic pressure ratio is approximately 2:1."
+          ],
+          [
+            "300 Kで計算するとグルコースはc=50 mol/m³なのでπ≈50×8.314×300≈125 kPa、NaClは約249 kPaです。mol/Lをmol/m³へ直す倍率1000を忘れないでください。",
+            "At 300 K, glucose concentration is 50 mol/m³, giving π≈50×8.314×300≈125 kPa; ideal NaCl gives roughly 249 kPa. The conversion from mol/L to mol/m³ multiplies by 1000."
+          ],
+          [
+            "同じ『塩分濃度』でも質量濃度とモル濃度を混同すると比較がずれます。植物細胞や生体膜では膜透過性や水ポテンシャル、非理想性まで重要になります。",
+            "Mass concentration and molarity should not be mixed. In cells and biological membranes, permeability, water potential and nonideal solute behavior complicate this idealized prediction."
+          ]
         ]
       }
     }
