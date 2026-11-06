@@ -1,0 +1,1376 @@
+{
+  "schema": "chemistry-knowledge-atlas",
+  "schemaVersion": "1.0",
+  "locale": [
+    "ja",
+    "en"
+  ],
+  "status": "curated-draft",
+  "scope": "29 high-school chapters + 9 university core fields",
+  "nodes": [
+    {
+      "id": "chem.hs.0-0.a",
+      "chapter": "0-0",
+      "level": "high-school",
+      "ja": "純物質",
+      "en": "Pure substance",
+      "contextJa": "純物質と混合物",
+      "contextEn": "Pure substances and mixtures"
+    },
+    {
+      "id": "chem.hs.0-0.b",
+      "chapter": "0-0",
+      "level": "high-school",
+      "ja": "分離操作",
+      "en": "Separation method",
+      "contextJa": "純物質と混合物",
+      "contextEn": "Pure substances and mixtures"
+    },
+    {
+      "id": "chem.hs.0-1.a",
+      "chapter": "0-1",
+      "level": "high-school",
+      "ja": "原子番号",
+      "en": "Atomic number",
+      "contextJa": "原子・同位体・イオン",
+      "contextEn": "Atoms, isotopes and ions"
+    },
+    {
+      "id": "chem.hs.0-1.b",
+      "chapter": "0-1",
+      "level": "high-school",
+      "ja": "同位体",
+      "en": "Isotope",
+      "contextJa": "原子・同位体・イオン",
+      "contextEn": "Atoms, isotopes and ions"
+    },
+    {
+      "id": "chem.hs.0-2.a",
+      "chapter": "0-2",
+      "level": "high-school",
+      "ja": "価電子配置",
+      "en": "Valence configuration",
+      "contextJa": "電子配置と周期表",
+      "contextEn": "Electron configuration and periodicity"
+    },
+    {
+      "id": "chem.hs.0-2.b",
+      "chapter": "0-2",
+      "level": "high-school",
+      "ja": "周期的性質",
+      "en": "Periodic trends",
+      "contextJa": "電子配置と周期表",
+      "contextEn": "Electron configuration and periodicity"
+    },
+    {
+      "id": "chem.hs.0-3.a",
+      "chapter": "0-3",
+      "level": "high-school",
+      "ja": "共有結合",
+      "en": "Covalent bond",
+      "contextJa": "化学結合と結晶",
+      "contextEn": "Bonding and crystals"
+    },
+    {
+      "id": "chem.hs.0-3.b",
+      "chapter": "0-3",
+      "level": "high-school",
+      "ja": "結晶格子",
+      "en": "Crystal lattice",
+      "contextJa": "化学結合と結晶",
+      "contextEn": "Bonding and crystals"
+    },
+    {
+      "id": "chem.hs.0-4.a",
+      "chapter": "0-4",
+      "level": "high-school",
+      "ja": "分子の形",
+      "en": "Molecular geometry",
+      "contextJa": "分子の形と分子間力",
+      "contextEn": "Molecular shape and intermolecular forces"
+    },
+    {
+      "id": "chem.hs.0-4.b",
+      "chapter": "0-4",
+      "level": "high-school",
+      "ja": "分子間相互作用",
+      "en": "Intermolecular interactions",
+      "contextJa": "分子の形と分子間力",
+      "contextEn": "Molecular shape and intermolecular forces"
+    },
+    {
+      "id": "chem.hs.1-0.a",
+      "chapter": "1-0",
+      "level": "high-school",
+      "ja": "物質量",
+      "en": "Amount of substance",
+      "contextJa": "物質量と化学式",
+      "contextEn": "Amount of substance and formulae"
+    },
+    {
+      "id": "chem.hs.1-0.b",
+      "chapter": "1-0",
+      "level": "high-school",
+      "ja": "モル質量",
+      "en": "Molar mass",
+      "contextJa": "物質量と化学式",
+      "contextEn": "Amount of substance and formulae"
+    },
+    {
+      "id": "chem.hs.1-1.a",
+      "chapter": "1-1",
+      "level": "high-school",
+      "ja": "化学量論",
+      "en": "Stoichiometry",
+      "contextJa": "化学反応式と量的関係",
+      "contextEn": "Stoichiometry"
+    },
+    {
+      "id": "chem.hs.1-1.b",
+      "chapter": "1-1",
+      "level": "high-school",
+      "ja": "制限試薬",
+      "en": "Limiting reagent",
+      "contextJa": "化学反応式と量的関係",
+      "contextEn": "Stoichiometry"
+    },
+    {
+      "id": "chem.hs.1-2.a",
+      "chapter": "1-2",
+      "level": "high-school",
+      "ja": "圧力",
+      "en": "Pressure",
+      "contextJa": "気体の性質",
+      "contextEn": "Gas properties"
+    },
+    {
+      "id": "chem.hs.1-2.b",
+      "chapter": "1-2",
+      "level": "high-school",
+      "ja": "状態方程式",
+      "en": "Equation of state",
+      "contextJa": "気体の性質",
+      "contextEn": "Gas properties"
+    },
+    {
+      "id": "chem.hs.1-3.a",
+      "chapter": "1-3",
+      "level": "high-school",
+      "ja": "モル濃度",
+      "en": "Molarity",
+      "contextJa": "溶液の濃度と溶解度",
+      "contextEn": "Concentration and solubility"
+    },
+    {
+      "id": "chem.hs.1-3.b",
+      "chapter": "1-3",
+      "level": "high-school",
+      "ja": "溶解度",
+      "en": "Solubility",
+      "contextJa": "溶液の濃度と溶解度",
+      "contextEn": "Concentration and solubility"
+    },
+    {
+      "id": "chem.hs.1-4.a",
+      "chapter": "1-4",
+      "level": "high-school",
+      "ja": "束一的性質",
+      "en": "Colligative properties",
+      "contextJa": "希薄溶液・浸透圧",
+      "contextEn": "Colligative properties and osmosis"
+    },
+    {
+      "id": "chem.hs.1-4.b",
+      "chapter": "1-4",
+      "level": "high-school",
+      "ja": "浸透圧",
+      "en": "Osmotic pressure",
+      "contextJa": "希薄溶液・浸透圧",
+      "contextEn": "Colligative properties and osmosis"
+    },
+    {
+      "id": "chem.hs.2-0.a",
+      "chapter": "2-0",
+      "level": "high-school",
+      "ja": "反応エンタルピー",
+      "en": "Reaction enthalpy",
+      "contextJa": "熱化学と反応エンタルピー",
+      "contextEn": "Thermochemistry"
+    },
+    {
+      "id": "chem.hs.2-0.b",
+      "chapter": "2-0",
+      "level": "high-school",
+      "ja": "状態関数",
+      "en": "State function",
+      "contextJa": "熱化学と反応エンタルピー",
+      "contextEn": "Thermochemistry"
+    },
+    {
+      "id": "chem.hs.2-1.a",
+      "chapter": "2-1",
+      "level": "high-school",
+      "ja": "反応速度",
+      "en": "Reaction rate",
+      "contextJa": "反応速度・触媒",
+      "contextEn": "Kinetics and catalysis"
+    },
+    {
+      "id": "chem.hs.2-1.b",
+      "chapter": "2-1",
+      "level": "high-school",
+      "ja": "触媒",
+      "en": "Catalyst",
+      "contextJa": "反応速度・触媒",
+      "contextEn": "Kinetics and catalysis"
+    },
+    {
+      "id": "chem.hs.2-2.a",
+      "chapter": "2-2",
+      "level": "high-school",
+      "ja": "動的平衡",
+      "en": "Dynamic equilibrium",
+      "contextJa": "化学平衡",
+      "contextEn": "Chemical equilibrium"
+    },
+    {
+      "id": "chem.hs.2-2.b",
+      "chapter": "2-2",
+      "level": "high-school",
+      "ja": "平衡定数",
+      "en": "Equilibrium constant",
+      "contextJa": "化学平衡",
+      "contextEn": "Chemical equilibrium"
+    },
+    {
+      "id": "chem.hs.2-3.a",
+      "chapter": "2-3",
+      "level": "high-school",
+      "ja": "プロトン授受",
+      "en": "Proton transfer",
+      "contextJa": "酸と塩基・pH",
+      "contextEn": "Acids, bases and pH"
+    },
+    {
+      "id": "chem.hs.2-3.b",
+      "chapter": "2-3",
+      "level": "high-school",
+      "ja": "pH",
+      "en": "pH",
+      "contextJa": "酸と塩基・pH",
+      "contextEn": "Acids, bases and pH"
+    },
+    {
+      "id": "chem.hs.2-4.a",
+      "chapter": "2-4",
+      "level": "high-school",
+      "ja": "滴定の当量点",
+      "en": "Titration equivalence point",
+      "contextJa": "中和・滴定・緩衝液",
+      "contextEn": "Neutralization, titration and buffers"
+    },
+    {
+      "id": "chem.hs.2-4.b",
+      "chapter": "2-4",
+      "level": "high-school",
+      "ja": "緩衝作用",
+      "en": "Buffer action",
+      "contextJa": "中和・滴定・緩衝液",
+      "contextEn": "Neutralization, titration and buffers"
+    },
+    {
+      "id": "chem.hs.2-5.a",
+      "chapter": "2-5",
+      "level": "high-school",
+      "ja": "酸化数",
+      "en": "Oxidation state",
+      "contextJa": "酸化還元・電池・電気分解",
+      "contextEn": "Redox and electrochemistry"
+    },
+    {
+      "id": "chem.hs.2-5.b",
+      "chapter": "2-5",
+      "level": "high-school",
+      "ja": "電極電位",
+      "en": "Electrode potential",
+      "contextJa": "酸化還元・電池・電気分解",
+      "contextEn": "Redox and electrochemistry"
+    },
+    {
+      "id": "chem.hs.3-0.a",
+      "chapter": "3-0",
+      "level": "high-school",
+      "ja": "ハロゲン",
+      "en": "Halogens",
+      "contextJa": "非金属元素の性質",
+      "contextEn": "Nonmetal elements"
+    },
+    {
+      "id": "chem.hs.3-0.b",
+      "chapter": "3-0",
+      "level": "high-school",
+      "ja": "酸化力",
+      "en": "Oxidizing ability",
+      "contextJa": "非金属元素の性質",
+      "contextEn": "Nonmetal elements"
+    },
+    {
+      "id": "chem.hs.3-1.a",
+      "chapter": "3-1",
+      "level": "high-school",
+      "ja": "金属の反応性",
+      "en": "Metal reactivity",
+      "contextJa": "典型金属元素",
+      "contextEn": "Main-group metals"
+    },
+    {
+      "id": "chem.hs.3-1.b",
+      "chapter": "3-1",
+      "level": "high-school",
+      "ja": "両性水酸化物",
+      "en": "Amphoteric hydroxide",
+      "contextJa": "典型金属元素",
+      "contextEn": "Main-group metals"
+    },
+    {
+      "id": "chem.hs.3-2.a",
+      "chapter": "3-2",
+      "level": "high-school",
+      "ja": "配位結合",
+      "en": "Coordinate bonding",
+      "contextJa": "遷移元素と錯イオン",
+      "contextEn": "Transition elements and complexes"
+    },
+    {
+      "id": "chem.hs.3-2.b",
+      "chapter": "3-2",
+      "level": "high-school",
+      "ja": "錯形成平衡",
+      "en": "Complex formation equilibrium",
+      "contextJa": "遷移元素と錯イオン",
+      "contextEn": "Transition elements and complexes"
+    },
+    {
+      "id": "chem.hs.3-3.a",
+      "chapter": "3-3",
+      "level": "high-school",
+      "ja": "沈殿反応",
+      "en": "Precipitation reaction",
+      "contextJa": "無機物質の識別",
+      "contextEn": "Inorganic qualitative analysis"
+    },
+    {
+      "id": "chem.hs.3-3.b",
+      "chapter": "3-3",
+      "level": "high-school",
+      "ja": "定性分析",
+      "en": "Qualitative analysis",
+      "contextJa": "無機物質の識別",
+      "contextEn": "Inorganic qualitative analysis"
+    },
+    {
+      "id": "chem.hs.4-0.a",
+      "chapter": "4-0",
+      "level": "high-school",
+      "ja": "官能基",
+      "en": "Functional group",
+      "contextJa": "有機化合物の構造と異性体",
+      "contextEn": "Organic structure and isomers"
+    },
+    {
+      "id": "chem.hs.4-0.b",
+      "chapter": "4-0",
+      "level": "high-school",
+      "ja": "構造異性",
+      "en": "Constitutional isomerism",
+      "contextJa": "有機化合物の構造と異性体",
+      "contextEn": "Organic structure and isomers"
+    },
+    {
+      "id": "chem.hs.4-1.a",
+      "chapter": "4-1",
+      "level": "high-school",
+      "ja": "不飽和結合",
+      "en": "Unsaturation",
+      "contextJa": "炭化水素・芳香族",
+      "contextEn": "Hydrocarbons and aromaticity"
+    },
+    {
+      "id": "chem.hs.4-1.b",
+      "chapter": "4-1",
+      "level": "high-school",
+      "ja": "芳香族性",
+      "en": "Aromaticity",
+      "contextJa": "炭化水素・芳香族",
+      "contextEn": "Hydrocarbons and aromaticity"
+    },
+    {
+      "id": "chem.hs.4-2.a",
+      "chapter": "4-2",
+      "level": "high-school",
+      "ja": "アルコールの酸化",
+      "en": "Alcohol oxidation",
+      "contextJa": "アルコール・エーテル・カルボニル",
+      "contextEn": "Alcohols, ethers and carbonyls"
+    },
+    {
+      "id": "chem.hs.4-2.b",
+      "chapter": "4-2",
+      "level": "high-school",
+      "ja": "カルボニル基",
+      "en": "Carbonyl group",
+      "contextJa": "アルコール・エーテル・カルボニル",
+      "contextEn": "Alcohols, ethers and carbonyls"
+    },
+    {
+      "id": "chem.hs.4-3.a",
+      "chapter": "4-3",
+      "level": "high-school",
+      "ja": "エステル化",
+      "en": "Esterification",
+      "contextJa": "カルボン酸・エステル・油脂",
+      "contextEn": "Carboxylic acids and esters"
+    },
+    {
+      "id": "chem.hs.4-3.b",
+      "chapter": "4-3",
+      "level": "high-school",
+      "ja": "加水分解",
+      "en": "Hydrolysis",
+      "contextJa": "カルボン酸・エステル・油脂",
+      "contextEn": "Carboxylic acids and esters"
+    },
+    {
+      "id": "chem.hs.4-4.a",
+      "chapter": "4-4",
+      "level": "high-school",
+      "ja": "芳香族置換",
+      "en": "Aromatic substitution",
+      "contextJa": "芳香族化合物",
+      "contextEn": "Aromatic compounds"
+    },
+    {
+      "id": "chem.hs.4-4.b",
+      "chapter": "4-4",
+      "level": "high-school",
+      "ja": "置換基効果",
+      "en": "Substituent effects",
+      "contextJa": "芳香族化合物",
+      "contextEn": "Aromatic compounds"
+    },
+    {
+      "id": "chem.hs.4-5.a",
+      "chapter": "4-5",
+      "level": "high-school",
+      "ja": "グリコシド結合",
+      "en": "Glycosidic bond",
+      "contextJa": "糖類・アミノ酸",
+      "contextEn": "Carbohydrates and amino acids"
+    },
+    {
+      "id": "chem.hs.4-5.b",
+      "chapter": "4-5",
+      "level": "high-school",
+      "ja": "ペプチド結合",
+      "en": "Peptide bond",
+      "contextJa": "糖類・アミノ酸",
+      "contextEn": "Carbohydrates and amino acids"
+    },
+    {
+      "id": "chem.hs.5-0.a",
+      "chapter": "5-0",
+      "level": "high-school",
+      "ja": "連鎖重合",
+      "en": "Chain polymerization",
+      "contextJa": "付加重合と縮合重合",
+      "contextEn": "Addition and condensation polymerization"
+    },
+    {
+      "id": "chem.hs.5-0.b",
+      "chapter": "5-0",
+      "level": "high-school",
+      "ja": "縮合重合",
+      "en": "Condensation polymerization",
+      "contextJa": "付加重合と縮合重合",
+      "contextEn": "Addition and condensation polymerization"
+    },
+    {
+      "id": "chem.hs.5-1.a",
+      "chapter": "5-1",
+      "level": "high-school",
+      "ja": "架橋",
+      "en": "Crosslinking",
+      "contextJa": "合成繊維・樹脂・ゴム",
+      "contextEn": "Synthetic fibers, plastics and rubbers"
+    },
+    {
+      "id": "chem.hs.5-1.b",
+      "chapter": "5-1",
+      "level": "high-school",
+      "ja": "材料物性",
+      "en": "Material properties",
+      "contextJa": "合成繊維・樹脂・ゴム",
+      "contextEn": "Synthetic fibers, plastics and rubbers"
+    },
+    {
+      "id": "chem.hs.5-2.a",
+      "chapter": "5-2",
+      "level": "high-school",
+      "ja": "セルロース",
+      "en": "Cellulose",
+      "contextJa": "天然高分子と材料",
+      "contextEn": "Natural polymers and materials"
+    },
+    {
+      "id": "chem.hs.5-2.b",
+      "chapter": "5-2",
+      "level": "high-school",
+      "ja": "生分解性",
+      "en": "Biodegradability",
+      "contextJa": "天然高分子と材料",
+      "contextEn": "Natural polymers and materials"
+    },
+    {
+      "id": "chem.uni.physical",
+      "level": "university",
+      "ja": "物理化学",
+      "en": "Physical chemistry",
+      "contextJa": "エネルギー・速度・平衡を同じ数理的枠組みで理解する。",
+      "contextEn": "Use mathematical models to connect energy, rates and equilibria."
+    },
+    {
+      "id": "chem.uni.quantum",
+      "level": "university",
+      "ja": "量子化学",
+      "en": "Quantum chemistry",
+      "contextJa": "電子状態の量子力学から結合と周期性を読み直す。",
+      "contextEn": "Revisit bonding and periodicity through electronic quantum states."
+    },
+    {
+      "id": "chem.uni.inorganic",
+      "level": "university",
+      "ja": "無機化学",
+      "en": "Inorganic chemistry",
+      "contextJa": "元素の周期性・結晶・錯体・反応性を体系化する。",
+      "contextEn": "Systematize periodicity, crystals, complexes and element reactivity."
+    },
+    {
+      "id": "chem.uni.organic",
+      "level": "university",
+      "ja": "有機化学",
+      "en": "Organic chemistry",
+      "contextJa": "分子構造・電子の流れ・反応機構をつなぐ。",
+      "contextEn": "Connect molecular structure, electron flow and reaction mechanisms."
+    },
+    {
+      "id": "chem.uni.analytical",
+      "level": "university",
+      "ja": "分析化学",
+      "en": "Analytical chemistry",
+      "contextJa": "測定・分離・誤差評価を使い、化学的判断の証拠を作る。",
+      "contextEn": "Build chemical evidence through measurement, separation and uncertainty."
+    },
+    {
+      "id": "chem.uni.biochem",
+      "level": "university",
+      "ja": "生化学",
+      "en": "Biochemistry",
+      "contextJa": "生体分子の構造と反応を代謝・酵素作用へつなげる。",
+      "contextEn": "Link biomolecular structures to metabolism and enzymatic reactions."
+    },
+    {
+      "id": "chem.uni.polymer",
+      "level": "university",
+      "ja": "高分子化学",
+      "en": "Polymer chemistry",
+      "contextJa": "高分子の構造・合成・物性を結びつける。",
+      "contextEn": "Connect polymer structure, synthesis and properties."
+    },
+    {
+      "id": "chem.uni.theoretical",
+      "level": "university",
+      "ja": "理論化学",
+      "en": "Theoretical chemistry",
+      "contextJa": "化学現象の仮定・モデル・方程式の意味と限界を検討する。",
+      "contextEn": "Examine assumptions, models and equations underlying chemistry."
+    },
+    {
+      "id": "chem.uni.computational",
+      "level": "university",
+      "ja": "計算化学",
+      "en": "Computational chemistry",
+      "contextJa": "近似モデルや数値計算で構造・エネルギー・反応を推定する。",
+      "contextEn": "Estimate molecular structures, energies and reactions computationally."
+    }
+  ],
+  "edges": [
+    {
+      "from": "chem.hs.0-0.a",
+      "to": "chem.hs.0-0.b",
+      "type": "application",
+      "ja": "組成が一定の物質と、性質の差を利用する分離操作を区別する。",
+      "en": "Distinguish a fixed-composition substance from separation based on physical properties.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.0-0.b",
+      "to": "chem.uni.analytical",
+      "type": "reinterpret",
+      "ja": "大学「分析化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Analytical chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.0-1.a",
+      "to": "chem.hs.0-1.b",
+      "type": "application",
+      "ja": "陽子数が元素を定義し、中性子数の差が同位体を生む。",
+      "en": "Proton count defines an element while differing neutron counts define isotopes.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.0-1.b",
+      "to": "chem.uni.inorganic",
+      "type": "reinterpret",
+      "ja": "大学「無機化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Inorganic chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.0-2.a",
+      "to": "chem.hs.0-2.b",
+      "type": "application",
+      "ja": "価電子配置が元素の性質の周期性を理解する入口になる。",
+      "en": "Valence configuration helps explain recurring chemical trends.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.0-2.b",
+      "to": "chem.uni.quantum",
+      "type": "reinterpret",
+      "ja": "大学「量子化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Quantum chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.0-3.a",
+      "to": "chem.hs.0-3.b",
+      "type": "application",
+      "ja": "電子密度が支える結合と、結晶全体の配列から物性を考える。",
+      "en": "Connect electron-density bonding to extended crystal organization.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.0-3.b",
+      "to": "chem.uni.inorganic",
+      "type": "reinterpret",
+      "ja": "大学「無機化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Inorganic chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.0-4.a",
+      "to": "chem.hs.0-4.b",
+      "type": "application",
+      "ja": "分子の形と電荷分布が分子間相互作用の性質に影響する。",
+      "en": "Molecular geometry and charge distribution affect intermolecular interactions.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.0-4.b",
+      "to": "chem.uni.physical",
+      "type": "reinterpret",
+      "ja": "大学「物理化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Physical chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.1-0.a",
+      "to": "chem.hs.1-0.b",
+      "type": "application",
+      "ja": "粒子数に対応する物質量と、質量を結びつける。",
+      "en": "Connect amount of substance, particle number and measurable mass.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.1-0.b",
+      "to": "chem.uni.analytical",
+      "type": "reinterpret",
+      "ja": "大学「分析化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Analytical chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.1-1.a",
+      "to": "chem.hs.1-1.b",
+      "type": "application",
+      "ja": "係数による物質量の比から生成量の上限を判断する。",
+      "en": "Use reaction coefficients to establish the limiting reagent and maximum yield.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.1-1.b",
+      "to": "chem.uni.analytical",
+      "type": "reinterpret",
+      "ja": "大学「分析化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Analytical chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.1-2.a",
+      "to": "chem.hs.1-2.b",
+      "type": "application",
+      "ja": "圧力・体積・温度・物質量をモデル条件付きの式で結ぶ。",
+      "en": "Connect pressure, volume, temperature and amount in a defined model.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.1-2.b",
+      "to": "chem.uni.physical",
+      "type": "reinterpret",
+      "ja": "大学「物理化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Physical chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.1-3.a",
+      "to": "chem.hs.1-3.b",
+      "type": "application",
+      "ja": "濃度は組成の量的表現であり、溶解度は条件下の溶解可能量を表す。",
+      "en": "Concentration measures composition; solubility describes the amount dissolvable under specified conditions.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.1-3.b",
+      "to": "chem.uni.analytical",
+      "type": "reinterpret",
+      "ja": "大学「分析化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Analytical chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.1-4.a",
+      "to": "chem.hs.1-4.b",
+      "type": "application",
+      "ja": "理想的な希薄溶液では溶質粒子の数が浸透圧などに関わる。",
+      "en": "Solute particle count governs ideal-dilute colligative behavior such as osmosis.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.1-4.b",
+      "to": "chem.uni.physical",
+      "type": "reinterpret",
+      "ja": "大学「物理化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Physical chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.2-0.a",
+      "to": "chem.hs.2-0.b",
+      "type": "application",
+      "ja": "エンタルピー変化は経路ではなく始状態と終状態で定まる。",
+      "en": "Enthalpy changes depend on states rather than the reaction path.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.2-0.b",
+      "to": "chem.uni.physical",
+      "type": "reinterpret",
+      "ja": "大学「物理化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Physical chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.2-1.a",
+      "to": "chem.hs.2-1.b",
+      "type": "application",
+      "ja": "触媒は速度を変え得るが、一定温度の平衡定数そのものは変えない。",
+      "en": "Catalysts can change rates but not an equilibrium constant at fixed temperature.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.2-1.b",
+      "to": "chem.uni.physical",
+      "type": "reinterpret",
+      "ja": "大学「物理化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Physical chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.2-2.a",
+      "to": "chem.hs.2-2.b",
+      "type": "application",
+      "ja": "正逆速度が等しい動的な状態を平衡定数で定量化する。",
+      "en": "An equilibrium constant characterizes a dynamic state with balanced forward and reverse rates.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.2-2.b",
+      "to": "chem.uni.physical",
+      "type": "reinterpret",
+      "ja": "大学「物理化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Physical chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.2-3.a",
+      "to": "chem.hs.2-3.b",
+      "type": "application",
+      "ja": "プロトンの授受と水素イオン活量に基づく尺度を区別して理解する。",
+      "en": "Relate proton transfer to an activity-based measure of acidity.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.2-3.b",
+      "to": "chem.uni.analytical",
+      "type": "reinterpret",
+      "ja": "大学「分析化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Analytical chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.2-4.a",
+      "to": "chem.hs.2-4.b",
+      "type": "application",
+      "ja": "滴定の量論と溶液内平衡は関連するが同じ概念ではない。",
+      "en": "Titration stoichiometry and solution equilibria are related but distinct.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.2-4.b",
+      "to": "chem.uni.analytical",
+      "type": "reinterpret",
+      "ja": "大学「分析化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Analytical chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.2-5.a",
+      "to": "chem.hs.2-5.b",
+      "type": "application",
+      "ja": "形式的な電子の数え方を電極反応と熱力学の理解へ広げる。",
+      "en": "Extend formal electron accounting to electrode reactions and thermodynamics.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.2-5.b",
+      "to": "chem.uni.physical",
+      "type": "reinterpret",
+      "ja": "大学「物理化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Physical chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.3-0.a",
+      "to": "chem.hs.3-0.b",
+      "type": "application",
+      "ja": "ハロゲンの置換反応を酸化還元として読み直す。",
+      "en": "Revisit halogen displacement as a redox process.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.3-0.b",
+      "to": "chem.uni.inorganic",
+      "type": "reinterpret",
+      "ja": "大学「無機化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Inorganic chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.3-1.a",
+      "to": "chem.hs.3-1.b",
+      "type": "application",
+      "ja": "水酸化物の反応性は単なる金属分類では説明しきれない。",
+      "en": "Hydroxide reactions require more than a simple metals classification.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.3-1.b",
+      "to": "chem.uni.inorganic",
+      "type": "reinterpret",
+      "ja": "大学「無機化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Inorganic chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.3-2.a",
+      "to": "chem.hs.3-2.b",
+      "type": "application",
+      "ja": "配位子による電子対供与と溶液中の平衡を結びつける。",
+      "en": "Connect ligand electron-pair donation to solution complexation equilibria.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.3-2.b",
+      "to": "chem.uni.inorganic",
+      "type": "reinterpret",
+      "ja": "大学「無機化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Inorganic chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.3-3.a",
+      "to": "chem.hs.3-3.b",
+      "type": "application",
+      "ja": "沈殿生成の観察を、複数の候補を区別する証拠へ変える。",
+      "en": "Use precipitation observations as evidence to distinguish substances.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.3-3.b",
+      "to": "chem.uni.analytical",
+      "type": "reinterpret",
+      "ja": "大学「分析化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Analytical chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.4-0.a",
+      "to": "chem.hs.4-0.b",
+      "type": "application",
+      "ja": "同じ分子式でも結合関係が異なると性質が異なる。",
+      "en": "Different connectivity can cause different properties for the same formula.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.4-0.b",
+      "to": "chem.uni.organic",
+      "type": "reinterpret",
+      "ja": "大学「有機化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Organic chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.4-1.a",
+      "to": "chem.hs.4-1.b",
+      "type": "application",
+      "ja": "不飽和結合の付加反応だけでは芳香族化合物を説明できない。",
+      "en": "Simple addition chemistry does not fully describe aromatic compounds.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.4-1.b",
+      "to": "chem.uni.organic",
+      "type": "reinterpret",
+      "ja": "大学「有機化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Organic chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.4-2.a",
+      "to": "chem.hs.4-2.b",
+      "type": "application",
+      "ja": "アルコールの酸化はカルボニル化合物への変換として読み取れる。",
+      "en": "Alcohol oxidation can generate carbonyl compounds.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.4-2.b",
+      "to": "chem.uni.organic",
+      "type": "reinterpret",
+      "ja": "大学「有機化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Organic chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.4-3.a",
+      "to": "chem.hs.4-3.b",
+      "type": "application",
+      "ja": "エステル化と加水分解は条件によって反対方向に進む関係として理解できる。",
+      "en": "Esterification and hydrolysis can be understood as opposing processes under suitable conditions.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.4-3.b",
+      "to": "chem.uni.organic",
+      "type": "reinterpret",
+      "ja": "大学「有機化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Organic chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.4-4.a",
+      "to": "chem.hs.4-4.b",
+      "type": "application",
+      "ja": "置換基が芳香環の反応性と位置選択性を変える。",
+      "en": "Substituents affect aromatic reactivity and positional selectivity.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.4-4.b",
+      "to": "chem.uni.organic",
+      "type": "reinterpret",
+      "ja": "大学「有機化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Organic chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.4-5.a",
+      "to": "chem.hs.4-5.b",
+      "type": "application",
+      "ja": "生体高分子は異なる単位間結合の化学から説明できる。",
+      "en": "Biopolymer structures depend on distinct linkages between building blocks.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.4-5.b",
+      "to": "chem.uni.biochem",
+      "type": "reinterpret",
+      "ja": "大学「生化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Biochemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.5-0.a",
+      "to": "chem.hs.5-0.b",
+      "type": "application",
+      "ja": "重合は反応機構と生成する繰り返し単位を分けて考える。",
+      "en": "Distinguish polymerization mechanism from resulting repeat units.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.5-0.b",
+      "to": "chem.uni.polymer",
+      "type": "reinterpret",
+      "ja": "大学「高分子化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Polymer chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.5-1.a",
+      "to": "chem.hs.5-1.b",
+      "type": "application",
+      "ja": "高分子の結合・架橋構造が巨視的な材料特性を左右する。",
+      "en": "Polymer connectivity and crosslinks influence bulk properties.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.5-1.b",
+      "to": "chem.uni.polymer",
+      "type": "reinterpret",
+      "ja": "大学「高分子化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Polymer chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.5-2.a",
+      "to": "chem.hs.5-2.b",
+      "type": "application",
+      "ja": "天然由来かどうかだけで生分解性は決まらず、構造と環境に依存する。",
+      "en": "Biodegradation depends on structure and conditions, not just natural origin.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.5-2.b",
+      "to": "chem.uni.polymer",
+      "type": "reinterpret",
+      "ja": "大学「高分子化学」でこの概念を別の理論・手法から考え直す。",
+      "en": "Reinterpret this concept in university-level Polymer chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.0-1.b",
+      "to": "chem.hs.0-2.a",
+      "type": "prerequisite",
+      "ja": "原子番号と電子数を知ると電子配置と周期性を説明できる。",
+      "en": "Atomic number and electron count support electronic configurations.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.0-2.b",
+      "to": "chem.hs.0-3.a",
+      "type": "application",
+      "ja": "価電子配置から結合の種類を検討できる。",
+      "en": "Valence configurations help predict bonding patterns.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.0-3.b",
+      "to": "chem.hs.0-4.a",
+      "type": "reinterpret",
+      "ja": "結合の極性だけでは分子の極性は決まらず、立体構造が必要。",
+      "en": "Geometry is needed to understand molecular polarity beyond polar bonds.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.1-0.b",
+      "to": "chem.hs.1-1.a",
+      "type": "application",
+      "ja": "物質量は化学反応式の係数比を定量的に読むための単位。",
+      "en": "Moles turn reaction coefficients into quantitative ratios.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.1-2.b",
+      "to": "chem.hs.1-4.a",
+      "type": "analogy",
+      "ja": "気体の状態方程式と浸透圧の近似式は粒子数と温度に関係する。",
+      "en": "Ideal gas and dilute osmotic relations both connect particle amount and temperature.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.1-3.b",
+      "to": "chem.hs.2-2.a",
+      "type": "prerequisite",
+      "ja": "溶液の組成を量的に扱うことは平衡式への入口。",
+      "en": "Quantifying solution composition supports equilibrium calculations.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.2-0.b",
+      "to": "chem.hs.2-2.a",
+      "type": "reinterpret",
+      "ja": "反応エンタルピーのみでは平衡の方向を決定できず、自由エネルギーが必要になる。",
+      "en": "Enthalpy alone does not determine equilibrium direction; Gibbs energy matters.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.2-1.b",
+      "to": "chem.hs.2-2.a",
+      "type": "contrast",
+      "ja": "反応速度と平衡組成は別の問いであり、触媒は平衡定数を変えない。",
+      "en": "Kinetics differs from equilibrium composition; catalysts do not change K.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.2-2.b",
+      "to": "chem.hs.2-3.a",
+      "type": "application",
+      "ja": "弱酸の電離を一般の化学平衡として扱う。",
+      "en": "Weak-acid dissociation is an equilibrium.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.2-3.b",
+      "to": "chem.hs.2-4.a",
+      "type": "application",
+      "ja": "共役酸塩基対の平衡を使うと緩衝液を理解できる。",
+      "en": "Conjugate acid-base equilibria explain buffers.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.2-2.b",
+      "to": "chem.hs.3-2.a",
+      "type": "application",
+      "ja": "錯体形成も化学平衡の一例。",
+      "en": "Complex formation is another example of equilibrium.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.3-2.b",
+      "to": "chem.hs.3-3.a",
+      "type": "application",
+      "ja": "錯形成と沈殿の競合が定性分析に影響する。",
+      "en": "Complexation and precipitation compete during qualitative analysis.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.2-5.b",
+      "to": "chem.hs.3-0.a",
+      "type": "application",
+      "ja": "ハロゲンの反応を電子授受として説明できる。",
+      "en": "Redox ideas explain halogen displacement.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.2-5.b",
+      "to": "chem.hs.3-2.a",
+      "type": "application",
+      "ja": "酸化数は錯体中の金属イオンを考える助けとなる。",
+      "en": "Oxidation states help interpret metal centers in complexes.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.4-0.b",
+      "to": "chem.hs.4-1.a",
+      "type": "application",
+      "ja": "異性体・官能基の構造を学ぶことで炭化水素の違いを理解する。",
+      "en": "Molecular connectivity helps explain hydrocarbon differences.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.4-1.b",
+      "to": "chem.hs.4-4.a",
+      "type": "reinterpret",
+      "ja": "ベンゼンの芳香族性は単純なアルケンの性質へ還元できない。",
+      "en": "Aromatic benzene cannot be reduced to ordinary alkene reactivity.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.4-2.b",
+      "to": "chem.hs.4-3.a",
+      "type": "application",
+      "ja": "アルコールの酸化とカルボン酸・エステルの反応を比較する。",
+      "en": "Compare alcohol oxidation with acid and ester chemistry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.2-2.b",
+      "to": "chem.hs.4-3.a",
+      "type": "reinterpret",
+      "ja": "エステル化は条件に応じて平衡に達する可逆反応。",
+      "en": "Esterification may be reversible and governed by equilibrium.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.4-3.b",
+      "to": "chem.hs.5-1.a",
+      "type": "application",
+      "ja": "エステル結合はPETなどのポリエステルにも現れる。",
+      "en": "Ester linkages appear in polyesters including PET.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.4-5.b",
+      "to": "chem.hs.5-2.a",
+      "type": "application",
+      "ja": "単糖・アミノ酸から天然高分子の構造をつなぐ。",
+      "en": "Building blocks connect to natural polymer structures.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.5-0.b",
+      "to": "chem.hs.5-1.a",
+      "type": "application",
+      "ja": "重合法と高分子の結合構造は物性に影響する。",
+      "en": "Polymerization pathways and connectivity affect material properties.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.1-4.b",
+      "to": "chem.hs.5-2.a",
+      "type": "analogy",
+      "ja": "浸透は生体系の水移動にも使えるが、実在系の膜特性や溶質条件に注意する。",
+      "en": "Osmotic concepts apply to biological systems with membrane and nonideal caveats.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.1-3.b",
+      "to": "chem.hs.3-3.a",
+      "type": "application",
+      "ja": "溶液条件が沈殿と分離を左右する。",
+      "en": "Solution conditions influence precipitation and separation.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.0-4.b",
+      "to": "chem.hs.1-4.a",
+      "type": "application",
+      "ja": "分子間相互作用が溶媒和や浸透の前提となる。",
+      "en": "Intermolecular interactions influence solvation and solution behavior.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.0-3.b",
+      "to": "chem.hs.4-0.a",
+      "type": "prerequisite",
+      "ja": "共有結合の結び方が構造異性体を理解する土台になる。",
+      "en": "Covalent connectivity underlies structural isomerism.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.2-4.b",
+      "to": "chem.hs.3-3.a",
+      "type": "analogy",
+      "ja": "滴定の当量点と定性分析の判定は、どちらも観察結果を化学量論と結びつける。",
+      "en": "Titration and qualitative analysis both connect observations to stoichiometry.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.0-1.b",
+      "to": "chem.hs.3-0.a",
+      "type": "prerequisite",
+      "ja": "原子番号の違いが元素分類の基本になる。",
+      "en": "Atomic number underpins classification of the elements.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.0-2.b",
+      "to": "chem.hs.3-1.a",
+      "type": "application",
+      "ja": "価電子配置は典型金属の反応性の手がかり。",
+      "en": "Valence configuration informs main-group reactivity.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.1-1.b",
+      "to": "chem.hs.5-0.a",
+      "type": "application",
+      "ja": "重合反応も量論を含むが、分子量分布など固有の特徴をもつ。",
+      "en": "Polymerization involves stoichiometry alongside molecular weight distributions.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.hs.0-0.b",
+      "to": "chem.hs.3-3.a",
+      "type": "application",
+      "ja": "混合物の分離を、試験管での識別から機器分析へ発展させる。",
+      "en": "Extend separation of mixtures to qualitative and instrumental analysis.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.uni.physical",
+      "to": "chem.uni.theoretical",
+      "type": "analogy",
+      "ja": "物理化学の式を理論化学ではモデルの仮定から検討する。",
+      "en": "Theoretical chemistry examines assumptions behind physical-chemistry equations.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.uni.quantum",
+      "to": "chem.uni.computational",
+      "type": "application",
+      "ja": "量子化学の近似方程式を計算で解き、分子の性質を推定する。",
+      "en": "Computational methods approximate quantum electronic states.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.uni.inorganic",
+      "to": "chem.uni.quantum",
+      "type": "reinterpret",
+      "ja": "元素の周期性や錯体を電子状態の観点で再解釈する。",
+      "en": "Reinterpret periodicity and coordination through electronic states.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.uni.organic",
+      "to": "chem.uni.quantum",
+      "type": "reinterpret",
+      "ja": "有機反応の電子の流れを軌道相互作用の視点から考える。",
+      "en": "Consider organic reactivity through orbital interactions.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.uni.analytical",
+      "to": "chem.uni.computational",
+      "type": "application",
+      "ja": "測定データのモデル化・誤差評価に計算手法を用いる。",
+      "en": "Use computational approaches for calibration, analysis and uncertainty.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.uni.biochem",
+      "to": "chem.uni.physical",
+      "type": "application",
+      "ja": "酵素反応と生体分子の結合は速度論・熱力学にも依存する。",
+      "en": "Enzyme catalysis and molecular binding involve kinetics and thermodynamics.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.uni.polymer",
+      "to": "chem.uni.organic",
+      "type": "application",
+      "ja": "高分子の繰り返し単位の結合は有機反応に支えられる。",
+      "en": "Organic transformations underpin polymer repeat-unit synthesis.",
+      "provenance": "curated-draft"
+    },
+    {
+      "from": "chem.uni.theoretical",
+      "to": "chem.uni.computational",
+      "type": "application",
+      "ja": "理論モデルを数値計算で評価し、実験と比較する。",
+      "en": "Compute predictions from models and compare them with observations.",
+      "provenance": "curated-draft"
+    }
+  ]
+}
