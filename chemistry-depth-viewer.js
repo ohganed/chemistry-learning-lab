@@ -55,6 +55,8 @@ function styles(){if(document.getElementById("chemistryDepthStyle"))return;const
 .depth-math-support .math-equation{font-size:16px;font-weight:750;color:#194c6c;overflow-wrap:anywhere;margin:4px 0}
 .depth-math-support .math-boundary{background:#e7f0f7;padding:8px 11px;border-radius:8px}
 @media(max-width:650px){.depth-math-support{padding:10px 8px}.depth-math-support .math-equation{font-size:14px}}
+.depth-organic-primer{margin:8px 0 16px;padding:10px 13px;background:#eef7f1;border:1px solid #c6dfcd;border-radius:10px;font-size:14px;line-height:1.8}
+.depth-organic-primer a{color:#155f50;font-weight:800;min-height:44px;display:inline-flex;align-items:center;text-decoration:underline;text-underline-offset:3px}
 .depth-organic-reasoning{margin:17px 0;border:1px solid #d7dfce;border-radius:15px;padding:14px;background:#fbfcf8}
 .depth-organic-reasoning h3{margin:3px 0 8px;color:#45623d;font-size:19px;line-height:1.5}
 .depth-organic-question{margin:10px 0 13px;background:#eff5e8;border-left:3px solid #6f9970;border-radius:6px;padding:11px 13px;line-height:1.9}
@@ -344,8 +346,16 @@ function renderOrganicReasoning(lesson,lang){
   '</div></details>':"";
  const title=organic[en?"titleEn":"titleJa"],question=organic[en?"questionEn":"questionJa"];
  const illustration=window.ChemistryPedagogyVisuals?.renderOrganic?.(organic.kind,lang)||"";
+ const primerTopic={
+  structure:"lewis",addition:"donor",carbonyl:"carbonyl",
+  catalysis:"proton",aromatic:"resonance",stereochemistry:"electrons"
+ }[organic.kind]||"why";
+ const primerLink="./electron-flow-foundations.html"+(en?"?lang=en":"")+"#"+primerTopic;
+ const primer='<p class="depth-organic-primer"><a href="'+primerLink+'">'+
+ (en?"Start with the purpose of electron-pair arrows and bonding →":"電子対・曲矢印の意味を理解する基礎章へ →")+'</a></p>';
+
  return '<section class="depth-organic-reasoning" aria-label="'+escapeHTML(title)+'">'+
- '<h3>'+escapeHTML(title)+'</h3><p class="depth-organic-question">'+escapeHTML(question)+'</p>'+illustration+
+ '<h3>'+escapeHTML(title)+'</h3>'+primer+'<p class="depth-organic-question">'+escapeHTML(question)+'</p>'+illustration+
  '<details data-depth-section="organic-mechanism" open><summary>'+(en?"Follow the explanation, one justified step at a time":"一段ずつ理由を追う")+'</summary>'+stages+'</details>'+evidenceHtml+
  '<details data-depth-section="organic-models"><summary>'+(en?"Compare explanatory models":"説明モデルの比較")+'</summary>'+models+'</details>'+
  '<details data-depth-section="organic-predict"><summary>'+(en?"Try predicting a different case (optional)":"別の事例を予測する（任意）")+'</summary><p class="depth-organic-note">'+escapeHTML(organic[en?"predictionEn":"predictionJa"])+'</p></details>'+
