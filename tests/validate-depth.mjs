@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import assert from 'node:assert/strict';
+import { runInNewContext } from 'node:vm';
 
 const expected = [5,5,6,4,6,3];
 const all = [],seen = new Set();
@@ -220,6 +221,9 @@ assert.ok(viewer.includes('chemistry-knowledge-bridges-v1.json')&&viewer.include
 assert.ok(viewer.includes('renderStageVisual(id,lang,entry.id)'), 'Annotated diagrams must appear inside the corresponding enthalpy derivation steps');
 assert.ok(viewer.includes('renderInorganicWorkshop(lesson,lang)'), 'Detailed model comparison and derivation are not presented');
 assert.ok(viewer.includes('renderOrganicReasoning(lesson,lang)'), 'Organic explanations must appear after conceptual origins and before formula summaries');
+assert.ok(viewer.includes('depth-origin-toggle'),'Readers must be able to collapse or expand the complete explanation in one action');
+assert.ok(viewer.includes("lesson.originJourney.sections.map((entry,i)=>'<details data-depth-section=\\\"origin-"),'Origin concepts must be rendered in natural sequence');
+
 assert.ok(viewer.includes('origin+workshop+organic+block+deep+guided+'), 'The organic reasoning route must be in a natural sequence within the lesson');
 assert.ok(viewer.includes('data-depth-section="organic-models"')&&viewer.includes('data-depth-section="organic-predict"'), 'Optional comparison and prediction should be available without a knowledge gate');
 
@@ -254,6 +258,24 @@ console.log('PASS: 87 subsection-specific pedagogical approaches across 29 chapt
 
 const figures=readFileSync(new URL('../chemistry-topic-visuals.js',import.meta.url),'utf8');
 assert.doesNotThrow(()=>new Function(figures),'Original scientific figure JavaScript must parse');
+
+const visualizationSandbox={window:{}};
+assert.doesNotThrow(()=>runInNewContext(figures,visualizationSandbox,{timeout:1000}),'Visualizations must initialize without browser-only dependencies');
+const visuals=visualizationSandbox.window.ChemistryPedagogyVisuals;
+assert.equal(typeof visuals.render,'function');
+assert.equal(typeof visuals.renderOrganic,'function');
+for(const kind of ['carbonyl','addition','catalysis','aromatic']){
+ const japanese=visuals.renderOrganic(kind,'ja'),english=visuals.renderOrganic(kind,'en');
+ for(const [language,output] of [['ja',japanese],['en',english]]){
+  assert.ok(output.includes('<svg')&&output.includes('<figcaption>'),kind+'/'+language+' should explain the depicted mechanism');
+  assert.ok(output.includes('role="img"')&&output.includes('aria-label'),kind+'/'+language+' requires an accessible figure description');
+ }
+}
+assert.ok(visuals.renderOrganic('carbonyl','ja').includes('marker-end="url(#organic-electron-arrow)"'),'Curved arrows must identify electron-pair transfer');
+assert.equal(visuals.renderOrganic('unknown','en'),'','Do not force a diagram into an unrelated topic');
+assert.ok(viewer.includes('const illustration=window.ChemistryPedagogyVisuals?.renderOrganic?.(organic.kind,lang)'),'Place the right mechanism image after the scientific question');
+assert.ok(viewer.includes('illustration+'),'The original mechanism image should be shown, not only defined');
+
 assert.ok(figures.includes('ChemistryPedagogyVisuals={render}'),'Scientific figure renderer must expose its entrypoint');
 assert.ok(viewer.includes('window.ChemistryPedagogyVisuals?.render?.(id,lang,entry.id)'),'Stage-specific diagrams must accompany their explanatory stage');
 const figureKeys=[
