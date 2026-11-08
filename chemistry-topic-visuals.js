@@ -163,6 +163,50 @@ function render(id,lang,step){
   return figure(en?"Crosslinks change how polymer chains can move":"架橋は高分子鎖の動き方を変える",
     en?"Idealized polymer chains: crosslinks restrain large-scale flow while flexible segments can rearrange. Strand shape and density are schematic, not measured polymer-network morphology.":"架橋によって鎖どうしがつながり、全体の流動が抑えられる一方、鎖の部分は動き得る。模式図であり、実際の高分子網目の形や密度を測定した図ではない。","chain conformation + crosslinks → elastic response",art);
  }
+
+ if(id==="4-1"&&step==="benzene"){
+  const bond=(x1,y1,x2,y2,dash="")=>ln(x1,y1,x2,y2,"#497e79",3,dash);
+  const x1=140,y1=113,R=65,x2=448,y2=113;
+  let hexA="",hexB="";
+  for(let i=0;i<6;i++){let a=i*Math.PI/3-Math.PI/2,b=(i+1)*Math.PI/3-Math.PI/2;
+    hexA+=bond(x1+R*Math.cos(a),y1+R*Math.sin(a),x1+R*Math.cos(b),y1+R*Math.sin(b));
+    hexB+=bond(x2+R*Math.cos(a),y2+R*Math.sin(a),x2+R*Math.cos(b),y2+R*Math.sin(b))}
+  hexB+='<circle cx="'+x2+'" cy="'+y2+'" r="37" fill="none" stroke="#b97d4f" stroke-width="3"/>';
+  const art=hexA+hexB+tx(294,113,"→",33)+
+  tx(140,202,en?"One Lewis contributor":"一つの共鳴寄与構造",14)+tx(448,202,en?"Delocalized π model":"π電子非局在化模型",14);
+  return figure(en?"Benzene is not three independent alkene bonds":"ベンゼンは独立した二重結合三つではない",
+    en?"A polygon-like Lewis contributor is contrasted with a delocalized π-ring symbol. These are alternative representations of one electronic structure, not a time sequence or a measured electron-density map.":"結合を局在させたルイス型の表現と、π電子が環全体へ広がる模型の比較。共鳴式は時間的に交替する構造の写真ではない。","resonance contributors ≠ interconverting molecules",art);
+ }
+ if(id==="4-3"&&step==="resonance"){
+  const art=rect(19,50,250,120,"#f1f7f9")+rect(331,50,249,120,"#f2f9f4")+
+  tx(144,102,"R–C(=O)–O⁻",22)+tx(454,102,"R–C(–O⁻)=O",22)+
+  tx(300,105,"↔",32)+tx(300,194,en?"Contributors to ONE state":"一つの状態を表す共鳴式",16);
+  return figure(en?"The conjugate base has delocalized electron density":"共役塩基の電子は一つの酸素だけに固定されない",
+    en?"Two resonance contributors for a carboxylate anion, shown schematically. The negative charge is delocalized; the two formulas are not distinct ions converting back and forth.":"カルボキシラートイオンの二つの共鳴寄与構造。負電荷に関係する電子密度は非局在化しており、二種類のイオンが行き来する図ではない。","RCOO⁻: electron density shared over both oxygen atoms",art);
+ }
+ if(id==="4-5"&&step==="starch"){
+  const art=rect(16,34,268,145,"#eff7ef")+rect(315,34,267,145,"#eef3f9")+
+  tx(150,73,en?"Starch":"デンプン",23)+tx(447,73,en?"Cellulose":"セルロース",23)+
+  tx(150,122,"α glycosidic",21)+tx(447,122,"β-1,4 glycosidic",21)+
+  tx(150,157,en?"enzyme recognition differs":"認識する酵素が異なる",13)+tx(447,157,en?"chain packing differs":"鎖の配列が異なる",13);
+  return figure(en?"A stereochemical change can alter polymer function":"結合の立体配置が、高分子全体の性質を変える",
+    en?"Conceptual comparison of α-type linkages common in starch and β-1,4 links in cellulose. This chart names linkage stereochemistry; it is not a 3D atomic drawing.":"デンプンの代表的なα型結合とセルロースのβ-1,4結合を比較。立体配置の違いを示す説明表であり、原子の三次元配置を正確に描いた模型ではない。","glucose residue ≠ guaranteed identical polymer structure",art);
+ }
+ if(id==="5-0"&&step==="averages"){
+  const art=rect(22,44,253,122,"#edf7f0")+rect(327,44,249,122,"#f1f5fa")+
+  tx(149,75,en?"Two chains":"分子鎖が2本",19)+tx(149,108,"M₁=100",20)+tx(149,137,"M₂=200",20)+
+  tx(454,76,"Mn=150",23)+tx(454,114,"Mw≈166.7",23)+tx(300,110,"→",31);
+  return figure(en?"Different averages answer different distribution questions":"平均をどう取るかで分子量の値は変わる",
+    en?"Illustrative two-chain sample with molar masses 100 and 200 in the same units. The number-average is 150 and the weight-average is approximately 166.7. The values are invented solely for calculation.":"同じ単位でモル質量100と200の分子鎖が各1本ある模型。数平均150、重量平均約166.7。数値は計算方法の説明用で、実在の高分子試料の測定値ではない。","Mn=ΣNiMi/ΣNi; Mw=ΣNiMi²/ΣNiMi",art);
+ }
+ if(id==="5-2"&&step==="evidence"){
+  const art=rect(16,49,258,118,"#faf2e9")+rect(330,49,254,118,"#e9f6f0")+
+  tx(144,87,en?"Fragmentation":"細片化",24)+tx(455,87,en?"Mineralization":"無機化",24)+
+  tx(144,127,en?"smaller pieces remain":"小片が残る",16)+tx(455,127,en?"carbon balance / CO₂":"炭素収支・CO₂測定",16)+
+  tx(300,195,en?"Not interchangeable evidence":"同じ証拠として扱わない",17);
+  return figure(en?"Breaking into fragments is not the same as biodegradation":"細かく砕けることと、生分解することは異なる",
+    en?"A conceptual comparison: particle fragmentation can leave persistent polymer, while demonstrating biological mineralization needs suitable chemical evidence and controlled environmental conditions.":"細片化では高分子が残存する場合がある。生分解を調べるには炭素収支や生成CO₂などの化学的証拠と、測定条件の明記が必要となる。","origin label ≠ biodegradation rate",art);
+ }
  return "";
 }
 window.ChemistryPedagogyVisuals={render};
