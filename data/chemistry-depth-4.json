@@ -375,6 +375,14 @@
             "reasonEn": "In a nonnucleophilic medium, bromide can open the bridged intermediate by backside attack to give vicinal bromine substituents; symmetric ethene yields 1,2-dibromoethane."
           },
           {
+            "ja": "反対側からの攻撃は、立体配置にも影響する",
+            "en": "Backside attack can control the stereochemical outcome",
+            "changeJa": "bromonium opening → often anti addition",
+            "changeEn": "bromonium opening → often anti addition",
+            "reasonJa": "環状ブロモニウム中間体では求核剤がBrで橋かけされた側から近づきにくく、反対側から開環する経路が生じます。これは置換基を持つアルケンの付加生成物の相対的な立体配置を説明する重要な手掛かりです。ただしエテンの生成物では二つの炭素が対称なので、反対側から攻撃したことを生成物の立体配置だけで判別しにくくなります。",
+            "reasonEn": "In a bridged bromonium intermediate, nucleophilic approach on the bridged face is disfavored, so opening commonly occurs from the opposite face. This can explain anti stereochemistry for substituted alkenes. In the simple ethene product, however, the molecular symmetry makes that stereochemical information difficult to observe directly."
+          },
+          {
             "ja": "溶媒を変えると結果が変わるか検討する",
             "en": "Test how solvent changes the outcome",
             "changeJa": "H₂O may compete with Br⁻ as nucleophile",
@@ -554,12 +562,20 @@
             "reasonEn": "For an illustrative anionic nucleophile Nu:⁻, a curved arrow starts at its lone pair and points to carbon. It tracks an electron pair, not the motion of an atomic nucleus."
           },
           {
-            "ja": "炭素の価数を保つようπ結合を変える",
-            "en": "Reorganize the π bond while making the σ bond",
-            "changeJa": "C=O π pair → O; C–Nu bond forms",
-            "changeEn": "C=O π pair → O; C–Nu bond forms",
-            "reasonJa": "NuからCへ新しい結合ができるだけでは、通常の四価炭素に過剰な結合を描いてしまう。そこでC=Oのπ電子対を酸素へ移し、四面体に近いアルコキシド中間体を表す。",
-            "reasonEn": "Forming the new C–Nu bond without altering the π bond would overfill the usual valence of carbon. Moving the C=O π pair toward oxygen gives a tetrahedral alkoxide-type intermediate."
+            "ja": "新しい結合を作ったら、炭素に結合が多すぎないか",
+            "en": "If a new bond forms, can the carbonyl π bond remain unchanged?",
+            "changeJa": "Nu:⁻ + R₂C=O → ?",
+            "changeEn": "Nu:⁻ + R₂C=O → ?",
+            "reasonJa": "求核剤から炭素へ電子対が移ると、C–Nu結合が増えます。C=Oの二重結合をそのままにしてしまうと、通常のカルボニル炭素の価数に合わない構造になってしまいます。そこで、もう一組の電子が同時にどこへ移ればよいかを考える必要が生じます。この疑問が二本目の曲矢印を必要にします。",
+            "reasonEn": "A nucleophile donating an electron pair makes a new C–Nu bond. Keeping the original full C=O double bond unchanged would give an inappropriate bond count for the usual carbonyl carbon. This creates the need to account for the π-bond electron pair in a second curved arrow."
+          },
+          {
+            "ja": "C=Oのπ電子対を酸素へ移して、結合数と電荷をそろえる",
+            "en": "Move the carbonyl π electrons toward oxygen",
+            "changeJa": "Nu:⁻ + R₂C=O → R₂C(O⁻)(Nu)",
+            "changeEn": "Nu:⁻ + R₂C=O → R₂C(O⁻)(Nu)",
+            "reasonJa": "炭素と酸素の間のπ電子対を酸素へ移せば、炭素はNuとのσ結合を新しく持ちながら四つの結合に対応する電子配置を保てます。酸素は負電荷を持つアルコキシドになり、生成する炭素中心はほぼ四面体になります。二つの曲矢印は独立した魔法の操作ではなく、電子対と原子価を同時につり合わせるための表現です。",
+            "reasonEn": "Shifting the C=O π-electron pair toward oxygen lets carbon form its new σ bond to Nu without exceeding its ordinary valence. Oxygen becomes an alkoxide carrying negative formal charge, and the carbon center approaches tetrahedral geometry. Both curved arrows describe coordinated electron-pair bookkeeping, not independent mysterious steps."
           },
           {
             "ja": "プロトン移動と条件を確認する",
@@ -568,6 +584,14 @@
             "changeEn": "R–CH(O⁻)(Nu) → R–CH(OH)(Nu)",
             "reasonJa": "適切なプロトン供与体があればアルコキシドのO⁻がプロトンを受け取る。実際の反応は求核剤の種類・酸塩基条件・立体障害・競争反応によって異なる。",
             "reasonEn": "With a suitable proton donor, the alkoxide can be protonated. Actual outcomes depend on nucleophile identity, acid–base conditions, sterics and competing pathways."
+          },
+          {
+            "ja": "平面だった炭素へ、どの方向から近づくか",
+            "en": "Which face of the planar carbonyl does the nucleophile approach?",
+            "changeJa": "planar C=O → possible attack from either face",
+            "changeEn": "planar C=O → possible attack from either face",
+            "reasonJa": "カルボニル炭素の周辺は反応前にはほぼ平面状ですが、付加が起こると四面体に近い配置になります。置換基の違いによって新しい不斉中心が生まれる場合、どちらの面から近づいたかが生成物の立体化学に影響します。近づきやすさは立体障害、求核剤の大きさ、溶媒、触媒などで変わるため、平面だという事実だけでは生成物の比率は決まりません。",
+            "reasonEn": "The carbonyl carbon begins approximately trigonal planar and becomes tetrahedral-like on addition. When a new stereocenter is created, attack from either face can produce different stereochemical products. Steric hindrance, reagent, solvent and catalysts affect face selectivity; planarity alone cannot predict the product ratio."
           }
         ],
         "models": [
@@ -741,20 +765,36 @@
             "reasonEn": "An electron pair on the alcohol oxygen forms a bond to the carbonyl carbon as the π-bond distribution shifts toward oxygen, producing a tetrahedral-type intermediate."
           },
           {
-            "ja": "脱離しやすい基へ変える",
-            "en": "Enable a suitable leaving group",
-            "changeJa": "–OH → protonated –OH₂⁺, then H₂O leaves",
-            "changeEn": "–OH → protonated –OH₂⁺, then H₂O leaves",
-            "reasonJa": "そのままのOH⁻は酸性条件のよい脱離基ではない。中間体でのプロトン移動により水として脱離できる形を作り、C=Oを再形成する。",
-            "reasonEn": "Hydroxide is a poor leaving group in acidic conditions. Proton transfers allow a hydroxyl-derived group to leave as water while the carbonyl bond reforms."
+            "ja": "中間体でプロトンが移る理由を考える",
+            "en": "Why are proton transfers needed inside the intermediate?",
+            "changeJa": "tetrahedral intermediate: redistribute H⁺",
+            "changeEn": "tetrahedral intermediate: redistribute H⁺",
+            "reasonJa": "カルボニルにアルコールが付加した中間体では、酸素の位置ごとにプロトン化の状態が異なります。反応の途中でプロトンの受け渡しが起こると、最終的に離れるOH基を水分子として脱離しやすい形に変えられます。ここで描くのは酸触媒による代表的な経路であり、実際のプロトン移動には溶媒分子などが仲介する場合もあります。",
+            "reasonEn": "The tetrahedral intermediate contains oxygens in different protonation states. Proton transfers can convert a hydroxyl-derived group into a better leaving group, namely water. This is a representative acid-catalyzed pathway; actual proton-transfer events may be mediated by solvent molecules."
           },
           {
-            "ja": "H⁺が再生し、平衡が残る",
-            "en": "Regenerate the catalyst; retain reversibility",
+            "ja": "水が離れると同時にC=Oが再形成される",
+            "en": "Eliminate water while reforming the carbonyl bond",
+            "changeJa": "protonated –OH₂⁺ leaves; C=O reforms",
+            "changeEn": "protonated –OH₂⁺ leaves; C=O reforms",
+            "reasonJa": "酸素の孤立電子対がカルボニルのπ結合を再形成し、同時にプロトン化された水酸基がH₂Oとして脱離します。C–O結合が変わる過程を電子対の移動で追うと、カルボニルが消えたまま反応が終わるのではないことがわかります。プロトン化されたエステルに対応する化学種がこの段階で形成されます。",
+            "reasonEn": "An oxygen lone pair reforms a carbonyl π bond while a protonated hydroxyl-derived group leaves as water. Electron-pair accounting shows how the carbonyl bond returns, producing a protonated ester-like species rather than leaving a permanently tetrahedral carbon."
+          },
+          {
+            "ja": "最後にH⁺が戻るので、触媒は全体では消費されない",
+            "en": "Regenerate H⁺: the catalyst is not consumed overall",
             "changeJa": "protonated ester → ester + H⁺",
             "changeEn": "protonated ester → ester + H⁺",
-            "reasonJa": "最後の脱プロトン化で酸触媒は全体として再生される。酸は主に速度を変え、同じ温度での平衡定数を勝手に変えるものではない。水が多ければ逆反応も重要になる。",
-            "reasonEn": "Final deprotonation regenerates the acid catalyst overall. Catalysis changes kinetic access without changing the equilibrium constant at fixed temperature; water promotes the importance of the reverse hydrolysis pathway."
+            "reasonJa": "脱プロトン化すると中性のエステルが得られ、酸触媒は全体として再生されます。中間段階で触媒が反応に関わることと、反応式の左右で触媒が打ち消されることは両立します。ただし完全な反応機構では触媒と溶媒の種類によって具体的なプロトン移動の経路が異なり得ます。",
+            "reasonEn": "Deprotonation yields the neutral ester and regenerates the acid catalyst overall. The catalyst can participate in intermediates yet cancel from the net reaction. Specific proton-transfer routes can differ with solvent and catalytic conditions."
+          },
+          {
+            "ja": "エステル化が途中で止まるのは、触媒がなくなるからか",
+            "en": "Why is esterification not necessarily complete?",
+            "changeJa": "RCOOH + R′OH ⇌ RCOOR′ + H₂O",
+            "changeEn": "RCOOH + R′OH ⇌ RCOOR′ + H₂O",
+            "reasonJa": "反応が可逆なら、生成物から反応物へ戻る過程も進みます。一定温度では酸触媒の存在そのものは平衡定数を変えませんが、水を取り除くことや反応物の比を変えることは平衡組成に影響します。速度を変える操作と平衡を変える操作を区別すれば、合成で何を制御すべきか自然にわかります。",
+            "reasonEn": "A reversible reaction can proceed in both directions. At fixed temperature an acid catalyst does not itself change the equilibrium constant, whereas removing water or changing the starting reactant ratio can alter equilibrium composition. Distinguishing a kinetic intervention from an equilibrium intervention clarifies synthetic decisions."
           }
         ],
         "models": [
