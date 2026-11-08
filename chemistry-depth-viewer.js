@@ -283,7 +283,7 @@ function renderLesson(host,id,lang,lesson){
  const block=lesson.sections.map((section,i)=>'<details data-depth-section="concept-'+i+'" '+(i===0?"open":"")+'><summary>'+escapeHTML((i+1)+". "+section[title])+'</summary><p class="depth-text">'+escapeHTML(section[body])+'</p></details>').join("");
  const origin=lesson.originJourney&&Array.isArray(lesson.originJourney.sections)&&lesson.originJourney.sections.length?
  '<section class="depth-origin" id="depthOrigin"><h3>'+escapeHTML(t.originTitle)+'</h3><p>'+escapeHTML(lesson.originJourney[lang==="ja"?"premiseJa":"premiseEn"])+'</p>'+
- lesson.originJourney.sections.map((entry,i)=>'<details data-depth-section="origin-'+i+'" '+(i===0?"open":"")+'><summary>'+escapeHTML(entry[title])+'</summary><p class="depth-text">'+escapeHTML(entry[lang==="ja"?"textJa":"textEn"])+'</p>'+renderStageVisual(id,lang,entry.id)+renderInorganicStageVisual(id,lang,entry.id)+'</details>').join("")+'</section>':"";
+ lesson.originJourney.sections.map((entry,i)=>'<details data-depth-section="origin-'+i+'" '+(i===0?"open":"")+'><summary>'+escapeHTML(entry[title])+'</summary><p class="depth-text">'+escapeHTML(entry[lang==="ja"?"textJa":"textEn"])+'</p>'+renderStageVisual(id,lang,entry.id)+renderInorganicStageVisual(id,lang,entry.id)+(window.ChemistryPedagogyVisuals?.render?.(id,lang,entry.id)||'')+'</details>').join("")+'</section>':"";
  const workshop=renderInorganicWorkshop(lesson,lang);
  const guided=lesson.guidedExample&&Array.isArray(lesson.guidedExample.steps)&&lesson.guidedExample.steps.length===5?
  '<details class="depth-guided" data-depth-section="guided"><summary>'+escapeHTML(t.guidedTitle)+'</summary><p class="depth-problem">'+escapeHTML(lesson.guidedExample[lang==="ja"?"titleJa":"titleEn"])+'</p>'+
