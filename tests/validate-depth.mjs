@@ -222,7 +222,7 @@ assert.ok(viewer.includes('renderStageVisual(id,lang,entry.id)'), 'Annotated dia
 assert.ok(viewer.includes('renderInorganicWorkshop(lesson,lang)'), 'Detailed model comparison and derivation are not presented');
 assert.ok(viewer.includes('renderOrganicReasoning(lesson,lang)'), 'Organic explanations must appear after conceptual origins and before formula summaries');
 assert.ok(viewer.includes('depth-origin-toggle'),'Readers must be able to collapse or expand the complete explanation in one action');
-assert.ok(viewer.includes("lesson.originJourney.sections.map((entry,i)=>'<details data-depth-section=\\\"origin-"),'Origin concepts must be rendered in natural sequence');
+assert.ok(viewer.includes('lesson.originJourney.sections.map((entry,i)=>')&&viewer.includes('data-depth-section="origin-'),'Origin concepts must be rendered in their authored sequence');
 
 assert.ok(viewer.includes('origin+workshop+organic+block+deep+guided+'), 'The organic reasoning route must be in a natural sequence within the lesson');
 assert.ok(viewer.includes('data-depth-section="organic-models"')&&viewer.includes('data-depth-section="organic-predict"'), 'Optional comparison and prediction should be available without a knowledge gate');
@@ -276,7 +276,7 @@ assert.equal(visuals.renderOrganic('unknown','en'),'','Do not force a diagram in
 assert.ok(viewer.includes('const illustration=window.ChemistryPedagogyVisuals?.renderOrganic?.(organic.kind,lang)'),'Place the right mechanism image after the scientific question');
 assert.ok(viewer.includes('illustration+'),'The original mechanism image should be shown, not only defined');
 
-assert.ok(figures.includes('ChemistryPedagogyVisuals={render}'),'Scientific figure renderer must expose its entrypoint');
+assert.ok(figures.includes('ChemistryPedagogyVisuals={render,renderOrganic}'),'Scientific figure renderer must expose its entrypoint');
 assert.ok(viewer.includes('window.ChemistryPedagogyVisuals?.render?.(id,lang,entry.id)'),'Stage-specific diagrams must accompany their explanatory stage');
 const figureKeys=[
  ['0-0','contrast'],['0-2','wave'],['0-3','melt'],['0-4','vectors'],
