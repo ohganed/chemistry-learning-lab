@@ -16,7 +16,7 @@ assert.doesNotThrow(()=>new Function(figures),"Inline scientific diagrams must p
 const figureSandbox={window:{}};
 assert.doesNotThrow(()=>runInNewContext(figures,figureSandbox,{timeout:1000}),"Inline figure module must initialize");
 const scienceFigures=figureSandbox.window.ElectronFlowFigures;
-const requiredFigures=["why","electrons","lewis","charge","donor","arrows","checks","proton","substitution","carbonyl","resonance","evidence"];
+const requiredFigures=["firstlook","atom","bondbegin","sharing","symbols","rearrange","why","electrons","lewis","charge","donor","arrows","checks","proton","substitution","carbonyl","resonance","evidence"];
 assert.deepEqual(Array.from(scienceFigures.topics),requiredFigures,"One original scientific diagram is needed for each concept");
 for(const topic of requiredFigures){
  for(const lang of ["ja","en"]){
@@ -36,6 +36,7 @@ assert.ok(html.includes('src="./electron-flow-foundations.js"'),"The independent
 assert.ok(html.includes('src="./electron-flow-figures.js"'),"The visual module must be loaded before the lesson engine");
 assert.ok(html.indexOf('src="./electron-flow-figures.js"')<html.indexOf('src="./electron-flow-foundations.js"'),"Diagrams must be available before the lesson is rendered");
 assert.ok(html.includes(".concept-figure svg")&&html.includes("max-width:470px"),"Lesson SVGs must fit the mobile portrait layout");
+assert.ok(html.includes("figure-guide")&&html.includes('id="chapterMenu"'),"Every beginner concept should have a figure explanation and a compact table of contents");
 assert.ok(html.includes('aria-live="polite"')&&html.includes('role="status"'),"Optional practice needs accessible feedback");
 assert.ok(html.includes('id="lessons"')&&html.includes('id="reactionDiagram"')&&html.includes('id="toc"'),"The independent chapter must have its reading and visualization mounts");
 assert.ok(html.includes("prefers-reduced-motion"),"Reading should respect reduced-motion settings");
@@ -65,7 +66,7 @@ function simulate(lang){
  const context={
   URLSearchParams,location:{search:lang==="en"?"?lang=en":"",hash:""},
   document:{documentElement:{lang:"ja"},getElementById:make,title:""},
-  window:{ElectronFlowFigures:scienceFigures},requestAnimationFrame:fn=>fn()
+  window:{ElectronFlowFigures:scienceFigures,matchMedia:()=>({matches:true})},requestAnimationFrame:fn=>fn()
  };
  runInNewContext(js,context,{timeout:2000});
  const root=context.window.ElectronFlowFoundations;
@@ -74,6 +75,12 @@ function simulate(lang){
  assert.ok(Array.isArray(root.curriculum.cases));
  assert.equal(new Set(root.curriculum.lessons.map(x=>x.id)).size,root.curriculum.lessons.length,"Repeated lesson IDs");
  const ids=new Set(root.curriculum.lessons.map(x=>x.id));
+ const introductory=["firstlook","atom","bondbegin","sharing","symbols","rearrange"];
+ assert.deepEqual(Array.from(root.curriculum.lessons.slice(0,introductory.length).map(x=>x.id)),introductory,"Begin with atoms, bonds and accessible symbols before using organic reaction notation");
+ assert.ok(root.curriculum.lessons.findIndex(x=>x.id==="donor")>introductory.length,"Nucleophile and electrophile terminology should not appear before prerequisite concepts");
+ assert.equal(make("chapterMenu").open,false,"On a narrow phone, the longer chapter contents should start collapsed");
+ assert.ok(make("heroLead").textContent.includes(lang==="ja"?"原子って何":"What is an atom"),"The first explanation should genuinely welcome beginners");
+
  for(const required of ["why","electrons","lewis","charge","donor","arrows","checks","proton","substitution","carbonyl","resonance","evidence"]){
   assert.ok(ids.has(required),"Missing scientific foundation: "+required);
  }
@@ -81,13 +88,19 @@ function simulate(lang){
   for(const l of ["ja","en"]){
    assert.ok(lesson.title[l]?.trim()&&lesson.question[l]?.trim()&&lesson.limit[l]?.trim(),"Bilingual lesson fields missing: "+lesson.id);
    assert.ok(lesson.body[l]?.length>0&&lesson.body[l].every(p=>p.trim()),"Each explanation must have meaningful content: "+lesson.id+"/"+l);
+   assert.ok(Array.isArray(lesson.guide?.[l])&&lesson.guide[l].length>0,"Every diagram needs a step-by-step reading guide: "+lesson.id+"/"+l);
+
   }
   assert.ok(lesson.formula?.trim(),"The illustration needs a scientific relation or formula: "+lesson.id);
   assert.ok(make("lessons").innerHTML.includes('id="'+lesson.id+'"'),"All lessons must render: "+lesson.id+"/"+lang);
   assert.ok(make("lessons").innerHTML.includes('data-concept-figure="'+lesson.id+'"'),"An actual explanatory diagram must render in every section: "+lesson.id+"/"+lang);
+  assert.ok(make("lessons").innerHTML.includes('<div class="figure-guide">'),"Diagram guidance must render alongside the figure");
+
   const segment=make("lessons").innerHTML.split('id="'+lesson.id+'"')[1]?.split('</article>')[0]||"";
   assert.ok(segment.indexOf('class="question"')>=0&&segment.indexOf('class="concept-figure"')>segment.indexOf('class="question"'),"Scientific illustration must immediately follow the concept question: "+lesson.id+"/"+lang);
   const figureEnd=segment.indexOf('</figure>');
+  assert.ok(segment.indexOf('<div class="figure-guide">')>figureEnd,"The figure should be interpreted immediately, before introducing additional terms: "+lesson.id+"/"+lang);
+
   assert.ok(figureEnd>=0&&segment.indexOf('<p>',figureEnd)>figureEnd,"Explanatory paragraphs should follow the diagram rather than burying it at the end: "+lesson.id+"/"+lang);
   assert.ok(make("toc").innerHTML.includes('href="#'+lesson.id+'"'),"Every lesson must have a direct-access TOC link: "+lesson.id);
  }
@@ -125,5 +138,9 @@ assert.deepEqual(ja,en,"Both languages must provide the same learning structure"
 assert.ok(js.includes("Electron-pair")||js.includes("electron-pair")||js.includes("electron pair"),"Explicitly identify which entities the arrows track");
 assert.ok(js.includes("total electric charge")||js.includes("total charge"),"Charge conservation must be taught");
 assert.ok(!js.includes("localStorage.setItem"),"This independent chapter should not modify any existing progress history");
+assert.ok(scienceFigures.render("sharing","ja").includes("H:H"),"The first bonding visual should connect two electron dots to one bond line");
+assert.ok(scienceFigures.render("atom","ja").includes("ef-cloud"),"First principles should avoid pretending electrons follow a fixed circular trajectory");
+assert.ok(scienceFigures.render("bondbegin","ja").includes("stable bond"),"Bond energy should be explained using the physical situation rather than a memorized slogan");
+
 assert.ok(js.includes("window.ElectronFlowFigures?.render?.(x.id,lang)"),"A diagram must be embedded in the lesson prose, not hidden at the end in a separate playground");
 console.log("PASS: original electron-flow chapter, "+ja.lessons+" bilingual concept explanations, "+ja.cases+" interactive mechanisms, working next-step arrows, links, mobile layout and offline integration.");
