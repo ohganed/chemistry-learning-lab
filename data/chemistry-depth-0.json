@@ -228,6 +228,55 @@
             "If the abundances were 50% each, the average would be 36. The periodic-table value is often an isotope-weighted average, not the mass number of a single nuclide."
           ]
         ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "同じ元素なのに重さが違う原子があり、原子が電気を帯びることもあります。原子番号、質量数、イオンという名称を先に覚えず、どの粒子が変わると何が変わるのかを順番に考えます。",
+        "premiseEn": "Atoms of the same element can have different masses, while atoms can also gain or lose charge. Instead of beginning with a list of terms, ask which subatomic particles change and which observable properties are affected.",
+        "sections": [
+          {
+            "id": "element",
+            "ja": "1　元素の種類を決めるものは何か",
+            "en": "1. What determines the identity of an element?",
+            "textJa": "酸素の原子がどれだけ結びつき方を変えても、原子核に含まれる陽子の数が8なら元素は酸素です。陽子数を原子番号Zと呼びます。酸素原子が電子を受け取ってO²⁻になっても、陽子数は変わらないので酸素という元素のままです。電荷が変わることと、元素の種類が変わることを分けると、化学反応と原子核反応の違いを理解する土台になります。",
+            "textEn": "An oxygen atom remains oxygen as long as its nucleus contains eight protons, regardless of its chemical environment. Proton number is atomic number Z. If it gains electrons to become O²⁻, it remains the same element because its nucleus is unchanged. Altering electron number changes charge; altering proton number changes elemental identity. This distinction separates ordinary chemical transformations from nuclear reactions."
+          },
+          {
+            "id": "isotopes",
+            "ja": "2　同じ酸素なのに、質量が違う理由",
+            "en": "2. Why can atoms of one element differ in mass?",
+            "textJa": "酸素には、陽子が8個で中性子が8個の¹⁶Oや、中性子が10個の¹⁸Oなどの同位体があります。陽子数は同じでも、原子核に含まれる中性子の数が異なります。質量数Aは陽子数Zと中性子数Nの和A=Z+Nです。記号¹⁸Oの18は陽子数ではありません。『同じ元素で化学的性質が一般によく似る』ことと、『質量が異なり同位体効果が生じ得る』ことを分けて説明できます。",
+            "textEn": "Oxygen includes isotopes such as ¹⁶O, with eight protons and eight neutrons, and ¹⁸O, with eight protons and ten neutrons. The mass number A is the sum A=Z+N. The superscript 18 does not indicate proton count. Isotopes generally share similar chemical behavior because their electron structures are closely related, while nuclear masses differ and can influence reaction rates and physical properties."
+          },
+          {
+            "id": "average",
+            "ja": "3　周期表の原子量が整数にならないのはなぜか",
+            "en": "3. Why is the listed atomic weight not usually an integer?",
+            "textJa": "元素の天然試料には、複数の同位体が混じっていることがあります。例として同位体Aが質量10で20%、Bが質量11で80%という架空の元素なら、平均は10×0.20+11×0.80=10.8です。この加重平均は、高校数学で学ぶ平均の考えと同じです。実際の標準原子量は同位体の精密な相対質量と同位体存在比から求め、存在比も試料によって変動し得ます。質量数そのものを正確な原子質量と同一視しません。",
+            "textEn": "Natural samples may contain more than one isotope. For a hypothetical element with 20% of a mass-10 isotope and 80% of a mass-11 isotope, the weighted mean is 10×0.20+11×0.80=10.8. The mathematics is an ordinary weighted average. Real standard atomic weights use precise isotopic masses and abundances, which may vary among sources. Mass number is not itself an exact atomic mass."
+          },
+          {
+            "id": "ions",
+            "ja": "4　電子を一個失うと何が変わるのか",
+            "en": "4. What changes when an atom loses an electron?",
+            "textJa": "中性のNa原子には陽子が11個、電子が11個あります。電子を一個失えば陽子11個、電子10個となり、全体の電荷は+1なのでNa⁺です。電子の数が変わっても原子核の陽子数は変わりません。原子とイオンの化学的な性質を比較するときは電子配置と周囲の相互作用を考えます。『Naは必ずNa⁺になりたがる』と単独原子の傾向だけで反応を決めるのは不十分です。",
+            "textEn": "A neutral sodium atom contains 11 protons and 11 electrons. Removing one electron leaves 11 protons and 10 electrons, giving charge +1 and Na⁺. The element remains sodium because proton number is unchanged. Ion formation changes electronic structure and interactions with the surroundings. Whether an actual reaction occurs depends on the full energy balance, not solely on the tendency of an isolated atom."
+          },
+          {
+            "id": "nuclear",
+            "ja": "5　同位体の違いと放射性は同じ話ではない",
+            "en": "5. Is every isotope radioactive?",
+            "textJa": "同位体は中性子数の違う原子を指す名称です。¹²Cや¹³Cのような安定同位体もあります。一方、¹⁴Cは放射性です。安定性は原子核の性質であり、『同位体だから放射性』という意味ではありません。化学反応で電子の配置が変わることと、原子核が壊変することを分けて扱います。この違いは同位体標識や年代測定、放射線の理解にもつながります。",
+            "textEn": "An isotope is simply an atom with a particular proton and neutron count. Stable isotopes exist, including ¹²C and ¹³C, whereas ¹⁴C is radioactive. Radioactivity concerns nuclear stability; not every isotope is radioactive. Ordinary electron rearrangements in chemical reactions are distinct from nuclear decay. This distinction is central to isotope tracing and radiometric measurements."
+          },
+          {
+            "id": "revisit",
+            "ja": "6　何を一定にして比較するかで、問いが変わる",
+            "en": "6. Choose what stays fixed in each comparison",
+            "textJa": "原子番号を固定して中性子数を変えると同位体を比較します。陽子数と中性子数を固定して電子数を変えると、原子とイオンを比較できます。原子の性質を決める変数を一つずつ分離する考えは、実験の対照条件と同じです。後に周期表、化学結合、同位体効果、電気化学を学ぶたびに、この区別が以前の内容をより精密に説明する手助けになります。",
+            "textEn": "Keep proton number fixed while changing neutron number to compare isotopes. Keep the nucleus fixed while changing electron number to compare charge states. Controlling one variable at a time resembles controlled experimental reasoning. Later topics—periodicity, bonding, isotope effects and electrochemistry—can all be understood more precisely using this distinction."
+          }
+        ]
       }
     },
     {
@@ -457,6 +506,55 @@
             "原子番号だけから密度を決められないのは、モル質量のほかに格子構造と格子長が関係するためです。温度・欠陥・合金化によって測定値は変化します。",
             "Density depends on lattice geometry and spacing as well as molar mass. Temperature, defects and alloying can shift measured values, so the ideal lattice calculation is a model."
           ]
+        ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "固体の食塩が電気を通しにくいのに、融けた食塩や食塩水は電気を通します。原子やイオンの種類だけでなく、粒子が動けるかという構造上の条件が必要です。結合の三分類を暗記する前に、観察された物性を説明します。",
+        "premiseEn": "Solid sodium chloride conducts poorly, whereas molten NaCl and salt solutions conduct. The particles are not identified solely by the word 'ionic'; their mobility and structure matter. Use the observation to motivate bonding and crystal models.",
+        "sections": [
+          {
+            "id": "current",
+            "ja": "1　固体NaClはなぜ電流を流しにくいか",
+            "en": "1. Why is solid NaCl a poor conductor?",
+            "textJa": "NaClの結晶にはNa⁺とCl⁻が存在します。それでも室温の固体は通常ほとんど電気を通しません。電流が流れるためには電荷を持つ粒子が動いて電荷を運べる必要があります。結晶格子の中でイオンがそれぞれの位置に束縛されていれば、自由に移動する電荷担体が少ないのです。『イオンがある＝電気が流れる』ではなく、『イオンが移動できるか』を考えます。",
+            "textEn": "NaCl crystals contain Na⁺ and Cl⁻ ions, yet solid NaCl is a poor electrical conductor at ordinary conditions. Current requires charge carriers that can move through the material. Ions held in a crystal lattice cannot freely traverse the solid as they can in a liquid phase. The key distinction is not whether charged particles exist but whether they have sufficient mobility."
+          },
+          {
+            "id": "melt",
+            "ja": "2　融解すると、何が変わるのか",
+            "en": "2. What does melting change?",
+            "textJa": "NaClが融解すると結晶の規則的な長距離配列が崩れ、陽イオンと陰イオンが液体中で移動できるようになります。化学式NaClのイオンの比そのものが変わったわけではありません。構成粒子の種類がほぼ同じでも、粒子の移動可能性が変わることで、電気伝導という巨視的性質が大きく変化します。このことが、状態と構造を化学結合の知識へ加える必要性を示します。",
+            "textEn": "Melting disrupts long-range crystalline order, allowing sodium and chloride ions to move through the ionic liquid. The stoichiometric ratio remains NaCl. Charge transport changes dramatically even though the types of constituent ions remain essentially the same. This is a structure–property explanation: the phase and mobility of carriers are as important as composition."
+          },
+          {
+            "id": "lattice",
+            "ja": "3　NaClは一個ずつの分子が並んでいるのか",
+            "en": "3. Is a crystal of NaCl made of isolated molecules?",
+            "textJa": "NaCl結晶では、各Na⁺が周囲の複数のCl⁻と静電的に相互作用し、三次元的な格子を作っています。NaClという式はイオンの最簡整数比を示す式単位であって、孤立したNaCl分子が一つずつ入っているという意味ではありません。格子の繰り返しを単位格子として取り出すことで、配位数や密度を幾何学的に計算できるようになります。",
+            "textEn": "In crystalline NaCl, each ion interacts electrostatically with many neighbors in an extended three-dimensional lattice. NaCl represents the simplest formula-unit ratio, not necessarily discrete NaCl molecules packed together. Defining a repeating unit cell provides a geometric model for coordination numbers, distances and theoretical density."
+          },
+          {
+            "id": "count",
+            "ja": "4　単位格子の数え方を幾何学から導く",
+            "en": "4. Count particles in a unit cell from shared geometry",
+            "textJa": "単純な立方格子を考え、頂点に球が8個描かれているとします。しかし各頂点は隣接する8個の単位格子と共有されるので、一つの格子へ割り当てる数は8×1/8=1個です。面中心なら一つの粒子が2格子で共有されるため、6面に配置すると6×1/2=3個分になります。図の中に何個見えるかだけでなく、境界で何個の格子に共有されているかを数えることが重要です。",
+            "textEn": "Consider a cubic unit cell with particles at all eight corners. Each corner particle is shared among eight neighboring cells, contributing 1/8 to one cell; eight corners contribute 8×1/8=1 particle. A face-center particle is shared by two cells; six face-centered positions contribute 6×1/2=3. Unit-cell counting is a problem of shared geometry, not merely counting visible circles."
+          },
+          {
+            "id": "types",
+            "ja": "5　金属・分子・共有結合の結晶も比べる",
+            "en": "5. Compare ionic, metallic, molecular and network solids",
+            "textJa": "金属では電子が多数の原子に広がる状態が電気伝導に寄与します。ダイヤモンドでは共有結合の三次元網目が構造を支えます。分子結晶では分子間相互作用が結晶の凝集に重要です。しかし現実の結合は三分類で完全に切り分けられないことがあり、半導体などでは電子状態をさらに詳しく考える必要があります。結晶の分類は物性を理解するための模型であり、物質の種類だけで結論を決める表ではありません。",
+            "textEn": "In metals, delocalized electronic states help carry current. Diamond has a three-dimensional covalent network, while molecular crystals depend substantially on intermolecular interactions. These are useful ideal types, but real bonding spans a continuum and semiconductor behavior requires more electronic-structure detail. A classification should guide the explanation of measured properties rather than replace it."
+          },
+          {
+            "id": "limits",
+            "ja": "6　結晶の構造を知ることは、物性の予測の始まり",
+            "en": "6. Crystal structure provides a starting model, not a final answer",
+            "textJa": "同じ結晶構造でも、欠陥、温度、不純物、粒界、粒子の大きさで実測の導電性や強さは変わります。単位格子だけを正確に描いても、すべての材料特性が計算できるわけではありません。密度や配位数の計算を基礎として、どの構造情報がどの物性に関係するかを考えます。高分子材料や無機材料へ進んだ後にこの章へ戻ると、構造と物性の接続が一層具体的になります。",
+            "textEn": "Defects, temperature, impurities, grain boundaries and particle size affect measured conductivity and strength even when ideal crystal structures resemble one another. An accurate unit-cell picture alone cannot predict every material property. It provides a geometric foundation for density and coordination calculations, to be supplemented by electronic and microstructural information when explaining materials."
+          }
         ]
       }
     },
