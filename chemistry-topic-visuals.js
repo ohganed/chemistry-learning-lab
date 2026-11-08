@@ -155,8 +155,8 @@ function render(id,lang,step){
  }
  if(id==="5-1"&&step==="rubber"){
   let loose="",net="";
-  for(let i=0;i<5;i++){let a=58+i*34;loose+='<path d="M'+a+' 47 q21 35 0 70 q−16 30 0 55" stroke="#5b90a2" stroke-width="3" fill="none"/>';
-   let b=351+i*38;net+='<path d="M'+b+' 47 q18 35 0 70 q−15 30 0 55" stroke="#4b8e72" stroke-width="3" fill="none"/>'}
+  for(let i=0;i<5;i++){let a=58+i*34;loose+='<path d="M'+a+' 47 q21 35 0 70 q-16 30 0 55" stroke="#5b90a2" stroke-width="3" fill="none"/>';
+   let b=351+i*38;net+='<path d="M'+b+' 47 q18 35 0 70 q-15 30 0 55" stroke="#4b8e72" stroke-width="3" fill="none"/>'}
   net+=ln(356,99,517,99,"#ac7956",3)+ln(356,154,517,154,"#ac7956",3);
   const art=rect(20,22,232,165)+rect(315,22,263,165)+loose+net+
   tx(133,207,en?"Unlinked flexible chains":"架橋なしの鎖",14)+tx(447,207,en?"Crosslinked network":"架橋した網目",14);
@@ -169,7 +169,7 @@ function render(id,lang,step){
   const x1=140,y1=113,R=65,x2=448,y2=113;
   let hexA="",hexB="";
   for(let i=0;i<6;i++){let a=i*Math.PI/3-Math.PI/2,b=(i+1)*Math.PI/3-Math.PI/2;
-    hexA+=bond(x1+R*Math.cos(a),y1+R*Math.sin(a),x1+R*Math.cos(b),y1+R*Math.sin(b));
+    hexA+=bond(x1+R*Math.cos(a),y1+R*Math.sin(a),x1+R*Math.cos(b),y1+R*Math.sin(b));if(i%2===0)hexA+=bond(x1+(R-10)*Math.cos(a),y1+(R-10)*Math.sin(a),x1+(R-10)*Math.cos(b),y1+(R-10)*Math.sin(b),"","#497e79");
     hexB+=bond(x2+R*Math.cos(a),y2+R*Math.sin(a),x2+R*Math.cos(b),y2+R*Math.sin(b))}
   hexB+='<circle cx="'+x2+'" cy="'+y2+'" r="37" fill="none" stroke="#b97d4f" stroke-width="3"/>';
   const art=hexA+hexB+tx(294,113,"→",33)+
