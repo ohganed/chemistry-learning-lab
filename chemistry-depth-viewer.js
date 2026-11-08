@@ -42,6 +42,27 @@ function styles(){if(document.getElementById("chemistryDepthStyle"))return;const
 .depth-schematic .schematic-table{width:100%;border-collapse:collapse;font-size:14px}
 .depth-schematic .schematic-table td,.depth-schematic .schematic-table th{border-bottom:1px solid #d3e6d9;text-align:left;padding:8px 7px;vertical-align:top}
 @media(max-width:560px){.depth-schematic{padding:10px 7px}.depth-schematic .schematic-row{grid-template-columns:1fr}.depth-schematic h4{font-size:15px}.depth-schematic .schematic-table{font-size:13px}}
+
+.depth-inorganic-workshop{padding:12px 14px;margin:18px 0;background:#f7f9fc;border:2px solid #ced9e9;border-radius:15px}
+.depth-inorganic-workshop>h3{margin:3px 0 9px;color:#254969;font-size:20px;line-height:1.5}
+.depth-inorganic-workshop .workshop-intro{font-size:14px;line-height:1.9;color:#516471}
+.depth-inorganic-workshop details{background:#fff;border-color:#d2dfea}
+.depth-model-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:9px;margin:12px 0}
+.depth-model{background:#f7fbff;border:1px solid #d7e6f2;padding:11px;border-radius:10px}
+.depth-model h4{font-size:15px;line-height:1.5;margin:0 0 7px;color:#1b5778}
+.depth-model .subhead{font-size:12px;font-weight:800;color:#436778;margin:11px 0 3px}
+.depth-model p{font-size:14px;line-height:1.9;margin:0;color:#283d4a}
+.depth-derivation-intro{background:#eaf2f8;padding:10px 13px;border-radius:9px;white-space:pre-line;line-height:1.9}
+.depth-derivation-list{list-style:none;counter-reset:derive;margin:12px 0 14px;padding:0}
+.depth-derivation-list li{counter-increment:derive;margin:11px 0;border-left:3px solid #6b9cba;padding:6px 10px;background:#f8fbfd;border-radius:0 8px 8px 0}
+.depth-derivation-list li h4{margin:0 0 4px;font-size:15px;line-height:1.5}
+.depth-derivation-list li h4:before{content:counter(derive) ". ";color:#2f7698}
+.depth-derivation-list li p{margin:8px 0;font-size:14px;line-height:1.9}
+.depth-equation{font-size:16px;font-weight:750;color:#164b63;background:#eaf3f7;padding:9px 10px;border-radius:8px;overflow-wrap:anywhere;line-height:1.9}
+.depth-inorganic-visual{margin:13px 3px 17px;border:1px solid #c4dcca;background:#f7faf8;border-radius:12px;padding:10px}
+.depth-inorganic-visual svg{display:block;max-width:100%;height:auto;width:100%}
+.depth-inorganic-visual figcaption{font-size:13px;color:#43675b;line-height:1.85;margin-top:8px}
+@media(max-width:730px){.depth-inorganic-workshop{padding:10px}.depth-inorganic-workshop>h3{font-size:18px}.depth-equation{font-size:15px}}
 .depth-origin h3{font-size:20px;color:#175844;margin:5px 4px 8px}
 .depth-origin>p{margin:8px 4px 13px;line-height:1.85}
 .depth-origin details{margin:9px 0;background:#fff}
@@ -187,6 +208,74 @@ function renderStageVisual(id,lang,step){
  }
  return "";
 }
+
+function renderInorganicStageVisual(id,lang,stage){
+ const en=lang==="en";
+ const fig=(title,desc,svg,formula)=>'<figure class="depth-inorganic-visual"><svg viewBox="0 0 600 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="'+escapeHTML(desc)+'">'+svg+'</svg>'+(formula?'<div class="depth-equation">'+escapeHTML(formula)+'</div>':"")+'<figcaption><strong>'+escapeHTML(title)+':</strong> '+escapeHTML(desc)+'</figcaption></figure>';
+ const r=(x,y,w,h,fill)=>'<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="12" fill="'+fill+'" stroke="#6a9b86" stroke-width="2"/>';
+ const t=(x,y,value,size=19,fill="#24483c")=>'<text x="'+x+'" y="'+y+'" text-anchor="middle" font-size="'+size+'" font-weight="650" fill="'+fill+'">'+escapeHTML(value)+'</text>';
+ if(id==="3-0"&&stage==="balance"){
+  const title=en?"Electron conservation in halogen displacement":"ハロゲン置換反応での電子の保存";
+  const desc=en?"The bromide oxidation half-reaction releases two electrons. Chlorine reduction accepts the same two electrons. Adding them eliminates electrons and preserves charge; schematic only.":"臭化物イオンの酸化で2個の電子を放出し、塩素の還元がその2個を受け取る。半反応式を足せば電子が相殺され、電荷も保存される。模式図。";
+  const svg=r(17,23,265,69,"#eef8fa")+r(318,23,265,69,"#f7eff7")+
+   t(149,51,en?"Oxidation":"酸化",18)+t(448,51,en?"Reduction":"還元",18)+
+   t(149,78,"2Br⁻ → Br₂ + 2e⁻",18)+t(448,78,"Cl₂ + 2e⁻ → 2Cl⁻",18)+
+   '<path d="M300 103 V139" stroke="#3a796a" stroke-width="3"/><path d="M292 129 L300 139 L308 129" fill="none" stroke="#3a796a" stroke-width="3"/>'+
+   t(300,161,en?"Add and cancel 2e⁻":"足して2e⁻を消去する",17)+r(85,180,430,45,"#e9f4ed")+t(300,209,"Cl₂ + 2Br⁻ → 2Cl⁻ + Br₂",20);
+  return fig(title,desc,svg,"2e⁻ ("+(en?"lost":"放出")+") = 2e⁻ ("+(en?"gained":"受容")+")");
+ }
+ if(id==="3-1"&&stage==="surface"){
+  const title=en?"A thin surface layer changes reaction rate":"薄い表面膜が反応速度を変える";
+  const desc=en?"Aluminium substrate covered by a thin aluminium-oxide-rich protective film. Arrows from air stop at the film, illustrating passivation, not an exact microscopic reaction mechanism or scale.":"アルミニウム金属の上に酸化アルミニウムに富む保護膜が形成される。外部からの矢印が膜で止まる模式図。正確な膜厚や微視的機構を描いたものではない。";
+  const svg=r(32,139,536,77,"#b7cbd8")+r(32,110,536,26,"#7ebca5")+
+   t(295,188,en?"Al metal":"Al 金属",22)+t(295,128,en?"Protective oxide film":"酸化物保護膜",18,"#103f35")+
+   t(295,29,en?"O₂ / H₂O from the environment":"外界のO₂・H₂O",19)+
+   '<path d="M125 40 V97 M275 40 V97 M425 40 V97" stroke="#b66d42" stroke-width="3" stroke-dasharray="5 4"/>'+
+   '<path d="M114 86 L125 97 L136 86 M264 86 L275 97 L286 86 M414 86 L425 97 L436 86" fill="none" stroke="#b66d42" stroke-width="3"/>'+
+   '<path d="M102 140 L146 140 M252 140 L296 140 M402 140 L446 140" stroke="#b65855" stroke-width="5"/>';
+  return fig(title,desc,svg,en?"Favorable oxidation ≠ necessarily fast corrosion":"酸化が熱力学的に有利 ≠ 腐食が必ず速い");
+ }
+ if(id==="3-2"&&stage==="barycenter"){
+  const title=en?"Octahedral d-orbital splitting: energy bookkeeping":"八面体結晶場のd軌道分裂とエネルギーの数え方";
+  const desc=en?"Ideal octahedral crystal-field energy-level diagram. Two upper e_g orbitals shift +0.6Δo and three lower t₂g orbitals −0.4Δo relative to the conserved barycenter. The diagram is not a quantitative spectrum or an image of spatial orbital shape.":"理想八面体結晶場のエネルギー準位模式図。上側のe_gは2軌道で+0.6Δo、下側のt₂gは3軌道で−0.4Δo。中央の破線は重心。実際の吸収スペクトルや軌道の空間形状を描いたものではない。";
+  let upper="",lower="";
+  [300,375].forEach(x=>upper+='<path d="M'+x+' 66 H'+(x+52)+'" stroke="#356c9d" stroke-width="4"/>');
+  [248,323,398].forEach(x=>lower+='<path d="M'+x+' 176 H'+(x+52)+'" stroke="#34836d" stroke-width="4"/>');
+  const svg=t(83,23,en?"Energy ↑":"エネルギー↑",19)+
+  '<path d="M92 31 V217" stroke="#4a6e73" stroke-width="3"/><path d="M85 42 L92 31 L99 42" fill="none" stroke="#4a6e73" stroke-width="3"/>'+
+  '<path d="M180 124 H528" stroke="#829da3" stroke-dasharray="6 5" stroke-width="2"/>'+
+  upper+lower+t(470,52,"e_g (+0.6Δₒ)",18)+t(480,210,"t₂g (−0.4Δₒ)",18)+
+  t(170,117,en?"Barycenter":"重心",16)+
+  '<path d="M549 68 V177 M543 76 L549 68 L555 76 M543 169 L549 177 L555 169" fill="none" stroke="#b77e48" stroke-width="2.5"/>'+
+  t(555,125,"Δₒ",18);
+  return fig(title,desc,svg,"3 × (−0.4Δₒ) + 2 × (+0.6Δₒ) = 0");
+ }
+ if(id==="3-3"&&(stage==="combine"||stage==="ammonia")){
+  const title=en?"Two coupled equilibria explain redissolution":"二つの平衡をつなげて再溶解を説明する";
+  const desc=en?"AgCl(s) dissolves into free Ag⁺ and Cl⁻; NH₃ binds free Ag⁺ to form [Ag(NH₃)₂]⁺, favoring further dissolution under suitable conditions. Competing equilibria and concentrations are omitted from this schematic.":"AgCl(s)が溶けてAg⁺とCl⁻をつくり、NH₃が遊離Ag⁺を錯体に取り込むことで条件によって追加の溶解が進む。共存する多数の平衡や濃度は省略した模式図。";
+  const svg=r(15,64,149,94,"#edf2f9")+r(220,64,145,94,"#eff9f4")+r(419,64,165,94,"#eaf1fb")+
+  t(88,105,"AgCl(s)",22)+t(88,129,en?"Solid":"固体",15)+
+  t(292,100,"Ag⁺ + Cl⁻",21)+t(292,129,en?"Aqueous ions":"溶存イオン",15)+
+  t(502,105,"[Ag(NH₃)₂]⁺",17)+t(502,131,"+ Cl⁻",17)+
+  '<path d="M165 109 H219 M207 102 L219 109 L207 116" fill="none" stroke="#3d8c72" stroke-width="3"/>'+
+  '<path d="M367 109 H418 M406 102 L418 109 L406 116" fill="none" stroke="#3d8c72" stroke-width="3"/>'+
+  t(189,78,"Ksp",16)+t(394,78,"β₂",16)+
+  t(394,47,"+2NH₃",17)+t(300,201,"K = Ksp × β₂",24);
+  return fig(title,desc,svg,"AgCl(s) + 2NH₃ ⇌ [Ag(NH₃)₂]⁺ + Cl⁻");
+ }
+ return "";
+}
+function renderInorganicWorkshop(lesson,lang){
+ const content=lesson.inorganicWorkshop;
+ if(!content||content.schemaVersion!=="1.0"||!Array.isArray(content.models)||!content.derivation)return "";
+ const en=lang==="en",title=en?"en":"ja",strong=en?"strengthEn":"strengthJa",limit=en?"limitEn":"limitJa",why=en?"whyEn":"whyJa";
+ const table=content.models.map(item=>'<article class="depth-model"><h4>'+escapeHTML(item[title])+'</h4><div class="subhead">'+(en?"Explains":"説明できること")+'</div><p>'+escapeHTML(item[strong])+'</p><div class="subhead">'+(en?"Does not explain alone":"この模型だけでは説明できないこと")+'</div><p>'+escapeHTML(item[limit])+'</p></article>').join("");
+ const deriv=content.derivation;
+ const steps=deriv.steps.map(item=>'<li><h4>'+escapeHTML(item[title])+'</h4><div class="depth-equation">'+escapeHTML(item.equation)+'</div><p>'+escapeHTML(item[why])+'</p></li>').join("");
+ return '<section class="depth-inorganic-workshop"><h3>'+(en?"Understand a model before using its equations":"模型の意味を理解してから式を使う")+'</h3><p class="workshop-intro">'+(en?"Compare explanatory power and limits. The original derivations below show why the equations arise, not just how to substitute numbers.":"説明できること・できないことを比較します。次のオリジナル導出では、数値を代入する前に式が必要になる理由と、途中の論理を確かめます。")+'</p>'+
+ '<details open data-depth-section="inorganic-models"><summary>'+escapeHTML(content[en?"titleEn":"titleJa"])+'</summary><div class="depth-model-grid">'+table+'</div></details>'+
+ '<details open data-depth-section="inorganic-derivation"><summary>'+escapeHTML(deriv[en?"titleEn":"titleJa"])+'</summary><p class="depth-derivation-intro">'+escapeHTML(deriv[en?"setupEn":"setupJa"])+'</p><ol class="depth-derivation-list">'+steps+'</ol></details></section>';
+}
 function renderLesson(host,id,lang,lesson){
  if(!host.isConnected||host.dataset.chapter!==id)return;
  styles();const t=COPY[lang];
@@ -194,7 +283,8 @@ function renderLesson(host,id,lang,lesson){
  const block=lesson.sections.map((section,i)=>'<details data-depth-section="concept-'+i+'" '+(i===0?"open":"")+'><summary>'+escapeHTML((i+1)+". "+section[title])+'</summary><p class="depth-text">'+escapeHTML(section[body])+'</p></details>').join("");
  const origin=lesson.originJourney&&Array.isArray(lesson.originJourney.sections)&&lesson.originJourney.sections.length?
  '<section class="depth-origin" id="depthOrigin"><h3>'+escapeHTML(t.originTitle)+'</h3><p>'+escapeHTML(lesson.originJourney[lang==="ja"?"premiseJa":"premiseEn"])+'</p>'+
- lesson.originJourney.sections.map((entry,i)=>'<details data-depth-section="origin-'+i+'" '+(i===0?"open":"")+'><summary>'+escapeHTML(entry[title])+'</summary><p class="depth-text">'+escapeHTML(entry[lang==="ja"?"textJa":"textEn"])+'</p>'+renderStageVisual(id,lang,entry.id)+'</details>').join("")+'</section>':"";
+ lesson.originJourney.sections.map((entry,i)=>'<details data-depth-section="origin-'+i+'" '+(i===0?"open":"")+'><summary>'+escapeHTML(entry[title])+'</summary><p class="depth-text">'+escapeHTML(entry[lang==="ja"?"textJa":"textEn"])+'</p>'+renderStageVisual(id,lang,entry.id)+renderInorganicStageVisual(id,lang,entry.id)+'</details>').join("")+'</section>':"";
+ const workshop=renderInorganicWorkshop(lesson,lang);
  const guided=lesson.guidedExample&&Array.isArray(lesson.guidedExample.steps)&&lesson.guidedExample.steps.length===5?
  '<details class="depth-guided" data-depth-section="guided"><summary>'+escapeHTML(t.guidedTitle)+'</summary><p class="depth-problem">'+escapeHTML(lesson.guidedExample[lang==="ja"?"titleJa":"titleEn"])+'</p>'+
  lesson.guidedExample.steps.map((step,i)=>'<details class="depth-step" '+(i===0?'open':'')+'><summary>'+escapeHTML(t.guidedStep)+" "+(i+1)+'</summary><p>'+escapeHTML(step[lang==="ja"?0:1])+'</p></details>').join("")+'</details>':"";
@@ -202,7 +292,7 @@ function renderLesson(host,id,lang,lesson){
  '<details class="depth-deep" data-depth-section="reasoning"><summary>'+escapeHTML(t.reasoningTitle)+'</summary><p class="depth-reasoning-intro">'+escapeHTML(t.reasoningIntro)+'</p>'+lesson.reasoning.lenses.map((lens,i)=>'<section class="depth-lens"><h4><span>'+String(i+1)+'</span>'+escapeHTML(t.lenses[i])+'</h4><p>'+escapeHTML(lens[lang==="ja"?"ja":"en"])+'</p></section>').join("")+'</details>':"";
  host.innerHTML='<section class="depth-area" aria-label="'+escapeHTML(t.heading)+'"><h3>'+escapeHTML(t.heading)+'</h3><p class="depth-caption">'+escapeHTML(t.subtitle)+'</p><p class="depth-hint">'+escapeHTML(t.draft)+'</p>'+
  '<div class="depth-routes" role="group" aria-label="Learning entry points">'+(origin?'<button type="button" data-depth-open="origin-0">'+escapeHTML(t.entryOrigin)+'</button>':'')+'<button type="button" data-depth-open="concept-0">'+escapeHTML(t.entryConcept)+'</button><button type="button" data-depth-open="reasoning">'+escapeHTML(t.entryReasoning)+'</button>'+(guided?'<button type="button" data-depth-open="guided">'+escapeHTML(t.entryGuided)+'</button>':'')+'<button type="button" data-depth-open="example">'+escapeHTML(t.entryExample)+'</button><button type="button" data-depth-open="bridge">'+escapeHTML(t.entryBridge)+'</button></div>'+
- origin+block+deep+guided+
+ origin+workshop+block+deep+guided+
  '<details data-depth-section="example"><summary>'+escapeHTML(t.example)+'</summary><p class="depth-text">'+escapeHTML(lesson.example[title])+'</p><details><summary>'+escapeHTML(t.showSolution)+'</summary><p class="depth-text">'+escapeHTML(lesson.example[sol])+'</p></details></details>'+
  '<details><summary>'+escapeHTML(t.pitfall)+'</summary><p class="depth-text">'+escapeHTML(lesson.pitfall[title])+'</p></details>'+
  '<details data-depth-section="bridge"><summary>'+escapeHTML(t.bridge)+'</summary><p class="depth-text">'+escapeHTML(lesson.bridge[title])+'</p></details>'+
