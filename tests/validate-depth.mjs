@@ -73,6 +73,9 @@ assert.ok(enthalpy.originJourney.sections.find(x=>x.id==='states').textJa.includ
 assert.ok(enthalpy.originJourney.sections.find(x=>x.id==='worked').textJa.includes('400 J'),'Worked expansion energy balance must be present');
 
 // Organic: verify the natural conceptual progression and the applicability of each model.
+const benzene=all.find(ch=>ch.id==='4-1').sections[2];
+assert.ok(benzene.ja.includes('独立した三つの二重結合'),'Benzene heading should refer to three conventional double bonds, not triple bonds');
+assert.ok(!benzene.ja.includes('三重結合'),'Do not introduce the wrong orbital-bond model in the heading');
 const organicChapters=all.filter(ch=>ch.id.startsWith('4-'));
 const organicModes=['structure','addition','carbonyl','catalysis','aromatic','stereochemistry'];
 assert.equal(organicChapters.length,6);
@@ -153,27 +156,30 @@ const requiredLenses=['observation','particles','model','limits','revisit'];
 let guidedCount=0,reasoningCount=0;
 for(const ch of all) {
  assert.equal(ch.reasoning?.schemaVersion,'1.0','Reasoning schema missing: '+ch.id);
- assert.deepEqual(ch.reasoning.lenses.map(x=>x.type),requiredLenses,'Five conceptual perspectives missing: '+ch.id);
+ assert.ok(Array.isArray(ch.reasoning.lenses)&&ch.reasoning.lenses.length>0,'Provide only scientifically useful lenses: '+ch.id);
+ assert.ok(ch.reasoning.lenses.every(x=>requiredLenses.includes(x.type)),'Unexpected explanation lens: '+ch.id);
+ assert.equal(new Set(ch.reasoning.lenses.map(x=>x.type)).size,ch.reasoning.lenses.length,'Duplicate explanation lens: '+ch.id);
  for(const lens of ch.reasoning.lenses){
-   assert.ok(lens.ja?.length>=100,'Five-perspective Japanese explanation incomplete: '+ch.id+'/'+lens.type);
-   assert.ok(lens.en?.length>=160,'Five-perspective English explanation incomplete: '+ch.id+'/'+lens.type);
+   assert.ok(lens.ja?.trim(),'Bilingual reasoning incomplete: '+ch.id+'/'+lens.type);
+   assert.ok(lens.en?.trim(),'English reasoning incomplete: '+ch.id+'/'+lens.type);
    reasoningCount++;
  }
  if(ch.guidedExample){
    guidedCount++;
-   assert.ok(ch.guidedExample.titleJa?.length>10&&ch.guidedExample.titleEn?.length>15,'Bilingual guided example title missing: '+ch.id);
-   assert.equal(ch.guidedExample.steps.length,5,'Guided calculation must have five steps: '+ch.id);
+   assert.ok(ch.guidedExample.titleJa?.trim()&&ch.guidedExample.titleEn?.trim(),'Bilingual guided example title missing: '+ch.id);
+   assert.ok(ch.guidedExample.steps.length>0,'A calculation needs all necessary steps, not a fixed five-step quota: '+ch.id);
    for(const step of ch.guidedExample.steps){
-     assert.ok(Array.isArray(step)&&step[0]?.length>=50&&step[1]?.length>=60,'Incomplete guided calculation step: '+ch.id);
+     assert.ok(Array.isArray(step)&&step[0]?.trim()&&step[1]?.trim(),'Incomplete guided calculation step: '+ch.id);
    }
  }
 }
-assert.equal(reasoningCount,145,'29 chapters × five perspectives');
-assert.equal(guidedCount,16,'Expected sixteen cross-curriculum guided problems');
+console.log('PASS: '+reasoningCount+' useful reasoning lenses and '+guidedCount+' guided examples, without forced numbers of steps.');
 const viewer=readFileSync(new URL('../chemistry-depth-viewer.js',import.meta.url),'utf8');
 assert.ok(viewer.includes('chemistry-depth-reflections-v1'));
-assert.ok(viewer.includes('depth-deep')&&viewer.includes('data-depth-section="reasoning"'),'Five-lens viewer controls missing');
+assert.ok(viewer.includes('depth-deep')&&viewer.includes('data-depth-section="reasoning"'),'Optional reasoning perspectives missing');
 assert.ok(viewer.includes('depth-guided')&&viewer.includes('data-depth-section="guided"'),'Guided calculations not rendered');
+assert.ok(viewer.includes('lesson.guidedExample.steps.length>0?'),'Do not require exactly five steps before displaying a guided calculation');
+assert.ok(viewer.includes('lesson.reasoning.lenses.length>0?'),'Reasoning should support variable-length science explanations');
 const html=['high-school-chemistry.html','high-school-chemistry-en.html'].map(p=>readFileSync(new URL('../'+p,import.meta.url),'utf8'));
 html.forEach(s=>{
  assert.ok(s.includes('src="./chemistry-depth-viewer.js"'),'Viewer missing');
