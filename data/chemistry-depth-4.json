@@ -217,7 +217,19 @@
         "predictionJa": "未知のC₃H₈Oについて、先に原子のつながりを複数考え、次に水素結合や酸化され方の違いを予想する。名称を知らなくても、反応性の仮説を作れるか。",
         "predictionEn": "For an unfamiliar C₃H₈O compound, propose distinct connectivities before comparing hydrogen bonding and oxidation behavior. Can you form predictions without first memorizing names?",
         "boundaryJa": "価数の規則は中性で単純な分子への第一近似。反応条件、配座、立体異性、電子の非局在化まではこれだけで完全に説明できない。",
-        "boundaryEn": "Ordinary valence rules are a first approximation for simple neutral molecules. Conformations, stereoisomerism, delocalization and reaction conditions need further models."
+        "boundaryEn": "Ordinary valence rules are a first approximation for simple neutral molecules. Conformations, stereoisomerism, delocalization and reaction conditions need further models.",
+        "evidence": {
+          "titleJa": "同じ分子式の異性体を、どう見分けるか",
+          "titleEn": "How could you distinguish two isomers with the same formula?",
+          "questionJa": "質量分析で分子量が同じとわかっただけで、エタノールとジメチルエーテルを区別できるでしょうか。",
+          "questionEn": "If mass spectrometry indicates the same nominal molecular mass, is that alone enough to distinguish ethanol from dimethyl ether?",
+          "methodJa": "赤外吸収スペクトルでO–H結合に関係する広い吸収帯の有無を比べ、あわせて沸点や他のスペクトルの特徴を確認する。候補がC₂H₆Oの二種類だけと限らない場合は、複数の測定で構造を絞る。",
+          "methodEn": "Compare infrared spectra for the broad O–H stretching feature associated with an alcohol, alongside boiling behavior and other spectral evidence. If candidate structures are not already restricted, use multiple independent measurements.",
+          "supportsJa": "分子式が同じでも酸素と水素の結合関係が違う、という構造式による説明を支持できる。",
+          "supportsEn": "These data can support the structural interpretation that oxygen and hydrogen have different connectivity despite equal molecular formulas.",
+          "limitsJa": "O–H吸収帯は試料に水が混じっても現れ得る。単独の吸収帯だけで分子構造を一意に確定しない。試料の純度や測定条件を確認する。",
+          "limitsEn": "Water contamination can also introduce O–H absorptions. A single band is not unique proof of identity; purity and measurement conditions matter."
+        }
       }
     },
     {
@@ -412,7 +424,19 @@
         "predictionJa": "エテンを水中で臭素と反応させる場合、Br⁻だけでなく水分子を求核剤の候補に入れると、どの結合ができると予想できるか。",
         "predictionEn": "If ethene reacts with bromine in water, include water as a possible nucleophile alongside bromide. Which additional bond-forming pathway can you predict?",
         "boundaryJa": "臭素や有機ハロゲン化物は危険な試薬を含み得るため、これは反応機構の理論教材であり実験手順ではない。生成物の比率は試薬・溶媒・濃度によって異なる。",
-        "boundaryEn": "Bromine reagents and organohalides can be hazardous. This is a conceptual mechanism lesson, not an experiment protocol. Product distributions depend on solvent, reagent and concentration."
+        "boundaryEn": "Bromine reagents and organohalides can be hazardous. This is a conceptual mechanism lesson, not an experiment protocol. Product distributions depend on solvent, reagent and concentration.",
+        "evidence": {
+          "titleJa": "反応生成物の立体化学は、機構の証拠になるか",
+          "titleEn": "Can product stereochemistry support a reaction mechanism?",
+          "questionJa": "臭素が単純に一個ずつ独立に付加する模型と、ブロモニウムを経由する模型は、立体化学について同じ予測をするでしょうか。",
+          "questionEn": "Would independent direct additions and a bromonium-mediated pathway necessarily predict the same stereochemical outcome?",
+          "methodJa": "置換基を持つアルケンの幾何異性体について、適切に条件をそろえ、生成物の相対的な立体配置を比較する。ブロモニウムの反対側から求核開環が進む場合には、anti付加に対応する生成物の傾向を予測する。",
+          "methodEn": "Compare the relative configurations of products derived from geometrically distinct substituted alkenes under carefully matched conditions. Backside opening of a bromonium ion commonly predicts anti-addition relationships.",
+          "supportsJa": "anti付加の傾向は橋かけ中間体による立体的な制約を支持する証拠になる。しかし生成物の立体配置だけで、すべての素反応の経路が一意に決まるわけではない。",
+          "supportsEn": "A predominance of anti-addition products supports a bridged-intermediate interpretation, but product stereochemistry alone does not uniquely establish every microscopic step.",
+          "limitsJa": "溶媒による別の求核剤の参加、ラジカル反応、立体異性体の二次反応などが結果を変え得る。エテンのような対称分子では立体化学からの判別が限定される。",
+          "limitsEn": "Solvent nucleophiles, radical conditions and secondary reactions can alter product distributions. Symmetric ethene offers limited stereochemical discrimination."
+        }
       }
     },
     {
@@ -615,7 +639,19 @@
         "predictionJa": "アルデヒドとケトンを比べると、カルボニル炭素の近くの置換基が多い場合、求核剤の近づきやすさと電子の分布はどう変わり得るか。単一の規則として断定しないで考える。",
         "predictionEn": "Compare an aldehyde with a ketone. How might additional neighboring substituents affect steric approach and electron distribution at the carbonyl carbon? Do not replace the analysis with an absolute rule.",
         "boundaryJa": "これは一般化した負電荷の求核剤の模型。水やアルコールのような中性求核剤では中間体の電荷とプロトン移動の順序が異なり得る。反応式にない溶媒や酸触媒も重要。",
-        "boundaryEn": "This mechanism uses a generic anionic nucleophile. Neutral nucleophiles such as water or alcohol can give different charged intermediates and proton-transfer sequences. Solvent and catalysis matter."
+        "boundaryEn": "This mechanism uses a generic anionic nucleophile. Neutral nucleophiles such as water or alcohol can give different charged intermediates and proton-transfer sequences. Solvent and catalysis matter.",
+        "evidence": {
+          "titleJa": "カルボニルへの付加を、何で確かめるか",
+          "titleEn": "What experimental evidence supports carbonyl addition?",
+          "questionJa": "C=Oがあると求核付加が起こり得るという説明は、何を測れば検討できるでしょうか。",
+          "questionEn": "What observation could test the claim that a carbonyl group undergoes nucleophilic addition?",
+          "methodJa": "適切な反応の前後で赤外吸収やNMRなどを比較し、カルボニルに対応する特徴の変化、新しいC–Nu結合に対応する生成物の構造を複数の証拠から調べる。アルデヒドとケトンを比べるなら、求核剤や溶媒、温度をそろえて比較する。",
+          "methodEn": "Compare spectra before and after a suitable reaction, using infrared or NMR observations to support loss or transformation of a carbonyl signature and formation of a product containing the new C–Nu bond. Comparisons of aldehydes and ketones should control nucleophile, solvent and temperature.",
+          "supportsJa": "観察された生成物の結合順序は電子対の移動で描いた正味の結合変化と整合するか確認できる。異なる置換基が反応性へ与える影響も検討できる。",
+          "supportsEn": "Product connectivity can be evaluated against the net bonding changes proposed by curved arrows, while controlled comparisons probe substituent effects.",
+          "limitsJa": "生成物の確認だけでは、遷移状態の形やすべての中間体の寿命は決定できない。反応経路の確証には速度論、同位体効果、より高度な分光法など別の証拠が必要になる。",
+          "limitsEn": "Identifying a product does not reveal every intermediate lifetime or transition-state geometry. Mechanistic discrimination may require kinetic, isotope-effect or more advanced spectroscopic evidence."
+        }
       }
     },
     {
@@ -818,7 +854,19 @@
         "predictionJa": "水の割合を増やした場合と、反応系から水を除いた場合を比較する。触媒量を増やす場合とは、何が違うのか。",
         "predictionEn": "Compare adding water with removing water from a reversible esterification. How do those changes differ from increasing the amount of catalyst?",
         "boundaryJa": "フィッシャーエステル化の概念模型であり、全てのエステル化法に当てはまる反応機構ではない。酸触媒と平衡組成・速度の関係を分けて扱う。",
-        "boundaryEn": "This is a conceptual model for Fischer esterification, not every ester-forming method. Distinguish equilibrium composition from catalyst-dependent kinetics."
+        "boundaryEn": "This is a conceptual model for Fischer esterification, not every ester-forming method. Distinguish equilibrium composition from catalyst-dependent kinetics.",
+        "evidence": {
+          "titleJa": "同位体標識で、どの酸素がどこへ行くかを調べる",
+          "titleEn": "Use isotope tracing to examine oxygen-atom fate",
+          "questionJa": "エステル中でアルコール由来の酸素がどの位置に入るのか。反応式だけでなく原子の行き先を調べられるでしょうか。",
+          "questionEn": "Which ester oxygen comes from the alcohol, and how could its identity be tracked rather than merely assumed from the net equation?",
+          "methodJa": "概念的には、アルコールの酸素を安定同位体¹⁸Oで標識し、生成したエステルのどの酸素に標識が残るかを分析する。通常のフィッシャーエステル化では、アルコール由来の酸素がエステルのアルコキシ側に入ることが予測される。",
+          "methodEn": "Conceptually, label the alcohol oxygen with stable ¹⁸O and determine which oxygen position in the ester retains the label. A usual Fischer esterification pathway predicts retention of alcohol-derived oxygen in the ester alkoxy group.",
+          "supportsJa": "原子の追跡は結合組み換えの模型を検証するのに役立つ。単に『水ができた』と覚えるより、どの原子がどこへ移ったかを考えられる。",
+          "supportsEn": "Atom tracing tests how bonds are reorganized and provides stronger information than knowing only that water appears among the products.",
+          "limitsJa": "酸触媒条件では酸素交換などの副反応もあり得るので、標識分布を一つの単純な機構へ直結させない。触媒や溶媒、反応時間と分析上の対照を考慮する必要がある。",
+          "limitsEn": "Acid-catalyzed oxygen exchange and competing processes can complicate labeling results. Mechanistic conclusions need appropriate controls and attention to conditions and time."
+        }
       }
     },
     {
@@ -1005,7 +1053,19 @@
         "predictionJa": "ベンゼン環に–OHと–NO₂を付けた二種類の化合物で、求電子剤への反応しやすさが違うのはなぜか。中間体の共鳴寄与構造で仮説を作る。",
         "predictionEn": "Compare an aromatic ring bearing –OH with one bearing –NO₂. How might their different electronic effects influence formation of the σ complex and reaction rate?",
         "boundaryJa": "すべての芳香族反応がこの経路ではない。求核芳香族置換、ラジカル反応、水素化などでは別の説明が必要。安全な反応理論の説明であり実験手順ではない。",
-        "boundaryEn": "Not all reactions of aromatic compounds use this mechanism. Nucleophilic aromatic substitution, radical processes and hydrogenation require different descriptions. This is a conceptual lesson, not an experiment protocol."
+        "boundaryEn": "Not all reactions of aromatic compounds use this mechanism. Nucleophilic aromatic substitution, radical processes and hydrogenation require different descriptions. This is a conceptual lesson, not an experiment protocol.",
+        "evidence": {
+          "titleJa": "置換基による生成物と速度の違いから、何を推論できるか",
+          "titleEn": "What can substitution patterns and rates reveal?",
+          "questionJa": "芳香環に−OHと−NO₂がある場合、求電子置換の起こりやすさや生成物の位置はどう違うでしょうか。",
+          "questionEn": "How could –OH and –NO₂ substituents affect the rate and positional distribution of electrophilic aromatic substitution?",
+          "methodJa": "基質・反応剤・温度・溶媒などをそろえた条件で、反応の相対速度とオルト・メタ・パラ生成物の分布を比較するという実験計画を考える。置換基の電子供与・求引の効果から予測を作る。",
+          "methodEn": "Consider a controlled comparison of relative reaction rates and ortho/meta/para product distributions, with substrate, electrophile, temperature and solvent suitably accounted for. Generate predictions from donor and withdrawing substituent effects.",
+          "supportsJa": "置換基によって反応速度と位置選択性が変わるという観察は、芳香環の電子分布とσ錯体の安定化を結びつける説明を支持する。",
+          "supportsEn": "Observed differences in rate and regioselectivity can support explanations involving substituent-dependent electronic distributions and the stability of σ-complex intermediates.",
+          "limitsJa": "置換基による立体障害、酸塩基反応、副反応、触媒との相互作用を無視できない。生成物の割合だけで中間体の電子分布を直接観測したとは言えない。",
+          "limitsEn": "Steric effects, acid–base chemistry, side reactions and catalyst interactions may contribute. Product ratios are indirect evidence, not a direct image of intermediate charge distributions."
+        }
       }
     },
     {
@@ -1192,7 +1252,19 @@
         "predictionJa": "同じ二糖でも、グリコシド結合の結合位置やα/βを変えたとき、酵素の認識が変わる可能性を考えよう。実測による検証方法も考える。",
         "predictionEn": "For two disaccharides with different linkage positions or anomeric configurations, predict possible enzyme selectivity differences and propose experimental evidence that could test the prediction.",
         "boundaryJa": "立体構造だけで消化速度の全ては決まらない。結晶性、溶解性、酵素の発現、試料の加工・調理条件なども考慮する。",
-        "boundaryEn": "Stereochemistry alone does not determine all digestion rates. Crystallinity, solubility, enzyme expression and processing conditions also matter."
+        "boundaryEn": "Stereochemistry alone does not determine all digestion rates. Crystallinity, solubility, enzyme expression and processing conditions also matter.",
+        "evidence": {
+          "titleJa": "デンプンとセルロースの酵素選択性を確かめる",
+          "titleEn": "Test enzymatic selectivity for starch and cellulose",
+          "questionJa": "同じグルコース由来の高分子でも、加水分解のされやすさが違うのは立体的な結合の違いで説明できるでしょうか。",
+          "questionEn": "Can different glycosidic stereochemistry help explain why glucose-based polymers differ in enzymatic hydrolysis?",
+          "methodJa": "基質の量や粒子の形態、pH・温度などを比較可能にし、アミラーゼとセルラーゼの有無で生成する糖の量を測定する計画を考える。酵素を加えない試料や活性を失わせた酵素を対照として置く。",
+          "methodEn": "Design comparative measurements of sugar released from starch and cellulose under controlled substrate loading, pH and temperature, considering amylase and cellulase activity. Include no-enzyme and inactivated-enzyme controls.",
+          "supportsJa": "結合の種類と酵素が認識する基質の違いを結びつけて考える証拠になる。化学構造と生体機能を一つの因果の説明へつなげられる。",
+          "supportsEn": "The comparisons can support a connection between linkage stereochemistry, substrate recognition and enzyme-dependent hydrolysis.",
+          "limitsJa": "結晶性、表面積、溶解性、材料の加工状態も速度へ影響する。酵素で分解されないという観察だけから、結合の立体化学が唯一の原因だとは断定できない。",
+          "limitsEn": "Crystallinity, surface area, solubility and sample processing also affect rates. Lack of observed hydrolysis alone does not prove that stereochemistry is the only cause."
+        }
       }
     }
   ]
