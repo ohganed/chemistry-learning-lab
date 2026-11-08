@@ -474,6 +474,55 @@
             "en": "Reinterpreting esterification through Q and K shows that organic synthesis also obeys equilibrium. The same ester linkage appears in polyesters such as PET. Lipid hydrolysis and membrane biology connect this chemistry to life, while surfactant properties relate it to environmental chemistry."
           }
         ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "カルボン酸はアルコールより酸として働きやすいのはなぜか。エステル化が進んでもなぜ反応物が残るのか。分子内の電子の分布と、反応の平衡を分けて考えることで、油脂や石けんの性質まで説明をつなげます。",
+        "premiseEn": "Why is a carboxylic acid usually more acidic than a comparable alcohol, and why can esterification leave reactants behind? Connect electron distribution with reversible reactions, then apply the same ideas to fats and soaps.",
+        "sections": [
+          {
+            "id": "acid",
+            "ja": "1　カルボキシ基からH⁺が離れるとは何か",
+            "en": "1. What changes when a carboxylic acid donates a proton?",
+            "textJa": "カルボン酸RCOOHは水溶液中でプロトンを渡し、RCOO⁻となる平衡をもちます。ここで単にO−H結合が切れると考えるだけでは、なぜ同じO−Hをもつアルコールとの酸性度に違いがあるのかわかりません。H⁺を失った後にどんなイオンが残り、電子がどのように分布するかを考える必要があります。酸の強さは、反応の前後での状態の有利さを比較する問題です。",
+            "textEn": "A carboxylic acid RCOOH can donate a proton in water to give RCOO⁻. Merely noting that an O–H bond breaks does not explain why comparable alcohols are generally far less acidic. The stability of the conjugate base and the distribution of electron density after deprotonation matter. Acidity is an equilibrium comparison between specified chemical states."
+          },
+          {
+            "id": "resonance",
+            "ja": "2　カルボキシラートの電子は一か所に固定されない",
+            "en": "2. Delocalization stabilizes the carboxylate ion",
+            "textJa": "カルボキシラートRCOO⁻では負電荷に対応する電子密度が二つの酸素の間で非局在化しています。共鳴式を二つ書くのは、二種類のイオンが高速で行き来しているという意味ではなく、一つの実際の電子状態を複数の寄与構造で表す工夫です。一方、一般のアルコキシドRO⁻では同じような二つの酸素間の共鳴がありません。この違いは、両者の酸性度の違いを説明する一つの重要な要因です。",
+            "textEn": "In a carboxylate RCOO⁻, electron density associated with negative charge is delocalized over the two oxygen atoms. Drawing two resonance contributors does not mean that two distinct ions oscillate rapidly back and forth. They are representations of one electronic state. A typical alkoxide RO⁻ lacks an analogous two-oxygen delocalization, which is one important contribution to the difference in acidity."
+          },
+          {
+            "id": "ester",
+            "ja": "3　酸とアルコールを混ぜたら全部エステルになるか",
+            "en": "3. Is esterification automatically complete?",
+            "textJa": "カルボン酸とアルコールは、適切な条件でRCOOH+R′OH⇌RCOOR′+H₂Oの可逆反応を行います。酸触媒は反応経路や速度に関係しますが、同じ温度での平衡定数を変えるわけではありません。エステルを多く得たければ、反応物の比や水の除去など、平衡を変化させる条件を考える必要があります。化学反応式は前後の物質を示すものの、必ず100%進むという約束ではありません。",
+            "textEn": "Under suitable acid-catalyzed conditions, a carboxylic acid and alcohol undergo reversible esterification: RCOOH+R′OH⇌RCOOR′+H₂O. The catalyst affects the pathway and rate, not the equilibrium constant at fixed temperature. Increasing the ester yield may require changing reactant ratios or removing water. A balanced equation describes what interconverts; it does not promise complete conversion."
+          },
+          {
+            "id": "mechanism",
+            "ja": "4　エステル化は結合の組み替えとして考える",
+            "en": "4. Reinterpret esterification as bond rearrangement",
+            "textJa": "酸触媒下の代表的なフィッシャーエステル化では、カルボニル酸素のプロトン化によりカルボニル炭素が求核攻撃を受けやすくなり、アルコールが関与する中間体を経て、水の脱離と脱プロトン化が進みます。各段階では原子と電荷が保存され、触媒のH⁺は全体として再生します。この理解があれば、『酸を加えたからエステルが生じた』という一言から、どの結合が変化したのかという説明へ進めます。",
+            "textEn": "In a representative acid-catalyzed Fischer esterification, carbonyl oxygen protonation activates the carbonyl carbon toward nucleophilic attack by alcohol. Intermediates undergo proton transfers, elimination of water and catalyst regeneration. At every step atoms and charge are conserved. A mechanism clarifies how the bond network changes instead of attributing the entire outcome to a vague role of the acid."
+          },
+          {
+            "id": "fats",
+            "ja": "5　油脂をエステルとして読めるようになる",
+            "en": "5. Fats are interpretable as multiple ester linkages",
+            "textJa": "油脂の主成分であるトリアシルグリセロールは、グリセリンの三つのヒドロキシ基と脂肪酸がエステル結合を作った分子です。脂肪酸の鎖長や二重結合の数・立体配置が変われば、分子の詰まり方や融点も変わります。『植物油は液体、動物脂は固体』といった大まかな分類だけでなく、分子構造から性質を説明するための変数が増えていきます。",
+            "textEn": "Triacylglycerols, major components of fats and oils, contain three ester linkages joining glycerol to fatty-acid residues. Chain length, the number and geometry of double bonds influence molecular packing and melting behavior. Instead of relying solely on food-source categories, we can connect measurable material properties to molecular structural variables."
+          },
+          {
+            "id": "soap",
+            "ja": "6　けん化で生じる石けんは、なぜ洗浄に役立つか",
+            "en": "6. Connect saponification to amphiphilic behavior",
+            "textJa": "油脂を塩基性条件で加水分解すると、脂肪酸のナトリウム塩などとグリセリンが得られます。脂肪酸塩には水と相互作用しやすいイオン性の頭部と、油と相互作用しやすい炭化水素鎖があります。この両方の性質によって界面への吸着やミセル形成が起こり、油汚れを水中へ分散させやすくなります。カルボン酸・エステル・界面活性は一つの連続した理解になります。",
+            "textEn": "Base hydrolysis of triacylglycerols produces glycerol and fatty-acid salts such as sodium carboxylates. Each fatty-acid salt has an ionic head group that interacts favorably with water and a hydrocarbon tail that can interact with oil. Such amphiphilic molecules can adsorb at interfaces and form micelles, helping disperse oily substances in water. Carboxylic-acid chemistry, ester reactions and detergency now connect."
+          }
+        ]
       }
     },
     {
@@ -548,6 +597,55 @@
             "en": "Resonance from Lewis structures helps explain phenol and aniline through lone-pair delocalization. Conjugate-base stability connects phenol's acidity to equilibrium. Molecular orbital theory later offers a broader explanation of aromaticity and electron distribution."
           }
         ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "フェノールとエタノールにはどちらもO−Hがあるのに、酸性が違います。アニリンも普通の脂肪族アミンと同じ強さの塩基ではありません。ベンゼン環との電子のやり取りから、置換基の影響を考えます。",
+        "premiseEn": "Phenol and ethanol both contain O–H bonds yet differ in acidity; aniline also differs in basicity from many aliphatic amines. Use electron delocalization and substituent effects to explain these observations.",
+        "sections": [
+          {
+            "id": "phenol",
+            "ja": "1　同じO−Hを含むのに、酸性が違う",
+            "en": "1. Why is phenol more acidic than ethanol?",
+            "textJa": "フェノールC₆H₅OHとエタノールCH₃CH₂OHは、どちらもO−H結合を含みます。しかしフェノールは一般にエタノールより酸性が強い傾向があります。これはO−Hの存在だけでは説明できません。酸がH⁺を失った後に残るフェノキシドとエトキシドの電子状態を比較する必要があります。酸性の違いを考えるために、芳香環と酸素の孤立電子対の関係が重要になります。",
+            "textEn": "Phenol C₆H₅OH and ethanol CH₃CH₂OH both contain an O–H bond, yet phenol is appreciably more acidic under common aqueous conditions. The difference cannot be inferred simply by counting O–H bonds. We must compare phenoxide and ethoxide conjugate bases and ask how their electrons are distributed."
+          },
+          {
+            "id": "delocalize",
+            "ja": "2　フェノキシドの負電荷は環と関わる",
+            "en": "2. Conjugation helps stabilize phenoxide",
+            "textJa": "フェノキシドイオンでは酸素の電子対が芳香環のπ系と共役し、負電荷に対応する電子密度が酸素と環にわたって分散します。共鳴構造を複数書くときは、各構造を独立の分子が行き来するものと考えないようにします。脂肪族アルコキシドでは同じ芳香環との共役がありません。ただし酸性度には溶媒和や置換基の誘起効果なども関係し、共鳴だけですべての数値を説明できるわけではありません。",
+            "textEn": "Phenoxide has an oxygen lone pair conjugated with the aromatic π system, allowing electron density associated with negative charge to be distributed over oxygen and the ring. Resonance structures are alternative contributors to one state, not distinct species rapidly converting into one another. Ethoxide lacks this particular conjugation. Solvation and inductive substituent effects also influence acidity, so resonance alone is not a complete quantitative prediction."
+          },
+          {
+            "id": "aniline",
+            "ja": "3　アニリンが塩基として弱くなる理由を考える",
+            "en": "3. Why is aniline less basic than many alkylamines?",
+            "textJa": "アニリンC₆H₅NH₂の窒素は孤立電子対をもち、H⁺を受け取れるため塩基として働きます。しかしその孤立電子対は芳香環のπ電子系にも関与し、単純な脂肪族アミンの窒素電子対と同じ状態ではありません。H⁺を受け取るとこの共役の状況が変わるため、塩基性の傾向が異なります。『NH₂があるから同じ塩基性』という規則が十分でないことがわかります。",
+            "textEn": "Aniline C₆H₅NH₂ has a nitrogen lone pair and can accept a proton, but that lone pair interacts with the aromatic π system. Protonation changes the electronic structure and the availability of the lone pair for conjugation. Thus aniline is typically less basic than many alkylamines under comparable conditions. Merely identifying an –NH₂ group does not establish equal basicity."
+          },
+          {
+            "id": "substituents",
+            "ja": "4　置換基は環の電子密度を変える",
+            "en": "4. Substituents change electronic distribution in the ring",
+            "textJa": "芳香環に結びつく基は、誘起効果や共鳴効果によって、環の各位置の電子密度を変えることがあります。例えば−OHや−NH₂のような基は電子対の供与によって特定の位置の求電子反応を促進し得ます。一方、−NO₂は電子を引きつける性質が強く、反応速度や置換位置への影響が異なります。置換基の性質だけでなく、反応剤と反応条件も考える必要があります。",
+            "textEn": "Groups attached to an aromatic ring influence electron density by inductive and resonance effects. Donor groups such as –OH and –NH₂ can enhance certain electrophilic substitutions and favor particular positions. Strong electron-withdrawing groups such as –NO₂ change both rates and positional preferences. The nature of the electrophile and reaction conditions also matter."
+          },
+          {
+            "id": "orientation",
+            "ja": "5　オルト・メタ・パラは、名前でなく電子構造と結ぶ",
+            "en": "5. Explain ortho/meta/para tendencies rather than memorizing labels",
+            "textJa": "ベンゼン環に置換基が一つあるとき、次に反応する位置は既存の基との相対的な配置でオルト・メタ・パラに分類されます。求電子置換の途中で生じるσ錯体の共鳴構造を比べると、ある置換基が特定の位置の中間体を安定化しやすいことがわかります。配向性の一覧は便利ですが、立体障害や強い反応条件の影響を見落としてはいけません。",
+            "textEn": "With one substituent on benzene, incoming substitution sites are described as ortho, meta or para. Comparing resonance contributors of the arenium-ion intermediate can explain why some substituents favor certain positions. Directing-group tables are useful summaries, but steric hindrance, conditions and competing pathways also affect real product distributions."
+          },
+          {
+            "id": "boundaries",
+            "ja": "6　共鳴式で説明できることと、できないこと",
+            "en": "6. Know the limits of resonance-based explanations",
+            "textJa": "共鳴式は電子の非局在化の考えを整理するのに役立ちますが、反応速度の実測値や生成物の割合を一意に求める完全な理論ではありません。反応の活性化自由エネルギーや溶媒効果を含めれば、より詳細な比較が必要です。フェノールの酸性やアニリンの塩基性に戻ると、『電子対が利用できるか』を単独の原子でなく分子全体の電子構造として考えることの意味が見えてきます。",
+            "textEn": "Resonance drawings clarify delocalization but do not uniquely determine measured rate constants or product ratios. Activation free energies, steric effects and solvent interactions remain important. Returning to phenol acidity and aniline basicity reveals why a lone pair must be understood within the electronic structure of the whole molecule, not as a detachable property of one atom."
+          }
+        ]
       }
     },
     {
@@ -620,6 +718,55 @@
             "type": "revisit",
             "ja": "酸塩基を学んだ後にはアミノ酸の電荷を、分子間力を学んだ後にはタンパク質の折り畳みを、立体異性を学んだ後には酵素の基質選択性を説明できます。化学の別の単元を進むたびに、生命を構成する分子の意味が深くなることを意識してください。",
             "en": "Acid–base equilibria explain amino acid charge; intermolecular forces illuminate protein folding; stereochemistry clarifies enzyme selectivity. Each new chemistry topic offers another way to reinterpret familiar biomolecules and their functions."
+          }
+        ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "同じC₆H₁₂O₆なのにグルコースとフルクトースは異なり、同じグルコースから作ったデンプンとセルロースも性質が違います。分子式から立体構造、さらに酵素による選択へ理解を広げます。",
+        "premiseEn": "Glucose and fructose share a molecular formula, while starch and cellulose can be built from glucose residues yet behave differently. Follow the explanatory chain from connectivity to three-dimensional structure and biological recognition.",
+        "sections": [
+          {
+            "id": "sugars",
+            "ja": "1　分子式だけでは糖の性質を決められない",
+            "en": "1. Equal formulas can hide different sugar structures",
+            "textJa": "グルコースとフルクトースはどちらもC₆H₁₂O₆ですが、開鎖形のカルボニル基の位置が異なり、立体配置にも違いがあります。糖が水中で開鎖形と環状形の間で平衡をとることもあります。分子式だけを見て同じ物質と考えると、こうした変化を説明できません。糖の性質を知るためには、結合の順序・立体配置・溶液中の化学種の分布が必要です。",
+            "textEn": "Glucose and fructose share C₆H₁₂O₆ but differ in carbonyl connectivity in their open-chain forms and in stereochemistry. In solution, many sugars interconvert between open-chain and cyclic structures. Formula alone cannot encode these distinctions. Connectivity, stereochemical configuration and the distribution of species in solution all matter."
+          },
+          {
+            "id": "rings",
+            "ja": "2　環を作ると、新しい立体的な違いが生まれる",
+            "en": "2. Ring formation creates new stereochemical possibilities",
+            "textJa": "グルコースが分子内反応で環状ヘミアセタールを形成すると、新たなアノマー炭素の立体配置によってα型とβ型のような違いが生じます。描く向きや記号の規約を正しく理解する必要がありますが、根本は同じ構成原子が異なる三次元配置を持つということです。αとβの違いは単なる名前ではなく、他の糖へつながる結合の向きを変えます。",
+            "textEn": "When glucose cyclizes to a hemiacetal, the anomeric carbon becomes a new stereochemical center. The α and β forms differ in configuration at that center under a given stereochemical convention. These labels are not arbitrary decorations: the orientation at the anomeric center influences subsequent glycosidic linkages."
+          },
+          {
+            "id": "starch",
+            "ja": "3　同じグルコースからデンプンとセルロースができる",
+            "en": "3. Why do starch and cellulose behave so differently?",
+            "textJa": "デンプンでは主にα型のグリコシド結合が、セルロースではβ-1,4-グリコシド結合が現れます。結合の向きが違うと、高分子鎖の形や分子間水素結合のしやすさが変わり、材料としての強さや酵素による分解のされやすさにも差が生まれます。同じ単糖を構成単位としていても、結合の立体配置という情報が欠ければ物性は説明できません。",
+            "textEn": "Starch contains predominantly α glycosidic linkages, whereas cellulose contains β-1,4 glycosidic linkages. Different link geometries lead to different chain conformations, hydrogen-bonding patterns, material properties and enzyme susceptibility. Knowing that both are built from glucose residues is insufficient to predict their behavior."
+          },
+          {
+            "id": "amino",
+            "ja": "4　アミノ酸は『酸』でも『塩基』でもある",
+            "en": "4. Why can an amino acid behave as both acid and base?",
+            "textJa": "グリシンのようなアミノ酸にはカルボキシ基とアミノ基があります。水溶液のpHによってプロトンを渡す部位と受け取る部位が変わり、双性イオンを含む化学種が存在します。等電点は平均の電荷がゼロとなるpHであり、すべての分子が電荷を持たない中性形だけになるという意味ではありません。酸塩基の知識を新しい分子へ適用する例です。",
+            "textEn": "Amino acids such as glycine contain both a carboxyl group and an amino group. Their protonation states change with pH, and zwitterionic forms may dominate under suitable conditions. The isoelectric point is the pH at which the average net charge is zero; it does not mean every molecule exists as a completely uncharged neutral structure. Acid–base reasoning transfers directly to biomolecules."
+          },
+          {
+            "id": "peptide",
+            "ja": "5　ペプチド結合はどこから生まれるのか",
+            "en": "5. How does a peptide bond connect amino acids?",
+            "textJa": "アミノ酸のカルボキシ基と別のアミノ酸のアミノ基が結ばれてできるアミド結合を、タンパク質の文脈ではペプチド結合と呼びます。反応式では水が除かれる縮合として表せますが、生体内でのタンパク質合成はリボソームや活性化された原料を使う複雑な過程です。単純に二つの遊離アミノ酸を水に混ぜたら自発的に大量のペプチドができるわけではありません。",
+            "textEn": "A peptide bond is an amide linkage between the carboxyl-derived carbon of one amino-acid residue and the nitrogen derived from another. The net composition can be represented as condensation with loss of water, but cellular protein synthesis is a complex ribosome-mediated process using activated substrates. Merely mixing free amino acids in water does not normally produce large amounts of peptide spontaneously."
+          },
+          {
+            "id": "function",
+            "ja": "6　酵素の選択性は立体構造と結びつく",
+            "en": "6. Three-dimensional recognition explains enzyme specificity",
+            "textJa": "タンパク質のアミノ酸配列は、折り畳みや分子間相互作用を通じて立体構造へつながります。酵素の活性部位では、基質との形の適合だけでなく、電荷、極性、動き、遷移状態の安定化が反応性に関係します。デンプンとセルロースの分解の違いに戻ると、基質の結合の向きが酵素との相互作用を変えることを理解できます。化学の立体構造が、生物の機能の説明になるのです。",
+            "textEn": "A protein's amino-acid sequence influences its folded structure through many interactions. An enzyme's active site recognizes a substrate through geometry, charge, polarity and dynamic interactions while stabilizing relevant transition states. Returning to starch and cellulose hydrolysis shows how linkage stereochemistry affects recognition and catalysis. Molecular structure connects chemistry to biological function."
           }
         ]
       }
