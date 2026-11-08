@@ -317,6 +317,55 @@
             "The model predicts 50% remaining after 100 s and 25% after 200 s. Large deviations suggest that the first-order assumption, constant temperature or absence of competing reactions should be reconsidered."
           ]
         ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "同じ温度・濃度でも反応によって速さが大きく違う。反応式だけでは時間がわかりません。実験の濃度変化をグラフにし、傾きから速度を定義し、反応経路とエネルギー障壁を分けて説明します。",
+        "premiseEn": "Two reactions can proceed at very different rates despite similar concentrations and temperatures. A balanced equation does not specify time. Measure changes, interpret slopes, and distinguish reaction pathways from energy barriers.",
+        "sections": [
+          {
+            "id": "measure",
+            "ja": "1　反応がどれほど進んだかと、どれほど速いかは違う",
+            "en": "1. How far versus how fast are different questions",
+            "textJa": "反応が進んで生成物が十分にできたとしても、それに1秒かかったのか1日かかったのかでは現象が大きく違います。反応式から原子の収支はわかりますが、反応に必要な時間は決まりません。例えば溶液中のAの濃度が0.80 mol/Lから10秒後に0.50 mol/Lになったなら、その間に0.30 mol/Lが消費されたと測定できます。次に、この変化を時間で割って『速さ』という新しい量を定義する必要が出てきます。",
+            "textEn": "A reaction may produce the same amount of product in one second or in one day. The balanced equation constrains material balance but does not determine the elapsed time. If a reactant decreases from 0.80 mol/L to 0.50 mol/L in ten seconds, 0.30 mol/L has been consumed. Dividing this measured change by elapsed time constructs a rate quantity that stoichiometry alone cannot provide."
+          },
+          {
+            "id": "slope",
+            "ja": "2　グラフの傾きが、反応速度になる",
+            "en": "2. Rate is the slope of a concentration–time graph",
+            "textJa": "A→BでAの濃度を測ると、平均消費速度は−Δ[A]/Δtです。前の例では−(0.50−0.80)/10=0.030 mol L⁻¹ s⁻¹となります。時刻によって速度が変わるとき、ある一瞬の速度は接線の傾き−d[A]/dtとして定義します。微分は新しい魔法の記号ではありません。時間を非常に短くしたときの変化の割合を表します。濃度の時間変化を測れないなら、速度の数値にも実験的な裏付けがありません。",
+            "textEn": "For A→B, the average rate of A consumption is −Δ[A]/Δt. The example gives −(0.50−0.80)/10=0.030 mol L⁻¹ s⁻¹. When the rate changes with time, its instantaneous value is the tangent slope −d[A]/dt. A derivative is the limiting ratio of a very small concentration change to a very small time interval. The equation is meaningful because it corresponds to a measurable curve."
+          },
+          {
+            "id": "coefficients",
+            "ja": "3　反応式の係数を速度式の指数にしない",
+            "en": "3. Stoichiometric coefficients are not automatically rate-law exponents",
+            "textJa": "2A+B→Cという反応式なら、反応速度vを−(1/2)d[A]/dt=−d[B]/dt=d[C]/dtのように係数で規格化できます。しかし実験で求める速度式v=k[A]^m[B]^nの指数m,nが必ず2,1になるわけではありません。反応式は前後の原子数を示しますが、分子がどのような素過程を経て反応するかは別の情報だからです。素反応の場合と全体反応式を混同しないことが重要です。",
+            "textEn": "For 2A+B→C, the overall reaction rate can be normalized as v=−(1/2)d[A]/dt=−d[B]/dt=d[C]/dt. Yet the experimentally determined rate law v=k[A]^m[B]^n need not have exponents m=2 and n=1. Stoichiometry describes net reactant and product changes; kinetic orders depend on the mechanism and conditions. Only for an appropriate elementary step can its molecularity directly inform an elementary rate law."
+          },
+          {
+            "id": "activation",
+            "ja": "4　衝突が起きても、すべて反応するわけではない",
+            "en": "4. Why is a collision not necessarily a reaction?",
+            "textJa": "分子が衝突しても、その衝突が必ず結合の組み換えを起こすわけではありません。反応に必要な配置やエネルギーに到達するための障壁があるからです。アレニウス式k=Aexp(−Ea/RT)は、多くの反応で温度依存を近似的に記述します。自然対数をとるとln k=ln A−Ea/(RT)です。ln kを1/Tに対してプロットしたときの傾き−Ea/Rから、見かけの活性化エネルギーを求められる場合があります。すべての反応がこの単純式で完全に表せるわけではありません。",
+            "textEn": "Molecules may collide without reacting because a successful transformation requires suitable configurations and access to a barrier-crossing pathway. The Arrhenius equation k=A exp(−Ea/RT) approximates the temperature dependence of many rate constants. Taking logarithms yields ln k=ln A−Ea/(RT), so a plot of ln k versus 1/T may have slope −Ea/R. Its activation energy is often an effective parameter; complex mechanisms need not follow a single Arrhenius law over all temperatures."
+          },
+          {
+            "id": "catalyst",
+            "ja": "5　触媒は反応物でも生成物でもない、だけで十分か",
+            "en": "5. What does a catalyst actually change?",
+            "textJa": "触媒は反応中に一時的に化学種を形成しても、反応の一巡の後に再生する場合があります。触媒が提供する別の経路は活性化自由エネルギーを下げ、特定の方向だけでなく逆方向も含めて平衡到達を速めることがあります。触媒を加えても同じ温度での平衡定数Kは変わりません。平衡での状態の有利さと、その状態へ到達する時間の長さは別の物理的な問題です。",
+            "textEn": "A catalyst may form transient intermediates yet be regenerated after a reaction cycle. It offers an alternative pathway that can lower activation free-energy barriers and accelerate approach to equilibrium. At the same temperature it does not change the thermodynamic equilibrium constant. The preference between equilibrium states and the time required to approach them are distinct physical questions."
+          },
+          {
+            "id": "test",
+            "ja": "6　速さの予測は、どの測定で検証できるか",
+            "en": "6. How could a proposed rate law be tested?",
+            "textJa": "仮に速度が[A]に比例すると予想したなら、他の条件を保ちながら[A]を2倍にして、初速度も約2倍になるか測ればよいでしょう。もし2倍にならなければ仮説を修正します。触媒の効果を評価するときも、温度、濃度、混合状態、表面積をそろえる必要があります。速度論は正解の式を覚える分野ではなく、時間変化のデータから反応の機構を問い直す分野です。",
+            "textEn": "If a rate law predicts first-order dependence on [A], double its initial concentration while holding other conditions fixed and see whether the initial rate approximately doubles. A different result calls for a revised model. Evaluating a catalyst likewise requires controlling temperature, mixing, concentrations and surface area. Kinetics uses time-dependent observations to test mechanistic hypotheses rather than accepting a rate equation by convention."
+          }
+        ]
       }
     },
     {
@@ -416,6 +465,55 @@
             "濃度変化はAが0.12減少しBが0.12増加します。平衡での濃度は等しくありません。触媒は到達時間を変えても、温度を同じにすればこの平衡値は変えません。",
             "The net change is −0.12 mol/L A and +0.12 mol/L B. Equilibrium concentrations are unequal. An ideal catalyst can change the approach time but not these equilibrium values at fixed temperature."
           ]
+        ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "目に見える濃度が一定なのに、分子は反応を続けることがある。この一見矛盾した現象を、流入と流出、正反応と逆反応、反応商と平衡定数の順に整理します。ただし、水槽のたとえと熱力学的平衡は同一ではありません。",
+        "premiseEn": "A system can have constant visible composition even while molecules keep reacting. Work from balanced opposing changes toward forward/reverse rates, then reaction quotients and equilibrium constants. Explicitly distinguish the analogy from thermodynamic equilibrium.",
+        "sections": [
+          {
+            "id": "still",
+            "ja": "1　濃度が一定なら、化学反応は止まったのか",
+            "en": "1. Does unchanged concentration mean no reaction?",
+            "textJa": "可逆反応A⇌Bを閉じた容器で考えます。一定温度で十分に時間がたつと、AとBの濃度がほぼ一定になる場合があります。しかし分子レベルではAからBへの変化とBからAへの変化が続き得ます。観察されるのは正味の変化がゼロという事実であって、個々の反応がゼロという証拠ではありません。この違いを説明するために『動的平衡』という概念が必要になります。",
+            "textEn": "For a reversible process A⇌B in a closed vessel at constant temperature, the concentrations may eventually stop changing appreciably. At a molecular level A can still turn into B while B turns back into A. A zero net concentration change does not establish that each microscopic reaction has stopped. The concept of dynamic equilibrium addresses this apparent contradiction."
+          },
+          {
+            "id": "tank",
+            "ja": "2　水槽の流入と流出は何を説明できるか",
+            "en": "2. What can a tank with inflow and outflow explain?",
+            "textJa": "水槽に毎分2 Lが入り、毎分2 Lが出れば水量は一定です。水が止まったわけではありません。このたとえは『量が一定でも動きがある』ことを直感的に理解するための道具です。ただし流入と流出を外部ポンプで維持している水槽は、熱力学的な平衡ではなく定常状態です。化学平衡では、閉じた系の中で正逆反応がつり合うという点が違います。",
+            "textEn": "A tank receiving and releasing two liters per minute can maintain a constant water level even though water continues moving. This analogy captures the coexistence of microscopic activity and no net macroscopic change. However, a pumped flow-through tank is a nonequilibrium steady state, not a thermodynamic equilibrium. Chemical equilibrium involves balancing opposing processes within a system under its own constraints."
+          },
+          {
+            "id": "rates",
+            "ja": "3　正反応と逆反応の速度を式で比較する",
+            "en": "3. How do forward and reverse rates balance?",
+            "textJa": "単純な素反応A⇌Bで、正反応速度をvf=kf[A]、逆反応速度をvr=kr[B]と表す模型を考えます。平衡ならvf=vrなのでkf[A]eq=kr[B]eqです。変形すると[B]eq/[A]eq=kf/krとなります。この単純模型では濃度比が速度定数の比に一致します。ただし複雑な反応では全体反応式からこの関係を直接作れるわけではありません。ここで使った仮定を確認する必要があります。",
+            "textEn": "For a simple elementary reversible reaction A⇌B, model the forward and reverse rates as vf=kf[A] and vr=kr[B]. At equilibrium vf=vr, giving kf[A]eq=kr[B]eq and therefore [B]eq/[A]eq=kf/kr. This relation is valid for this simple kinetic model, not a universal way to infer equilibrium constants from arbitrary overall reaction coefficients."
+          },
+          {
+            "id": "qk",
+            "ja": "4　今の状態と、平衡状態をどう比べるか",
+            "en": "4. Compare the current reaction quotient with equilibrium",
+            "textJa": "A⇌Bなら、理想的な希薄溶液でQ≈[B]/[A]と書けます。温度が決まると平衡定数Kが決まります。もしK=4で、現在[A]=0.20 mol/L、[B]=0.40 mol/LならQ=2です。Q<Kなので正方向の変化が熱力学的に有利と予想できます。ただし速さや、どれだけの時間がかかるかまではQだけではわかりません。QとKは反応の方向を考える物差しです。",
+            "textEn": "For A⇌B in an ideal dilute-solution approximation, Q≈[B]/[A]. At a specified temperature the equilibrium constant has a definite value K. If K=4 while [A]=0.20 mol/L and [B]=0.40 mol/L, Q=2. Since Q<K, the forward change is thermodynamically favored. This predicts the tendency, not the time scale. Q and K answer a different question from reaction rates."
+          },
+          {
+            "id": "gibbs",
+            "ja": "5　なぜQとKを比べると、進む向きがわかるか",
+            "en": "5. Connect Q/K to Gibbs energy",
+            "textJa": "一定温度・圧力のもと、反応ギブズエネルギーはΔrG=ΔrG°+RT ln Qと書けます。平衡ではΔrG=0、Q=KなのでΔrG°=−RT ln Kです。代入するとΔrG=RT ln(Q/K)。Q<Kなら対数は負になり、正方向の反応がギブズエネルギーを下げます。この式は『ルシャトリエの原理』という言葉だけでは見えにくい方向性の理由を説明します。",
+            "textEn": "At constant temperature and pressure, reaction Gibbs energy is ΔrG=ΔrG°+RT ln Q. At equilibrium ΔrG=0 and Q=K, so ΔrG°=−RT ln K. Substitution gives ΔrG=RT ln(Q/K). When Q<K, the logarithm is negative and forward reaction progress lowers Gibbs energy. This derivation gives a thermodynamic explanation for the favored direction rather than relying only on a verbal rule."
+          },
+          {
+            "id": "changes",
+            "ja": "6　触媒を加える場合と温度を変える場合は違う",
+            "en": "6. A catalyst and a temperature change do different things",
+            "textJa": "触媒は通常、反応経路と速度を変えますが、同じ温度での平衡定数Kは変えません。一方、温度を変えると平衡定数Kそのものが変化する場合があります。反応物を加えた直後はQが変わり、温度を変えたときにはQとKの両方を考える必要があります。条件を変えた反応を予測するには『何が変わり、何が一定なのか』を整理することが重要です。",
+            "textEn": "A catalyst normally changes the kinetic route and rates without changing the equilibrium constant at fixed temperature. Changing temperature can alter K itself. Adding reactant immediately changes Q, whereas changing temperature may affect both Q and K. Predicting the response of an equilibrium system requires explicit identification of what is held fixed and what is changed."
+          }
         ]
       }
     },
@@ -517,6 +615,55 @@
             "The dissociation fraction x/0.10≈1.34%, supporting the small-x approximation here. For much more dilute solutions or larger Ka, solve the quadratic relation and possibly include water autoionization."
           ]
         ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "酸っぱい液体でも、濃い酸と強い酸は同じ意味ではありません。酸性の程度を数で比べるために、まずイオンと平衡を考え、その後で大きな数値範囲を扱う対数という数学が必要になる理由を説明します。",
+        "premiseEn": "A concentrated acid is not necessarily a strong acid. To compare acidity quantitatively, begin with proton transfer and dissociation equilibrium, then introduce logarithms as a convenient way to express a broad range of hydrogen-ion activities.",
+        "sections": [
+          {
+            "id": "different",
+            "ja": "1　酸の『強さ』と『濃さ』を分ける",
+            "en": "1. Distinguish strength from concentration",
+            "textJa": "酢酸は弱酸、塩酸は通常強酸に分類されます。これは同じ条件での電離の程度や酸解離平衡についての違いです。一方、濃い・薄いは溶液中にどれだけ溶質を含むかという量の違いです。希薄な塩酸と濃い酢酸のpHは、どちらが低いと一律に決められません。まず『何を比較しているか』を分けなければ、定義も計算も意味を持ちません。",
+            "textEn": "Acetic acid is classified as weak and hydrochloric acid as strong in ordinary aqueous conditions because their dissociation behaviors differ. Concentrated and dilute, by contrast, refer to the amount of solute present. A very dilute strong acid and a concentrated weak acid cannot be ordered by pH using those labels alone. Define the question before applying a numerical rule."
+          },
+          {
+            "id": "bronsted",
+            "ja": "2　水の中の酸・塩基はプロトンの移動で考えられる",
+            "en": "2. Acids and bases can be modeled by proton transfer",
+            "textJa": "HClを水に加えると、HCl+H₂O→H₃O⁺+Cl⁻と表せます。ここではHClがH⁺を渡し、水がそれを受け取っています。ブレンステッド・ローリーの定義では酸はプロトン供与体、塩基は受容体です。定義を導入する理由は、水が単なる容器ではなく反応に参加し、H₃O⁺を生じることを記述できるからです。さらに別の溶媒では酸・塩基のふるまいが変わることもあります。",
+            "textEn": "In water, HCl+H₂O→H₃O⁺+Cl⁻ represents proton transfer from HCl to a water molecule. In the Brønsted–Lowry model, the acid donates a proton and the base accepts it. This definition is useful because water participates in the reaction; it is not merely an inert container. The solvent matters, so acid behavior can differ between chemical environments."
+          },
+          {
+            "id": "scale",
+            "ja": "3　水素イオンの量は桁違いに変わる",
+            "en": "3. Acidity spans large orders of magnitude",
+            "textJa": "酸性度を水素イオンの活量で表すと、10⁻²、10⁻⁵、10⁻⁸などの桁が連続して登場します。小数点以下にゼロを何個も書くのは比較に不便です。そこでpH=−log₁₀a(H⁺)という尺度を使います。活量は標準状態で無次元化した量であり、実験条件によって濃度と同じとは限りません。希薄な溶液ではa(H⁺)≈[H⁺]/c°と近似でき、濃度による計算が可能になります。",
+            "textEn": "Hydrogen-ion activities span many orders of magnitude, such as 10⁻², 10⁻⁵ and 10⁻⁸. Writing many zeros is inconvenient, so pH is defined as −log₁₀a(H⁺), using a dimensionless activity relative to a standard state. Activity is not automatically the numerical concentration. For dilute solutions a concentration approximation can often be used to connect pH to familiar laboratory units."
+          },
+          {
+            "id": "log",
+            "ja": "4　対数が何をしているかを数で確かめる",
+            "en": "4. Why does a factor of ten change pH by one?",
+            "textJa": "log₁₀(10⁻³)=−3なので、pH=−(−3)=3です。水素イオンの活量が10倍に増えて10⁻²になれば、pHは2になります。十倍という倍率を1だけの差に置き換えているのです。pHは水素イオンの量そのものではなく、対数変換した尺度です。したがってpH3とpH4の違いは『1だけ』でも、水素イオンの活量には約10倍の差があることを意味します。",
+            "textEn": "Since log₁₀(10⁻³)=−3, the negative logarithm gives pH 3. Multiplying hydrogen-ion activity by ten to 10⁻² gives pH 2. The logarithmic scale converts multiplicative factors of ten into additive steps of one. pH is not a direct count of hydrogen ions. A one-unit pH difference corresponds to a tenfold activity ratio."
+          },
+          {
+            "id": "weak",
+            "ja": "5　弱酸のpHを、電離平衡から考える",
+            "en": "5. Build a weak-acid relation from equilibrium",
+            "textJa": "弱酸HAを水に溶かすとHA+H₂O⇌H₃O⁺+A⁻です。薄い理想溶液で初濃度c、電離した量をxとすると、近似的に[HA]=c−x、[H₃O⁺]≈[A⁻]≈xです。酸解離定数はKa≈x²/(c−x)となります。電離の割合x/cが小さければc−x≈cなのでx≈√(Kac)を得ます。『弱酸のpH公式』を丸暗記するより、粒子の物質収支と平衡定数から必要な関係を作ったと理解できます。",
+            "textEn": "For HA+H₂O⇌H₃O⁺+A⁻, let the initial analytical acid concentration be c and the dissociated amount x. In a dilute approximation, [HA]≈c−x and [H₃O⁺]≈[A⁻]≈x, neglecting water autoionization. Then Ka≈x²/(c−x). If x/c is small, c−x≈c, giving x≈√(Kac). The familiar weak-acid approximation is a consequence of mass balance and equilibrium, with explicit assumptions."
+          },
+          {
+            "id": "limits",
+            "ja": "6　酸の定義と測定の限界を考える",
+            "en": "6. Revisit conditions and limits of acidity models",
+            "textJa": "pHが7なら必ず中性という説明は、25 ℃付近の純水についての近似に由来します。温度が変われば水のイオン積Kwが変わるため、中性のpHも変化します。また濃い電解質溶液では活量係数の影響が大きくなります。大学ではルイス酸・塩基や溶媒和、活量を利用して高校のpH計算を読み直します。数字がわかると、どの条件を明記すべきかも見えてきます。",
+            "textEn": "The statement that neutral water always has pH 7 is a near-25 °C approximation. Water's ion product changes with temperature, so the neutral pH changes. In concentrated electrolyte solutions, activity coefficients become important. Lewis acid–base models, solvation and activity provide deeper interpretations beyond the first concentration-based calculations."
+          }
+        ]
       }
     },
     {
@@ -617,6 +764,55 @@
             "An indicator endpoint may not exactly match the equivalence point. For weak acids, equivalence-point pH is not necessarily seven. Evaluate mathematical calculations and measurement validity separately."
           ]
         ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "指示薬の色が変わった瞬間、本当に酸と塩基の物質量は完全に一致しているのでしょうか。滴定の観察から当量点と終点を区別し、化学量論・平衡・対数を組み合わせて緩衝液まで導きます。",
+        "premiseEn": "When an indicator changes color, have the reacting acid and base equivalents necessarily matched exactly? Start from the experimental observation, separate the equivalence point from the endpoint, then combine stoichiometry, equilibrium and logarithms to understand buffers.",
+        "sections": [
+          {
+            "id": "color",
+            "ja": "1　指示薬の色の変化は、何を測っているのか",
+            "en": "1. What does an indicator color change measure?",
+            "textJa": "未知濃度の酸をフラスコに入れ、既知濃度の塩基を少しずつ加えます。指示薬が変色したところを終点として記録できます。しかし指示薬の色は、酸と塩基の物質量が理論的に一致した事実を直接見せているわけではありません。指示薬自身の酸塩基平衡が、周囲のpHの変化に応じて色を変えるのです。そこで実験の終点と化学量論上の当量点を区別する必要があります。",
+            "textEn": "A standard base is added to an acid of unknown concentration until an indicator changes color. The observed endpoint is not itself a direct count of matched chemical equivalents. The indicator is an acid–base system whose color depends on pH. The theoretical equivalence point and the measured endpoint are different concepts that should be compared quantitatively."
+          },
+          {
+            "id": "stoich",
+            "ja": "2　まず反応するイオンの個数をそろえる",
+            "en": "2. Begin with the particle balance",
+            "textJa": "HClとNaOHの水溶液では、正味の反応をH₃O⁺+OH⁻→2H₂Oと表せます。強酸・強塩基の一価同士なら、当量点では酸の物質量と塩基の物質量が等しくなります。0.10 mol/LのHCl 20 mLなら酸の物質量は0.10×0.020=0.0020 molです。0.20 mol/LのNaOHで同量のOH⁻を加えるには、V=0.0020/0.20=0.010 L=10 mLです。",
+            "textEn": "For aqueous HCl and NaOH, the net neutralization is H₃O⁺+OH⁻→2H₂O. With monoprotic strong acid and strong base, their reaction equivalents agree at equivalence. A 20 mL sample of 0.10 mol/L HCl contains 0.10×0.020=0.0020 mol acid. It requires V=0.0020/0.20=0.010 L, or 10 mL, of 0.20 mol/L NaOH. The volume follows from particle conservation."
+          },
+          {
+            "id": "curve",
+            "ja": "3　弱酸の滴定曲線は、なぜ同じ形にならないか",
+            "en": "3. Why does a weak acid produce a different titration curve?",
+            "textJa": "弱酸HAに強塩基を加えると、まずHAの一部がA⁻へ変化し、HAとA⁻が同時に存在する領域ができます。ここでは追加した少量のH⁺やOH⁻が既存の成分と反応し、pHが比較的変化しにくくなります。当量点に近づくと比率が大きく変わり、当量点の後では過剰の塩基がpHを決めます。したがってどの指示薬を選ぶかは、滴定する酸や塩基の強さによって変わります。",
+            "textEn": "As strong base is added to weak acid HA, some HA becomes conjugate base A⁻. A region emerges where both species coexist and can consume small added amounts of acid or base. Near equivalence the composition changes rapidly; after equivalence, excess base dominates. Therefore the best indicator depends on the pH transition around the equivalence point rather than a rule that every neutralization crosses pH 7."
+          },
+          {
+            "id": "buffer",
+            "ja": "4　共役酸と共役塩基があるとpHが安定する理由",
+            "en": "4. How does a conjugate pair resist pH changes?",
+            "textJa": "HAとA⁻が共存していると、酸を加えたときA⁻がH⁺を受け取り、塩基を加えたときHAがH⁺を渡して反応します。これが緩衝作用の粒子レベルの説明です。ただしHAやA⁻の量は有限なので、どれだけ加えてもpHが一定という意味ではありません。緩衝液の仕組みは、単なる公式の記憶ではなく、どの化学種が加えられた物質を消費するかを考えることから理解できます。",
+            "textEn": "When HA and A⁻ coexist, added protons can react with A⁻, while added base can react with HA. These reactions reduce the pH change caused by modest additions. But the available amounts of HA and A⁻ are finite; a buffer does not hold pH constant indefinitely. Its behavior follows from chemical species and their reactions, rather than an unexplained formula."
+          },
+          {
+            "id": "derive",
+            "ja": "5　ヘンダーソン・ハッセルバルヒ式はどこから来るか",
+            "en": "5. Derive the buffer equation from Ka",
+            "textJa": "酸解離定数の濃度近似Ka≈[H⁺][A⁻]/[HA]を[H⁺]について解くと[H⁺]≈Ka[HA]/[A⁻]です。両辺の負の常用対数をとれば−log[H⁺]=−log Ka+log([A⁻]/[HA])、すなわちpH≈pKa+log([A⁻]/[HA])です。水素イオン活量と濃度の近似が成立する範囲で使う式です。酸解離平衡と対数の関係を理解していれば、公式だけを別に暗記する必要はありません。",
+            "textEn": "Using the concentration approximation Ka≈[H⁺][A⁻]/[HA], rearrange to [H⁺]≈Ka[HA]/[A⁻]. Taking negative base-10 logarithms gives −log[H⁺]=−log Ka+log([A⁻]/[HA]), or pH≈pKa+log([A⁻]/[HA]). This is the Henderson–Hasselbalch approximation under suitable activity and concentration conditions. It follows from acid equilibrium and logarithm properties."
+          },
+          {
+            "id": "range",
+            "ja": "6　緩衝能が尽きる条件は何か",
+            "en": "6. When does buffering stop being effective?",
+            "textJa": "HAの量に比べて大量の塩基を加えると、HAが消費され、A⁻との共存が崩れます。逆に大量の酸を加えるとA⁻が消費されます。緩衝能は一般に酸と共役塩基の量が十分あり、両者の比が極端ではない領域で有用です。実際の滴定では温度、濃度、電極の校正、指示薬の変色幅なども結果に影響します。『計算値と測定値が違う』ことが新しい検討事項を生みます。",
+            "textEn": "If much more base is added than available HA, the weak acid is depleted; if much more acid is added, A⁻ is depleted. Buffer action is useful only while both components remain in appreciable amounts. Actual titration results also depend on temperature, ionic strength, calibration and indicator transition ranges. Disagreement between calculated and observed endpoints becomes a question for further investigation."
+          }
+        ]
       }
     },
     {
@@ -716,6 +912,55 @@
             "電流を2倍、時間を同じにすれば理論上の析出量も2倍です。ただし実測質量が異なるなら電流効率、電極の状態、反応液の条件などを調べます。理論量と実験量の違いは検証する価値のある情報です。",
             "Doubling current at the same time doubles theoretical deposit mass. If the measured result differs, investigate current efficiency, electrode condition and electrolyte composition. Disagreement between model and experiment is useful evidence."
           ]
+        ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "電池では化学反応から電流を取り出し、電気分解では電流を流して化学反応を進めます。同じ酸化・還元が、なぜ異なる装置で逆向きの役割をするのか。電子の保存、回路、自由エネルギー、電気量を結びつけます。",
+        "premiseEn": "A battery converts chemical change into electrical work; electrolysis uses external electrical work to drive chemical change. Use charge conservation, circuits and Gibbs energy to compare these distinct arrangements without memorizing disconnected electrode signs.",
+        "sections": [
+          {
+            "id": "electrons",
+            "ja": "1　電子を失う反応と受け取る反応は組で起こる",
+            "en": "1. Oxidation and reduction must balance electrons",
+            "textJa": "亜鉛がZn²⁺になる反応ではZn→Zn²⁺+2e⁻と電子を放出します。銅(II)イオンではCu²⁺+2e⁻→Cuと電子を受け取ります。二つを足すとZn+Cu²⁺→Zn²⁺+Cuです。電子2個が消えるのは電子がなくなったからではなく、片方で放出した電子と片方で受け取った電子を、反応式の帳簿上で相殺したからです。酸化と還元は別々の奇妙な変化ではありません。",
+            "textEn": "Zinc oxidation releases electrons: Zn→Zn²⁺+2e⁻. Copper(II) reduction consumes them: Cu²⁺+2e⁻→Cu. Adding the half-reactions gives Zn+Cu²⁺→Zn²⁺+Cu. The two electrons cancel in the net equation because released and accepted electrons balance, not because electrical charge disappears. The half-reactions are complementary accounts of one overall redox process."
+          },
+          {
+            "id": "circuit",
+            "ja": "2　電池を動かすには、電子とイオンの両方が必要",
+            "en": "2. A cell requires electron flow and ionic charge transport",
+            "textJa": "亜鉛電極と銅電極を外部導線で結ぶと、放出された電子は回路を通って還元側へ移動できます。しかし電極だけを結んでも、溶液中の電荷が偏れば反応は持続しにくくなります。塩橋や隔膜を通じてイオンが移動することで電気的中性が保たれ、外部の電子の流れと内部のイオンの流れが組になります。電流は導線だけに存在する現象ではないのです。",
+            "textEn": "Connecting zinc and copper electrodes through an external wire allows electrons released by oxidation to reach the reduction electrode. But charge accumulation in the solutions would hinder sustained operation without an ionic connection. A salt bridge or membrane allows ions to maintain approximate electroneutrality. Electronic current in the wire and ionic charge transport in the electrolyte are complementary parts of the complete cell."
+          },
+          {
+            "id": "work",
+            "ja": "3　電位差と化学反応のエネルギーを結びつける",
+            "en": "3. Connect cell potential to available electrical work",
+            "textJa": "電荷Qを電位差Eだけ移動させるときの電気的仕事の大きさにはQEという関係があります。電子n molに対応する電荷の大きさはnFです。可逆な条件の電池反応では、反応ギブズエネルギーと起電力はΔrG=−nFEと結びつきます。この式はEが大きい電池ほど必ず大きな電流が流れることを意味しません。起電力は熱力学の量、実際に流れる電流は抵抗や反応速度などの条件に依存します。",
+            "textEn": "Moving charge magnitude Q through a potential difference E is associated with electrical work magnitude QE. Transfer of n moles of electrons corresponds to charge nF. For a reversible electrochemical reaction, ΔrG=−nFE links the reaction Gibbs energy to cell potential. This does not mean larger emf always produces larger current: current depends on circuit resistance, electrode kinetics and transport."
+          },
+          {
+            "id": "electrolysis",
+            "ja": "4　電気分解では外部から反応を駆動する",
+            "en": "4. Electrolysis uses an external power source",
+            "textJa": "電池として自然に進む反応だけが電気化学ではありません。外部電源から必要な電圧を加えれば、指定条件で自発的でない電極反応を進めることもできます。このときも酸化は陽極、還元は陰極で起こります。しかし電極の正負は電池と電気分解装置では異なり得ます。『陽極は必ずプラス』と暗記するより、電子を失う場所が陽極であると理解する方が混乱しません。",
+            "textEn": "Electrochemistry also uses external power supplies to drive reactions that are unfavorable without electrical input. Oxidation still occurs at the anode and reduction at the cathode, but electrode signs differ between galvanic cells and electrolytic setups. Identifying the reaction occurring at an electrode is more reliable than memorizing that the anode always has one electrical sign."
+          },
+          {
+            "id": "faraday",
+            "ja": "5　流れた電荷量から生成する物質量を求める",
+            "en": "5. Derive the amount deposited from charge",
+            "textJa": "電流Iは単位時間あたりに流れる電荷量なのでQ=Itです。電子1 molの電荷の大きさはファラデー定数F≈96485 C/molを用いて表せます。Cu²⁺+2e⁻→Cuなら銅1 molを析出させるために電子2 molが必要です。Q=193000 Cがすべてこの反応に使われるなら、n(Cu)=Q/(2F)≈193000/(2×96485)≈1.00 molです。これは電荷保存と反応式の粒子数の比から自然に導かれます。",
+            "textEn": "Current I is charge transferred per unit time, so Q=It. One mole of electrons carries charge magnitude F≈96485 C/mol. For Cu²⁺+2e⁻→Cu, two moles of electrons produce one mole of copper. If Q=193000 C is used entirely for that reduction, n(Cu)=Q/(2F)≈193000/(2×96485)≈1.00 mol. The calculation follows from charge counting and the balanced half-reaction."
+          },
+          {
+            "id": "limits",
+            "ja": "6　理論生成量と実測生成量の差が教えること",
+            "en": "6. What does a difference between predicted and measured deposit mean?",
+            "textJa": "実際の電気分解では、副反応に電荷が使われたり、電極表面で析出物が脱落したりする場合があります。電流効率が100%でないなら、前の式だけでは実際の回収質量を正確に予測できません。また起電力だけで反応速度を計算できません。反応の熱力学、電荷の収支、反応速度、装置の構造を分けて考えることで、測定値の違いを原因ごとに調べられます。",
+            "textEn": "In real electrolysis, competing electrode reactions may consume charge, and deposits may be lost from the electrode. If current efficiency is below 100%, a charge-only calculation overestimates recovered product. Nor does cell emf alone determine reaction rate. Separating thermodynamics, charge balance, kinetics and experimental apparatus turns discrepancies into testable explanations."
+          }
         ]
       }
     }
