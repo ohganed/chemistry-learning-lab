@@ -145,7 +145,7 @@ function renderLogs(mount,id,lang){
  out.querySelectorAll("[data-depth-delete]").forEach(b=>b.addEventListener("click",()=>{const next=records.filter(n=>n.id!==b.dataset.depthDelete);try{localStorage.setItem(KEY,JSON.stringify(next));records=next;renderLogs(mount,id,lang)}catch{const status=mount.querySelector(".depth-status");if(status)status.textContent=t.failedSave}}));
 }
 function appendExtensions(host,id,lang,topics){
- if(!host.isConnected||host.dataset.chapter!==id)return;
+ if(!host.isConnected||host.dataset.chapter!==id||host.dataset.language!==lang)return;
  const selected=topics.filter(x=>Array.isArray(x.chapters)&&x.chapters.includes(id));
  if(!selected.length)return;
  const t=COPY[lang],key=lang==="ja"?"ja":"en",body=lang==="ja"?"bodyJa":"bodyEn",reason=lang==="ja"?"reasonJa":"reasonEn",question=lang==="ja"?"questionJa":"questionEn";
@@ -352,7 +352,7 @@ function renderOrganicReasoning(lesson,lang){
  '<details data-depth-section="organic-boundary"><summary>'+(en?"Where this explanation has limits":"この説明が成り立つ範囲と限界")+'</summary><p class="depth-organic-note">'+escapeHTML(organic[en?"boundaryEn":"boundaryJa"])+'</p></details></section>';
 }
 function renderLesson(host,id,lang,lesson){
- if(!host.isConnected||host.dataset.chapter!==id)return;
+ if(!host.isConnected||host.dataset.chapter!==id||host.dataset.language!==lang)return;
  styles();const t=COPY[lang];
  const title=lang==="ja"?"ja":"en",body=lang==="ja"?"textJa":"textEn",sol=lang==="ja"?"solutionJa":"solutionEn";
  const block=lesson.sections.map((section,i)=>'<details data-depth-section="concept-'+i+'" '+(i===0?"open":"")+'><summary>'+escapeHTML((i+1)+". "+section[title])+'</summary><p class="depth-text">'+escapeHTML(section[body])+'</p></details>').join("");
@@ -405,7 +405,7 @@ async function render(id,lang,host){
  try{const value=await groupData(group),lesson=value.chapters.find(x=>x.id===id);
  if(!lesson)throw Error("Missing chapter "+id);renderLesson(host,id,lang,lesson);
  await Promise.allSettled([loadBridges().then(items=>appendBridges(host,id,lang,items)),loadExtensions().then(topics=>appendExtensions(host,id,lang,topics))]);}
- catch(error){if(!host.isConnected||host.dataset.chapter!==id)return;host.innerHTML='<div class="depth-area"><p>'+escapeHTML(t.failed)+'</p><button type="button" class="depth-retry">'+escapeHTML(t.reopen)+'</button></div>';host.querySelector(".depth-retry").onclick=()=>render(id,lang,host);}
+ catch(error){if(!host.isConnected||host.dataset.chapter!==id||host.dataset.language!==lang)return;host.innerHTML='<div class="depth-area"><p>'+escapeHTML(t.failed)+'</p><button type="button" class="depth-retry">'+escapeHTML(t.reopen)+'</button></div>';host.querySelector(".depth-retry").onclick=()=>render(id,lang,host);}
 }
 window.ChemistryDepth={render};
 })();
