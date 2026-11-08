@@ -4,6 +4,7 @@ import assert from "node:assert/strict";
 
 const html=readFileSync(new URL("../electron-flow-foundations.html",import.meta.url),"utf8");
 const js=readFileSync(new URL("../electron-flow-foundations.js",import.meta.url),"utf8");
+const figures=readFileSync(new URL("../electron-flow-figures.js",import.meta.url),"utf8");
 const viewer=readFileSync(new URL("../chemistry-depth-viewer.js",import.meta.url),"utf8");
 const jaCourse=readFileSync(new URL("../high-school-chemistry.html",import.meta.url),"utf8");
 const enCourse=readFileSync(new URL("../high-school-chemistry-en.html",import.meta.url),"utf8");
@@ -11,8 +12,30 @@ const homepage=readFileSync(new URL("../index.html",import.meta.url),"utf8");
 const sw=readFileSync(new URL("../sw.js",import.meta.url),"utf8");
 
 assert.doesNotThrow(()=>new Function(js),"Electron-flow curriculum JavaScript must parse");
+assert.doesNotThrow(()=>new Function(figures),"Inline scientific diagrams must parse");
+const figureSandbox={window:{}};
+assert.doesNotThrow(()=>runInNewContext(figures,figureSandbox,{timeout:1000}),"Inline figure module must initialize");
+const scienceFigures=figureSandbox.window.ElectronFlowFigures;
+const requiredFigures=["why","electrons","lewis","charge","donor","arrows","checks","proton","substitution","carbonyl","resonance","evidence"];
+assert.deepEqual(Array.from(scienceFigures.topics),requiredFigures,"One original scientific diagram is needed for each concept");
+for(const topic of requiredFigures){
+ for(const lang of ["ja","en"]){
+  const svg=scienceFigures.render(topic,lang);
+  assert.ok(svg.includes('<figure class="concept-figure"')&&svg.includes('<svg')&&svg.includes('<figcaption>'),"Each section requires an actual inline figure: "+topic+"/"+lang);
+  assert.ok(svg.includes('viewBox="0 0 360 345"')&&svg.includes('role="img"')&&svg.includes('aria-label'),"Figures must have portrait legibility and a meaningful accessible description: "+topic+"/"+lang);
+ }
+}
+for(const topic of ["donor","proton","substitution","carbonyl"]){
+ const svg=scienceFigures.render(topic,"ja");
+ assert.ok(svg.includes('marker-end="url(#ef-curve-'+topic+')"'),"Electron-pair curves must be drawn in the relevant science topic: "+topic);
+}
+assert.equal(scienceFigures.render("unknown","ja"),"","Do not substitute unrelated graphics for scientific explanations");
+
 assert.ok(html.includes("width=device-width")&&html.includes("@media(max-width:800px)"),"The independent lesson must adapt to mobile screens");
 assert.ok(html.includes('src="./electron-flow-foundations.js"'),"The independent page must load its actual curriculum");
+assert.ok(html.includes('src="./electron-flow-figures.js"'),"The visual module must be loaded before the lesson engine");
+assert.ok(html.indexOf('src="./electron-flow-figures.js"')<html.indexOf('src="./electron-flow-foundations.js"'),"Diagrams must be available before the lesson is rendered");
+assert.ok(html.includes(".concept-figure svg")&&html.includes("max-width:470px"),"Lesson SVGs must fit the mobile portrait layout");
 assert.ok(html.includes('aria-live="polite"')&&html.includes('role="status"'),"Optional practice needs accessible feedback");
 assert.ok(html.includes('id="lessons"')&&html.includes('id="reactionDiagram"')&&html.includes('id="toc"'),"The independent chapter must have its reading and visualization mounts");
 assert.ok(html.includes("prefers-reduced-motion"),"Reading should respect reduced-motion settings");
@@ -24,6 +47,7 @@ for(const target of ["lewis","donor","carbonyl","proton","resonance","electrons"
  assert.ok(viewer.includes('"'+target+'"'),"Organic lessons must deep-link to their relevant prerequisite: "+target);
 }
 assert.ok(sw.includes("./electron-flow-foundations.html")&&sw.includes("./electron-flow-foundations.js"),"The independent lesson must be offline-cacheable");
+assert.ok(sw.includes("./electron-flow-figures.js"),"Scientific diagrams must remain available offline");
 
 function simulate(lang){
  const elements=new Map();
@@ -41,7 +65,7 @@ function simulate(lang){
  const context={
   URLSearchParams,location:{search:lang==="en"?"?lang=en":"",hash:""},
   document:{documentElement:{lang:"ja"},getElementById:make,title:""},
-  window:{},requestAnimationFrame:fn=>fn()
+  window:{ElectronFlowFigures:scienceFigures},requestAnimationFrame:fn=>fn()
  };
  runInNewContext(js,context,{timeout:2000});
  const root=context.window.ElectronFlowFoundations;
@@ -60,6 +84,7 @@ function simulate(lang){
   }
   assert.ok(lesson.formula?.trim(),"The illustration needs a scientific relation or formula: "+lesson.id);
   assert.ok(make("lessons").innerHTML.includes('id="'+lesson.id+'"'),"All lessons must render: "+lesson.id+"/"+lang);
+  assert.ok(make("lessons").innerHTML.includes('data-concept-figure="'+lesson.id+'"'),"An actual explanatory diagram must render in every section: "+lesson.id+"/"+lang);
   assert.ok(make("toc").innerHTML.includes('href="#'+lesson.id+'"'),"Every lesson must have a direct-access TOC link: "+lesson.id);
  }
  const cases=root.curriculum.cases;
@@ -96,4 +121,5 @@ assert.deepEqual(ja,en,"Both languages must provide the same learning structure"
 assert.ok(js.includes("Electron-pair")||js.includes("electron-pair")||js.includes("electron pair"),"Explicitly identify which entities the arrows track");
 assert.ok(js.includes("total electric charge")||js.includes("total charge"),"Charge conservation must be taught");
 assert.ok(!js.includes("localStorage.setItem"),"This independent chapter should not modify any existing progress history");
+assert.ok(js.includes("window.ElectronFlowFigures?.render?.(x.id,lang)"),"A diagram must be embedded in the lesson prose, not hidden at the end in a separate playground");
 console.log("PASS: original electron-flow chapter, "+ja.lessons+" bilingual concept explanations, "+ja.cases+" interactive mechanisms, working next-step arrows, links, mobile layout and offline integration.");
