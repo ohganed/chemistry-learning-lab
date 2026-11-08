@@ -1,0 +1,832 @@
+{
+  "schema": "chemistry-teaching-approaches",
+  "schemaVersion": "1.0",
+  "purposeJa": "各単元・各項目に同じ教え方を適用しない。現象と学習上のつまずきに応じて導出・図解・実験・反証・構造比較を選び、式の前提と説明できる範囲を点検する。",
+  "purposeEn": "Select the teaching method that matches each scientific concept and its learning difficulties, rather than imposing a single format. Verify assumptions, model limits, and explanatory power.",
+  "approachKinds": {
+    "experiment": "観察を起点とした実験・対照条件",
+    "derive": "単位と保存則から式を導出",
+    "visual": "空間・粒子・ベクトルの模型",
+    "contrast": "似た現象の比較と反例",
+    "mechanism": "反応前後の粒子と機構を追跡",
+    "model": "複数の理論モデルの説明力と限界を比較",
+    "evidence": "測定値と仮説の区別・反証",
+    "structure": "構造と巨視的物性を接続",
+    "dynamic": "時間変化・平衡・速度の視点",
+    "transfer": "以前の数学・物理・化学の知識を転用"
+  },
+  "chapters": [
+    {
+      "id": "0-0",
+      "titleJa": "純物質・混合物と分離",
+      "titleEn": "Pure substances, mixtures and separation",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "組成で見分ける",
+          "sectionEn": "Distinguish by composition",
+          "approach": "evidence",
+          "reasonJa": "透明という観察と純物質という推論を分ける"
+        },
+        {
+          "index": 1,
+          "sectionJa": "均一と不均一",
+          "sectionEn": "Homogeneous and heterogeneous mixtures",
+          "approach": "contrast",
+          "reasonJa": "均一に見える尺度と分子レベルの分布を対比する"
+        },
+        {
+          "index": 2,
+          "sectionJa": "何を利用して分けるか",
+          "sectionEn": "Choose the separation principle",
+          "approach": "experiment",
+          "reasonJa": "分離に使う物性差と回収物を先に決める"
+        }
+      ]
+    },
+    {
+      "id": "0-1",
+      "titleJa": "原子・同位体・イオン",
+      "titleEn": "Atoms, isotopes and ions",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "原子番号が元素を決める",
+          "sectionEn": "Protons determine the element",
+          "approach": "contrast",
+          "reasonJa": "陽子数を固定し、元素の種類と核の構成を区別する"
+        },
+        {
+          "index": 1,
+          "sectionJa": "同位体と相対原子質量",
+          "sectionEn": "Isotopes and atomic mass",
+          "approach": "derive",
+          "reasonJa": "存在比を重みにした平均から原子量を理解する"
+        },
+        {
+          "index": 2,
+          "sectionJa": "イオンは電子の数が変わる",
+          "sectionEn": "Ions change electron count",
+          "approach": "mechanism",
+          "reasonJa": "電子数だけを変えたときの電荷の保存を確かめる"
+        }
+      ]
+    },
+    {
+      "id": "0-2",
+      "titleJa": "電子配置と周期表",
+      "titleEn": "Electron configuration and periodicity",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "電子はどこに存在するか",
+          "sectionEn": "Where are electrons?",
+          "approach": "evidence",
+          "reasonJa": "線スペクトルの測定から古典模型の不足を明らかにする"
+        },
+        {
+          "index": 1,
+          "sectionJa": "電子配置の規則",
+          "sectionEn": "Rules for configurations",
+          "approach": "model",
+          "reasonJa": "定常波・境界条件を足場に量子状態へ進む"
+        },
+        {
+          "index": 2,
+          "sectionJa": "周期性の理由",
+          "sectionEn": "Why properties recur",
+          "approach": "transfer",
+          "reasonJa": "周期表の観察事実を電子構造で再解釈する"
+        }
+      ]
+    },
+    {
+      "id": "0-3",
+      "titleJa": "化学結合と結晶",
+      "titleEn": "Bonding and crystal structures",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "結合の三つの典型",
+          "sectionEn": "Three common bonding models",
+          "approach": "contrast",
+          "reasonJa": "結合分類の適用範囲を導電性の違いで確かめる"
+        },
+        {
+          "index": 1,
+          "sectionJa": "結晶は繰り返す構造",
+          "sectionEn": "Lattices repeat in space",
+          "approach": "visual",
+          "reasonJa": "単位格子の共有数・配位数を立体幾何で数える"
+        },
+        {
+          "index": 2,
+          "sectionJa": "結合と物性をつなぐ",
+          "sectionEn": "Relate structures to properties",
+          "approach": "structure",
+          "reasonJa": "イオンや電子の移動可能性を材料物性へつなぐ"
+        }
+      ]
+    },
+    {
+      "id": "0-4",
+      "titleJa": "分子の形と分子間力",
+      "titleEn": "Molecular geometry and intermolecular forces",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "分子の形を考える",
+          "sectionEn": "Predict a shape",
+          "approach": "visual",
+          "reasonJa": "形を空間的に描き、結合方向を区別する"
+        },
+        {
+          "index": 1,
+          "sectionJa": "結合の極性と分子の極性",
+          "sectionEn": "Bond versus molecular polarity",
+          "approach": "derive",
+          "reasonJa": "CO₂とH₂Oの双極子のベクトル和を比較する"
+        },
+        {
+          "index": 2,
+          "sectionJa": "分子間相互作用は何を変えるか",
+          "sectionEn": "Interactions between molecules",
+          "approach": "structure",
+          "reasonJa": "分子間相互作用から沸点・溶解性の違いを調べる"
+        }
+      ]
+    },
+    {
+      "id": "1-0",
+      "titleJa": "物質量と化学式",
+      "titleEn": "The mole and chemical formulas",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "物質量は数えるための単位",
+          "sectionEn": "The mole counts entities",
+          "approach": "transfer",
+          "reasonJa": "ダースという個数の単位からモルへつなぐ"
+        },
+        {
+          "index": 1,
+          "sectionJa": "式量・モル質量・質量",
+          "sectionEn": "Formula mass and molar mass",
+          "approach": "derive",
+          "reasonJa": "質量・モル質量・物質量の単位を約分する"
+        },
+        {
+          "index": 2,
+          "sectionJa": "化学式は比も表す",
+          "sectionEn": "Formula subscripts encode ratios",
+          "approach": "contrast",
+          "reasonJa": "分子と式単位とイオンを数える対象として区別する"
+        }
+      ]
+    },
+    {
+      "id": "1-1",
+      "titleJa": "化学反応式と量的関係",
+      "titleEn": "Reaction equations and stoichiometry",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "係数は反応する粒子の比",
+          "sectionEn": "Coefficients give reacting ratios",
+          "approach": "mechanism",
+          "reasonJa": "反応式の係数を粒子の組み合わせとして読む"
+        },
+        {
+          "index": 1,
+          "sectionJa": "制限試薬を見つける",
+          "sectionEn": "Find the limiting reactant",
+          "approach": "derive",
+          "reasonJa": "不足する反応物を反応進行度と対応させる"
+        },
+        {
+          "index": 2,
+          "sectionJa": "実際の収率を評価する",
+          "sectionEn": "Evaluate chemical yield",
+          "approach": "evidence",
+          "reasonJa": "理論収率と実際の回収損失・副反応を切り分ける"
+        }
+      ]
+    },
+    {
+      "id": "1-2",
+      "titleJa": "気体の性質",
+      "titleEn": "Properties of gases",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "圧力と温度の粒子モデル",
+          "sectionEn": "Microscopic view of gases",
+          "approach": "derive",
+          "reasonJa": "衝突の運動量変化から気体圧力を導く"
+        },
+        {
+          "index": 1,
+          "sectionJa": "気体の法則を一つの式に",
+          "sectionEn": "Unify the gas laws",
+          "approach": "derive",
+          "reasonJa": "等方性と運動エネルギーからPV=nRTへ進む"
+        },
+        {
+          "index": 2,
+          "sectionJa": "混合気体と分圧",
+          "sectionEn": "Mixtures and partial pressure",
+          "approach": "experiment",
+          "reasonJa": "湿った気体や混合気体の分圧を測定条件へ戻す"
+        }
+      ]
+    },
+    {
+      "id": "1-3",
+      "titleJa": "溶液の濃度と溶解度",
+      "titleEn": "Solutions: concentration and solubility",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "溶けるとはどんな変化か",
+          "sectionEn": "What happens during dissolution?",
+          "approach": "visual",
+          "reasonJa": "溶質が水中でどの化学種になるか模式化する"
+        },
+        {
+          "index": 1,
+          "sectionJa": "濃度を目的に合わせて表す",
+          "sectionEn": "Different concentration measures",
+          "approach": "derive",
+          "reasonJa": "保存される溶質量から希釈式を作る"
+        },
+        {
+          "index": 2,
+          "sectionJa": "溶解度と飽和状態",
+          "sectionEn": "Solubility and saturation",
+          "approach": "dynamic",
+          "reasonJa": "溶解と析出の動的平衡を可視化する"
+        }
+      ]
+    },
+    {
+      "id": "1-4",
+      "titleJa": "希薄溶液・浸透圧",
+      "titleEn": "Dilute solutions and osmotic pressure",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "束一的性質は粒子数に注目する",
+          "sectionEn": "Colligative properties count particles",
+          "approach": "contrast",
+          "reasonJa": "膜の両方向の水移動と正味の流れを区別する"
+        },
+        {
+          "index": 1,
+          "sectionJa": "浸透圧は膜を通した水の移動に関係する",
+          "sectionEn": "Osmosis through membranes",
+          "approach": "derive",
+          "reasonJa": "化学ポテンシャルを釣り合わせ浸透圧を導く"
+        },
+        {
+          "index": 2,
+          "sectionJa": "濃度勾配と化学ポテンシャル",
+          "sectionEn": "From concentration to chemical potential",
+          "approach": "transfer",
+          "reasonJa": "植物の膨圧や水ポテンシャルへ理論を再適用する"
+        }
+      ]
+    },
+    {
+      "id": "2-0",
+      "titleJa": "熱化学と反応エンタルピー",
+      "titleEn": "Thermochemistry and reaction enthalpy",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "エンタルピーが必要になった理由を整理する",
+          "sectionEn": "Why enthalpy had to be introduced",
+          "approach": "experiment",
+          "reasonJa": "測った熱量と気体の仕事を別々に識別する"
+        },
+        {
+          "index": 1,
+          "sectionJa": "反応の前後で何を比較するのか",
+          "sectionEn": "Which states does a reaction compare?",
+          "approach": "derive",
+          "reasonJa": "第一法則からH=U+PVとqP=ΔHの条件を導く"
+        },
+        {
+          "index": 2,
+          "sectionJa": "ヘスの法則が成り立つ理由",
+          "sectionEn": "The reason Hess's law works",
+          "approach": "transfer",
+          "reasonJa": "保存力の経路独立性からヘスの法則へつなぐ"
+        }
+      ]
+    },
+    {
+      "id": "2-1",
+      "titleJa": "反応速度と触媒",
+      "titleEn": "Reaction rates and catalysis",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "速度と反応の量は違う",
+          "sectionEn": "Rate is not reaction yield",
+          "approach": "dynamic",
+          "reasonJa": "濃度対時間の測定から速度の意味を考える"
+        },
+        {
+          "index": 1,
+          "sectionJa": "速度を変える要因",
+          "sectionEn": "Factors affecting rates",
+          "approach": "derive",
+          "reasonJa": "速度式の指数とアレニウスの傾きを導出する"
+        },
+        {
+          "index": 2,
+          "sectionJa": "触媒の役割",
+          "sectionEn": "Catalysis and mechanism",
+          "approach": "model",
+          "reasonJa": "触媒の別経路と平衡定数を区別する"
+        }
+      ]
+    },
+    {
+      "id": "2-2",
+      "titleJa": "化学平衡",
+      "titleEn": "Chemical equilibrium",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "動的平衡は停止ではない",
+          "sectionEn": "Dynamic equilibrium is not a stop",
+          "approach": "dynamic",
+          "reasonJa": "一定濃度と分子反応の継続を同時に考える"
+        },
+        {
+          "index": 1,
+          "sectionJa": "反応商と平衡定数",
+          "sectionEn": "Reaction quotient and equilibrium constant",
+          "approach": "derive",
+          "reasonJa": "反応商Qと平衡定数Kの式を意味から作る"
+        },
+        {
+          "index": 2,
+          "sectionJa": "条件を変えたとき",
+          "sectionEn": "Disturb an equilibrium",
+          "approach": "contrast",
+          "reasonJa": "濃度・触媒・温度の変更を別々に解析する"
+        }
+      ]
+    },
+    {
+      "id": "2-3",
+      "titleJa": "酸と塩基・pH",
+      "titleEn": "Acids, bases and pH",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "酸・塩基の定義を比較する",
+          "sectionEn": "Compare acid–base definitions",
+          "approach": "contrast",
+          "reasonJa": "強さと濃さの混同を具体的な水溶液で修正する"
+        },
+        {
+          "index": 1,
+          "sectionJa": "pHは対数尺度",
+          "sectionEn": "pH is logarithmic",
+          "approach": "derive",
+          "reasonJa": "10倍の差を対数の1目盛りへ変換する"
+        },
+        {
+          "index": 2,
+          "sectionJa": "酸の強さと濃さ",
+          "sectionEn": "Strength versus concentration",
+          "approach": "model",
+          "reasonJa": "弱酸の電離平衡と強酸の仮定を区別する"
+        }
+      ]
+    },
+    {
+      "id": "2-4",
+      "titleJa": "中和・滴定・緩衝液",
+      "titleEn": "Neutralization, titration and buffers",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "中和と量論",
+          "sectionEn": "Neutralization stoichiometry",
+          "approach": "derive",
+          "reasonJa": "当量点を原子と電荷の収支から求める"
+        },
+        {
+          "index": 1,
+          "sectionJa": "滴定曲線と指示薬",
+          "sectionEn": "Titration curves and indicators",
+          "approach": "experiment",
+          "reasonJa": "滴定曲線・指示薬の終点と当量点を対比する"
+        },
+        {
+          "index": 2,
+          "sectionJa": "緩衝作用の仕組み",
+          "sectionEn": "How buffers work",
+          "approach": "derive",
+          "reasonJa": "酸解離定数から緩衝液の対数式を導く"
+        }
+      ]
+    },
+    {
+      "id": "2-5",
+      "titleJa": "酸化還元・電池・電気分解",
+      "titleEn": "Redox, cells and electrolysis",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "電子の受け渡しを数える",
+          "sectionEn": "Track electrons",
+          "approach": "mechanism",
+          "reasonJa": "電子の授受と酸化数を別の表現として読む"
+        },
+        {
+          "index": 1,
+          "sectionJa": "電池は化学エネルギーを電気仕事へ",
+          "sectionEn": "Galvanic cells produce work",
+          "approach": "visual",
+          "reasonJa": "外部電子回路と内部イオン移動を区別する"
+        },
+        {
+          "index": 2,
+          "sectionJa": "電気分解で反応を駆動する",
+          "sectionEn": "Electrolysis uses electrical work",
+          "approach": "derive",
+          "reasonJa": "通過電荷から電子のmol数と析出量を求める"
+        }
+      ]
+    },
+    {
+      "id": "3-0",
+      "titleJa": "非金属元素の性質",
+      "titleEn": "Nonmetal elements and their chemistry",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "非金属を電子配置から整理する",
+          "sectionEn": "Organize nonmetals by electron structure",
+          "approach": "contrast",
+          "reasonJa": "単体・イオン・化合物の化学種を区別する"
+        },
+        {
+          "index": 1,
+          "sectionJa": "ハロゲンの酸化力",
+          "sectionEn": "Halogens as oxidants",
+          "approach": "derive",
+          "reasonJa": "ハロゲン置換で電子と電位の収支を求める"
+        },
+        {
+          "index": 2,
+          "sectionJa": "酸化物・水素化物と生活",
+          "sectionEn": "Oxides, hydrides and daily life",
+          "approach": "model",
+          "reasonJa": "酸化数・結合・平衡で非金属酸化物を分類する"
+        }
+      ]
+    },
+    {
+      "id": "3-1",
+      "titleJa": "典型金属元素",
+      "titleEn": "Main-group metals",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "金属がイオンになりやすい理由",
+          "sectionEn": "Why metals form cations",
+          "approach": "model",
+          "reasonJa": "孤立原子の電子配置と溶液の反応性を区別する"
+        },
+        {
+          "index": 1,
+          "sectionJa": "酸化物・水酸化物",
+          "sectionEn": "Metal oxides and hydroxides",
+          "approach": "mechanism",
+          "reasonJa": "酸塩基条件で水酸化物の化学種を追跡する"
+        },
+        {
+          "index": 2,
+          "sectionJa": "金属の利用と表面保護",
+          "sectionEn": "Metals, corrosion and passivation",
+          "approach": "structure",
+          "reasonJa": "不動態膜と腐食の速度を材料利用へ結ぶ"
+        }
+      ]
+    },
+    {
+      "id": "3-2",
+      "titleJa": "遷移元素と錯イオン",
+      "titleEn": "Transition metals and coordination chemistry",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "遷移金属の多様な酸化状態",
+          "sectionEn": "Variable oxidation states",
+          "approach": "model",
+          "reasonJa": "酸化数と電子配置から可能性と限界を調べる"
+        },
+        {
+          "index": 1,
+          "sectionJa": "配位子と錯体の構造",
+          "sectionEn": "Ligands and complex ions",
+          "approach": "visual",
+          "reasonJa": "配位数・幾何・d軌道分裂を図解する"
+        },
+        {
+          "index": 2,
+          "sectionJa": "錯形成平衡と分析",
+          "sectionEn": "Complexation equilibria",
+          "approach": "derive",
+          "reasonJa": "錯生成定数と沈殿溶解平衡を結ぶ"
+        }
+      ]
+    },
+    {
+      "id": "3-3",
+      "titleJa": "無機物質の識別",
+      "titleEn": "Inorganic qualitative analysis",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "識別は仮説の絞り込み",
+          "sectionEn": "Identification as hypothesis testing",
+          "approach": "evidence",
+          "reasonJa": "白色沈殿の観察と物質同定を切り分ける"
+        },
+        {
+          "index": 1,
+          "sectionJa": "沈殿反応と溶解度積",
+          "sectionEn": "Precipitation and solubility products",
+          "approach": "derive",
+          "reasonJa": "溶解度積と実際のイオン積を比較する"
+        },
+        {
+          "index": 2,
+          "sectionJa": "分析の信頼性を考える",
+          "sectionEn": "Assess reliability",
+          "approach": "experiment",
+          "reasonJa": "空試験や妨害イオンを含む検証計画を組む"
+        }
+      ]
+    },
+    {
+      "id": "4-0",
+      "titleJa": "有機化合物の構造と異性体",
+      "titleEn": "Organic structure and isomerism",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "炭素の結び方を読む",
+          "sectionEn": "Read carbon connectivity",
+          "approach": "visual",
+          "reasonJa": "分子式と構造式の情報量の違いを図解する"
+        },
+        {
+          "index": 1,
+          "sectionJa": "異性体の種類",
+          "sectionEn": "Types of isomerism",
+          "approach": "contrast",
+          "reasonJa": "結合順序と立体配置の異性体を区別する"
+        },
+        {
+          "index": 2,
+          "sectionJa": "官能基は性質の手がかり",
+          "sectionEn": "Functional groups predict reactivity",
+          "approach": "structure",
+          "reasonJa": "官能基の電子分布と反応条件を結びつける"
+        }
+      ]
+    },
+    {
+      "id": "4-1",
+      "titleJa": "炭化水素・芳香族",
+      "titleEn": "Hydrocarbons and aromaticity",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "アルカン・アルケン・アルキン",
+          "sectionEn": "Saturated and unsaturated hydrocarbons",
+          "approach": "mechanism",
+          "reasonJa": "二重結合の付加反応を電子移動で説明する"
+        },
+        {
+          "index": 1,
+          "sectionJa": "二重結合の反応",
+          "sectionEn": "Addition reactions",
+          "approach": "evidence",
+          "reasonJa": "臭素水の脱色が何の証拠になるか評価する"
+        },
+        {
+          "index": 2,
+          "sectionJa": "ベンゼンは普通の三重結合の集まりではない",
+          "sectionEn": "Aromaticity changes the picture",
+          "approach": "model",
+          "reasonJa": "ベンゼンの共鳴とπ電子の非局在化を説明する"
+        }
+      ]
+    },
+    {
+      "id": "4-2",
+      "titleJa": "アルコール・エーテル・カルボニル",
+      "titleEn": "Alcohols, ethers and carbonyls",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "アルコールとエーテル",
+          "sectionEn": "Alcohols and ethers",
+          "approach": "contrast",
+          "reasonJa": "同じ分子式のアルコールとエーテルを比較する"
+        },
+        {
+          "index": 1,
+          "sectionJa": "アルコールの酸化",
+          "sectionEn": "Oxidation of alcohols",
+          "approach": "mechanism",
+          "reasonJa": "アルコール酸化で変わる結合を追跡する"
+        },
+        {
+          "index": 2,
+          "sectionJa": "カルボニル基の反応性",
+          "sectionEn": "Carbonyl polarity and reactions",
+          "approach": "model",
+          "reasonJa": "カルボニル炭素への求核攻撃を電子密度で説明する"
+        }
+      ]
+    },
+    {
+      "id": "4-3",
+      "titleJa": "カルボン酸・エステル・油脂",
+      "titleEn": "Carboxylic acids, esters and fats",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "カルボン酸の酸性",
+          "sectionEn": "Carboxylic acid behavior",
+          "approach": "derive",
+          "reasonJa": "共役塩基の電子分布から酸性を説明する"
+        },
+        {
+          "index": 1,
+          "sectionJa": "エステル化と加水分解",
+          "sectionEn": "Esterification and hydrolysis",
+          "approach": "dynamic",
+          "reasonJa": "エステル化の可逆反応と触媒の役割を分ける"
+        },
+        {
+          "index": 2,
+          "sectionJa": "油脂の構造とけん化",
+          "sectionEn": "Triacylglycerols and saponification",
+          "approach": "structure",
+          "reasonJa": "脂肪酸の鎖構造と界面活性をつなぐ"
+        }
+      ]
+    },
+    {
+      "id": "4-4",
+      "titleJa": "芳香族化合物",
+      "titleEn": "Aromatic compounds",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "芳香族性と置換基",
+          "sectionEn": "Aromatic rings and substituents",
+          "approach": "model",
+          "reasonJa": "置換基と芳香環の電子の非局在化を比較する"
+        },
+        {
+          "index": 1,
+          "sectionJa": "フェノールとアニリン",
+          "sectionEn": "Phenol and aniline",
+          "approach": "contrast",
+          "reasonJa": "フェノールとアニリンの酸塩基反応性を分ける"
+        },
+        {
+          "index": 2,
+          "sectionJa": "芳香族の置換反応",
+          "sectionEn": "Electrophilic aromatic substitution",
+          "approach": "mechanism",
+          "reasonJa": "芳香族置換での中間体を説明する"
+        }
+      ]
+    },
+    {
+      "id": "4-5",
+      "titleJa": "糖類・アミノ酸",
+      "titleEn": "Carbohydrates and amino acids",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "糖類は結合と立体構造で違う",
+          "sectionEn": "Sugars differ in connectivity and geometry",
+          "approach": "visual",
+          "reasonJa": "糖の環構造・α/β結合の立体的な違いを描く"
+        },
+        {
+          "index": 1,
+          "sectionJa": "アミノ酸は酸性も塩基性ももつ",
+          "sectionEn": "Amino acids are amphoteric",
+          "approach": "dynamic",
+          "reasonJa": "アミノ酸の荷電状態がpHで変わる様子を考える"
+        },
+        {
+          "index": 2,
+          "sectionJa": "ペプチド結合とタンパク質",
+          "sectionEn": "Peptide bonding and proteins",
+          "approach": "structure",
+          "reasonJa": "ペプチド結合から立体構造・酵素機能へ接続する"
+        }
+      ]
+    },
+    {
+      "id": "5-0",
+      "titleJa": "付加重合と縮合重合",
+      "titleEn": "Addition and condensation polymerization",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "単量体から高分子へ",
+          "sectionEn": "From monomers to polymers",
+          "approach": "mechanism",
+          "reasonJa": "連鎖成長と段階成長を副生成物と分けて考える"
+        },
+        {
+          "index": 1,
+          "sectionJa": "付加と縮合の違いを反応で理解する",
+          "sectionEn": "Understand polymerization pathways",
+          "approach": "contrast",
+          "reasonJa": "付加・縮合の分類と反応機構を混同しない"
+        },
+        {
+          "index": 2,
+          "sectionJa": "高分子の形が物性を変える",
+          "sectionEn": "How architecture changes properties",
+          "approach": "structure",
+          "reasonJa": "枝分かれや鎖長分布を材料物性へ結びつける"
+        }
+      ]
+    },
+    {
+      "id": "5-1",
+      "titleJa": "合成繊維・樹脂・ゴム",
+      "titleEn": "Synthetic fibers, plastics and rubber",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "繊維・樹脂の結合を見分ける",
+          "sectionEn": "Read bonds in materials",
+          "approach": "structure",
+          "reasonJa": "繊維の配向・結合・結晶性を強さに対応させる"
+        },
+        {
+          "index": 1,
+          "sectionJa": "熱可塑性と熱硬化性",
+          "sectionEn": "Thermoplastic versus thermosetting",
+          "approach": "contrast",
+          "reasonJa": "熱可塑性と熱硬化性を鎖の移動性で比べる"
+        },
+        {
+          "index": 2,
+          "sectionJa": "ゴムの弾性と加硫",
+          "sectionEn": "Rubber elasticity and vulcanization",
+          "approach": "model",
+          "reasonJa": "架橋密度とゴム弾性のエントロピー模型を考える"
+        }
+      ]
+    },
+    {
+      "id": "5-2",
+      "titleJa": "天然高分子と材料",
+      "titleEn": "Natural macromolecules and materials",
+      "sections": [
+        {
+          "index": 0,
+          "sectionJa": "デンプンとセルロース",
+          "sectionEn": "Starch versus cellulose",
+          "approach": "visual",
+          "reasonJa": "αとβのグリコシド結合の違いを立体で比較する"
+        },
+        {
+          "index": 1,
+          "sectionJa": "タンパク質の構造と機能",
+          "sectionEn": "Proteins as functional polymers",
+          "approach": "mechanism",
+          "reasonJa": "タンパク質の折り畳みと変性を段階的に説明する"
+        },
+        {
+          "index": 2,
+          "sectionJa": "天然由来と生分解性は別",
+          "sectionEn": "Origin versus biodegradability",
+          "approach": "evidence",
+          "reasonJa": "天然由来と生分解性の主張を測定条件で検証する"
+        }
+      ]
+    }
+  ]
+}
