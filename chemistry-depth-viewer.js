@@ -43,6 +43,23 @@ function styles(){if(document.getElementById("chemistryDepthStyle"))return;const
 .depth-schematic .schematic-table td,.depth-schematic .schematic-table th{border-bottom:1px solid #d3e6d9;text-align:left;padding:8px 7px;vertical-align:top}
 @media(max-width:560px){.depth-schematic{padding:10px 7px}.depth-schematic .schematic-row{grid-template-columns:1fr}.depth-schematic h4{font-size:15px}.depth-schematic .schematic-table{font-size:13px}}
 
+
+/* Organic chemistry: purpose-driven reasoning, not a fixed page-length template. */
+.depth-organic-reasoning{margin:17px 0;border:1px solid #d7dfce;border-radius:15px;padding:14px;background:#fbfcf8}
+.depth-organic-reasoning h3{margin:3px 0 8px;color:#45623d;font-size:19px;line-height:1.5}
+.depth-organic-question{margin:10px 0 13px;background:#eff5e8;border-left:3px solid #6f9970;border-radius:6px;padding:11px 13px;line-height:1.9}
+.depth-organic-reasoning details{border-color:#d9e5d3;background:#fff}
+.depth-organic-reasoning summary{color:#335f41}
+.depth-organic-reasoning .depth-organic-step{border-left:3px solid #91ab81;padding:8px 13px;margin:11px 0;background:#f8fbf5;border-radius:0 10px 10px 0}
+.depth-organic-reasoning .depth-organic-step strong{display:block;color:#335c45}
+.depth-organic-equation{background:#eaf2ea;padding:9px 11px;line-height:1.8;overflow-wrap:anywhere;border-radius:8px;font-weight:700;font-size:15px;margin:8px 0}
+.depth-organic-reasoning .depth-organic-step p{margin:8px 0;line-height:1.9;font-size:15px}
+.depth-organic-reasoning .depth-organic-model{padding:10px 11px;border:1px solid #d9e5d3;border-radius:9px;background:#fcfefb;margin:9px 0}
+.depth-organic-reasoning .depth-organic-model h4{margin:0 0 7px;font-size:15px;color:#2e5d43}
+.depth-organic-reasoning .depth-organic-model p{line-height:1.85;font-size:14px;margin:6px 0}
+.depth-organic-reasoning .depth-organic-note{line-height:1.9;margin:11px 0}
+.depth-organic-reasoning .depth-organic-subhead{font-weight:750;color:#4c6e4f;font-size:13px;display:block;margin:9px 0 2px}
+@media(max-width:650px){.depth-organic-reasoning{padding:10px}.depth-organic-reasoning .depth-organic-step{padding:8px}}
 .depth-inorganic-workshop{padding:12px 14px;margin:18px 0;background:#f7f9fc;border:2px solid #ced9e9;border-radius:15px}
 .depth-inorganic-workshop>h3{margin:3px 0 9px;color:#254969;font-size:20px;line-height:1.5}
 .depth-inorganic-workshop .workshop-intro{font-size:14px;line-height:1.9;color:#516471}
@@ -276,6 +293,26 @@ function renderInorganicWorkshop(lesson,lang){
  '<details open data-depth-section="inorganic-models"><summary>'+escapeHTML(content[en?"titleEn":"titleJa"])+'</summary><div class="depth-model-grid">'+table+'</div></details>'+
  '<details open data-depth-section="inorganic-derivation"><summary>'+escapeHTML(deriv[en?"titleEn":"titleJa"])+'</summary><p class="depth-derivation-intro">'+escapeHTML(deriv[en?"setupEn":"setupJa"])+'</p><ol class="depth-derivation-list">'+steps+'</ol></details></section>';
 }
+
+function renderOrganicReasoning(lesson,lang){
+ const organic=lesson.organicReasoning;
+ if(!organic||organic.schemaVersion!=="1.0"||!Array.isArray(organic.steps)||organic.steps.length===0)return "";
+ const en=lang==="en",textKey=en?"en":"ja",whyKey=en?"reasonEn":"reasonJa",changeKey=en?"changeEn":"changeJa";
+ const stages=organic.steps.map((step,i)=>
+  '<div class="depth-organic-step"><strong>'+escapeHTML((i+1)+". "+step[textKey])+'</strong>'+
+  '<div class="depth-organic-equation">'+escapeHTML(step[changeKey])+'</div>'+
+  '<p>'+escapeHTML(step[whyKey])+'</p></div>').join("");
+ const models=organic.models.map(item=>'<div class="depth-organic-model"><h4>'+escapeHTML(item[textKey])+'</h4>'+
+  '<span class="depth-organic-subhead">'+(en?"Can explain":"説明できること")+'</span><p>'+escapeHTML(item[en?"canEn":"canJa"])+'</p>'+
+  '<span class="depth-organic-subhead">'+(en?"Cannot explain alone":"この模型だけでは説明できないこと")+'</span><p>'+escapeHTML(item[en?"limitEn":"limitJa"])+'</p></div>').join("");
+ const title=organic[en?"titleEn":"titleJa"],question=organic[en?"questionEn":"questionJa"];
+ return '<section class="depth-organic-reasoning" aria-label="'+escapeHTML(title)+'">'+
+ '<h3>'+escapeHTML(title)+'</h3><p class="depth-organic-question">'+escapeHTML(question)+'</p>'+
+ '<details data-depth-section="organic-mechanism" open><summary>'+(en?"Follow the explanation, one justified step at a time":"一段ずつ理由を追う")+'</summary>'+stages+'</details>'+
+ '<details data-depth-section="organic-models"><summary>'+(en?"Compare explanatory models":"説明モデルの比較")+'</summary>'+models+'</details>'+
+ '<details data-depth-section="organic-predict"><summary>'+(en?"Try predicting a different case (optional)":"別の事例を予測する（任意）")+'</summary><p class="depth-organic-note">'+escapeHTML(organic[en?"predictionEn":"predictionJa"])+'</p></details>'+
+ '<details data-depth-section="organic-boundary"><summary>'+(en?"Where this explanation has limits":"この説明が成り立つ範囲と限界")+'</summary><p class="depth-organic-note">'+escapeHTML(organic[en?"boundaryEn":"boundaryJa"])+'</p></details></section>';
+}
 function renderLesson(host,id,lang,lesson){
  if(!host.isConnected||host.dataset.chapter!==id)return;
  styles();const t=COPY[lang];
@@ -285,6 +322,7 @@ function renderLesson(host,id,lang,lesson){
  '<section class="depth-origin" id="depthOrigin"><h3>'+escapeHTML(t.originTitle)+'</h3><p>'+escapeHTML(lesson.originJourney[lang==="ja"?"premiseJa":"premiseEn"])+'</p>'+
  lesson.originJourney.sections.map((entry,i)=>'<details data-depth-section="origin-'+i+'" '+(i===0?"open":"")+'><summary>'+escapeHTML(entry[title])+'</summary><p class="depth-text">'+escapeHTML(entry[lang==="ja"?"textJa":"textEn"])+'</p>'+renderStageVisual(id,lang,entry.id)+renderInorganicStageVisual(id,lang,entry.id)+(window.ChemistryPedagogyVisuals?.render?.(id,lang,entry.id)||'')+'</details>').join("")+'</section>':"";
  const workshop=renderInorganicWorkshop(lesson,lang);
+ const organic=renderOrganicReasoning(lesson,lang);
  const guided=lesson.guidedExample&&Array.isArray(lesson.guidedExample.steps)&&lesson.guidedExample.steps.length===5?
  '<details class="depth-guided" data-depth-section="guided"><summary>'+escapeHTML(t.guidedTitle)+'</summary><p class="depth-problem">'+escapeHTML(lesson.guidedExample[lang==="ja"?"titleJa":"titleEn"])+'</p>'+
  lesson.guidedExample.steps.map((step,i)=>'<details class="depth-step" '+(i===0?'open':'')+'><summary>'+escapeHTML(t.guidedStep)+" "+(i+1)+'</summary><p>'+escapeHTML(step[lang==="ja"?0:1])+'</p></details>').join("")+'</details>':"";
@@ -292,7 +330,7 @@ function renderLesson(host,id,lang,lesson){
  '<details class="depth-deep" data-depth-section="reasoning"><summary>'+escapeHTML(t.reasoningTitle)+'</summary><p class="depth-reasoning-intro">'+escapeHTML(t.reasoningIntro)+'</p>'+lesson.reasoning.lenses.map((lens,i)=>'<section class="depth-lens"><h4><span>'+String(i+1)+'</span>'+escapeHTML(t.lenses[i])+'</h4><p>'+escapeHTML(lens[lang==="ja"?"ja":"en"])+'</p></section>').join("")+'</details>':"";
  host.innerHTML='<section class="depth-area" aria-label="'+escapeHTML(t.heading)+'"><h3>'+escapeHTML(t.heading)+'</h3><p class="depth-caption">'+escapeHTML(t.subtitle)+'</p><p class="depth-hint">'+escapeHTML(t.draft)+'</p>'+
  '<div class="depth-routes" role="group" aria-label="Learning entry points">'+(origin?'<button type="button" data-depth-open="origin-0">'+escapeHTML(t.entryOrigin)+'</button>':'')+'<button type="button" data-depth-open="concept-0">'+escapeHTML(t.entryConcept)+'</button><button type="button" data-depth-open="reasoning">'+escapeHTML(t.entryReasoning)+'</button>'+(guided?'<button type="button" data-depth-open="guided">'+escapeHTML(t.entryGuided)+'</button>':'')+'<button type="button" data-depth-open="example">'+escapeHTML(t.entryExample)+'</button><button type="button" data-depth-open="bridge">'+escapeHTML(t.entryBridge)+'</button></div>'+
- origin+workshop+block+deep+guided+
+ origin+workshop+organic+block+deep+guided+
  '<details data-depth-section="example"><summary>'+escapeHTML(t.example)+'</summary><p class="depth-text">'+escapeHTML(lesson.example[title])+'</p><details><summary>'+escapeHTML(t.showSolution)+'</summary><p class="depth-text">'+escapeHTML(lesson.example[sol])+'</p></details></details>'+
  '<details><summary>'+escapeHTML(t.pitfall)+'</summary><p class="depth-text">'+escapeHTML(lesson.pitfall[title])+'</p></details>'+
  '<details data-depth-section="bridge"><summary>'+escapeHTML(t.bridge)+'</summary><p class="depth-text">'+escapeHTML(lesson.bridge[title])+'</p></details>'+
