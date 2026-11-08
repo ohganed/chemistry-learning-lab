@@ -29,6 +29,19 @@ function styles(){if(document.getElementById("chemistryDepthStyle"))return;const
 .depth-prior a{color:#176d57;text-decoration:underline;font-weight:700;display:inline-block;min-height:44px;padding:9px 4px}
 @media(max-width:730px){.depth-prior{padding:10px}.depth-prior .depth-prior-step p{font-size:15px}}
 .depth-origin{border:2px solid #90b8a1;border-radius:15px;padding:12px 13px;margin:13px 0;background:#f5faf7}
+
+.depth-schematic{margin:13px 4px 18px;padding:12px;background:#f4f9f7;border:1px solid #c8e0d3;border-radius:12px;color:#23433b}
+.depth-schematic h4{margin:0 0 9px;color:#174e41;font-size:16px}
+.depth-schematic svg{display:block;width:100%;height:auto;max-height:240px}
+.depth-schematic figcaption{font-size:13px;line-height:1.75;color:#4b675c;margin:10px 0 0}
+.depth-schematic .schematic-math{background:#e5f3ea;border-radius:8px;padding:9px 12px;line-height:1.75;overflow-wrap:anywhere;font-weight:700}
+.depth-schematic .schematic-row{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:11px 0}
+.depth-schematic .schematic-term{padding:11px 12px;background:#fff;border:1px solid #d6e7dd;border-radius:9px}
+.depth-schematic .schematic-term strong{display:block;color:#17604c}
+.depth-schematic .schematic-term small{display:block;line-height:1.6}
+.depth-schematic .schematic-table{width:100%;border-collapse:collapse;font-size:14px}
+.depth-schematic .schematic-table td,.depth-schematic .schematic-table th{border-bottom:1px solid #d3e6d9;text-align:left;padding:8px 7px;vertical-align:top}
+@media(max-width:560px){.depth-schematic{padding:10px 7px}.depth-schematic .schematic-row{grid-template-columns:1fr}.depth-schematic h4{font-size:15px}.depth-schematic .schematic-table{font-size:13px}}
 .depth-origin h3{font-size:20px;color:#175844;margin:5px 4px 8px}
 .depth-origin>p{margin:8px 4px 13px;line-height:1.85}
 .depth-origin details{margin:9px 0;background:#fff}
@@ -104,6 +117,76 @@ function appendBridges(host,id,lang,items){
  const area=host.querySelector(".depth-area"),routes=area?.querySelector(".depth-routes");
  if(routes)routes.insertAdjacentElement("afterend",section);else if(area)area.appendChild(section);
 }
+
+function renderStageVisual(id,lang,step){
+ if(id!=="2-0")return "";
+ const en=lang==="en";
+ if(step==="piston"){
+  const title=en?"Why is pressure multiplied by a volume change?":"なぜ圧力に体積変化を掛けるのか";
+  const labelA=en?"Before expansion":"膨張前",labelB=en?"After expansion":"膨張後";
+  const caption=en?"An original schematic: a gas expands by pushing a piston with cross-sectional area A through a displacement x. The external pressure Pext is assumed constant, the piston moves vertically, and only pressure–volume work is illustrated. The picture is not to scale.":"模式図：断面積 A のピストンが距離 x だけ動き、気体が膨張する。外圧 Pext は一定と仮定し、ここでは圧力・体積仕事だけを表す。寸法・粒子数は模式的なもの。";
+  const alt=en?"A piston moves upward as a gas expands. Its displacement x and area A give a larger volume, delta V equals A times x.":"気体が膨張してピストンを押し上げ、断面積Aと移動距離xの積が体積変化になることを示す図";
+  return '<figure class="depth-schematic" aria-label="'+escapeHTML(alt)+'"><h4>'+escapeHTML(title)+'</h4>'+
+  '<svg viewBox="0 0 560 215" role="img" aria-label="'+escapeHTML(alt)+'" xmlns="http://www.w3.org/2000/svg">'+
+  '<rect x="55" y="25" width="136" height="146" rx="4" fill="#eaf4f2" stroke="#477e73" stroke-width="2"/>'+
+  '<rect x="61" y="117" width="124" height="47" fill="#b1ded2"/>'+
+  '<rect x="61" y="106" width="124" height="11" rx="2" fill="#637f79"/>'+
+  '<path d="M123 106 V36" stroke="#637f79" stroke-width="7"/>'+
+  '<path d="M123 42 V72 M115 63 L123 72 L131 63" stroke="#b56d46" stroke-width="2" fill="none"/>'+
+  '<rect x="345" y="25" width="136" height="146" rx="4" fill="#eaf4f2" stroke="#477e73" stroke-width="2"/>'+
+  '<rect x="351" y="74" width="124" height="90" fill="#b1ded2"/>'+
+  '<rect x="351" y="63" width="124" height="11" rx="2" fill="#637f79"/>'+
+  '<path d="M413 63 V8" stroke="#637f79" stroke-width="7"/>'+
+  '<path d="M413 14 V37 M405 28 L413 37 L421 28" stroke="#b56d46" stroke-width="2" fill="none"/>'+
+  '<path d="M255 95 L320 95 M309 86 L320 95 L309 104" stroke="#348a70" stroke-width="3" fill="none"/>'+
+  '<path d="M501 66 V109 M496 71 L501 66 L506 71 M496 104 L501 109 L506 104" stroke="#348a70" stroke-width="2" fill="none"/>'+
+  '<text x="513" y="90" font-size="15" fill="#215648" font-weight="700">x</text>'+
+  '<text x="158" y="41" font-size="14" fill="#91532e">Pext</text>'+
+  '<text x="445" y="20" font-size="14" fill="#91532e">Pext</text>'+
+  '<text x="122" y="193" font-size="14" text-anchor="middle" fill="#26574b">'+escapeHTML(labelA)+'</text>'+
+  '<text x="414" y="193" font-size="14" text-anchor="middle" fill="#26574b">'+escapeHTML(labelB)+'</text>'+
+  '<text x="273" y="120" font-size="13" text-anchor="middle" fill="#26574b">ΔV = A x</text>'+
+  '</svg>'+
+  '<div class="schematic-math">F = Pext × A　→　Wby = F × x = Pext × ΔV</div>'+
+  '<figcaption>'+escapeHTML(caption)+'</figcaption></figure>';
+ }
+ if(step==="why"){
+  const title=en?"A state quantity and a process quantity are different":"状態を表す量と、過程で移動する量は違う";
+  const terms=en?[
+    ["U","Internal energy: property of a state"],
+    ["P × V","Pressure–volume product: property of a state"],
+    ["H = U + PV","Enthalpy: a newly defined state function"],
+    ["q and w","Heat and work: transferred during a process"]
+  ]:[
+    ["U","内部エネルギー：系の状態で決まる"],
+    ["P × V","圧力×体積：系の状態で決まる"],
+    ["H = U + PV","エンタルピー：新しく定義した状態量"],
+    ["q と w","熱と仕事：過程の間に移動するエネルギー"]
+  ];
+  const caption=en?"PV is not the amount of mechanical work already performed. With constant pressure and only pressure–volume work, the change in enthalpy equals the heat received: ΔH = qp. This equality is conditional; it is not the definition of H.":"PV は「これまでにした仕事の量」ではない。定圧で、圧力・体積仕事以外の仕事がないなどの条件を満たすとき、変化量 ΔH が受け取った熱 qp に一致する。この一致は条件付きの結果であり、H の定義ではない。";
+  return '<figure class="depth-schematic"><h4>'+escapeHTML(title)+'</h4><div class="schematic-row">'+
+  terms.map(t=>'<div class="schematic-term"><strong>'+escapeHTML(t[0])+'</strong><small>'+escapeHTML(t[1])+'</small></div>').join("")+
+  '</div><figcaption>'+escapeHTML(caption)+'</figcaption></figure>';
+ }
+ if(step==="distinction"){
+  const title=en?"The physical role of each quantity":"物理量の役割を比べる";
+  const rows=en?[
+   ["U, H","State properties","Same endpoints → same difference"],
+   ["q, w","Process quantities","Same endpoints may allow different values"],
+   ["PV","A product of state variables","Not identical with work W"],
+   ["PΔV","Expansion-work magnitude under stated conditions","Requires constant external pressure"]
+  ]:[
+   ["U、H","状態量","同じ始状態・終状態なら差も同じ"],
+   ["q、w","過程量","同じ始状態・終状態でも値が異なり得る"],
+   ["PV","状態変数の積","仕事そのものではない"],
+   ["PΔV","条件付きで膨張仕事の大きさ","外圧一定などの条件が必要"]
+  ];
+  const caption=en?"A comparison table to distinguish definition, units, and physical meaning; equal units do not mean interchangeable concepts.":"定義と役割を区別する比較表。同じ単位（J）でも、物理的な意味が同じとは限らない。";
+  return '<figure class="depth-schematic"><h4>'+escapeHTML(title)+'</h4><table class="schematic-table"><tbody>'+
+  rows.map(r=>'<tr>'+r.map(t=>'<td>'+escapeHTML(t)+'</td>').join("")+'</tr>').join("")+'</tbody></table><figcaption>'+escapeHTML(caption)+'</figcaption></figure>';
+ }
+ return "";
+}
 function renderLesson(host,id,lang,lesson){
  if(!host.isConnected||host.dataset.chapter!==id)return;
  styles();const t=COPY[lang];
@@ -111,7 +194,7 @@ function renderLesson(host,id,lang,lesson){
  const block=lesson.sections.map((section,i)=>'<details data-depth-section="concept-'+i+'" '+(i===0?"open":"")+'><summary>'+escapeHTML((i+1)+". "+section[title])+'</summary><p class="depth-text">'+escapeHTML(section[body])+'</p></details>').join("");
  const origin=lesson.originJourney&&Array.isArray(lesson.originJourney.sections)&&lesson.originJourney.sections.length?
  '<section class="depth-origin" id="depthOrigin"><h3>'+escapeHTML(t.originTitle)+'</h3><p>'+escapeHTML(lesson.originJourney[lang==="ja"?"premiseJa":"premiseEn"])+'</p>'+
- lesson.originJourney.sections.map((entry,i)=>'<details data-depth-section="origin-'+i+'" '+(i===0?"open":"")+'><summary>'+escapeHTML(entry[title])+'</summary><p class="depth-text">'+escapeHTML(entry[lang==="ja"?"textJa":"textEn"])+'</p></details>').join("")+'</section>':"";
+ lesson.originJourney.sections.map((entry,i)=>'<details data-depth-section="origin-'+i+'" '+(i===0?"open":"")+'><summary>'+escapeHTML(entry[title])+'</summary><p class="depth-text">'+escapeHTML(entry[lang==="ja"?"textJa":"textEn"])+'</p>'+renderStageVisual(id,lang,entry.id)+'</details>').join("")+'</section>':"";
  const guided=lesson.guidedExample&&Array.isArray(lesson.guidedExample.steps)&&lesson.guidedExample.steps.length===5?
  '<details class="depth-guided" data-depth-section="guided"><summary>'+escapeHTML(t.guidedTitle)+'</summary><p class="depth-problem">'+escapeHTML(lesson.guidedExample[lang==="ja"?"titleJa":"titleEn"])+'</p>'+
  lesson.guidedExample.steps.map((step,i)=>'<details class="depth-step" '+(i===0?'open':'')+'><summary>'+escapeHTML(t.guidedStep)+" "+(i+1)+'</summary><p>'+escapeHTML(step[lang==="ja"?0:1])+'</p></details>').join("")+'</details>':"";
