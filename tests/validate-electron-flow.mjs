@@ -85,6 +85,10 @@ function simulate(lang){
   assert.ok(lesson.formula?.trim(),"The illustration needs a scientific relation or formula: "+lesson.id);
   assert.ok(make("lessons").innerHTML.includes('id="'+lesson.id+'"'),"All lessons must render: "+lesson.id+"/"+lang);
   assert.ok(make("lessons").innerHTML.includes('data-concept-figure="'+lesson.id+'"'),"An actual explanatory diagram must render in every section: "+lesson.id+"/"+lang);
+  const segment=make("lessons").innerHTML.split('id="'+lesson.id+'"')[1]?.split('</article>')[0]||"";
+  assert.ok(segment.indexOf('class="question"')>=0&&segment.indexOf('class="concept-figure"')>segment.indexOf('class="question"'),"Scientific illustration must immediately follow the concept question: "+lesson.id+"/"+lang);
+  const figureEnd=segment.indexOf('</figure>');
+  assert.ok(figureEnd>=0&&segment.indexOf('<p>',figureEnd)>figureEnd,"Explanatory paragraphs should follow the diagram rather than burying it at the end: "+lesson.id+"/"+lang);
   assert.ok(make("toc").innerHTML.includes('href="#'+lesson.id+'"'),"Every lesson must have a direct-access TOC link: "+lesson.id);
  }
  const cases=root.curriculum.cases;
