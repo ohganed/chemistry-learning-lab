@@ -47,6 +47,50 @@ assert.ok(enthalpy.originJourney.sections.find(x=>x.id==='hessworked').textJa.in
 assert.ok(enthalpy.originJourney.sections.find(x=>x.id==='states').textJa.includes('H₂O(l)'),'Liquid/gas enthalpy distinction must be explicit');
 assert.ok(enthalpy.originJourney.sections.find(x=>x.id==='worked').textJa.includes('400 J'),'Worked expansion energy balance must be present');
 
+// Inorganic: a new concept must be motivated, derived, visualized, compared and qualified.
+const inorganic=all.filter(ch=>ch.id.startsWith('3-'));
+assert.equal(inorganic.length,4,'The four existing inorganic chapter IDs must remain stable');
+const requiredInorganicSteps={
+ '3-0':['observation','electrons','displacement','balance','potential','trend','oxides','limits'],
+ '3-1':['surface','ion','thermo','hydroxide','amphoteric','stoich','model','limits'],
+ '3-2':['copper','ligands','geometry','splitting','barycenter','light','equilibrium','models'],
+ '3-3':['white','equilibrium','ksp','ionproduct','ammonia','combine','free','proof']
+};
+let inorganicStageCount=0,inorganicDerivationCount=0,inorganicModelCount=0;
+for(const chapter of inorganic){
+ const j=chapter.originJourney,workshop=chapter.inorganicWorkshop;
+ assert.equal(j?.version,'1.0','Versioned inorganic motivation course missing in '+chapter.id);
+ assert.ok(j.premiseJa.length>=90&&j.premiseEn.length>=120,'Inorganic motivation should be substantial: '+chapter.id);
+ assert.deepEqual(j.sections.map(x=>x.id),requiredInorganicSteps[chapter.id],'Inorganic concept sequence changed: '+chapter.id);
+ for(const step of j.sections){
+  assert.ok(step.ja?.length>=12&&step.en?.length>=12,'Missing bilingual inorganic step heading: '+chapter.id);
+  assert.ok(step.textJa?.length>=145&&step.textEn?.length>=300,'Inorganic causal explanation needs adequate depth: '+chapter.id+'/'+step.id);
+  inorganicStageCount++;
+ }
+ assert.equal(workshop?.schemaVersion,'1.0','Inorganic comparison schema missing: '+chapter.id);
+ assert.equal(workshop.models.length,3,'Three distinct models must be compared: '+chapter.id);
+ for(const model of workshop.models){
+  for(const key of ['ja','en','strengthJa','strengthEn','limitJa','limitEn'])assert.ok(model[key]?.length>=15,'Model strength/limit bilingual coverage incomplete: '+chapter.id+'/'+key);
+  inorganicModelCount++;
+ }
+ const deriv=workshop.derivation;
+ assert.ok(deriv.titleJa?.length>=10&&deriv.titleEn?.length>=16,'Derivation title missing: '+chapter.id);
+ assert.ok(deriv.setupJa?.length>=38&&deriv.setupEn?.length>=68,'Derivation assumptions missing: '+chapter.id);
+ assert.ok(deriv.steps.length>=4,'Derivation must be truly stepwise: '+chapter.id);
+ for(const part of deriv.steps){
+  assert.ok(part.ja?.length>=7&&part.en?.length>=12&&part.equation?.length>=6,'Derivation step must display equation and heading: '+chapter.id);
+  assert.ok(part.whyJa?.length>=15&&part.whyEn?.length>=35,'Derivation step must explain its reasoning: '+chapter.id);
+  inorganicDerivationCount++;
+ }
+}
+assert.equal(inorganicStageCount,32,'Four inorganic chapters × eight original conceptual stages required');
+assert.equal(inorganicModelCount,12,'Twelve explicit model comparisons required');
+assert.equal(inorganicDerivationCount,17,'Seventeen explained derivation steps required');
+assert.ok(inorganic.find(c=>c.id==='3-2').originJourney.sections.find(s=>s.id==='barycenter').textJa.includes('3a+2b=0'),'Crystal field shifts must be derived, not asserted');
+assert.ok(inorganic.find(c=>c.id==='3-3').originJourney.sections.find(s=>s.id==='combine').textJa.includes('Ksp×β₂'),'Silver-ammonia combined equilibrium must be derived');
+assert.ok(inorganic.find(c=>c.id==='3-0').originJourney.sections.find(s=>s.id==='potential').textJa.includes('−nFE°'),'Electrode potential needs its thermodynamic meaning');
+assert.ok(inorganic.find(c=>c.id==='3-1').originJourney.sections.find(s=>s.id==='surface').textJa.includes('反応速度'),'Metal passivation must distinguish kinetics from thermodynamics');
+
 const requiredLenses=['observation','particles','model','limits','revisit'];
 let guidedCount=0,reasoningCount=0;
 for(const ch of all) {
@@ -116,6 +160,11 @@ assert.ok(bridges.bridges.some(x=>x.id==='conservative-state'&&x.chapters.includ
 assert.ok(viewer.includes('chemistry-knowledge-bridges-v1.json')&&viewer.includes('appendBridges'),'Viewer does not load prior-knowledge bridges');
 
 assert.ok(viewer.includes('renderStageVisual(id,lang,entry.id)'), 'Annotated diagrams must appear inside the corresponding enthalpy derivation steps');
+assert.ok(viewer.includes('renderInorganicWorkshop(lesson,lang)'), 'Detailed model comparison and derivation are not presented');
+assert.ok(viewer.includes('renderInorganicStageVisual(id,lang,entry.id)'), 'Scientific diagrams must appear in the correct inorganic explanatory section');
+for(const concept of ['3-0','3-1','3-2','3-3'])assert.ok(viewer.includes('id==="'+concept+'"'), 'Missing inorganic diagram: '+concept);
+assert.ok(viewer.includes('aria-label')&&viewer.includes('figcaption'),'Scientific schematic requires accessible labels and a caption');
+
 for(const stage of ['piston','why','distinction']){
  assert.ok(viewer.includes('step==="'+stage+'"'), 'Missing explanatory figure or comparison table for '+stage);
 }
