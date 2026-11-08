@@ -154,6 +154,70 @@
             "textEn": "Functional groups such as alcohols, ethers, carbonyls, carboxylic acids and amines provide useful predictions of reactivity. Yet neighbors and three-dimensional arrangements modify those predictions. Distinguishing the two C₂H₆O structures is a foundation for interpreting later reactions through connectivity and electron distribution rather than merely through compound names."
           }
         ]
+      },
+      "organicReasoning": {
+        "schemaVersion": "1.0",
+        "kind": "structure",
+        "titleJa": "構造式から未知の異性体を予測する",
+        "titleEn": "Predict structural isomers from connectivity",
+        "questionJa": "同じC₂H₆Oでも異なる化合物になるのはなぜか。水素結合を考える前に、炭素と酸素の結合相手を確認しよう。",
+        "questionEn": "Why can C₂H₆O represent different compounds? Determine connectivity before attempting to explain hydrogen bonding.",
+        "steps": [
+          {
+            "ja": "原子数を固定する",
+            "en": "Fix the atom counts",
+            "changeJa": "C₂H₆O: C×2, H×6, O×1",
+            "changeEn": "C₂H₆O: two C, six H, one O",
+            "reasonJa": "分子式は構成原子の数を与えるが、どの原子どうしが結びつくかは指定しない。",
+            "reasonEn": "A molecular formula specifies the count of atoms but not which atoms are connected."
+          },
+          {
+            "ja": "代表的な価数を使って結合を作る",
+            "en": "Apply common valences",
+            "changeJa": "C: 4; O: 2; H: 1",
+            "changeEn": "C: 4; O: 2; H: 1",
+            "reasonJa": "中性分子の単純な共有結合模型では、炭素は4本、酸素は2本、水素は1本の結合で満たす候補を調べられる。",
+            "reasonEn": "In a simple neutral covalent model, candidates can be checked against four bonds to carbon, two to oxygen and one to hydrogen."
+          },
+          {
+            "ja": "酸素が結ぶ相手を変えてみる",
+            "en": "Change the neighbors of oxygen",
+            "changeJa": "CH₃CH₂OH ⇄ CH₃OCH₃",
+            "changeEn": "CH₃CH₂OH versus CH₃OCH₃",
+            "reasonJa": "左はOが炭素と水素につながるアルコール、右は二つの炭素基をつなぐエーテルで、結合順序が異なる。",
+            "reasonEn": "Ethanol contains an O–H bond; dimethyl ether has oxygen between two carbon groups. The connectivities differ."
+          },
+          {
+            "ja": "見かけの同じ分子式から性質を予測する",
+            "en": "Predict a physical difference",
+            "changeJa": "O–H donor present? → hydrogen bonding",
+            "changeEn": "O–H donor present? → hydrogen bonding",
+            "reasonJa": "エタノール同士ではO–Hに関係する水素結合網目を作れる。ジメチルエーテル同士には同じ型の供与基がない。沸点の違いを予測できる。",
+            "reasonEn": "Ethanol can form an intermolecular O–H hydrogen-bond network; neat dimethyl ether lacks an analogous donor. That distinction helps predict boiling behavior."
+          }
+        ],
+        "models": [
+          {
+            "ja": "分子式・価数模型",
+            "en": "Formula and valence",
+            "canJa": "原子数が合い、あり得る結合構造を候補として列挙できる。",
+            "canEn": "Enumerates plausible connectivities consistent with atomic counts and simple valence.",
+            "limitJa": "結合の立体配置や分子間相互作用の大きさまでは決められない。",
+            "limitEn": "Does not quantify conformations or intermolecular interactions."
+          },
+          {
+            "ja": "ルイス構造・電子対",
+            "en": "Lewis structures and electron pairs",
+            "canJa": "非共有電子対、形式電荷、官能基と結合を整理できる。",
+            "canEn": "Organizes bonds, lone pairs, formal charge and functional groups.",
+            "limitJa": "一本線が電子雲そのものという意味ではなく、複雑な非局在化には限界がある。",
+            "limitEn": "A line is not a measured electron-density distribution; delocalization may require more sophisticated models."
+          }
+        ],
+        "predictionJa": "未知のC₃H₈Oについて、先に原子のつながりを複数考え、次に水素結合や酸化され方の違いを予想する。名称を知らなくても、反応性の仮説を作れるか。",
+        "predictionEn": "For an unfamiliar C₃H₈O compound, propose distinct connectivities before comparing hydrogen bonding and oxidation behavior. Can you form predictions without first memorizing names?",
+        "boundaryJa": "価数の規則は中性で単純な分子への第一近似。反応条件、配座、立体異性、電子の非局在化まではこれだけで完全に説明できない。",
+        "boundaryEn": "Ordinary valence rules are a first approximation for simple neutral molecules. Conformations, stereoisomerism, delocalization and reaction conditions need further models."
       }
     },
     {
@@ -277,6 +341,70 @@
             "textEn": "Benzene can undergo hydrogenation or oxidation under suitable conditions. Substituents alter electronic distributions and influence reaction rates and regioselectivity. Aromaticity is not a prohibition against every addition reaction. Treat it as an explanatory electronic-structure concept whose predictions depend on conditions and competing pathways."
           }
         ]
+      },
+      "organicReasoning": {
+        "schemaVersion": "1.0",
+        "kind": "addition",
+        "titleJa": "エテンへの臭素付加：電子の動きから生成物を予測する",
+        "titleEn": "Bromine addition to ethene: reason from electron movement",
+        "questionJa": "エテンに臭素を加えると、なぜ二重結合をはさんだ二つの炭素へBrが結びつくのか。生成物を先に覚えず、電子対の移動をたどろう。",
+        "questionEn": "Why can adding bromine to ethene attach bromine to the two carbons of the double bond? Follow electron-pair movement before memorizing the product.",
+        "steps": [
+          {
+            "ja": "反応しやすい電子の場所を探す",
+            "en": "Locate the electron-rich region",
+            "changeJa": "CH₂=CH₂ contains a π bond",
+            "changeEn": "CH₂=CH₂ contains a π bond",
+            "reasonJa": "エテンのπ電子が、近づいたBr₂分子を分極させる。『臭素が一方的に正電荷を持つ』のではなく、分子間の相互作用で電荷分布が変わる。",
+            "reasonEn": "The alkene π electron density polarizes an approaching Br₂ molecule. The bromine reagent is not simply a permanently isolated Br⁺ ion."
+          },
+          {
+            "ja": "最初にできる結合を考える",
+            "en": "Account for the first bond-forming event",
+            "changeJa": "π electrons → Br; Br–Br bond breaks",
+            "changeEn": "π electrons → Br; Br–Br bond breaks",
+            "reasonJa": "代表的な臭素付加機構では、π電子から求電子的なBrへ電子密度が移り、Br–Br結合が切れる過程で三員環状のブロモニウムイオンが形成される。",
+            "reasonEn": "In a typical bromination mechanism, electron density from the π bond attacks bromine as Br–Br breaks and a three-membered bromonium-ion intermediate forms."
+          },
+          {
+            "ja": "求核剤がどこを攻撃するか考える",
+            "en": "Consider the nucleophile and intermediate",
+            "changeJa": "Br⁻ attacks the bromonium ion",
+            "changeEn": "Br⁻ attacks the bromonium ion",
+            "reasonJa": "非求核性の溶媒中でBr⁻が反対側から三員環を開けば、隣り合う炭素にBrが付加する。エテンは対称で、生成物は1,2-ジブロモエタンとなる。",
+            "reasonEn": "In a nonnucleophilic medium, bromide can open the bridged intermediate by backside attack to give vicinal bromine substituents; symmetric ethene yields 1,2-dibromoethane."
+          },
+          {
+            "ja": "溶媒を変えると結果が変わるか検討する",
+            "en": "Test how solvent changes the outcome",
+            "changeJa": "H₂O may compete with Br⁻ as nucleophile",
+            "changeEn": "H₂O may compete with Br⁻ as nucleophile",
+            "reasonJa": "水中ではH₂Oがブロモニウムイオンを開き、プロトン移動を経てブロモヒドリンを生じる経路も競争する。『エテン＋臭素＝必ず同じ生成物』ではない。",
+            "reasonEn": "In water, nucleophilic attack by H₂O can compete, followed by proton transfer to give a bromohydrin. The same starting alkene and halogen need not yield a single product under all conditions."
+          }
+        ],
+        "models": [
+          {
+            "ja": "π電子・極性の模型",
+            "en": "π-electron polarization",
+            "canJa": "反応が始まる理由と、求電子剤が近づく位置を考えられる。",
+            "canEn": "Explains why an electrophile approaches electron-rich alkene π density.",
+            "limitJa": "生成物の立体化学を決めるには中間体の幾何と攻撃方向が必要。",
+            "limitEn": "Intermediate geometry and approach direction are needed for stereochemical predictions."
+          },
+          {
+            "ja": "ブロモニウム中間体模型",
+            "en": "Bridged bromonium intermediate",
+            "canJa": "多くのアルケンで観察される反対側からの攻撃を理解できる。",
+            "canEn": "Helps explain the frequent anti-addition stereochemical outcome.",
+            "limitJa": "溶媒・置換基・試薬で機構が変わる可能性があり、万能の予測ではない。",
+            "limitEn": "Mechanism can vary with substrates, reagents and solvent."
+          }
+        ],
+        "predictionJa": "エテンを水中で臭素と反応させる場合、Br⁻だけでなく水分子を求核剤の候補に入れると、どの結合ができると予想できるか。",
+        "predictionEn": "If ethene reacts with bromine in water, include water as a possible nucleophile alongside bromide. Which additional bond-forming pathway can you predict?",
+        "boundaryJa": "臭素や有機ハロゲン化物は危険な試薬を含み得るため、これは反応機構の理論教材であり実験手順ではない。生成物の比率は試薬・溶媒・濃度によって異なる。",
+        "boundaryEn": "Bromine reagents and organohalides can be hazardous. This is a conceptual mechanism lesson, not an experiment protocol. Product distributions depend on solvent, reagent and concentration."
       }
     },
     {
@@ -400,6 +528,70 @@
             "textEn": "Alcohol, ether, aldehyde and ketone are useful classes but do not uniquely determine rates or products. Neighboring substituents, steric effects, solvent, temperature and catalysts all matter. The earlier insight from C₂H₆O isomers—that connectivity changes properties—now develops into predictions based on electron distribution and mechanisms."
           }
         ]
+      },
+      "organicReasoning": {
+        "schemaVersion": "1.0",
+        "kind": "carbonyl",
+        "titleJa": "カルボニル基への求核付加：曲矢印を意味から読む",
+        "titleEn": "Nucleophilic carbonyl addition: interpret electron-pair arrows",
+        "questionJa": "アルデヒドのC=Oに求核剤が付加するとき、どうして炭素が攻撃され、同時にπ電子が酸素側へ移動するのか。原子価と電荷保存から説明する。",
+        "questionEn": "Why does a nucleophile attack the carbonyl carbon while the C=O π electrons shift toward oxygen? Explain through bonding, valence and charge bookkeeping.",
+        "steps": [
+          {
+            "ja": "どこが電子を受け取りやすいか確認する",
+            "en": "Identify the electrophilic site",
+            "changeJa": "R–CH=O: Cδ+ / Oδ−",
+            "changeEn": "R–CH=O: Cδ+ / Oδ−",
+            "reasonJa": "C=O結合では酸素へ電子密度が偏るため、カルボニル炭素が求電子的になる。ただし部分電荷は形式電荷と同一ではない。",
+            "reasonEn": "The polarized C=O bond gives its carbon electrophilic character. Partial charges describe electron distribution and are not identical to formal ionic charges."
+          },
+          {
+            "ja": "電子対の出発点を決める",
+            "en": "Start the arrow at the electron pair",
+            "changeJa": "Nu:⁻ → carbonyl C",
+            "changeEn": "Nu:⁻ → carbonyl C",
+            "reasonJa": "例として負電荷をもつ求核剤Nu:⁻を考える。曲矢印はNuの孤立電子対からCへの電子対の移動を表し、核が移動する方向を示すわけではない。",
+            "reasonEn": "For an illustrative anionic nucleophile Nu:⁻, a curved arrow starts at its lone pair and points to carbon. It tracks an electron pair, not the motion of an atomic nucleus."
+          },
+          {
+            "ja": "炭素の価数を保つようπ結合を変える",
+            "en": "Reorganize the π bond while making the σ bond",
+            "changeJa": "C=O π pair → O; C–Nu bond forms",
+            "changeEn": "C=O π pair → O; C–Nu bond forms",
+            "reasonJa": "NuからCへ新しい結合ができるだけでは、通常の四価炭素に過剰な結合を描いてしまう。そこでC=Oのπ電子対を酸素へ移し、四面体に近いアルコキシド中間体を表す。",
+            "reasonEn": "Forming the new C–Nu bond without altering the π bond would overfill the usual valence of carbon. Moving the C=O π pair toward oxygen gives a tetrahedral alkoxide-type intermediate."
+          },
+          {
+            "ja": "プロトン移動と条件を確認する",
+            "en": "Consider proton transfer and conditions",
+            "changeJa": "R–CH(O⁻)(Nu) → R–CH(OH)(Nu)",
+            "changeEn": "R–CH(O⁻)(Nu) → R–CH(OH)(Nu)",
+            "reasonJa": "適切なプロトン供与体があればアルコキシドのO⁻がプロトンを受け取る。実際の反応は求核剤の種類・酸塩基条件・立体障害・競争反応によって異なる。",
+            "reasonEn": "With a suitable proton donor, the alkoxide can be protonated. Actual outcomes depend on nucleophile identity, acid–base conditions, sterics and competing pathways."
+          }
+        ],
+        "models": [
+          {
+            "ja": "結合の極性とルイス酸塩基",
+            "en": "Bond polarity and Lewis acid–base reasoning",
+            "canJa": "電子を与える位置と受け取る位置を見つける入口になる。",
+            "canEn": "Identifies a plausible electron-pair donor and acceptor.",
+            "limitJa": "反応速度・選択性を数値的に決めるには軌道と遷移状態の情報が不足する。",
+            "limitEn": "Does not quantify rates or selectivity without additional orbital and transition-state information."
+          },
+          {
+            "ja": "分子軌道と立体電子効果",
+            "en": "Molecular orbitals and stereoelectronics",
+            "canJa": "求核剤の電子対軌道とカルボニルの反結合性軌道との相互作用を考えられる。",
+            "canEn": "Interprets interactions of a nucleophilic donor orbital with a carbonyl antibonding orbital.",
+            "limitJa": "実際の攻撃角や選択性は置換基・溶媒・立体条件も関わり、単純な矢印だけでは求まらない。",
+            "limitEn": "Attack geometry and selectivity depend on substitution, solvation and stereochemical factors."
+          }
+        ],
+        "predictionJa": "アルデヒドとケトンを比べると、カルボニル炭素の近くの置換基が多い場合、求核剤の近づきやすさと電子の分布はどう変わり得るか。単一の規則として断定しないで考える。",
+        "predictionEn": "Compare an aldehyde with a ketone. How might additional neighboring substituents affect steric approach and electron distribution at the carbonyl carbon? Do not replace the analysis with an absolute rule.",
+        "boundaryJa": "これは一般化した負電荷の求核剤の模型。水やアルコールのような中性求核剤では中間体の電荷とプロトン移動の順序が異なり得る。反応式にない溶媒や酸触媒も重要。",
+        "boundaryEn": "This mechanism uses a generic anionic nucleophile. Neutral nucleophiles such as water or alcohol can give different charged intermediates and proton-transfer sequences. Solvent and catalysis matter."
       }
     },
     {
@@ -523,6 +715,70 @@
             "textEn": "Base hydrolysis of triacylglycerols produces glycerol and fatty-acid salts such as sodium carboxylates. Each fatty-acid salt has an ionic head group that interacts favorably with water and a hydrocarbon tail that can interact with oil. Such amphiphilic molecules can adsorb at interfaces and form micelles, helping disperse oily substances in water. Carboxylic-acid chemistry, ester reactions and detergency now connect."
           }
         ]
+      },
+      "organicReasoning": {
+        "schemaVersion": "1.0",
+        "kind": "catalysis",
+        "titleJa": "フィッシャーエステル化：酸触媒がする仕事を一歩ずつ追う",
+        "titleEn": "Fischer esterification: account for every catalytic step",
+        "questionJa": "酸とアルコールを混ぜると、なぜ酸触媒によってエステル化が進みやすくなるのか。触媒が全体で消費されない理由まで追おう。",
+        "questionEn": "How does an acid catalyst facilitate esterification, and why is it regenerated rather than consumed overall?",
+        "steps": [
+          {
+            "ja": "カルボニルを活性化する",
+            "en": "Activate the carbonyl",
+            "changeJa": "R–C(=O)–OH + H⁺ ⇌ protonated carbonyl",
+            "changeEn": "R–C(=O)–OH + H⁺ ⇌ protonated carbonyl",
+            "reasonJa": "酸触媒の条件ではカルボニル酸素のプロトン化が起こり得る。この操作でカルボニル炭素の求電子性が増し、次の攻撃が起こりやすくなる。",
+            "reasonEn": "Under acid-catalyzed conditions protonation at the carbonyl oxygen can increase electrophilic character at the carbonyl carbon and facilitate attack."
+          },
+          {
+            "ja": "アルコールの酸素が攻撃する",
+            "en": "Let the alcohol donate an electron pair",
+            "changeJa": "R′OH oxygen pair → carbonyl C",
+            "changeEn": "R′OH oxygen pair → carbonyl C",
+            "reasonJa": "アルコールの酸素の孤立電子対が炭素へ結合を作り、カルボニルのπ電子は酸素側へ移る。四面体型の中間体ができる。",
+            "reasonEn": "An electron pair on the alcohol oxygen forms a bond to the carbonyl carbon as the π-bond distribution shifts toward oxygen, producing a tetrahedral-type intermediate."
+          },
+          {
+            "ja": "脱離しやすい基へ変える",
+            "en": "Enable a suitable leaving group",
+            "changeJa": "–OH → protonated –OH₂⁺, then H₂O leaves",
+            "changeEn": "–OH → protonated –OH₂⁺, then H₂O leaves",
+            "reasonJa": "そのままのOH⁻は酸性条件のよい脱離基ではない。中間体でのプロトン移動により水として脱離できる形を作り、C=Oを再形成する。",
+            "reasonEn": "Hydroxide is a poor leaving group in acidic conditions. Proton transfers allow a hydroxyl-derived group to leave as water while the carbonyl bond reforms."
+          },
+          {
+            "ja": "H⁺が再生し、平衡が残る",
+            "en": "Regenerate the catalyst; retain reversibility",
+            "changeJa": "protonated ester → ester + H⁺",
+            "changeEn": "protonated ester → ester + H⁺",
+            "reasonJa": "最後の脱プロトン化で酸触媒は全体として再生される。酸は主に速度を変え、同じ温度での平衡定数を勝手に変えるものではない。水が多ければ逆反応も重要になる。",
+            "reasonEn": "Final deprotonation regenerates the acid catalyst overall. Catalysis changes kinetic access without changing the equilibrium constant at fixed temperature; water promotes the importance of the reverse hydrolysis pathway."
+          }
+        ],
+        "models": [
+          {
+            "ja": "全体反応式と平衡",
+            "en": "Overall reaction and equilibrium",
+            "canJa": "反応物と生成物、平衡組成を量的に考える助けになる。",
+            "canEn": "Provides stoichiometric and equilibrium constraints.",
+            "limitJa": "酸触媒がどの段階に働くかや反応速度を直接説明しない。",
+            "limitEn": "Does not show how the catalyst acts or predict reaction rate."
+          },
+          {
+            "ja": "段階的な求核アシル置換",
+            "en": "Stepwise nucleophilic acyl substitution",
+            "canJa": "中間体、プロトン移動、水の脱離、触媒再生まで説明できる。",
+            "canEn": "Tracks intermediates, proton transfers, water loss and catalyst regeneration.",
+            "limitJa": "触媒、基質、溶媒による機構の違いと実験的な速度情報は別に確認する。",
+            "limitEn": "Mechanistic details and rates depend on substrates, catalyst, solvent and conditions."
+          }
+        ],
+        "predictionJa": "水の割合を増やした場合と、反応系から水を除いた場合を比較する。触媒量を増やす場合とは、何が違うのか。",
+        "predictionEn": "Compare adding water with removing water from a reversible esterification. How do those changes differ from increasing the amount of catalyst?",
+        "boundaryJa": "フィッシャーエステル化の概念模型であり、全てのエステル化法に当てはまる反応機構ではない。酸触媒と平衡組成・速度の関係を分けて扱う。",
+        "boundaryEn": "This is a conceptual model for Fischer esterification, not every ester-forming method. Distinguish equilibrium composition from catalyst-dependent kinetics."
       }
     },
     {
@@ -646,6 +902,70 @@
             "textEn": "Resonance drawings clarify delocalization but do not uniquely determine measured rate constants or product ratios. Activation free energies, steric effects and solvent interactions remain important. Returning to phenol acidity and aniline basicity reveals why a lone pair must be understood within the electronic structure of the whole molecule, not as a detachable property of one atom."
           }
         ]
+      },
+      "organicReasoning": {
+        "schemaVersion": "1.0",
+        "kind": "aromatic",
+        "titleJa": "芳香族求電子置換：なぜ付加ではなく置換が現れるのか",
+        "titleEn": "Electrophilic aromatic substitution: why substitution can dominate",
+        "questionJa": "ベンゼン環が求電子剤と結びついても、なぜ最終的にはHが置き換わる生成物が多いのか。芳香族性を失い、取り戻す過程を追おう。",
+        "questionEn": "Why can electrophilic attack on benzene yield substitution rather than permanent addition? Trace temporary loss and restoration of aromaticity.",
+        "steps": [
+          {
+            "ja": "芳香族環の電子状態を確認する",
+            "en": "Identify the delocalized π system",
+            "changeJa": "benzene: six interacting p orbitals",
+            "changeEn": "benzene: six interacting p orbitals",
+            "reasonJa": "ベンゼンのπ電子は環全体に非局在化し、局在化した三つの独立二重結合の模型では十分に表現できない。",
+            "reasonEn": "Benzene's π electrons are delocalized around the ring and are not adequately modeled as three entirely independent alkene bonds."
+          },
+          {
+            "ja": "求電子剤をどう用意するか考える",
+            "en": "Identify the activated electrophile",
+            "changeJa": "Br₂ / Lewis acid catalyst → activated brominating species",
+            "changeEn": "Br₂ / Lewis acid catalyst → activated brominating species",
+            "reasonJa": "代表的な臭素化ではルイス酸がBr₂を活性化して環との求電子反応を促進する。自由なBr⁺が単独で大量に存在すると決めつけない。",
+            "reasonEn": "In typical bromination, a Lewis acid activates bromine for electrophilic attack. The mechanism does not require treating a free, bulk Br⁺ ion as a separately abundant reagent."
+          },
+          {
+            "ja": "環の一部に新しい結合ができる",
+            "en": "Form the σ-complex intermediate",
+            "changeJa": "aromatic π electrons → electrophile; σ-complex forms",
+            "changeEn": "aromatic π electrons → electrophile; σ-complex forms",
+            "reasonJa": "炭素と求電子剤の結合が形成される一方、環の芳香族性が一時的に失われ、正電荷が環にわたり非局在化するσ錯体が生じる。",
+            "reasonEn": "Bond formation creates a σ complex in which aromaticity is temporarily lost and positive charge is delocalized across the ring."
+          },
+          {
+            "ja": "H⁺を失い芳香族性が回復する",
+            "en": "Restore aromaticity by deprotonation",
+            "changeJa": "σ-complex → substituted arene + H⁺",
+            "changeEn": "σ-complex → substituted arene + H⁺",
+            "reasonJa": "適切な塩基によりプロトンが除かれ、C–H結合の電子対が環のπ系へ戻る。芳香族性の回復が置換経路を理解する重要な理由になる。",
+            "reasonEn": "Deprotonation returns electron density from the C–H bond to the aromatic π system. Restoration of aromaticity is a central driving feature of the substitution pathway."
+          }
+        ],
+        "models": [
+          {
+            "ja": "共鳴寄与構造",
+            "en": "Resonance contributors",
+            "canJa": "σ錯体の正電荷の非局在化と置換基の電子効果を説明できる。",
+            "canEn": "Shows delocalization in the σ complex and qualitative substituent effects.",
+            "limitJa": "反応速度や生成物比率を正確に決めるには遷移状態と溶媒の影響が必要。",
+            "limitEn": "Rates and product ratios require transition-state and solvent information."
+          },
+          {
+            "ja": "エネルギー経路・遷移状態",
+            "en": "Energy profile and transition-state picture",
+            "canJa": "芳香族性を失う段階と回復する段階のエネルギーを比較できる。",
+            "canEn": "Compares energetic costs of temporary dearomatization and recovery.",
+            "limitJa": "各段階の障壁は基質・触媒・温度によって変わり、一般的な模式図では数値が決まらない。",
+            "limitEn": "Barrier heights depend on substrate, catalyst and temperature; a schematic cannot supply numerical rates."
+          }
+        ],
+        "predictionJa": "ベンゼン環に–OHと–NO₂を付けた二種類の化合物で、求電子剤への反応しやすさが違うのはなぜか。中間体の共鳴寄与構造で仮説を作る。",
+        "predictionEn": "Compare an aromatic ring bearing –OH with one bearing –NO₂. How might their different electronic effects influence formation of the σ complex and reaction rate?",
+        "boundaryJa": "すべての芳香族反応がこの経路ではない。求核芳香族置換、ラジカル反応、水素化などでは別の説明が必要。安全な反応理論の説明であり実験手順ではない。",
+        "boundaryEn": "Not all reactions of aromatic compounds use this mechanism. Nucleophilic aromatic substitution, radical processes and hydrogenation require different descriptions. This is a conceptual lesson, not an experiment protocol."
       }
     },
     {
@@ -769,6 +1089,70 @@
             "textEn": "A protein's amino-acid sequence influences its folded structure through many interactions. An enzyme's active site recognizes a substrate through geometry, charge, polarity and dynamic interactions while stabilizing relevant transition states. Returning to starch and cellulose hydrolysis shows how linkage stereochemistry affects recognition and catalysis. Molecular structure connects chemistry to biological function."
           }
         ]
+      },
+      "organicReasoning": {
+        "schemaVersion": "1.0",
+        "kind": "stereochemistry",
+        "titleJa": "糖とペプチド：なぜ立体構造が生体反応を左右するか",
+        "titleEn": "Sugars and peptides: why stereochemistry controls biological behavior",
+        "questionJa": "グルコースからできる高分子でも、なぜ人の酵素で分解しやすいものと分解しにくいものがあるのか。分子式から立体的な結合と認識へ進む。",
+        "questionEn": "Why can different polymers built from glucose be digested differently? Move from molecular formulas to stereochemical linkages and enzyme recognition.",
+        "steps": [
+          {
+            "ja": "構成単位をそろえて比べる",
+            "en": "Hold the monomer identity fixed",
+            "changeJa": "glucose residues in starch and cellulose",
+            "changeEn": "glucose residues in starch and cellulose",
+            "reasonJa": "どちらもグルコース由来の構成単位を持つ。単量体の種類が違うから、という説明では両者の差を解決できない。",
+            "reasonEn": "Both polymers contain glucose-derived units. Monomer identity alone cannot explain their different properties."
+          },
+          {
+            "ja": "結合の立体配置を区別する",
+            "en": "Compare linkage stereochemistry",
+            "changeJa": "α-glycosidic versus β-1,4 glycosidic",
+            "changeEn": "α-glycosidic versus β-1,4 glycosidic",
+            "reasonJa": "デンプンの代表的なα型グリコシド結合と、セルロースのβ-1,4結合では、原子のつながり方の空間的向きが違う。",
+            "reasonEn": "Starch commonly contains α-type glycosidic bonds, while cellulose contains β-1,4 bonds. Their spatial linkage arrangements differ."
+          },
+          {
+            "ja": "高分子鎖の形へ進む",
+            "en": "Connect linkage to chain shape",
+            "changeJa": "different conformations and packing",
+            "changeEn": "different conformations and packing",
+            "reasonJa": "結合の向きは鎖の曲がり方、分子間水素結合、結晶性や繊維構造に関係する。短い分子の立体化学が材料の性質へつながる。",
+            "reasonEn": "Link geometry affects conformations, hydrogen bonding, packing and fibrous organization. Local stereochemistry influences bulk material properties."
+          },
+          {
+            "ja": "酵素がどの結合を認識できるか考える",
+            "en": "Ask what an enzyme active site recognizes",
+            "changeJa": "enzyme–substrate geometry and transition state",
+            "changeEn": "enzyme–substrate geometry and transition state",
+            "reasonJa": "人のアミラーゼは多くのデンプン結合を加水分解できるが、人にはセルロースを効率よく分解する内因性セルラーゼがない。基質の構造と酵素の選択性の両方が必要になる。",
+            "reasonEn": "Human amylase can hydrolyze many starch linkages, whereas humans lack an effective endogenous cellulase for cellulose. Both substrate geometry and enzyme specificity contribute to digestibility."
+          }
+        ],
+        "models": [
+          {
+            "ja": "化学式・構造式",
+            "en": "Formula and structural notation",
+            "canJa": "構成単位と結合の種類を区別し、異性体を認識できる。",
+            "canEn": "Identifies constituent units, linkage identities and isomeric differences.",
+            "limitJa": "酵素反応の速さや鎖の三次元構造を直接定量できない。",
+            "limitEn": "Cannot directly quantify enzyme reaction rates or full chain conformation."
+          },
+          {
+            "ja": "立体構造・酵素反応模型",
+            "en": "Three-dimensional recognition and enzyme catalysis",
+            "canJa": "基質の結合方向と活性部位の幾何・相互作用の適合を説明できる。",
+            "canEn": "Explains how substrate stereochemistry interacts with an enzyme active site.",
+            "limitJa": "細胞内輸送や発現量、溶液条件などを含めた生物学的挙動には追加の情報が必要。",
+            "limitEn": "Biological outcomes also depend on expression, transport, cellular conditions and competing reactions."
+          }
+        ],
+        "predictionJa": "同じ二糖でも、グリコシド結合の結合位置やα/βを変えたとき、酵素の認識が変わる可能性を考えよう。実測による検証方法も考える。",
+        "predictionEn": "For two disaccharides with different linkage positions or anomeric configurations, predict possible enzyme selectivity differences and propose experimental evidence that could test the prediction.",
+        "boundaryJa": "立体構造だけで消化速度の全ては決まらない。結晶性、溶解性、酵素の発現、試料の加工・調理条件なども考慮する。",
+        "boundaryEn": "Stereochemistry alone does not determine all digestion rates. Crystallinity, solubility, enzyme expression and processing conditions also matter."
       }
     }
   ]
