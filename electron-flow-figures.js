@@ -17,7 +17,7 @@ const cap={
  firstlook:["分子のつながりを単純化した模式図。矢印は反応全体を示し、一段階の機構ではない。","Simplified bond diagrams. The arrow is the overall reaction, not a single mechanistic step."],
  atom:["中心の＋は陽子の正電荷を表す。周囲の淡い色は電子の存在確率の模式図で、電子の円軌道ではない。","The nucleus has positive charge. The blue cloud is a qualitative probability illustration, not a fixed electron orbit."],
  bondbegin:["水素原子二つの距離とエネルギーの定性的な関係。縦軸・横軸には実測値の目盛りを与えていない。","Qualitative potential-energy curve for two H atoms. The axes have no numerical measurement scale."],
- sharing:["H:Hの二点とH–Hの一本線は、どちらも共有される電子対一組を表す。","The two dots in H:H and the single line in H–H denote one shared bonding pair."],
+ sharing:["H:Hの二点とH–Hの一本線は同じ共有電子対を表す。水のH–O–Hは電子対を数えるための簡略図で、実際の水分子は折れ線形。","H:H and H–H denote the same shared pair. The H–O–H sketch is simplified for electron counting; real water is bent."],
  symbols:["下付き数字、右上の電荷、結合線、一般化した置換基の記号は、それぞれ異なる意味を持つ。","A subscript, superscript charge, bond line and generic substituent placeholder encode different information."],
  rearrange:["共有電子対を片側へ割り当てる場合と、電子一個ずつに分ける場合の違い。どちらが起こるかは反応条件による。","A conceptual comparison of heterolytic versus homolytic cleavage; actual pathways depend on conditions."],
  why:["反応式の前後に加えて、何が結合を変えたのかという問いを置く。","Go beyond the net reaction: what changed the bonds?"],
@@ -95,7 +95,7 @@ function art(id,en){
   a+=txt(229,69,en?"energy level":"とするエネルギー",13);
   a+=txt(198,237,en?"stable bond":"安定な結合",14);
   a+=txt(129,106,en?"too close: repulsion":"近すぎると反発",14);
-  a+=txt(180,331,en?"Lower energy at a suitable distance":"適度な距離でエネルギーが低い",14);
+  a+=txt(43,16,en?"Energy":"エネルギー",12);a+=txt(180,331,en?"Lower energy at a suitable distance":"適度な距離でエネルギーが低い",14);
  }
  if(id==="sharing"){
   a+=rect(12,16,336,143);
