@@ -79,6 +79,55 @@
             "en": "Return to this chapter after studying intermolecular forces to explain differences in volatility. Solution equilibria help explain recrystallization, and analytical chemistry transforms separation into a way to identify and quantify substances. A list of laboratory procedures becomes a network of particle-level mechanisms."
           }
         ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "試料が透明なのに、蒸発させると固体が残る。ここから『見えること』と『含まれる物質』の違いを考え、どう確かめるかという実験の設計へ進みます。分類を覚える前に、証拠が必要になります。",
+        "premiseEn": "A transparent sample leaves a solid when the water evaporates. Begin with the gap between appearance and composition, then design ways to test what is present. Classification follows the evidence.",
+        "sections": [
+          {
+            "id": "observe",
+            "ja": "1　透明なら純粋な水だろうか",
+            "en": "1. Does clear appearance establish purity?",
+            "textJa": "同じように透明に見える二つのビーカーに、蒸留水と食塩水が入っているとします。目で見ただけではほとんど区別できません。これは、溶質のイオンが光を大きく散乱しないほど小さく、分散しているからです。しかし水を蒸発させれば、食塩水からは固体が残る可能性があります。『透明』は観察事実ですが、『純物質である』は化学的な推論です。まずその二つを分けて考えます。",
+            "textEn": "Two beakers may look equally clear even though one contains distilled water and the other saltwater. Dissolved ions are too small and dispersed to scatter visible light strongly in an ordinary solution. Evaporating the solvent may leave a solid residue in the saltwater case. 'Clear' is an observation; 'pure substance' is a chemical inference. Their difference motivates a test rather than a definition to memorize."
+          },
+          {
+            "id": "sample",
+            "ja": "2　何を分けるのか、何が残るのか",
+            "en": "2. Decide what is being separated",
+            "textJa": "食塩水は水と溶存する塩類の混合物です。NaCl結晶が水に溶けると、Na⁺とCl⁻が水分子に囲まれて分散します。粒子として存在し続けるため、普通のろ紙の網目では捕らえられません。『食塩水をろ過すれば食塩を取り出せる』という予想がうまくいかない理由は、ろ過の装置が不良だからではなく、分離しようとする粒子の状態が方法に合わないからです。",
+            "textEn": "Saltwater is a mixture of water and dissolved salt species. Dissolving NaCl distributes Na⁺ and Cl⁻ ions among water molecules. Ordinary filter paper does not trap these dissolved ions, so filtering clear saltwater does not separate its salt in the way it removes sand. An unsuccessful separation may reflect an unsuitable physical principle rather than defective equipment. The size and state of the components must determine the method."
+          },
+          {
+            "id": "contrast",
+            "ja": "3　砂と食塩水の分離を比べてみる",
+            "en": "3. Contrast filtration with evaporation",
+            "textJa": "砂が混じった食塩水なら、まず砂をろ過で除けます。この操作では、砂の固体粒子がろ紙を通りにくい一方、水と溶けたイオンは通過します。次にろ液から水を蒸発させると塩類を残せます。ただし水を空気中へ逃がしてしまえば、水は回収できません。食塩と水を両方回収したい場合、蒸発した水蒸気を冷やして凝縮する蒸留を考える必要があります。",
+            "textEn": "For a sample containing sand and saltwater, filtration first removes the sand because its particles are retained while water and dissolved ions pass through. Evaporation can then leave dissolved salts behind. But evaporation into the room does not recover the water. To collect both a distillate rich in water and a residue rich in salt, vapor must be cooled and condensed in a distillation apparatus. The desired product determines the procedure."
+          },
+          {
+            "id": "energy",
+            "ja": "4　蒸留の『温度差』は何に利用されているのか",
+            "en": "4. Why does distillation involve heating and condensation?",
+            "textJa": "蒸留では、蒸気になりやすい成分を気相へ移し、再び液体へ戻します。食塩のような不揮発性溶質を含む水溶液では、水が主として蒸発し、食塩は釜に残ります。実際の蒸留では、突沸や液滴の飛散による同伴、蒸留液への微量の不純物混入などにも注意が必要です。混合物の分離に必要なのは、単純な物質名の知識ではなく、物質の状態が条件によってどう変わるかという理解です。",
+            "textEn": "Distillation transfers more volatile components into the vapor phase and then condenses them. With water containing a largely nonvolatile salt, water predominantly enters the vapor while salt remains in the vessel. Real distillation is not automatically perfectly pure: entrained droplets, splashing and volatile impurities can contaminate the distillate. The explanation depends on phase behavior and experimental conditions rather than on the labels 'water' and 'salt' alone."
+          },
+          {
+            "id": "mass",
+            "ja": "5　分離は物質が消える操作ではない",
+            "en": "5. Follow conservation of matter through separation",
+            "textJa": "初めに食塩が5 g、水が95 gあるとすると、試料の総質量は100 gです。理想的に完全分離して水95 gと食塩5 gを回収できた場合、両者の合計は100 gです。開放容器で蒸発させた後に秤量すると水の分だけ質量が減りますが、これは水が消えたのではなく周囲へ移動したためです。どこまでを系に含めるかという境界を定めれば、測定値をエネルギー保存や物質収支と同じ発想で整理できます。",
+            "textEn": "Suppose a sample initially contains 5 g of salt and 95 g of water. Its total mass is 100 g. Ideal complete recovery would yield 5 g of salt and 95 g of water, still totaling 100 g. In an open evaporation dish, the remaining sample weighs less because water crossed the system boundary, not because matter disappeared. Defining the system boundary makes a mass balance meaningful. This is a useful bridge to energy accounting in thermodynamics."
+          },
+          {
+            "id": "limits",
+            "ja": "6　分離方法を選べるということの意味",
+            "en": "6. A separation method is a testable physical hypothesis",
+            "textJa": "ろ過、蒸留、再結晶、抽出、クロマトグラフィーは、それぞれ別の性質の差を利用しています。試料の組成も、必要な回収物もわからない段階で装置だけ選ぶと失敗しやすくなります。まず『どの成分が、どの性質で区別できるか』を仮説として書き、それを検証します。揮発性の不純物を含む試料では、単純な蒸留でもきれいに分かれない可能性があります。予想の限界を考えて初めて、実験の意味が明確になります。",
+            "textEn": "Filtration, distillation, recrystallization, extraction and chromatography exploit different physical or chemical contrasts. Choosing apparatus before identifying the target components and desired recovered fractions is often ineffective. Begin with a testable hypothesis about differences in particle size, volatility, solubility or partitioning. Volatile impurities may not be separated well by a simple distillation. Identifying limitations is part of scientific experimental design."
+          }
+        ]
       }
     },
     {
@@ -253,6 +302,62 @@
             "en": "Bonding turns valence electrons into a predictive idea; spectroscopy provides evidence for quantized energy differences. Quantum chemistry then rebuilds periodic trends from wavefunctions and electron interactions. These connections give familiar trends a more explanatory meaning."
           }
         ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "周期表の並びは美しい規則を示します。しかしなぜ同じ性質が周期的に現れるのか、原子はどうして特定の波長の光を吸収・放出するのか。この二つの観察から電子の量子状態へ進みます。惑星模型の限界を明示し、必要な数学は途中で説明します。",
+        "premiseEn": "The periodic table shows repeating patterns, while atoms emit and absorb particular spectral lines. Start from these observations and build toward quantum states, explaining the limits of orbit-like pictures and introducing mathematics only when needed.",
+        "sections": [
+          {
+            "id": "spectrum",
+            "ja": "1　なぜ原子の光は虹のすべての色ではないのか",
+            "en": "1. Why are atomic emission spectra made of lines?",
+            "textJa": "低圧の水素などの気体を放電させ、分光器で観察すると、連続した虹ではなく特定の波長に明るい線が現れます。もし電子が任意のエネルギーを自由にとれるなら、なぜ限られた波長に光が集中するのでしょうか。原子内部には、エネルギーを区別する仕組みが必要になります。スペクトル線を説明することが、電子の状態を考える動機です。",
+            "textEn": "A low-pressure gas such as hydrogen emits discrete spectral lines when excited and viewed with a spectrometer, rather than an uninterrupted rainbow. If bound electrons could take any energy continuously, why would particular photon energies dominate? The observation motivates a description of discrete atomic energy differences. Spectroscopy provides an experimental question before quantum numbers are introduced."
+          },
+          {
+            "id": "model",
+            "ja": "2　電子は小さな惑星なのか",
+            "en": "2. Why not simply picture electrons as miniature planets?",
+            "textJa": "電子を原子核の周りを回る小球として描くボーア模型は、水素原子の一部のスペクトル規則を説明する歴史的な入口です。しかし古典電磁気学では加速度運動する電荷は放射し、単純な惑星模型では安定性や複雑なスペクトルを十分に説明できません。そこで『電子の位置を時刻ごとに一本の軌道で指定する』以外の記述が必要になります。原子軌道は電子が進む線ではなく、量子状態に結びついた空間的な振幅分布です。",
+            "textEn": "The Bohr model is a useful historical entry because it accounts for selected regularities in hydrogen spectra. Yet a classical accelerating charge radiates, and a literal planetary model cannot fully describe stable atoms or complex spectra. We need a different state description. An atomic orbital is not the line traced by a miniature planet; it is part of a quantum state described through a spatial wavefunction."
+          },
+          {
+            "id": "wave",
+            "ja": "3　波に境界を与えると、許される形が限られる",
+            "en": "3. A boundary condition selects allowed waves",
+            "textJa": "一本の弦の両端を固定すると、どんな波長でも定常波になるわけではありません。長さLの弦に半波長がn個並ぶときだけ、両端で変位をゼロにできます。式は L=nλ/2、したがってλ=2L/n（nは正整数）です。これは原子そのものの式ではありませんが、波を境界条件と組み合わせることで連続した波長から離散的な候補が生まれることを、高校の波動の知識だけで確かめられます。",
+            "textEn": "A string fixed at both ends cannot support an arbitrary standing-wave wavelength. The boundary conditions allow an integer n of half-wavelengths across the length L, so L=nλ/2 and λ=2L/n for positive integer n. This is not an atomic-electron model, but it demonstrates a key mathematical idea: boundary conditions can select discrete permitted patterns from continuous possibilities."
+          },
+          {
+            "id": "energy",
+            "ja": "4　波長が決まると、エネルギーも飛び飛びになり得る",
+            "en": "4. How wave conditions can lead to discrete energies",
+            "textJa": "量子力学で使うド・ブロイの関係p=h/λを、一次元の理想的な箱の中の粒子という別の模型に適用してみます。λ=2L/nを代入するとp=nh/(2L)です。非相対論的な運動エネルギーE=p²/(2m)を用いれば Eₙ=n²h²/(8mL²) と順に導けます。n²やL²が突然現れたのではなく、波長と運動量とエネルギーの二つの関係を合成した結果です。ここでの箱は電子をもつ実在の原子ではなく、量子化の意味を理解する近似模型です。",
+            "textEn": "Apply the de Broglie relation p=h/λ to a separate idealized model: a nonrelativistic particle in a one-dimensional box. With λ=2L/n, momentum magnitude is p=nh/(2L). Substituting into E=p²/(2m) gives Eₙ=n²h²/(8mL²). The factors n² and L² follow from the steps; they are not facts to memorize. The box is not a literal hydrogen atom but a simple model demonstrating how quantization emerges."
+          },
+          {
+            "id": "orbitals",
+            "ja": "5　実際の原子では、空間と電子間相互作用を考える",
+            "en": "5. Real atoms need three-dimensional states and interactions",
+            "textJa": "水素原子では原子核とのクーロン相互作用を含む三次元の波動方程式を考えます。その解にはn、l、mなどの量子数が現れ、波動関数の形やエネルギーを記述します。複数の電子がある原子では電子同士の反発もあり、厳密に独立な軌道を単純に積み重ねればよいとは限りません。高校のs、p、dの軌道模型は理解の道具ですが、電子を入れる箱の絵と同一視しないようにします。",
+            "textEn": "A hydrogen atom requires a three-dimensional equation involving the electron–nucleus Coulomb potential. Its solutions are characterized by quantum numbers including n, l and m. For many-electron atoms, electron–electron repulsion matters and a single collection of independent orbitals is an approximation. The familiar s, p and d pictures are useful representations, not literal boxes in which electrons sit."
+          },
+          {
+            "id": "periodic",
+            "ja": "6　周期表へ戻ると、規則の理由が見える",
+            "en": "6. Reinterpret periodicity with electronic states",
+            "textJa": "同じ族に似た化学的性質が繰り返し現れるのは、価電子の配置に共通性があるためです。ただし軌道エネルギーの順位は電子の相互作用や原子番号によって変わり、CrやCuのように単純な充填順では説明しきれない例もあります。周期表を最初に暗記する表として見るのではなく、実験で見つかった周期性を電子の量子状態で説明し直す表として読み直します。",
+            "textEn": "Similar valence arrangements help explain recurring chemical properties in a group. Yet orbital-energy order changes with electron interactions and nuclear charge, producing cases such as Cr and Cu that defeat a rigid simplistic filling list. The periodic table becomes a set of observed patterns to reinterpret through quantum states, rather than only a table to memorize."
+          },
+          {
+            "id": "limits",
+            "ja": "7　模型を正しく使うため、できないことを明記する",
+            "en": "7. State what the models cannot predict",
+            "textJa": "一次元箱の粒子は原子のスペクトルを数値的に予言する模型ではありません。弦の定常波の例は境界条件の働きを示す数学的なたとえです。水素原子の軌道模型も多電子原子の化学結合をそのまま完全に説明できるわけではありません。『何がわかったのか』『まだ何が必要か』を区別すると、数式の導出は知識を増やすだけでなく、自分で模型を選ぶ判断につながります。",
+            "textEn": "The one-dimensional box does not numerically predict atomic spectra; the standing-string example illustrates only the role of boundary conditions. Nor does a hydrogenic orbital picture solve all many-electron bonding problems. Distinguishing what a model demonstrates from what it cannot predict turns a derivation into a tool for choosing appropriate scientific explanations."
+          }
+        ]
       }
     },
     {
@@ -425,6 +530,55 @@
             "type": "revisit",
             "ja": "蒸留を学んだあと分子間力へ戻ると、なぜ沸点差が生じるのかが見えます。生化学を学んだ後ならタンパク質の折り畳み、DNAの塩基対、膜の構造を、個々の分子間相互作用が集まった結果として読み直せます。分子の形と相互作用は生命現象まで通じる橋です。",
             "en": "Intermolecular forces reinterpret the earlier topic of distillation by explaining volatility. Later, protein folding, DNA base pairing and membrane organization can all be revisited as outcomes of multiple molecular interactions acting together. Molecular geometry becomes a bridge to life science."
+          }
+        ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "CO₂のC=O結合には極性があるのに、CO₂分子全体の双極子はゼロに近い。H₂Oでは同じように酸素が含まれるのに分子全体が極性をもつ。この違和感から、ベクトルと分子の立体構造を使う必要性を導きます。",
+        "premiseEn": "The polar C=O bonds of CO₂ do not give the whole molecule a large net dipole, whereas H₂O is polar. This apparent contradiction motivates vector addition and molecular geometry instead of a one-word classification.",
+        "sections": [
+          {
+            "id": "contrast",
+            "ja": "1　結合の極性と分子の極性は同じなのか",
+            "en": "1. Is a polar bond the same as a polar molecule?",
+            "textJa": "酸素は炭素や水素より電子を引きつけやすいため、C=OやO−Hには電子密度の偏りが生まれます。しかし『極性のある結合が一つでもあるから極性分子』という規則ではCO₂の性質を説明できません。分子全体として電荷の偏りがどの方向へ残るかは、結合の向きにも依存するからです。ここで物理のベクトルの足し算が必要になります。",
+            "textEn": "Oxygen attracts bonding electron density more strongly than carbon or hydrogen, so C=O and O–H bonds are polar. Yet the rule 'one polar bond means a polar molecule' fails for CO₂. The net direction and magnitude of charge separation depend on the orientations of all contributing bonds. Vector addition from mechanics becomes the appropriate mathematical tool."
+          },
+          {
+            "id": "vectors",
+            "ja": "2　向きが反対なら、足し算した結果がゼロになる",
+            "en": "2. Opposite vectors can cancel",
+            "textJa": "物理の力で、右向き3 Nと左向き3 Nを足すと合力は0 Nです。結合双極子も大きさと向きをもつ量として扱えます。CO₂はO=C=Oが直線形で二つの結合の双極子がほぼ反対向きなので打ち消し合います。これは結合が無極性になったという意味ではなく、分子全体の双極子モーメントが相殺されたという意味です。",
+            "textEn": "In mechanics, adding a 3 N force to the right and a 3 N force to the left gives zero net force. Bond dipole contributions similarly have both magnitude and direction. Linear O=C=O has nearly opposing equal contributions that cancel. This does not make each C=O bond nonpolar: it makes the whole molecule's electric dipole moment cancel."
+          },
+          {
+            "id": "geometry",
+            "ja": "3　折れ線形になると、同じ足し算でも結果が変わる",
+            "en": "3. A bent geometry gives a nonzero vector sum",
+            "textJa": "H₂OではO−H結合二本が約104.5°の角をなし、二つの結合双極子の向きが完全には反対になりません。同じ大きさμの二つのベクトルが角度θをなすとき、合成の大きさは、余弦定理から R²=μ²+μ²+2μ²cosθ です。したがって R=2μcos(θ/2)（0≤θ≤180°）になります。θが180°なら0、104.5°なら0ではありません。分子の電子密度を単純な結合双極子だけで厳密には表せませんが、幾何の効果を理解できます。",
+            "textEn": "Water is bent, with an H–O–H angle near 104.5°. Its two O–H bond dipole contributions are not opposite. For two equal vectors of magnitude μ separated by angle θ, the cosine rule gives R²=μ²+μ²+2μ²cosθ, hence R=2μcos(θ/2) for 0≤θ≤180°. At 180° the sum is zero, whereas at 104.5° it is nonzero. This simple bond-vector model illustrates geometry but does not exactly reproduce the full electronic charge distribution."
+          },
+          {
+            "id": "shape",
+            "ja": "4　そもそも分子の形は何で決まるのか",
+            "en": "4. What determines the molecular geometry?",
+            "textJa": "ルイス構造で結合電子対と非共有電子対を整理し、VSEPR模型で電子領域の反発を考えると、H₂Oが折れ線形、CH₄が正四面体に近い形になることを説明できます。ただしVSEPRは経験的な近似模型であり、すべての結合角を正確に計算できません。より深く理解するには電子状態や分子軌道の知識が必要になります。形を知る理由は、原子配置を暗記するためだけではなく、その形が物性を決めるからです。",
+            "textEn": "Lewis structures distinguish bonding and nonbonding electron pairs. The VSEPR model uses electron-domain repulsions to rationalize bent H₂O and nearly tetrahedral CH₄. VSEPR is a useful approximate model rather than a universal calculation of exact angles; electronic structure and molecular orbitals provide deeper explanations. Geometry matters because it influences measurable properties."
+          },
+          {
+            "id": "forces",
+            "ja": "5　分子が極性をもつと、物性に何が起こるか",
+            "en": "5. Why should molecular polarity affect macroscopic properties?",
+            "textJa": "極性をもつ分子どうしには双極子に関係する相互作用があり、水では水素結合も重要です。こうした分子間相互作用は気体を液体にする際のエネルギーや蒸気圧、沸点に関わります。一方、分散力は無極性分子にも存在し、大きな分子では影響が強くなる場合があります。『極性があるから必ず沸点が高い』と決めるのではなく、分子の質量、大きさ、形、相互作用を合わせて比較します。",
+            "textEn": "Molecules with permanent dipoles interact through orientation-dependent electrostatics, and hydrogen bonding is especially important for water. Intermolecular interactions affect vapor pressure and boiling behavior. Dispersion forces exist even between nonpolar molecules and may become substantial for larger molecules. Molecular polarity is one variable among mass, size, shape and other interactions, not a single universal predictor."
+          },
+          {
+            "id": "revisit",
+            "ja": "6　物理のベクトルが、化学の例外を説明した",
+            "en": "6. A familiar vector rule resolves a chemical puzzle",
+            "textJa": "CO₂とH₂Oの比較から、物質の性質を原子の名前だけで判断することができないとわかります。構造式、立体配置、電荷の分布、ベクトルの和、分子間相互作用へと、必要な説明の層が増えました。水の溶解性や有機分子の官能基の反応性を学んだ後、再びこの単元へ戻ると、『分子の形』がさまざまな分野をつなぐことに気づきます。",
+            "textEn": "The CO₂/H₂O comparison shows why element names alone cannot predict molecular properties. The explanation moves from connectivity to three-dimensional arrangement, charge distribution, vector sums and intermolecular forces. After studying solutions or organic functional groups, returning to molecular shape provides a more powerful structure–property framework."
           }
         ]
       }
