@@ -25,5 +25,118 @@ const cases=[
 {"id":"carbonyl","title":{"ja":"カルボニルへの求核付加","en":"Nucleophilic carbonyl addition"},"prompt":{"ja":"最初の求核付加の図です。なぜC=Oのπ電子対も移る必要があるのか。","en":"Why must the carbonyl π electron pair also move in nucleophilic addition?"},"formula":"Nu⁻ + R₂C=O → R₂C(O⁻)(Nu)","steps":[{"title":{"ja":"電子対の供与源と受け取る場所","en":"Find the donor and the electrophilic carbon"},"reason":{"ja":"Nu⁻が電子対を与え、C=O結合の酸素が電子密度を引くため、炭素が求電子的になります。","en":"Nu⁻ donates an electron pair; polarization toward oxygen makes carbonyl carbon an electrophilic site."}},{"title":{"ja":"二本の曲矢印の理由","en":"Why two electron-pair arrows are needed"},"reason":{"ja":"一本目はNuの孤立電子対→炭素、二本目はC=Oのπ電子対→酸素です。二重結合を残したまま新しいC–Nu結合を作れば通常の炭素の価数に合いません。","en":"The first arrow goes from the Nu lone pair to carbon. The second sends the C=O π pair to oxygen, avoiding an overbonded carbon in the addition product."}},{"title":{"ja":"アルコキシド型中間体へ","en":"Examine the alkoxide intermediate"},"reason":{"ja":"O⁻を持つ四面体型の付加中間体を得ます。全電荷は−1のままです。その後のプロトン化は適切なプロトン供与体が必要な別段階です。","en":"The tetrahedral-like addition intermediate contains O⁻ and retains net charge −1. Protonation may occur later if a suitable proton donor is present."}}],"boundary":{"ja":"負電荷の求核剤の典型模型です。中性求核剤や酸触媒条件では、中間体の電荷・機構が異なります。","en":"This is an illustrative anionic-nucleophile pathway. Neutral nucleophiles and acid catalysis lead to different intermediate charges."},"quiz":{"question":{"ja":"カルボニルの二本目の曲矢印は、なぜ必要か。","en":"Why does carbonyl addition require the second curved arrow?"},"choices":{"ja":["C=Oのπ電子対をOへ移し、通常の炭素の原子価を保つため","酸素原子核を移動させるため","Nu⁻の負電荷を消してしまうため"],"en":["Move the C=O π pair toward O, maintaining carbon valence","Move the oxygen nucleus","Erase the nucleophile's negative charge"]},"answer":0,"why":{"ja":"Nuとの新しいσ結合を作ると同時に、C=Oのπ電子対を酸素へ移します。全電荷は−1で保存されます。","en":"Formation of a new C–Nu σ bond is accompanied by movement of the C=O π pair toward oxygen. Total charge stays −1."}}}
 /*CASES*/
 ];
-/*ENGINE*/
+
+const text={
+ ja:{title:"電子の移動を理解する",subtitle:"何のために曲矢印を導入するのか。理由から学び、反応を予測する。",toc:"理解の道筋",tocFoot:"学習の順番は提案です。関門テストはありません。必要になった箇所へいつでも戻れます。",heroTitle:"反応を暗記することと、反応を説明できることは違う",heroLead:"曲矢印を学ぶ理由は、反応を記号で飾るためではありません。結合をつくる電子対を追うと、別々に見える反応の共通原理を見つけ、まだ知らない反応も考えられるようになります。",heroNote:"価電子 → ルイス構造 → 電荷と極性 → 求核剤・求電子剤 → 曲矢印 → 実際の反応 → 実験的な証拠。内容に必要なところは丁寧に扱い、学習の進行をテストで制限しません。",concept:"理解の段階",limit:"成立条件・限界",labTitle:"曲矢印を自分で追ってみる",labIntro:"反応を選び、まず電子対の位置を探し、次に曲矢印が何を表すか確かめ、最後に結合と電荷を点検します。図は電子の実際の移動軌道ではありません。",prev:"← 前の段階",next:"次の段階 →",count:(n,t)=>"考える段階 "+n+" / "+t,checks:"理解の確認（任意）",checksIntro:"どれが電子の収支と整合するでしょうか。回答しなくても学習を続けられます。",transfer:"ほかの化学反応へ戻って考える",transferLead:"習ったばかりの電子対の見方を、前に学んだ章へ持ち帰ってみましょう。",fig:"結合と電子対の変化を表す模式図。曲矢印は電子の実際の軌道を示しません。",correct:"この考え方で説明できます。",incorrect:"その答えでは、電子対の出発点や電荷の収支をもう一度確かめる必要があります。"},
+ en:{title:"Understanding Electron Flow",subtitle:"Why electron-pair arrows matter, how to interpret them, and what they can predict",toc:"A path to understanding",tocFoot:"The order is a suggestion, not a gate. Return to previous concepts whenever you need them.",heroTitle:"Memorizing a reaction is not the same as explaining it",heroLead:"Curved arrows are not decorative. Following electron pairs involved in bonding helps reveal common principles across reactions and build predictions about unfamiliar chemistry.",heroNote:"Valence electrons → Lewis structures → charge and polarity → nucleophiles and electrophiles → curved arrows → mechanisms → experimental evidence. Explore the reasoning freely, without mandatory tests.",concept:"Concept",limit:"Assumptions and limits",labTitle:"Follow an electron-pair rearrangement",labIntro:"Choose a reaction, find the electron source, interpret the arrows, and check bonds and charge. Diagrams are not actual electron trajectories.",prev:"← Previous stage",next:"Next stage →",count:(n,t)=>"Reasoning stage "+n+" / "+t,checks:"Optional understanding check",checksIntro:"Which answer fits electron and charge bookkeeping? Nothing is blocked if you skip the question.",transfer:"Return to other chemistry chapters",transferLead:"Use this new idea to reinterpret reactions you have previously studied.",fig:"Schematic bond and electron-pair changes. Curved arrows do not show literal electron trajectories.",correct:"This interpretation is consistent with the electron-pair model.",incorrect:"Reconsider where the electrons begin and whether charge is conserved."}
+};
+let current="carbonyl",stage=0;
+function set(id,value){const node=el(id);if(node)node.textContent=value;}
+function renderCurriculum(){
+ const t=text[lang];
+ document.documentElement.lang=lang;
+ document.title=t.title+" | Chemistry Structure Lab";
+ set("mainTitle",t.title);set("mainSubtitle",t.subtitle);set("tocHeading",t.toc);set("tocFoot",t.tocFoot);
+ set("heroTitle",t.heroTitle);set("heroLead",t.heroLead);set("heroNote",t.heroNote);
+ set("workshopTitle",t.labTitle);set("workshopIntro",t.labIntro);
+ set("checkTitle",t.checks);set("checkIntro",t.checksIntro);
+ set("transferTitle",t.transfer);set("transferLead",t.transferLead);
+ set("scientificLimit",en?"Curved arrows are proposed electron-pair accounting models. Experimental evidence such as spectroscopy, product analysis, kinetics and isotope tracing is needed to discriminate actual pathways.":"曲矢印は電子対の再配置を表す説明モデルです。実際の機構は生成物の分析、速度論、分光、同位体標識などから確かめます。");
+ const course="./high-school-chemistry"+(en?"-en":"")+".html";
+ el("backToCourse").href=course+"#chapter=4-2";
+ set("backToCourse",en?"← High School Chemistry":"← 高校化学に戻る");
+ const switcher=el("languageSwitch");
+ switcher.href="./electron-flow-foundations.html"+(en?"":"?lang=en");
+ switcher.textContent=en?"日本語":"English";
+ switcher.addEventListener("click",()=>switcher.href="./electron-flow-foundations.html"+(en?"":"?lang=en")+location.hash);
+ el("toc").innerHTML=lessons.map((x,i)=>'<a href="#'+esc(x.id)+'">'+(i+1)+'. '+esc(x.title[lang])+'</a>').join("")+
+  '<a href="#workshop">'+esc(t.labTitle)+'</a><a href="#transfer">'+esc(t.transfer)+'</a>';
+ el("lessons").innerHTML=lessons.map((x,i)=>
+ '<article class="lesson" id="'+esc(x.id)+'" aria-labelledby="topic-'+esc(x.id)+'">'+
+ '<div class="number">'+esc(t.concept)+' '+(i+1)+'</div>'+
+ '<h2 id="topic-'+esc(x.id)+'">'+esc(x.title[lang])+'</h2>'+
+ '<p class="question">'+esc(x.question[lang])+'</p>'+
+ x.body[lang].map(par=>'<p>'+esc(par)+'</p>').join("")+
+ '<p class="formula">'+esc(x.formula)+'</p>'+
+ '<div class="limit"><strong>'+esc(t.limit)+'</strong><p>'+esc(x.limit[lang])+'</p></div></article>').join("");
+ const links=[
+ ["4-0",en?"Molecular structures and isomers":"分子構造・異性体"],
+ ["4-1",en?"Alkenes and aromaticity":"アルケンと芳香族性"],
+ ["4-2",en?"Carbonyl groups and nucleophilic addition":"カルボニル基と求核付加"],
+ ["4-3",en?"Esterification and proton transfer":"エステル化とプロトン移動"],
+ ["4-4",en?"Electrophilic aromatic substitution":"芳香族求電子置換"],
+ ["4-5",en?"Biomolecules and stereochemistry":"生体分子と立体構造"]
+ ];
+ el("connections").innerHTML=links.map(([id,name])=>'<a href="'+course+'#chapter='+id+'">'+esc(name)+'</a>').join("");
+}
+function svgText(x,y,t,size=23,fill="#254a43"){
+ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-size="'+size+'" fill="'+fill+'" font-family="system-ui,-apple-system,sans-serif" font-weight="650">'+esc(t)+'</text>';
+}
+function svgLine(x1,y1,x2,y2){
+ return '<path d="M'+x1+' '+y1+' L'+x2+' '+y2+'" stroke="#416774" stroke-width="3" stroke-linecap="round" fill="none"/>';
+}
+function drawDiagram(kind,position){
+ const c=cases.find(x=>x.id===kind);
+ const defs='<defs><marker id="curved-pair-arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#b05e41" stroke-width="2"/></marker></defs>';
+ const pair=path=>'<path d="'+path+'" fill="none" stroke="#b05e41" stroke-width="4" stroke-linecap="round" marker-end="url(#curved-pair-arrow)"/>';
+ let art='<rect x="5" y="5" width="670" height="250" rx="17" fill="#eff7f2"/>';
+ if(position===2){
+  let product=kind==="acid"?"NH₄⁺ + H₂O":kind==="sub"?"CH₃OH + Br⁻":"R₂C(O⁻)(Nu)";
+  art+=svgText(340,107,product,30)+svgText(340,161,en?"Check total charge and each bond":"全電荷と結合を確かめる",18);
+ }else if(kind==="acid"){
+  art+=svgText(114,121,"NH₃:",30)+svgText(347,121,"H",30)+svgText(469,121,"O⁺",30);
+  art+=svgLine(366,110,436,110)+svgText(470,67,"H",21)+svgText(514,164,"H",21);
+  art+=svgLine(466,95,467,79)+svgLine(481,127,500,146);
+  if(position===1)art+=pair("M172 107 C222 60 301 72 331 100")+pair("M394 100 C414 59 461 66 470 95");
+ }else if(kind==="sub"){
+  art+=svgText(101,120,"HO:⁻",30)+svgText(330,120,"CH₃",29)+svgText(500,120,"Br",29);
+  art+=svgLine(374,111,466,111);
+  if(position===1)art+=pair("M157 107 C213 64 276 65 307 99")+pair("M413 104 C456 59 497 66 501 98");
+ }else{
+  art+=svgText(102,122,"Nu:⁻",30)+svgText(341,122,"C",28)+svgText(341,54,"O",28);
+  art+=svgLine(334,87,334,67)+svgLine(349,87,349,67);
+  art+=svgLine(325,132,267,180)+svgLine(354,132,416,180);
+  art+=svgText(249,198,"R",23)+svgText(431,198,"R′",23);
+  if(position===1)art+=pair("M151 109 C203 60 275 75 321 110")+pair("M359 84 C405 66 400 36 365 45");
+ }
+ if(position===0)art+=svgText(341,238,en?"Locate available electron pairs":"どこに電子対があるか探す",17);
+ if(position===1)art+=svgText(341,238,en?"The arrows track pairs, not nuclei":"矢印が表すのは電子対の再配置",17);
+ return '<svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="'+esc(c.prompt[lang])+'">'+defs+art+'</svg>';
+}
+function renderQuiz(c){
+ const q=c.quiz,area=el("questionArea"),feedback=el("answerFeedback");
+ area.innerHTML='<p><strong>'+esc(q.question[lang])+'</strong></p><div class="choices">'+
+ q.choices[lang].map((choice,i)=>'<button type="button" data-answer="'+i+'">'+esc(choice)+'</button>').join("")+'</div>';
+ feedback.hidden=true;feedback.textContent="";
+ area.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{
+  const ok=Number(b.dataset.answer)===q.answer;
+  area.querySelectorAll("button").forEach(other=>other.classList.toggle("selected",other===b));
+  feedback.textContent=(ok?text[lang].correct:text[lang].incorrect)+" "+q.why[lang];
+  feedback.hidden=false;
+ }));
+}
+function renderCase(){
+ const t=text[lang],c=cases.find(x=>x.id===current),item=c.steps[stage];
+ el("caseButtons").innerHTML=cases.map(x=>'<button type="button" data-case="'+x.id+'" aria-pressed="'+String(x.id===current)+'">'+esc(x.title[lang])+'</button>').join("");
+ el("caseButtons").querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{current=b.dataset.case;stage=0;renderCase()}));
+ set("caseTitle",c.title[lang]);set("caseQuestion",c.prompt[lang]);
+ el("reactionDiagram").innerHTML=drawDiagram(current,stage);
+ set("diagramCaption",t.fig+" "+c.formula);
+ set("stepTitle",item.title[lang]);set("stepReason",item.reason[lang]);
+ set("caseBoundary",c.boundary[lang]);
+ set("prevStep",t.prev);set("nextStep",t.next);set("stepCount",t.count(stage+1,c.steps.length));
+ el("prevStep").disabled=stage===0;el("nextStep").disabled=stage===c.steps.length-1;
+ renderQuiz(c);
+}
+function init(){
+ renderCurriculum();
+ el("prevStep").addEventListener("click",()=>{stage=Math.max(0,stage-1);renderCase()});
+ el("nextStep").addEventListener("click",()=>{stage=Math.min(cases.find(x=>x.id===current).steps.length-1,stage+1);renderCase()});
+ renderCase();
+ const target=decodeURIComponent(location.hash.slice(1));
+ if(target&&el(target))requestAnimationFrame(()=>el(target).scrollIntoView({block:"start"}));
+}
+init();
+window.ElectronFlowFoundations={curriculum:{lessons,cases},locale:lang};
+
 })();
