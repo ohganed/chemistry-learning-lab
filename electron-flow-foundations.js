@@ -55,8 +55,8 @@ function renderCurriculum(){
  '<article class="lesson" id="'+esc(x.id)+'" aria-labelledby="topic-'+esc(x.id)+'">'+
  '<div class="number">'+esc(t.concept)+' '+(i+1)+'</div>'+
  '<h2 id="topic-'+esc(x.id)+'">'+esc(x.title[lang])+'</h2>'+
- '<p class="question">'+esc(x.question[lang])+'</p>'+
- x.body[lang].map((par,index)=>'<p>'+esc(par)+'</p>'+(index===0?(window.ElectronFlowFigures?.render?.(x.id,lang)||''):'')).join("")+
+ '<p class="question">'+esc(x.question[lang])+'</p>'+ (window.ElectronFlowFigures?.render?.(x.id,lang)||'')+
+ x.body[lang].map(par=>'<p>'+esc(par)+'</p>').join("")+
  '<p class="formula">'+esc(x.formula)+'</p>'+
  '<div class="limit"><strong>'+esc(t.limit)+'</strong><p>'+esc(x.limit[lang])+'</p></div></article>').join("");
  const links=[
