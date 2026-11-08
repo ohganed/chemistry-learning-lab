@@ -209,5 +209,84 @@ function render(id,lang,step){
  }
  return "";
 }
-window.ChemistryPedagogyVisuals={render};
+
+/* Organic drawings use the same original scientific-figure primitive as the main course.
+   A curved arrow denotes transfer of one electron pair, not the motion of an atom. */
+function renderOrganic(kind,lang){
+ const en=lang==="en";
+ if(kind==="carbonyl"){
+  const defs='<defs><marker id="organic-electron-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#aa674f"/></marker></defs>';
+  const art=defs
+   +tx(59,110,"Nu:⁻",26)+tx(249,117,"C",26)+tx(249,48,"O",26)
+   +tx(181,157,"R",23)+tx(318,157,"R′",23)
+   +ln(243,89,243,60,"#547486",3)+ln(256,89,256,60,"#547486",3)
+   +ln(235,121,201,145,"#547486",3)+ln(268,121,298,145,"#547486",3)
+   +'<path d="M104 94 C135 48 207 46 237 99" stroke="#aa674f" stroke-width="3.5" marker-end="url(#organic-electron-arrow)" fill="none"/>'
+   +'<path d="M266 79 C304 75 296 49 272 45" stroke="#aa674f" stroke-width="3.5" marker-end="url(#organic-electron-arrow)" fill="none"/>'
+   +tx(151,31,en?"lone pair":"孤立電子対",15)
+   +tx(327,57,en?"π pair":"π電子対",15)
+   +ln(369,111,407,111,"#2d856a",3)
+   +tx(502,101,"R₂C(O⁻)(Nu)",18)
+   +tx(498,137,en?"alkoxide intermediate":"アルコキシド中間体",14)
+   +tx(295,198,en?"Two electron-pair arrows":"二組の電子対の動きを表す",16);
+  return figure(
+   en?"Why does nucleophilic addition need two curved arrows?":"カルボニル求核付加に二本の曲矢印が必要な理由",
+   en?"One arrow goes from the nucleophile lone pair to carbon; the other shifts a C=O π pair to oxygen. The product is the idealized alkoxide intermediate from an anionic nucleophile, before protonation. This diagram does not represent full transition-state geometry or all solvent-dependent pathways.":"一方は求核剤の孤立電子対から炭素へ、もう一方はC=Oのπ電子対から酸素へ向かう。負電荷をもつ求核剤の付加後、プロトン移動前の中間体を示した模式図。遷移状態や溶媒に依存するすべての反応機構を表すものではない。",
+   "Nu:⁻ + R₂C=O → R₂C(O⁻)(Nu)",art);
+ }
+ if(kind==="addition"){
+  const art=rect(7,43,190,108,"#f0f7fb")+rect(243,43,143,108,"#fbf4ec")+rect(430,43,164,108,"#f0f8f0")
+   +tx(104,82,"H₂C=CH₂",22)+tx(104,112,"+ Br₂",20)
+   +tx(312,69,"Br⁺",19)+tx(277,120,"C",18)+tx(345,120,"C",18)
+   +ln(312,81,282,109,"#9e7159",3)+ln(312,81,341,109,"#9e7159",3)+ln(286,120,336,120,"#9e7159",3)
+   +tx(513,103,"BrCH₂CH₂Br",18)
+   +ln(199,102,239,102,"#35846f",3)+ln(389,102,424,102,"#35846f",3)
+   +tx(216,87,"→",23)+tx(407,87,"→",23)
+   +tx(105,172,en?"alkene + bromine":"アルケン＋臭素",14)
+   +tx(313,172,en?"bridged ion":"橋かけイオン",14)
+   +tx(515,172,en?"after Br⁻ attack":"Br⁻による開環後",14);
+  return figure(
+   en?"Bromonium formation followed by nucleophilic ring opening":"ブロモニウム形成と求核開環",
+   en?"Schematic connectivity: ethene and bromine can produce a bridged bromonium intermediate. Under suitable conditions bromide opens that ring to give 1,2-dibromoethane. The triangle is a bonding symbol, not orbital geometry. Water can compete as the nucleophile in aqueous media.":"エテンと臭素から橋かけされたブロモニウムイオンを経て、適切な条件でBr⁻が開環し1,2-ジブロモエタンが生じる模式図。三角形は結合を簡略化した記号で軌道図ではない。水中ではH₂Oによる攻撃も競争し得る。",
+   "π electrons → bridged bromonium ion → Br⁻ attack",art);
+ }
+ if(kind==="catalysis"){
+  const art=rect(11,30,171,126,"#f5f9f2")+rect(213,30,172,126,"#eff4fb")+rect(416,30,174,126,"#f2f9f3")
+   +tx(97,69,"RCOOH",20)+tx(97,107,"+ R′OH",19)
+   +tx(299,68,en?"Protonated":"プロトン化",17)+tx(299,106,en?"intermediates":"中間体",18)
+   +tx(503,69,"RCOOR′",19)+tx(503,107,"+ H₂O",19)
+   +ln(183,95,208,95,"#327d67",3)+ln(387,95,410,95,"#327d67",3)
+   +tx(195,82,"→",22)+tx(401,82,"→",22)+tx(300,18,"H⁺",18)
+   +'<path d="M299 157 Q309 191 503 186" fill="none" stroke="#b18354" stroke-width="2" stroke-dasharray="6 4"/>'
+   +tx(296,205,en?"H⁺ is regenerated overall":"H⁺は全体として再生される",15);
+  return figure(
+   en?"An acid catalyst acts in the mechanism but is regenerated":"酸触媒は途中で働き、全体として再生する",
+   en?"This is a conceptual overview of Fischer esterification, not a complete elementary mechanism. Proton transfers and water elimination occur inside the reaction, and acid is regenerated overall. The dotted path represents catalyst accounting, not a literal proton route. At constant temperature, adding catalyst does not change the equilibrium constant.":"フィッシャーエステル化の概念図で、完全な素反応機構図ではない。途中でプロトン移動と水の脱離があり、酸は全体として再生される。破線は触媒の収支を示すもので、プロトンの実際の移動経路ではない。同じ温度で触媒だけを加えても平衡定数は変わらない。",
+   "RCOOH + R′OH ⇌ RCOOR′ + H₂O",art);
+ }
+ if(kind==="aromatic"){
+  function aromaticRing(cx,cy,r,delocalized){
+   let out="",pts=[];
+   for(let i=0;i<6;i++){const a=Math.PI*(i/3-0.5);pts.push([cx+r*Math.cos(a),cy+r*Math.sin(a)]);}
+   for(let i=0;i<6;i++)out+=ln(...pts[i],...pts[(i+1)%6],"#467b72",3);
+   if(delocalized)out+='<circle cx="'+cx+'" cy="'+cy+'" r="'+(r*0.51)+'" fill="none" stroke="#b08a55" stroke-width="3"/>';
+   return out;
+  }
+  const art=aromaticRing(96,104,46,true)+aromaticRing(301,104,46,false)+aromaticRing(504,104,46,true)
+   +tx(95,173,en?"benzene":"ベンゼン",15)+tx(301,173,en?"σ complex":"σ錯体",15)
+   +tx(503,173,en?"substituted ring":"置換した環",15)
+   +tx(322,54,"E",18)+tx(317,139,"+",18)+tx(523,54,"E",18)
+   +ln(301,58,319,76,"#a97854",2)+ln(504,58,520,76,"#a97854",2)
+   +ln(150,105,235,105,"#387f6c",3)+ln(356,105,441,105,"#387f6c",3)
+   +tx(192,90,"→",22)+tx(398,90,"→",22)
+   +tx(301,205,en?"temporary loss → restoration of aromaticity":"芳香族性の一時的な喪失 → 回復",14);
+  return figure(
+   en?"A σ complex explains temporary loss and recovery of aromaticity":"σ錯体から芳香族性の喪失と回復を考える",
+   en?"An electrophile E attaches to an aromatic ring to give a σ complex. Removal of the proton can restore the π system. The circle stands for delocalization and is not an electron-density contour. The drawing is schematic, not a regioselectivity prediction.":"求電子剤Eが芳香環に結合してσ錯体となり、脱プロトン化を経てπ電子の非局在化が回復する。円は電子の非局在化を示す記号で実際の電子密度を表さない。模式図だけで置換位置を予測するものではない。",
+   "aromatic π system → σ complex → substituted arene",art);
+ }
+ return "";
+}
+
+window.ChemistryPedagogyVisuals={render,renderOrganic};
 })();
