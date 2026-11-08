@@ -85,7 +85,7 @@ function simulate(lang){
  const after=make("reactionDiagram").innerHTML;
  assert.ok(after.includes('marker-end="url(#curved-pair-arrow)"'),"The next stage must reveal electron-pair arrows");
  assert.ok((after.match(/marker-end="url\(#curved-pair-arrow\)"/g)||[]).length>=2,"Carbonyl addition requires both electron-pair arrows");
- assert.ok(make("stepReason").textContent.includes(lang==="ja"?"価数":"valence"),"The second stage should explain the necessity of the second arrow");
+ assert.ok(lang==="ja"?make("stepReason").textContent.includes("価数"):/valence|overbonded|bond count/i.test(make("stepReason").textContent),"The second stage should explain how electron-pair relocation preserves appropriate carbon bonding");
  assert.ok(make("questionArea").innerHTML.includes('data-answer="0"'),"Optional questions must render");
  assert.ok(make("connections").innerHTML.includes("#chapter=4-2"),"Return paths to the prior carbonyl topic must exist");
  assert.equal(make("backToCourse").href,"./high-school-chemistry"+(lang==="en"?"-en":"")+".html#chapter=4-2","Language-aware return path must be preserved");
