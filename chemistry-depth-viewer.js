@@ -309,8 +309,9 @@ function renderOrganicReasoning(lesson,lang){
   '<span class="depth-organic-subhead">'+(en?"Can explain":"説明できること")+'</span><p>'+escapeHTML(item[en?"canEn":"canJa"])+'</p>'+
   '<span class="depth-organic-subhead">'+(en?"Cannot explain alone":"この模型だけでは説明できないこと")+'</span><p>'+escapeHTML(item[en?"limitEn":"limitJa"])+'</p></div>').join("");
  const title=organic[en?"titleEn":"titleJa"],question=organic[en?"questionEn":"questionJa"];
+ const illustration=window.ChemistryPedagogyVisuals?.renderOrganic?.(organic.kind,lang)||"";
  return '<section class="depth-organic-reasoning" aria-label="'+escapeHTML(title)+'">'+
- '<h3>'+escapeHTML(title)+'</h3><p class="depth-organic-question">'+escapeHTML(question)+'</p>'+
+ '<h3>'+escapeHTML(title)+'</h3><p class="depth-organic-question">'+escapeHTML(question)+'</p>'+illustration+
  '<details data-depth-section="organic-mechanism" open><summary>'+(en?"Follow the explanation, one justified step at a time":"一段ずつ理由を追う")+'</summary>'+stages+'</details>'+
  '<details data-depth-section="organic-models"><summary>'+(en?"Compare explanatory models":"説明モデルの比較")+'</summary>'+models+'</details>'+
  '<details data-depth-section="organic-predict"><summary>'+(en?"Try predicting a different case (optional)":"別の事例を予測する（任意）")+'</summary><p class="depth-organic-note">'+escapeHTML(organic[en?"predictionEn":"predictionJa"])+'</p></details>'+
