@@ -14,6 +14,12 @@ const path=(d,color="#b05d3d",width=3)=>'<path d="'+d+'" stroke="'+color+'" stro
 const arrow=(d,id)=>'<path d="'+d+'" stroke="#b05d3d" stroke-width="3.2" fill="none" stroke-linecap="round" marker-end="url(#'+id+')"/>';
 const tip=id=>'<defs><marker id="'+id+'" viewBox="0 0 12 12" markerWidth="11" markerHeight="11" refX="10" refY="6" orient="auto"><path d="M1 1 L11 6 L1 11" fill="none" stroke="#b05d3d" stroke-width="2.1" stroke-linecap="round"/></marker></defs>';
 const cap={
+ firstlook:["分子のつながりを単純化した模式図。矢印は反応全体を示し、一段階の機構ではない。","Simplified bond diagrams. The arrow is the overall reaction, not a single mechanistic step."],
+ atom:["中心の＋は陽子の正電荷を表す。周囲の淡い色は電子の存在確率の模式図で、電子の円軌道ではない。","The nucleus has positive charge. The blue cloud is a qualitative probability illustration, not a fixed electron orbit."],
+ bondbegin:["水素原子二つの距離とエネルギーの定性的な関係。縦軸・横軸には実測値の目盛りを与えていない。","Qualitative potential-energy curve for two H atoms. The axes have no numerical measurement scale."],
+ sharing:["H:Hの二点とH–Hの一本線は、どちらも共有される電子対一組を表す。","The two dots in H:H and the single line in H–H denote one shared bonding pair."],
+ symbols:["下付き数字、右上の電荷、結合線、一般化した置換基の記号は、それぞれ異なる意味を持つ。","A subscript, superscript charge, bond line and generic substituent placeholder encode different information."],
+ rearrange:["共有電子対を片側へ割り当てる場合と、電子一個ずつに分ける場合の違い。どちらが起こるかは反応条件による。","A conceptual comparison of heterolytic versus homolytic cleavage; actual pathways depend on conditions."],
  why:["反応式の前後に加えて、何が結合を変えたのかという問いを置く。","Go beyond the net reaction: what changed the bonds?"],
  electrons:["炭素と酸素の価電子を点で表す模型。実際の電子雲の位置ではない。","Dots count valence electrons; their locations are not measured electron positions."],
  lewis:["水の酸素は結合2本・孤立電子対2組。OH⁻の酸素は結合1本・孤立電子対3組。","Water oxygen has two bonds and two lone pairs; hydroxide has one bond and three lone pairs."],
@@ -28,6 +34,12 @@ const cap={
  evidence:["曲矢印の模型から予測をつくり、実験結果と比較して説明を更新する。","Use a mechanism to predict observations, then compare with evidence and revise."]
 };
 const headers={
+ firstlook:["反応の前後で原子を数える","Count atoms before and after"],
+ atom:["原子核と電子の状態","Nucleus and electron distribution"],
+ bondbegin:["結合にはエネルギーの低い距離がある","A bond has a low-energy separation"],
+ sharing:["電子対を二点と一本線で示す","Draw a shared pair with dots or a line"],
+ symbols:["小さな数字・電荷・結合線を読む","Decode subscripts, charges and bond lines"],
+ rearrange:["結合が切れると電子はどう分かれる？","What happens to a bond's electrons when it breaks?"],
  why:["反応式だけでは見えないこと","What the overall equation leaves out"],
  electrons:["価電子を数える","Count the valence electrons"],
  lewis:["結合電子対と孤立電子対","Bonding pairs and lone pairs"],
@@ -43,6 +55,86 @@ const headers={
 };
 function art(id,en){
  const m="ef-curve-"+id;let a=tip(m);
+ if(id==="firstlook"){
+  a+=rect(14,12,332,128);
+  a+=txt(180,39,en?"Before: hydrogen + oxygen":"反応前：水素分子＋酸素分子",16);
+  a+=txt(180,82,"2 H–H   +   O=O",25);
+  a+=txt(180,116,en?"H: 4 atoms · O: 2 atoms":"H原子4個 · O原子2個",16);
+  a+=path("M180 146 L180 169","#46806b",3);
+  a+=path("M173 160 L180 173 L187 160","#46806b",2);
+  a+=rect(14,181,332,150,"#edf4fb");
+  a+=txt(180,205,en?"After: two water molecules":"反応後：水分子が2個",16);
+  a+=txt(180,242,"O",27);a+=txt(129,283,"H",24);a+=txt(231,283,"H",24);
+  a+=line(164,249,143,269)+line(196,249,218,269);
+  a+=txt(270,258,"× 2",20);
+  a+=txt(180,315,en?"H: 4 atoms · O: 2 atoms":"H原子4個 · O原子2個",16);
+ }
+ if(id==="atom"){
+  a+='<defs><radialGradient id="ef-cloud"><stop offset="0" stop-color="#6d9fbe" stop-opacity=".5"/><stop offset=".65" stop-color="#c3dded" stop-opacity=".5"/><stop offset="1" stop-color="#e8f4f9" stop-opacity="0"/></radialGradient></defs>';
+  a+=rect(13,14,334,241);
+  a+='<ellipse cx="180" cy="134" rx="123" ry="102" fill="url(#ef-cloud)"/>';
+  a+='<circle cx="180" cy="134" r="13" fill="#bc7654"/>';
+  a+=txt(180,140,"+",18,"#ffffff");
+  a+=txt(180,31,en?"Hydrogen atom (schematic)":"水素原子の模式図",18);
+  a+=txt(264,113,en?"electron cloud":"電子の分布",14,"#316489");
+  a+=txt(180,196,en?"Nucleus: proton +":"原子核：陽子（＋）",17);
+  a+=txt(180,223,en?"Electron charge: −":"電子の電荷：−",15);
+  a+=rect(18,267,324,68,"#edf4fb");
+  a+=txt(180,292,en?"No fixed circular orbit":"電子が円軌道を回る図ではない",16);
+  a+=txt(180,318,en?"Overall neutral charge = 0":"中性原子の電荷の和は 0",16);
+ }
+ if(id==="bondbegin"){
+  a+=rect(10,11,340,309);
+  a+=line(53,25,53,276,"#556b70",2);
+  a+=line(53,276,331,276,"#556b70",2);
+  a+=txt(31,39,"E",20);a+=txt(307,304,"r",18);
+  a+=path("M56 149 L327 149","#9aa7a9",1.8);
+  a+=path("M73 36 C96 53 112 212 156 240 C185 258 218 166 325 151","#397e70",4);
+  a+='<circle cx="159" cy="240" r="5" fill="#bf7856"/>';
+  a+=txt(229,46,en?"Far apart: reference":"離れた原子を基準",13);
+  a+=txt(229,69,en?"energy level":"とするエネルギー",13);
+  a+=txt(198,237,en?"stable bond":"安定な結合",14);
+  a+=txt(129,106,en?"too close: repulsion":"近すぎると反発",14);
+  a+=txt(180,331,en?"Lower energy at a suitable distance":"適度な距離でエネルギーが低い",14);
+ }
+ if(id==="sharing"){
+  a+=rect(12,16,336,143);
+  a+=txt(180,45,en?"Two H atoms, one electron each":"水素原子は電子を各1個",17);
+  a+=txt(180,81,"H·    +    ·H",25);
+  a+=txt(180,114,"H:H     =     H–H",25);
+  a+=txt(180,145,en?"Two dots = one bonding pair":"点2個＝結合電子対1組",16);
+  a+=rect(12,172,336,157,"#edf4fb");
+  a+=txt(180,200,en?"Water: two bonds and two lone pairs":"水：結合2本、孤立電子対2組",15);
+  a+=txt(180,262,"O",29);
+  a+=txt(85,266,"H",24);a+=txt(279,266,"H",24);
+  a+=line(110,253,156,253)+line(204,253,251,253);
+  a+=pair(178,224)+pair(178,288);
+  a+=txt(180,316,en?"Pairs on O are not O–H bonds":"Oの点はO–H結合に使われていない",13);
+ }
+ if(id==="symbols"){
+  a+=rect(12,13,336,90);
+  a+=txt(82,50,"H₂O",26)+txt(264,50,"CH₃Br",25);
+  a+=txt(180,83,en?"Subscripts count atoms":"右下の数字は原子の数",17);
+  a+=rect(12,115,336,88,"#edf4fb");
+  a+=txt(91,154,"OH⁻",27)+txt(262,154,"NH₄⁺",26);
+  a+=txt(180,186,en?"Superscripts denote charge":"右上の＋・−は電荷",16);
+  a+=rect(12,217,336,110);
+  a+=txt(100,253,"C=O",26)+txt(261,253,"R–OH",24);
+  a+=txt(180,290,en?"Lines = bonds · R = placeholder":"線＝結合、R＝原子団の仮記号",15);
+  a+=txt(180,314,en?"Nu = nucleophile (not an element)":"Nu＝求核剤（元素記号ではない）",14);
+ }
+ if(id==="rearrange"){
+  a+=rect(12,14,336,149);
+  a+=txt(180,39,en?"Heterolytic: the pair stays together":"不均等開裂：電子対が片側へ",16);
+  a+=txt(180,82,"A:B  →  A⁺  +  :B⁻",22);
+  a+=pair(180,116);
+  a+=txt(180,149,en?"Both bonding electrons on B":"結合電子2個がB側へ",15);
+  a+=rect(12,176,336,152,"#edf4fb");
+  a+=txt(180,202,en?"Homolytic: one electron each":"均等開裂：電子を1個ずつ",16);
+  a+=txt(180,244,"A:B  →  A·  +  ·B",22);
+  a+=txt(180,284,en?"Radical fragments result":"不対電子をもつ断片ができる",15);
+  a+=txt(180,309,en?"Neither is automatic in every reaction":"どちらも必ず起こるわけではない",13);
+ }
  if(id==="why"){
   a+=rect(18,20,324,76)+txt(180,47,en?"What we observe":"観察できる反応式",16)+txt(180,78,"HO⁻ + CH₃Br → CH₃OH + Br⁻",17);
   a+=rect(18,125,324,106,"#edf4fb")+txt(180,153,en?"What changed inside?":"途中で何が変わった？",18);
