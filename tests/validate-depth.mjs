@@ -342,6 +342,49 @@ const renderSandbox={
  localStorage:{getItem:()=>null}
 };
 assert.doesNotThrow(()=>runInNewContext(viewerForTest,renderSandbox,{timeout:1000}),'Curriculum renderer should initialize with a safe storage stub');
+
+// Full chapter render smoke test: exercise 29 lessons × 2 languages through the actual view builder.
+const fullRenderer=viewer.replace('window.ChemistryDepth={render};',
+ 'window.ChemistryDepth={render};window.__renderLesson=renderLesson;');
+let addedStyles=[];
+const fakeDocument={
+ getElementById(id){return addedStyles.find(node=>node.id===id)||null},
+ createElement(tag){return {tagName:tag,style:{},innerHTML:"",textContent:""}},
+ head:{appendChild(node){addedStyles.push(node)}}
+};
+const fullSandbox={
+ window:{ChemistryPedagogyVisuals:visuals},
+ localStorage:{getItem:()=>null},
+ document:fakeDocument
+};
+assert.doesNotThrow(()=>runInNewContext(fullRenderer,fullSandbox,{timeout:1000}),'Full lesson renderer should initialize');
+function fakeHost(id,lang){
+ const logs={innerHTML:"",querySelectorAll(){return []}};
+ return {
+  isConnected:true,dataset:{chapter:id,language:lang},innerHTML:"",
+  querySelectorAll(){return []},
+  querySelector(selector){
+   if(selector==='.depth-save')return {addEventListener(){}};
+   if(selector==='.depth-logs')return logs;
+   return null;
+  }
+ };
+}
+for(const chapter of all){
+ for(const lang of ['ja','en']){
+  const host=fakeHost(chapter.id,lang);
+  assert.doesNotThrow(()=>fullSandbox.window.__renderLesson(host,chapter.id,lang,chapter),'Lesson assembly should not fail: '+chapter.id+'/'+lang);
+  assert.ok(host.innerHTML.includes('depth-origin')&&host.innerHTML.includes('depth-origin-toggle'),'Continuous conceptual reading is missing: '+chapter.id+'/'+lang);
+  assert.ok(host.innerHTML.includes('data-depth-section="origin-0" open'),'The first explanatory step should be readable without a click: '+chapter.id+'/'+lang);
+  assert.ok(host.innerHTML.includes('data-depth-section="concept-0"'),'Original syllabus content should remain: '+chapter.id+'/'+lang);
+  assert.ok(host.innerHTML.includes('depthNote'),'Optional learning reflections should remain available: '+chapter.id+'/'+lang);
+  if(chapter.id.startsWith('4-'))assert.ok(host.innerHTML.includes('organic-evidence'),'Organic evidence must actually render: '+chapter.id+'/'+lang);
+  if(chapter.id.startsWith('3-'))assert.ok(host.innerHTML.includes('depth-inorganic-workshop'),'Inorganic theory comparison must remain: '+chapter.id+'/'+lang);
+  if(chapter.originJourney.sections.some(s=>s.mathHelp))assert.ok(host.innerHTML.includes('depth-math-support'),'Contextual math help should appear in the full lesson: '+chapter.id+'/'+lang);
+ }
+}
+console.log('PASS: end-to-end chapter HTML assembled for 29 chapters in both languages.');
+
 for(const ch of organicChapters){
  const o=ch.organicReasoning;
  for(const locale of ['ja','en']){
