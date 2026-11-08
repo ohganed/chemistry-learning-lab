@@ -137,7 +137,38 @@
             "ja": "4　平均の取り方が違うと、数値も違う",
             "en": "4. Derive two different averages from the same sample",
             "textJa": "分子量100と200（同じ単位）の鎖がそれぞれ1本ずつある簡単な模型では、数平均は(100+200)/2=150です。一方、重量平均は(100²+200²)/(100+200)=50000/300≈166.7となります。二つの数値が異なるのは計算ミスではなく、平均の重みの選び方が違うためです。一般にはMn=ΣNiMi/ΣNi、Mw=ΣNiMi²/ΣNiMiです。どの物性を調べたいかによって、平均の選択にも意味が生まれます。",
-            "textEn": "In a toy sample with one chain of molar mass 100 and one of 200 in consistent units, the number-average is (100+200)/2=150. The weight-average is (100²+200²)/(100+200)=50,000/300≈166.7. The two values differ because the weighting differs, not because one calculation is wrong. In general Mn=ΣNiMi/ΣNi and Mw=ΣNiMi²/ΣNiMi. A distribution requires specifying the statistic used to describe it."
+            "textEn": "In a toy sample with one chain of molar mass 100 and one of 200 in consistent units, the number-average is (100+200)/2=150. The weight-average is (100²+200²)/(100+200)=50,000/300≈166.7. The two values differ because the weighting differs, not because one calculation is wrong. In general Mn=ΣNiMi/ΣNi and Mw=ΣNiMi²/ΣNiMi. A distribution requires specifying the statistic used to describe it.",
+            "mathHelp": {
+              "schemaVersion": "1.0",
+              "titleJa": "必要になった数学：高分子の二つの平均分子量",
+              "titleEn": "Math when needed: two averages for polymer molar mass",
+              "purposeJa": "平均の取り方が違うと、同じ試料の数値が変わる理由を具体的な2本の鎖で考える。",
+              "purposeEn": "Use a two-chain example to show why number-average and weight-average masses differ for the same sample.",
+              "lines": [
+                {
+                  "equation": "M₁=100, M₂=200; N₁=N₂=1",
+                  "ja": "同じ単位の分子量100と200の鎖が各1本ある架空の試料を使う。",
+                  "en": "Consider a fictional sample containing one chain of each of two molar masses."
+                },
+                {
+                  "equation": "Mn=(ΣNiMi)/(ΣNi)=(100+200)/2=150",
+                  "ja": "数平均は鎖の本数で重みづけするので、普通の算術平均になる。",
+                  "en": "Number average weights each chain by its count, giving a simple arithmetic mean here."
+                },
+                {
+                  "equation": "Mw=(ΣNiMi²)/(ΣNiMi)=(100²+200²)/(100+200)≈166.7",
+                  "ja": "重量平均では重い鎖が大きな重みを持つので、より大きな値になる。",
+                  "en": "Weight-average molar mass gives larger molecules greater weight."
+                },
+                {
+                  "equation": "Đ=Mw/Mn≈1.11",
+                  "ja": "分布の広さを表す指標の一つは分散度Đで、単分散なら理想的には1になる。",
+                  "en": "Dispersity Đ compares the averages and is ideally 1 for a truly uniform chain-size distribution."
+                }
+              ],
+              "boundaryJa": "分子量100と200は説明用の架空値。実際の高分子では分子量分布・枝分かれ・測定方法の違いを別途考慮する。",
+              "boundaryEn": "The numbers 100 and 200 are invented teaching values. Real samples also require consideration of molecular-weight distributions, branching and measurement methods."
+            }
           },
           {
             "id": "structure",
