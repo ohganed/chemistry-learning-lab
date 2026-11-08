@@ -45,6 +45,16 @@ function styles(){if(document.getElementById("chemistryDepthStyle"))return;const
 
 
 /* Organic chemistry: purpose-driven reasoning, not a fixed page-length template. */
+
+.depth-math-support{border:1px solid #cddfee;background:#f6fafd;border-radius:12px;padding:13px;margin:15px 4px 18px}
+.depth-math-support h4{font-size:16px;color:#275277;margin:0 0 6px;line-height:1.5}
+.depth-math-support p{line-height:1.9;font-size:14px;margin:8px 0}
+.depth-math-support ol{list-style:none;counter-reset:mathhelp;margin:12px 0;padding:0}
+.depth-math-support li{counter-increment:mathhelp;border-left:3px solid #88acc6;background:#fff;border-radius:0 9px 9px 0;padding:9px 12px;margin:10px 0}
+.depth-math-support li:before{content:counter(mathhelp) ".";display:block;color:#477c9c;font-size:12px;font-weight:800}
+.depth-math-support .math-equation{font-size:16px;font-weight:750;color:#194c6c;overflow-wrap:anywhere;margin:4px 0}
+.depth-math-support .math-boundary{background:#e7f0f7;padding:8px 11px;border-radius:8px}
+@media(max-width:650px){.depth-math-support{padding:10px 8px}.depth-math-support .math-equation{font-size:14px}}
 .depth-organic-reasoning{margin:17px 0;border:1px solid #d7dfce;border-radius:15px;padding:14px;background:#fbfcf8}
 .depth-organic-reasoning h3{margin:3px 0 8px;color:#45623d;font-size:19px;line-height:1.5}
 .depth-organic-question{margin:10px 0 13px;background:#eff5e8;border-left:3px solid #6f9970;border-radius:6px;padding:11px 13px;line-height:1.9}
@@ -300,6 +310,19 @@ function renderInorganicWorkshop(lesson,lang){
  '<details open data-depth-section="inorganic-derivation"><summary>'+escapeHTML(deriv[en?"titleEn":"titleJa"])+'</summary><p class="depth-derivation-intro">'+escapeHTML(deriv[en?"setupEn":"setupJa"])+'</p><ol class="depth-derivation-list">'+steps+'</ol></details></section>';
 }
 
+
+function renderMathHelp(entry,lang){
+ const h=entry.mathHelp;
+ if(!h||h.schemaVersion!=="1.0"||!Array.isArray(h.lines)||!h.lines.length)return "";
+ const en=lang==="en";
+ const calculations=h.lines.map(line=>'<li><div class="math-equation">'+escapeHTML(line.equation)+'</div><p>'+escapeHTML(line[en?"en":"ja"])+'</p></li>').join("");
+ return '<section class="depth-math-support" aria-label="'+escapeHTML(h[en?"titleEn":"titleJa"])+'">'+
+ '<h4>'+escapeHTML(h[en?"titleEn":"titleJa"])+'</h4>'+
+ '<p>'+escapeHTML(h[en?"purposeEn":"purposeJa"])+'</p>'+
+ '<ol>'+calculations+'</ol>'+
+ '<p class="math-boundary"><strong>'+(en?"Assumptions and limits: ":"成立条件・限界：")+'</strong>'+escapeHTML(h[en?"boundaryEn":"boundaryJa"])+'</p>'+
+ '</section>';
+}
 function renderOrganicReasoning(lesson,lang){
  const organic=lesson.organicReasoning;
  if(!organic||organic.schemaVersion!=="1.0"||!Array.isArray(organic.steps)||organic.steps.length===0)return "";
@@ -335,7 +358,7 @@ function renderLesson(host,id,lang,lesson){
  const block=lesson.sections.map((section,i)=>'<details data-depth-section="concept-'+i+'" '+(i===0?"open":"")+'><summary>'+escapeHTML((i+1)+". "+section[title])+'</summary><p class="depth-text">'+escapeHTML(section[body])+'</p></details>').join("");
  const origin=lesson.originJourney&&Array.isArray(lesson.originJourney.sections)&&lesson.originJourney.sections.length?
  '<section class="depth-origin" id="depthOrigin"><div class="depth-origin-header"><h3>'+escapeHTML(t.originTitle)+'</h3><button type="button" class="depth-origin-toggle" aria-expanded="true">'+escapeHTML(t.originCollapse)+'</button></div><p>'+escapeHTML(lesson.originJourney[lang==="ja"?"premiseJa":"premiseEn"])+'</p>'+
- lesson.originJourney.sections.map((entry,i)=>'<details data-depth-section="origin-'+i+'" open><summary>'+escapeHTML(entry[title])+'</summary><p class="depth-text">'+escapeHTML(entry[lang==="ja"?"textJa":"textEn"])+'</p>'+renderStageVisual(id,lang,entry.id)+renderInorganicStageVisual(id,lang,entry.id)+(window.ChemistryPedagogyVisuals?.render?.(id,lang,entry.id)||'')+'</details>').join("")+'</section>':"";
+ lesson.originJourney.sections.map((entry,i)=>'<details data-depth-section="origin-'+i+'" open><summary>'+escapeHTML(entry[title])+'</summary><p class="depth-text">'+escapeHTML(entry[lang==="ja"?"textJa":"textEn"])+'</p>'+renderMathHelp(entry,lang)+renderStageVisual(id,lang,entry.id)+renderInorganicStageVisual(id,lang,entry.id)+(window.ChemistryPedagogyVisuals?.render?.(id,lang,entry.id)||'')+'</details>').join("")+'</section>':"";
  const workshop=renderInorganicWorkshop(lesson,lang);
  const organic=renderOrganicReasoning(lesson,lang);
  const guided=lesson.guidedExample&&Array.isArray(lesson.guidedExample.steps)&&lesson.guidedExample.steps.length>0?
