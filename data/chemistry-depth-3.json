@@ -142,6 +142,73 @@
             "textEn": "Reduction potentials describe thermodynamic tendencies under specified conditions; they do not by themselves predict rates, induction periods or side reactions. In aqueous chemistry, pH, concentrations and complex formation also influence the species present. Halogen displacement connects to Gibbs energy, electrochemistry and environmental speciation. The goal is to choose and evaluate an explanatory model rather than repeat a reaction list."
           }
         ]
+      },
+      "inorganicWorkshop": {
+        "schemaVersion": "1.0",
+        "titleJa": "同じ現象を複数の模型から考える",
+        "titleEn": "Compare explanatory models for nonmetals",
+        "models": [
+          {
+            "ja": "価電子配置",
+            "en": "Valence electron configuration",
+            "strengthJa": "ハロゲンの共通した結合やイオン形成を予測する入口になる。",
+            "strengthEn": "Explains common patterns of ion formation and bonding among halogens.",
+            "limitJa": "溶液中での反応の方向や速度を単独で決められない。",
+            "limitEn": "Alone it cannot determine aqueous reaction direction or rate."
+          },
+          {
+            "ja": "標準還元電位",
+            "en": "Standard reduction potential",
+            "strengthJa": "標準状態での酸化還元反応のギブズエネルギー変化に結びつく。",
+            "strengthEn": "Relates standard-state redox behavior to Gibbs-energy changes.",
+            "limitJa": "非標準条件の濃度効果、反応速度、競争反応は別に扱う。",
+            "limitEn": "Concentration effects, kinetics and side reactions require additional information."
+          },
+          {
+            "ja": "溶媒和と結合エネルギー",
+            "en": "Solvation and bond energetics",
+            "strengthJa": "元素単体の結合、イオンの水和、相変化まで含めて周期的傾向の理由を考えられる。",
+            "strengthEn": "Explains periodic trends by including bonding, hydration and phases.",
+            "limitJa": "正確な数値には複数の実測・理論値が必要で、単純な順位表だけでは足りない。",
+            "limitEn": "Numerical predictions require additional measured or calculated contributions."
+          }
+        ],
+        "derivation": {
+          "titleJa": "ハロゲン置換反応の標準起電力を導く",
+          "titleEn": "Derive the standard cell potential for halogen displacement",
+          "setupJa": "標準還元電位はCl₂/Cl⁻が+1.36 V、Br₂/Br⁻が+1.07 Vとする。化学種の標準状態と25 ℃付近を仮定する。",
+          "setupEn": "Take E°(Cl₂/Cl⁻)=+1.36 V and E°(Br₂/Br⁻)=+1.07 V for approximately 25 °C and the specified standard states.",
+          "steps": [
+            {
+              "ja": "還元される物質を確認する",
+              "en": "Identify the reduction",
+              "equation": "Cl₂+2e⁻→2Cl⁻",
+              "whyJa": "塩素分子が電子を受け取るので、こちらが還元側の半反応。",
+              "whyEn": "Chlorine accepts electrons; this half-reaction is the reduction."
+            },
+            {
+              "ja": "酸化される物質を確認する",
+              "en": "Identify the oxidation",
+              "equation": "2Br⁻→Br₂+2e⁻",
+              "whyJa": "臭化物イオンは電子を失う。電子の数が同じなので両式を足せる。",
+              "whyEn": "Bromide loses electrons. Equal electron counts allow the half-reactions to be added."
+            },
+            {
+              "ja": "標準起電力を求める",
+              "en": "Subtract reduction potentials",
+              "equation": "E°cell=E°cathode−E°anode=1.36−1.07≈+0.29 V",
+              "whyJa": "ここでは二つとも還元電位として表示した値を用いている。電位に化学反応式の係数を掛けない。",
+              "whyEn": "Both tabulated values are reduction potentials. Do not multiply an electrode potential by a stoichiometric coefficient."
+            },
+            {
+              "ja": "自発性との関係を確認する",
+              "en": "Interpret Gibbs energy",
+              "equation": "ΔrG°=−nFE°cell　(n=2)",
+              "whyJa": "正のE°cellは、指定条件で負の標準反応ギブズエネルギーに対応する。速度までは示さない。",
+              "whyEn": "A positive E°cell gives negative standard reaction Gibbs energy for n=2; it does not establish reaction rate."
+            }
+          ]
+        }
       }
     },
     {
@@ -279,6 +346,73 @@
             "textEn": "Alkali-metal reactions with water, alkaline-earth hydroxide solubilities and aluminium passivation all concern metals, but no single trend explains them completely. Even when valence configurations resemble one another, lattice energies, hydration and surface conditions matter. Inorganic predictions improve when the species, temperature, pH, solvent and surface state are specified."
           }
         ]
+      },
+      "inorganicWorkshop": {
+        "schemaVersion": "1.0",
+        "titleJa": "典型金属の反応を説明する理論を比較する",
+        "titleEn": "Compare models for main-group metals",
+        "models": [
+          {
+            "ja": "原子の電子配置",
+            "en": "Atomic electron configuration",
+            "strengthJa": "金属が形成しやすい酸化状態の予想を助ける。",
+            "strengthEn": "Helps identify plausible oxidation states and broad periodic patterns.",
+            "limitJa": "溶液中の溶解度や表面の腐食速度を決めるには不十分。",
+            "limitEn": "Cannot directly predict solubility or corrosion kinetics."
+          },
+          {
+            "ja": "溶解・錯形成平衡",
+            "en": "Solubility and complexation equilibria",
+            "strengthJa": "pHや配位子の濃度で、沈殿と溶存種の分布が変わることを扱う。",
+            "strengthEn": "Explains how pH and ligands affect precipitation and dissolved species.",
+            "limitJa": "電子移動の障壁や皮膜形成速度をそれだけでは説明できない。",
+            "limitEn": "Does not by itself determine electron-transfer barriers or passivation rates."
+          },
+          {
+            "ja": "表面・反応速度の模型",
+            "en": "Surface and kinetic models",
+            "strengthJa": "アルミニウムの保護皮膜による腐食抑制を説明できる。",
+            "strengthEn": "Explains slower corrosion caused by an adherent protective surface film.",
+            "limitJa": "平衡状態でどの化学種が存在するかを単独では確定できない。",
+            "limitEn": "Does not independently determine the equilibrium speciation."
+          }
+        ],
+        "derivation": {
+          "titleJa": "両性水酸化物の反応を化学量論で読む",
+          "titleEn": "Use stoichiometry to interpret amphoteric hydroxide dissolution",
+          "setupJa": "理想化した系で0.0020 molのAl(OH)₃を酸で完全に溶解させる。水和・副反応は化学量論の段階では省略する。",
+          "setupEn": "In an idealized system, dissolve 0.0020 mol of Al(OH)₃ in acid. Ignore hydration and side reactions for the first stoichiometric calculation.",
+          "steps": [
+            {
+              "ja": "最初と最後に必要な粒子を考える",
+              "en": "Identify reactants and products",
+              "equation": "Al(OH)₃(s)+3H⁺→Al³⁺+3H₂O",
+              "whyJa": "Al(OH)₃の水酸基をそれぞれ水へ変えるにはH⁺が3個必要。",
+              "whyEn": "Each of three hydroxide groups consumes one proton to form water."
+            },
+            {
+              "ja": "係数から量の比を読む",
+              "en": "Use the mole ratio",
+              "equation": "n(H⁺)/n(Al(OH)₃)=3/1",
+              "whyJa": "化学反応式の係数は粒子数、したがってmol数の比を示す。",
+              "whyEn": "The balanced coefficients give molecule-number and therefore mole ratios."
+            },
+            {
+              "ja": "求めたい量を計算する",
+              "en": "Calculate the stoichiometric need",
+              "equation": "n(H⁺)=3×0.0020=0.0060 mol",
+              "whyJa": "消費するH⁺の化学量論上の量が計算できる。",
+              "whyEn": "This is the ideal stoichiometric quantity of H⁺ consumed."
+            },
+            {
+              "ja": "実際の実験の条件に戻る",
+              "en": "Return to experimental conditions",
+              "equation": "Al(OH)₃(s)+OH⁻⇌[Al(OH)₄]⁻",
+              "whyJa": "強塩基中では異なる錯形成経路があり、正確な溶解量は平衡とpHにも依存する。",
+              "whyEn": "Strong base follows a different complexation pathway; real dissolution depends on equilibrium and pH."
+            }
+          ]
+        }
       }
     },
     {
@@ -416,6 +550,73 @@
             "textEn": "Crystal-field theory idealizes ligands as electrostatic sources to make d-orbital splitting intuitive. Ligand-field and molecular-orbital theories also treat metal–ligand orbital overlap and covalency. VSEPR is useful for geometries of many simple main-group molecules but insufficient for transition-metal colors and spin states. Compare what each model explains and what it neglects rather than treating models as rival slogans."
           }
         ]
+      },
+      "inorganicWorkshop": {
+        "schemaVersion": "1.0",
+        "titleJa": "錯体の結合模型を、使い分ける",
+        "titleEn": "Compare coordination-bonding models",
+        "models": [
+          {
+            "ja": "ルイス酸・塩基模型",
+            "en": "Lewis donor–acceptor model",
+            "strengthJa": "配位子の電子対と金属中心の結合形成を出発点から説明できる。",
+            "strengthEn": "Introduces metal–ligand bonding through electron-pair donation.",
+            "limitJa": "色の吸収波長や磁気的性質を数値的には予測できない。",
+            "limitEn": "Does not quantitatively predict absorption spectra or magnetism."
+          },
+          {
+            "ja": "結晶場模型（CFT）",
+            "en": "Crystal-field theory (CFT)",
+            "strengthJa": "理想化した電荷によるd軌道分裂と電子配置の傾向を説明する。",
+            "strengthEn": "Models d-orbital splitting and electronic arrangements with idealized electrostatics.",
+            "limitJa": "共有結合性、配位子と金属の軌道混成や電荷移動を直接には扱えない。",
+            "limitEn": "Does not explicitly include metal–ligand covalency or charge-transfer states."
+          },
+          {
+            "ja": "配位子場・分子軌道模型",
+            "en": "Ligand-field and molecular-orbital models",
+            "strengthJa": "金属と配位子の軌道の相互作用や共有結合性をより詳しく取り込める。",
+            "strengthEn": "Includes orbital overlap and covalency in metal–ligand interactions.",
+            "limitJa": "扱う電子状態が増え、軌道・対称性・線形代数の理解が追加で必要になる。",
+            "limitEn": "Requires richer electronic-structure treatment, symmetry and additional mathematics."
+          }
+        ],
+        "derivation": {
+          "titleJa": "d軌道分裂の−0.4Δₒと+0.6Δₒを導く",
+          "titleEn": "Derive −0.4Δo and +0.6Δo rather than memorizing them",
+          "setupJa": "理想的な八面体結晶場の分裂で、5個のd軌道のエネルギー重心を0に固定する模型を考える。",
+          "setupEn": "Consider an ideal octahedral crystal field with the energy barycenter of the five d orbitals fixed at zero.",
+          "steps": [
+            {
+              "ja": "軌道数とエネルギー差を決める",
+              "en": "Count orbitals and define the gap",
+              "equation": "3×t₂g, 2×e_g;　Δₒ=b−a",
+              "whyJa": "下側3軌道の変化をa、上側2軌道の変化をbとする。",
+              "whyEn": "Let each of the three lower orbitals shift by a, each of the two upper ones by b."
+            },
+            {
+              "ja": "重心の条件を書く",
+              "en": "Preserve the weighted barycenter",
+              "equation": "3a+2b=0",
+              "whyJa": "5軌道のエネルギー変化の和がゼロというモデル上の基準を置く。",
+              "whyEn": "Choose a zero-average energy reference for the five orbitals."
+            },
+            {
+              "ja": "二つの式を連立する",
+              "en": "Solve the two equations",
+              "equation": "b=a+Δₒ;　5a+2Δₒ=0",
+              "whyJa": "bを消去すればa=−2Δₒ/5、そこからb=+3Δₒ/5と求まる。",
+              "whyEn": "Eliminate b to obtain a=−2Δo/5 and then b=+3Δo/5."
+            },
+            {
+              "ja": "結果の意味と適用範囲を確かめる",
+              "en": "Interpret the energy diagram",
+              "equation": "t₂g: −0.4Δₒ;　e_g: +0.6Δₒ",
+              "whyJa": "これは理想的な八面体場の相対エネルギーで、電子の遷移や色の全てを決める式ではない。",
+              "whyEn": "These are relative energies for the ideal octahedral model, not a complete prediction of spectral color."
+            }
+          ]
+        }
       }
     },
     {
@@ -579,6 +780,80 @@
             "textEn": "An identification should be supported by converging observations: precipitate appearance, dissolution on complexation and other independent reactions. A negative observation may instead reflect a detection limit, insufficient concentration, interference or photochemical change. Record what was seen separately from the inferred identity, and use blanks or controls as appropriate. Inorganic analysis becomes a way to test models against evidence."
           }
         ]
+      },
+      "inorganicWorkshop": {
+        "schemaVersion": "1.0",
+        "titleJa": "無機分析では、複数の模型が同じ観察を説明する",
+        "titleEn": "Use multiple models to interpret inorganic analysis",
+        "models": [
+          {
+            "ja": "見た目と観察記録",
+            "en": "Visual observation",
+            "strengthJa": "沈殿の有無、色、溶解などを直接記録できる。",
+            "strengthEn": "Records precipitation, color and dissolution directly.",
+            "limitJa": "白い沈殿の化学式を一つに断定することはできない。",
+            "limitEn": "Cannot identify a chemical species uniquely from appearance."
+          },
+          {
+            "ja": "溶解度積・イオン積",
+            "en": "Solubility product and ion product",
+            "strengthJa": "どの条件で固体が安定しやすいかを定量的に扱える。",
+            "strengthEn": "Quantifies equilibrium tendencies for dissolution and precipitation.",
+            "limitJa": "錯形成、酸塩基反応、過飽和の核生成速度は別に扱う必要がある。",
+            "limitEn": "Requires extra treatment for complexation, acid–base chemistry and nucleation."
+          },
+          {
+            "ja": "錯形成定数と物質収支",
+            "en": "Formation constants and mass balances",
+            "strengthJa": "遊離金属イオンと錯体の割合を推定し、沈殿の再溶解を説明できる。",
+            "strengthEn": "Connects free-ion activity and complexes to explain redissolution.",
+            "limitJa": "自由配位子濃度、pH、活量、妨害イオンを知らなければ完全な予測はできない。",
+            "limitEn": "Needs free-ligand activity, pH and competing species for quantitative predictions."
+          }
+        ],
+        "derivation": {
+          "titleJa": "AgClの溶解と銀アンミン錯体形成を一つの平衡にする",
+          "titleEn": "Combine AgCl dissolution with silver–ammonia complexation",
+          "setupJa": "純粋なAgCl(s)の活量を1とし、化学種の活量を基準にした平衡定数を使う。Kspとβ₂は同じ温度で与えられるとする。",
+          "setupEn": "Set the activity of pure AgCl(s) to one and use activity-defined equilibrium constants Ksp and β₂ at the same temperature.",
+          "steps": [
+            {
+              "ja": "まず固体の溶解平衡を書く",
+              "en": "Begin with solid dissolution",
+              "equation": "AgCl(s)⇌Ag⁺+Cl⁻　; Ksp=a(Ag⁺)a(Cl⁻)",
+              "whyJa": "固体の活量が1なので、溶解度積は溶液の二つのイオンの積となる。",
+              "whyEn": "The pure-solid activity is one, leaving the product of dissolved-ion activities."
+            },
+            {
+              "ja": "次に錯体生成を書く",
+              "en": "Write complex formation",
+              "equation": "Ag⁺+2NH₃⇌[Ag(NH₃)₂]⁺",
+              "whyJa": "銀イオンをアンモニアが取り込むことで、自由なAg⁺は減り得る。",
+              "whyEn": "Binding Ag⁺ with ammonia can lower the activity of free Ag⁺."
+            },
+            {
+              "ja": "二つの式を足して中間物質を消す",
+              "en": "Cancel the intermediate species",
+              "equation": "AgCl(s)+2NH₃⇌[Ag(NH₃)₂]⁺+Cl⁻",
+              "whyJa": "足した反応の両辺からAg⁺が消える。",
+              "whyEn": "Ag⁺ cancels when the two balanced reaction equations are added."
+            },
+            {
+              "ja": "平衡定数の積を導く",
+              "en": "Multiply the equilibrium expressions",
+              "equation": "K=Ksp×β₂",
+              "whyJa": "二つの定数を掛けると、Ag⁺の活量が約分され、全反応の式になる。",
+              "whyEn": "Multiplying the activity ratios cancels a(Ag⁺), giving the overall constant."
+            },
+            {
+              "ja": "条件の意味を読み取る",
+              "en": "Interpret the result conditionally",
+              "equation": "Q= a([Ag(NH₃)₂]⁺)a(Cl⁻)/a(NH₃)²",
+              "whyJa": "アンモニアの自由活量を増やすと反応商が下がり、正味の溶解が熱力学的に有利になる場合がある。",
+              "whyEn": "Increasing free ammonia lowers the reaction quotient and can favor net dissolution, subject to mass balance and other equilibria."
+            }
+          ]
+        }
       }
     }
   ]
