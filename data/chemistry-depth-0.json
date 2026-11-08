@@ -383,7 +383,33 @@
             "ja": "4　波長が決まると、エネルギーも飛び飛びになり得る",
             "en": "4. How wave conditions can lead to discrete energies",
             "textJa": "量子力学で使うド・ブロイの関係p=h/λを、一次元の理想的な箱の中の粒子という別の模型に適用してみます。λ=2L/nを代入するとp=nh/(2L)です。非相対論的な運動エネルギーE=p²/(2m)を用いれば Eₙ=n²h²/(8mL²) と順に導けます。n²やL²が突然現れたのではなく、波長と運動量とエネルギーの二つの関係を合成した結果です。ここでの箱は電子をもつ実在の原子ではなく、量子化の意味を理解する近似模型です。",
-            "textEn": "Apply the de Broglie relation p=h/λ to a separate idealized model: a nonrelativistic particle in a one-dimensional box. With λ=2L/n, momentum magnitude is p=nh/(2L). Substituting into E=p²/(2m) gives Eₙ=n²h²/(8mL²). The factors n² and L² follow from the steps; they are not facts to memorize. The box is not a literal hydrogen atom but a simple model demonstrating how quantization emerges."
+            "textEn": "Apply the de Broglie relation p=h/λ to a separate idealized model: a nonrelativistic particle in a one-dimensional box. With λ=2L/n, momentum magnitude is p=nh/(2L). Substituting into E=p²/(2m) gives Eₙ=n²h²/(8mL²). The factors n² and L² follow from the steps; they are not facts to memorize. The box is not a literal hydrogen atom but a simple model demonstrating how quantization emerges.",
+            "mathHelp": {
+              "schemaVersion": "1.0",
+              "titleJa": "必要になった数学：波長からエネルギーまで",
+              "titleEn": "Math when needed: from wavelength to energy",
+              "purposeJa": "式の形を覚えるより、以前の式へ代入するだけでn²とL²が現れることを確かめる。",
+              "purposeEn": "See how n² and L² arise through substitution of familiar relations rather than memorizing them.",
+              "lines": [
+                {
+                  "equation": "L=nλ/2  →  λ=2L/n",
+                  "ja": "両端に節がある波では、箱の長さLにn個の半波長が入る。",
+                  "en": "With fixed-boundary standing waves, n half-wavelengths fit into length L."
+                },
+                {
+                  "equation": "p=h/λ=nh/(2L)",
+                  "ja": "量子力学でのド・ブロイの関係へ、許されるλを代入する。",
+                  "en": "Insert the allowed wavelength into the de Broglie momentum relation."
+                },
+                {
+                  "equation": "E=p²/(2m)=n²h²/(8mL²)",
+                  "ja": "前の式を二乗すると、分子にn²、分母にL²が現れる。",
+                  "en": "Squaring the momentum expression produces n² in the numerator and L² in the denominator."
+                }
+              ],
+              "boundaryJa": "一次元・無限に高い壁・非相対論的な粒子という仮定。水素原子のエネルギー準位をそのまま予測する式ではない。",
+              "boundaryEn": "Requires a one-dimensional infinitely high potential well and nonrelativistic dynamics. It is not the spectrum of a real hydrogen atom."
+            }
           },
           {
             "id": "orbitals",
@@ -655,7 +681,38 @@
             "ja": "3　折れ線形になると、同じ足し算でも結果が変わる",
             "en": "3. A bent geometry gives a nonzero vector sum",
             "textJa": "H₂OではO−H結合二本が約104.5°の角をなし、二つの結合双極子の向きが完全には反対になりません。同じ大きさμの二つのベクトルが角度θをなすとき、合成の大きさは、余弦定理から R²=μ²+μ²+2μ²cosθ です。したがって R=2μcos(θ/2)（0≤θ≤180°）になります。θが180°なら0、104.5°なら0ではありません。分子の電子密度を単純な結合双極子だけで厳密には表せませんが、幾何の効果を理解できます。",
-            "textEn": "Water is bent, with an H–O–H angle near 104.5°. Its two O–H bond dipole contributions are not opposite. For two equal vectors of magnitude μ separated by angle θ, the cosine rule gives R²=μ²+μ²+2μ²cosθ, hence R=2μcos(θ/2) for 0≤θ≤180°. At 180° the sum is zero, whereas at 104.5° it is nonzero. This simple bond-vector model illustrates geometry but does not exactly reproduce the full electronic charge distribution."
+            "textEn": "Water is bent, with an H–O–H angle near 104.5°. Its two O–H bond dipole contributions are not opposite. For two equal vectors of magnitude μ separated by angle θ, the cosine rule gives R²=μ²+μ²+2μ²cosθ, hence R=2μcos(θ/2) for 0≤θ≤180°. At 180° the sum is zero, whereas at 104.5° it is nonzero. This simple bond-vector model illustrates geometry but does not exactly reproduce the full electronic charge distribution.",
+            "mathHelp": {
+              "schemaVersion": "1.0",
+              "titleJa": "必要になった数学：向きのある二つの量を足す",
+              "titleEn": "Math when needed: add two directed quantities",
+              "purposeJa": "結合双極子を数値だけ足してはいけない理由を、余弦定理から説明する。",
+              "purposeEn": "Use the cosine rule to show why two bond dipoles cannot be added as unsigned numbers.",
+              "lines": [
+                {
+                  "equation": "R²=μ²+μ²+2μ²cosθ",
+                  "ja": "同じ大きさμの二つのベクトルの間の角θを使った余弦定理。",
+                  "en": "Apply the cosine rule to two equal-magnitude vectors separated by angle θ."
+                },
+                {
+                  "equation": "1+cosθ=2cos²(θ/2)",
+                  "ja": "高校数学の半角公式を使い、右辺を整理する。",
+                  "en": "Use the half-angle identity to simplify the resultant magnitude."
+                },
+                {
+                  "equation": "R=2μcos(θ/2)",
+                  "ja": "0°から180°ではcos(θ/2)は負にならないため、この形で書ける。",
+                  "en": "For 0°≤θ≤180°, cos(θ/2) is nonnegative, giving this magnitude."
+                },
+                {
+                  "equation": "θ=180° → R=0; θ≈104.5° → R≈1.22μ",
+                  "ja": "直線分子では打ち消し合い、折れ線形では残る。",
+                  "en": "Linear arrangements cancel; a bent arrangement can yield a nonzero resultant."
+                }
+              ],
+              "boundaryJa": "結合双極子の単純な合成模型。非共有電子対も含む実際の電子密度を厳密に計算した結果ではない。",
+              "boundaryEn": "A simplified bond-dipole vector model, not an exact calculation of the full molecular electronic distribution."
+            }
           },
           {
             "id": "shape",
