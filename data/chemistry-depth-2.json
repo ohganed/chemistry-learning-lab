@@ -335,7 +335,33 @@
             "ja": "2　グラフの傾きが、反応速度になる",
             "en": "2. Rate is the slope of a concentration–time graph",
             "textJa": "A→BでAの濃度を測ると、平均消費速度は−Δ[A]/Δtです。前の例では−(0.50−0.80)/10=0.030 mol L⁻¹ s⁻¹となります。時刻によって速度が変わるとき、ある一瞬の速度は接線の傾き−d[A]/dtとして定義します。微分は新しい魔法の記号ではありません。時間を非常に短くしたときの変化の割合を表します。濃度の時間変化を測れないなら、速度の数値にも実験的な裏付けがありません。",
-            "textEn": "For A→B, the average rate of A consumption is −Δ[A]/Δt. The example gives −(0.50−0.80)/10=0.030 mol L⁻¹ s⁻¹. When the rate changes with time, its instantaneous value is the tangent slope −d[A]/dt. A derivative is the limiting ratio of a very small concentration change to a very small time interval. The equation is meaningful because it corresponds to a measurable curve."
+            "textEn": "For A→B, the average rate of A consumption is −Δ[A]/Δt. The example gives −(0.50−0.80)/10=0.030 mol L⁻¹ s⁻¹. When the rate changes with time, its instantaneous value is the tangent slope −d[A]/dt. A derivative is the limiting ratio of a very small concentration change to a very small time interval. The equation is meaningful because it corresponds to a measurable curve.",
+            "mathHelp": {
+              "schemaVersion": "1.0",
+              "titleJa": "必要になった数学：接線の傾きと速度",
+              "titleEn": "Math when needed: tangent slopes and reaction rates",
+              "purposeJa": "Δ[A]/Δtは二時点の平均、一時点の速度は微分という違いを理解する。",
+              "purposeEn": "Distinguish an average between two observations from an instantaneous rate defined by a derivative.",
+              "lines": [
+                {
+                  "equation": "vavg=−([A]₂−[A]₁)/(t₂−t₁)",
+                  "ja": "反応物Aが減るなら濃度変化は負なので、消費速度を正に表すため符号を反転する。",
+                  "en": "For reactant disappearance, the concentration change is negative; the minus sign makes the consumption rate positive."
+                },
+                {
+                  "equation": "0.80→0.50 mol/L in 10 s  →  vavg=0.030 mol L⁻¹ s⁻¹",
+                  "ja": "実際の二点を用いて、まず平均値を計算する。",
+                  "en": "Use the two observed values to compute an interval-average rate."
+                },
+                {
+                  "equation": "v(t)=−lim(Δt→0) Δ[A]/Δt=−d[A]/dt",
+                  "ja": "時間の幅を小さくしていった極限が、濃度曲線上のその時刻の接線の傾きに対応する。",
+                  "en": "Take the limit of shorter observation intervals to obtain the tangent slope at one time."
+                }
+              ],
+              "boundaryJa": "測定値には雑音や時間分解能の限界がある。微分の定義だけから実際の反応機構や速度式の指数が決まるわけではない。",
+              "boundaryEn": "Real measurements have noise and finite temporal resolution. A derivative alone does not establish the elementary mechanism or kinetic order."
+            }
           },
           {
             "id": "coefficients",
@@ -647,7 +673,33 @@
             "ja": "4　対数が何をしているかを数で確かめる",
             "en": "4. Why does a factor of ten change pH by one?",
             "textJa": "log₁₀(10⁻³)=−3なので、pH=−(−3)=3です。水素イオンの活量が10倍に増えて10⁻²になれば、pHは2になります。十倍という倍率を1だけの差に置き換えているのです。pHは水素イオンの量そのものではなく、対数変換した尺度です。したがってpH3とpH4の違いは『1だけ』でも、水素イオンの活量には約10倍の差があることを意味します。",
-            "textEn": "Since log₁₀(10⁻³)=−3, the negative logarithm gives pH 3. Multiplying hydrogen-ion activity by ten to 10⁻² gives pH 2. The logarithmic scale converts multiplicative factors of ten into additive steps of one. pH is not a direct count of hydrogen ions. A one-unit pH difference corresponds to a tenfold activity ratio."
+            "textEn": "Since log₁₀(10⁻³)=−3, the negative logarithm gives pH 3. Multiplying hydrogen-ion activity by ten to 10⁻² gives pH 2. The logarithmic scale converts multiplicative factors of ten into additive steps of one. pH is not a direct count of hydrogen ions. A one-unit pH difference corresponds to a tenfold activity ratio.",
+            "mathHelp": {
+              "schemaVersion": "1.0",
+              "titleJa": "必要になった数学：対数が桁数を扱いやすくする",
+              "titleEn": "Math when needed: logarithms compress orders of magnitude",
+              "purposeJa": "pHの式は別の難しい規則ではなく、10の何乗かという情報を短くする表現だと理解する。",
+              "purposeEn": "Recognize pH as a compact way of reporting powers of ten, not an unrelated rule.",
+              "lines": [
+                {
+                  "equation": "log₁₀(10ⁿ)=n",
+                  "ja": "常用対数は、10を何乗するとその数になるかを表す。",
+                  "en": "A base-ten logarithm reports the exponent of ten."
+                },
+                {
+                  "equation": "a(H⁺)=10⁻³  →  pH=−log₁₀(10⁻³)=3",
+                  "ja": "水素イオン活量（無次元）が10の−3乗ならpHは3。",
+                  "en": "A dimensionless hydrogen-ion activity of 10⁻³ corresponds to pH 3."
+                },
+                {
+                  "equation": "a(H⁺)×10  →  pH−1",
+                  "ja": "活量が10倍になれば、pHは1小さくなる。",
+                  "en": "A tenfold increase in activity decreases pH by one unit."
+                }
+              ],
+              "boundaryJa": "定義に使うのは水素イオンの活量であり、生のmol/L濃度そのものではない。希薄溶液では濃度で近似する場合がある。",
+              "boundaryEn": "pH uses hydrogen-ion activity rather than raw molar concentration. Concentration is a useful approximation only under appropriate conditions."
+            }
           },
           {
             "id": "weak",
@@ -803,7 +855,38 @@
             "ja": "5　ヘンダーソン・ハッセルバルヒ式はどこから来るか",
             "en": "5. Derive the buffer equation from Ka",
             "textJa": "酸解離定数の濃度近似Ka≈[H⁺][A⁻]/[HA]を[H⁺]について解くと[H⁺]≈Ka[HA]/[A⁻]です。両辺の負の常用対数をとれば−log[H⁺]=−log Ka+log([A⁻]/[HA])、すなわちpH≈pKa+log([A⁻]/[HA])です。水素イオン活量と濃度の近似が成立する範囲で使う式です。酸解離平衡と対数の関係を理解していれば、公式だけを別に暗記する必要はありません。",
-            "textEn": "Using the concentration approximation Ka≈[H⁺][A⁻]/[HA], rearrange to [H⁺]≈Ka[HA]/[A⁻]. Taking negative base-10 logarithms gives −log[H⁺]=−log Ka+log([A⁻]/[HA]), or pH≈pKa+log([A⁻]/[HA]). This is the Henderson–Hasselbalch approximation under suitable activity and concentration conditions. It follows from acid equilibrium and logarithm properties."
+            "textEn": "Using the concentration approximation Ka≈[H⁺][A⁻]/[HA], rearrange to [H⁺]≈Ka[HA]/[A⁻]. Taking negative base-10 logarithms gives −log[H⁺]=−log Ka+log([A⁻]/[HA]), or pH≈pKa+log([A⁻]/[HA]). This is the Henderson–Hasselbalch approximation under suitable activity and concentration conditions. It follows from acid equilibrium and logarithm properties.",
+            "mathHelp": {
+              "schemaVersion": "1.0",
+              "titleJa": "必要になった数学：酸解離定数から緩衝液の式へ",
+              "titleEn": "Math when needed: derive the buffer relation",
+              "purposeJa": "対数の公式を使えば、緩衝液の計算式は酸解離平衡から必然的に現れる。",
+              "purposeEn": "See the Henderson–Hasselbalch approximation emerge from an acid-dissociation equation and log identities.",
+              "lines": [
+                {
+                  "equation": "Ka≈[H⁺][A⁻]/[HA]",
+                  "ja": "適切な希薄溶液で活量を濃度へ近似していることを最初に確認する。",
+                  "en": "Begin with a dilute-solution concentration approximation for acid dissociation."
+                },
+                {
+                  "equation": "[H⁺]≈Ka[HA]/[A⁻]",
+                  "ja": "掛け算と割り算を整理して、水素イオン濃度に着目する。",
+                  "en": "Rearrange to isolate the hydrogen-ion concentration."
+                },
+                {
+                  "equation": "−log[H⁺]≈−log Ka+log([A⁻]/[HA])",
+                  "ja": "積の対数が和になり、割り算の対数が差になる性質を使う。",
+                  "en": "Use logarithm product and quotient identities."
+                },
+                {
+                  "equation": "pH≈pKa+log([A⁻]/[HA])",
+                  "ja": "ここでpHとpKaの定義を用いると、おなじみの式が出てくる。",
+                  "en": "Apply the definitions of pH and pKa to obtain the familiar approximation."
+                }
+              ],
+              "boundaryJa": "活量の近似、弱酸HAと共役塩基A⁻の共存、化学平衡が成立していることが前提。極端な比や高濃度では補正を考える。",
+              "boundaryEn": "Assumes equilibrium, both conjugate species present, and appropriate activity approximations. Extreme ratios and high ionic strength need corrections."
+            }
           },
           {
             "id": "range",
@@ -952,7 +1035,38 @@
             "ja": "5　流れた電荷量から生成する物質量を求める",
             "en": "5. Derive the amount deposited from charge",
             "textJa": "電流Iは単位時間あたりに流れる電荷量なのでQ=Itです。電子1 molの電荷の大きさはファラデー定数F≈96485 C/molを用いて表せます。Cu²⁺+2e⁻→Cuなら銅1 molを析出させるために電子2 molが必要です。Q=193000 Cがすべてこの反応に使われるなら、n(Cu)=Q/(2F)≈193000/(2×96485)≈1.00 molです。これは電荷保存と反応式の粒子数の比から自然に導かれます。",
-            "textEn": "Current I is charge transferred per unit time, so Q=It. One mole of electrons carries charge magnitude F≈96485 C/mol. For Cu²⁺+2e⁻→Cu, two moles of electrons produce one mole of copper. If Q=193000 C is used entirely for that reduction, n(Cu)=Q/(2F)≈193000/(2×96485)≈1.00 mol. The calculation follows from charge counting and the balanced half-reaction."
+            "textEn": "Current I is charge transferred per unit time, so Q=It. One mole of electrons carries charge magnitude F≈96485 C/mol. For Cu²⁺+2e⁻→Cu, two moles of electrons produce one mole of copper. If Q=193000 C is used entirely for that reduction, n(Cu)=Q/(2F)≈193000/(2×96485)≈1.00 mol. The calculation follows from charge counting and the balanced half-reaction.",
+            "mathHelp": {
+              "schemaVersion": "1.0",
+              "titleJa": "必要になった数学：電荷を電子のmol数に換算する",
+              "titleEn": "Math when needed: electrical charge to moles of electrons",
+              "purposeJa": "電気量と物質量を別々に暗記せず、電流の定義と電荷保存から結ぶ。",
+              "purposeEn": "Connect current, charge and chemical amount by conservation rather than memorizing a separate formula.",
+              "lines": [
+                {
+                  "equation": "I=Q/t  →  Q=It  (constant I)",
+                  "ja": "電流は1秒間に流れる電荷の量。電流が一定なら時間を掛けて総電荷になる。",
+                  "en": "Current is charge per time. For a constant current, multiply by elapsed time."
+                },
+                {
+                  "equation": "n(e⁻)=Q/F",
+                  "ja": "電子1 molの電荷の大きさはファラデー定数Fを使う。",
+                  "en": "The Faraday constant gives the magnitude of charge per mole of electrons."
+                },
+                {
+                  "equation": "Cu²⁺+2e⁻→Cu  →  n(Cu)=Q/(2F)",
+                  "ja": "銅を1 mol作るには電子2 molが必要なので2で割る。",
+                  "en": "Two moles of electrons reduce one mole of copper(II) to metal."
+                },
+                {
+                  "equation": "Q≈193000 C  →  n(Cu)≈1.00 mol",
+                  "ja": "理想的に電荷がすべて銅の析出へ使われた場合の値を求める。",
+                  "en": "Calculate the ideal amount if all charge goes to copper deposition."
+                }
+              ],
+              "boundaryJa": "電流一定でない場合はQ=∫I dtが必要。副反応や電流効率があれば、実際の析出量は理論値と異なる。",
+              "boundaryEn": "For varying current, Q=∫I dt. Side reactions and current efficiency can reduce actual deposition below the ideal prediction."
+            }
           },
           {
             "id": "limits",
