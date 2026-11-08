@@ -140,7 +140,7 @@ assert.ok(js.includes("total electric charge")||js.includes("total charge"),"Cha
 assert.ok(!js.includes("localStorage.setItem"),"This independent chapter should not modify any existing progress history");
 assert.ok(scienceFigures.render("sharing","ja").includes("H:H"),"The first bonding visual should connect two electron dots to one bond line");
 assert.ok(scienceFigures.render("atom","ja").includes("ef-cloud"),"First principles should avoid pretending electrons follow a fixed circular trajectory");
-assert.ok(scienceFigures.render("bondbegin","ja").includes("stable bond"),"Bond energy should be explained using the physical situation rather than a memorized slogan");
+assert.ok(scienceFigures.render("bondbegin","ja").includes("安定な結合"),"Bond energy should be explained using the physical situation rather than a memorized slogan");
 
 assert.ok(js.includes("window.ElectronFlowFigures?.render?.(x.id,lang)"),"A diagram must be embedded in the lesson prose, not hidden at the end in a separate playground");
 console.log("PASS: original electron-flow chapter, "+ja.lessons+" bilingual concept explanations, "+ja.cases+" interactive mechanisms, working next-step arrows, links, mobile layout and offline integration.");
