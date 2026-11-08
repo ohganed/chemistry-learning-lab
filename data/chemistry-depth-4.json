@@ -105,6 +105,55 @@
             "DBE narrows structural possibilities but does not uniquely identify the compound. Spectroscopy and reactivity provide further evidence. A calculated constraint is not the same as a fully determined structure."
           ]
         ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "分子式が同じなら、なぜ物質は同じにならないのでしょうか。C₂H₆Oという具体例を使い、『何個あるか』と『どう結びつくか』を分け、構造式が必要になる背景から有機化学を始めます。",
+        "premiseEn": "Why can the same molecular formula describe different substances? Use C₂H₆O to separate how many atoms are present from how they connect, motivating structural formulas before naming classes.",
+        "sections": [
+          {
+            "id": "formula",
+            "ja": "1　同じ元素と個数で、二つの物質が存在する",
+            "en": "1. The same formula can describe two substances",
+            "textJa": "分子式C₂H₆Oは炭素2個、水素6個、酸素1個が一つの分子に存在することを示します。しかしエタノールCH₃CH₂OHとジメチルエーテルCH₃OCH₃は、ともにこの分子式を満たします。違うのは酸素がどこに結びついているかです。実験で異なる沸点や反応性が見つかれば、分子式だけでは説明できないので、原子のつながりを表す構造式が必要になります。",
+            "textEn": "C₂H₆O specifies two carbon atoms, six hydrogen atoms and one oxygen atom per molecule. Yet ethanol CH₃CH₂OH and dimethyl ether CH₃OCH₃ share this composition. Their atom connectivity differs: oxygen is bonded to one carbon and hydrogen in ethanol but to two carbons in the ether. Different physical and chemical behavior motivates a structural formula; a molecular formula is insufficient."
+          },
+          {
+            "id": "valence",
+            "ja": "2　原子の価数を使えば、つながり方を検証できる",
+            "en": "2. Use valence to test a proposed connectivity",
+            "textJa": "炭素が通常4本、酸素が通常2本、水素が1本の共有結合をつくるという初歩模型を使います。CH₃CH₂OHでは、最初の炭素は三つのHと一つのC、次の炭素は二つのHとCとO、酸素はCとHに結合します。CH₃OCH₃では酸素が二つのCを結びます。原子数と結合数を一つずつ確認すれば、構造式は暗記した絵ではなく、制約を満たす候補として自分で組み立てられます。",
+            "textEn": "In a simple main-group valence model, carbon forms four ordinary covalent bonds, oxygen usually two, and hydrogen one. In ethanol the CH₃ carbon bonds to three hydrogens and a carbon; the CH₂ carbon bonds to two hydrogens, carbon and oxygen; oxygen bonds to carbon and hydrogen. In dimethyl ether, oxygen joins two carbon groups. Count atoms and bonds to construct allowable connectivities instead of copying pictures."
+          },
+          {
+            "id": "properties",
+            "ja": "3　構造が違えば、分子間相互作用も変わる",
+            "en": "3. Connectivity changes intermolecular interactions",
+            "textJa": "エタノールにはO−H結合があるので、エタノール分子どうしで水素結合を形成できます。ジメチルエーテルには酸素の孤立電子対がありますがO−H結合がなく、純粋なジメチルエーテル同士では同じ型の強い水素結合を作りにくくなります。この違いは沸点などの差を理解する重要な手掛かりです。ただし沸点は分子の形や分散力にも依存するので、官能基だけで完全に予測できるわけではありません。",
+            "textEn": "Ethanol contains an O–H bond and can form strong hydrogen bonds between ethanol molecules. Dimethyl ether has oxygen lone pairs but no O–H bond, so neat dimethyl ether cannot form the same network of intermolecular hydrogen bonds. This difference helps explain their boiling behavior. Molecular shape and dispersion interactions also matter, so a functional group alone does not provide a complete boiling-point prediction."
+          },
+          {
+            "id": "geometry",
+            "ja": "4　結合の順序が同じでも立体配置が違うことがある",
+            "en": "4. Same connectivity can still allow different spatial arrangements",
+            "textJa": "構造異性体は原子のつながり方が異なります。しかし二重結合や環の回転制限によって、原子のつながりは同じでも空間の配置が異なる異性体が生じます。さらに鏡像と重ね合わせられない分子もあります。つまり構造を理解するには『分子式→結合順序→三次元配置』という段階が必要です。炭素4価という規則だけでは有機化合物の全ての違いを説明できません。",
+            "textEn": "Constitutional isomers differ in connectivity. Other molecules have the same connectivity but differ in spatial arrangement, for example around a double bond with restricted rotation, or as non-superimposable mirror images. Structural interpretation therefore requires successive levels: molecular formula, connectivity and three-dimensional stereochemistry. Carbon's valence rules alone cannot describe every chemical distinction."
+          },
+          {
+            "id": "model",
+            "ja": "5　構造図は分子の写真ではない",
+            "en": "5. Structural drawings are models rather than photographs",
+            "textJa": "骨格式の折れ目や端点は炭素を表し、多くの炭素上の水素を省略しています。これは本当の分子に水素がないという意味ではありません。線やくさび形の表記は原子のつながりと立体配置を簡単に表現するための規約です。分子軌道や電子密度の分布を調べれば、共有結合を一本の棒として描く模型にも限界があるとわかります。何を示す図なのか、何を省略したのかを必ず確認します。",
+            "textEn": "Skeletal formulas omit most carbon labels and carbon-bound hydrogen symbols. The omitted atoms have not disappeared; the drawing is a compact convention for connectivity. Wedges and dashed bonds can represent stereochemistry. Neither a structural line nor a molecular ball-and-stick image is a literal photograph of electron density. A model is useful only when its encoded information and omissions are understood."
+          },
+          {
+            "id": "revisit",
+            "ja": "6　新しい官能基を学ぶたび、構造式へ戻る",
+            "en": "6. Revisit structure whenever learning a functional group",
+            "textJa": "アルコール、エーテル、カルボニル、カルボン酸、アミンなどを学ぶと、構造の一部から反応性を予想できるようになります。一方、同じ官能基があっても、隣接原子や立体構造によって反応速度や生成物が変わります。最初にC₂H₆Oの異性体を区別した経験は、有機反応の分類を名前の暗記から電子分布と構造の問題へ変える土台になります。",
+            "textEn": "Functional groups such as alcohols, ethers, carbonyls, carboxylic acids and amines provide useful predictions of reactivity. Yet neighbors and three-dimensional arrangements modify those predictions. Distinguishing the two C₂H₆O structures is a foundation for interpreting later reactions through connectivity and electron distribution rather than merely through compound names."
+          }
+        ]
       }
     },
     {
@@ -179,6 +228,55 @@
             "en": "Bonding and orbital theory deepen the explanation of delocalized π electrons, bond lengths and aromatic reactivity. Polymer chemistry turns ethene addition into chain formation. Aromatic amino acids and molecular light absorption provide further connections to biochemistry."
           }
         ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "エテンは臭素と付加反応するのに、ベンゼンは同じ二重結合の三つ組として扱うと性質が合いません。反応の違いという観察から、π電子の広がりと芳香族性を必要なところで導入します。",
+        "premiseEn": "Ethene readily undergoes addition with bromine, whereas treating benzene as three ordinary isolated double bonds fails to explain its behavior. Start with reactivity and develop the need for delocalized π electrons and aromaticity.",
+        "sections": [
+          {
+            "id": "compare",
+            "ja": "1　二重結合があれば、必ず同じ反応をするか",
+            "en": "1. Do all apparent double bonds react in the same way?",
+            "textJa": "エテンCH₂=CH₂は、適切な条件で臭素と付加反応します。ベンゼンC₆H₆を三つの二重結合が並んだだけの分子だと考えると、同じような付加反応を簡単に予想してしまいます。しかし実際にはベンゼン環の反応性には大きな違いがあり、条件によっては置換反応が代表的になります。この違和感から、単結合・二重結合を独立した棒として描く説明を検討し直す必要があります。",
+            "textEn": "Ethene, CH₂=CH₂, can add bromine under appropriate conditions. A drawing of benzene as three isolated double bonds might suggest analogous additions, yet benzene's behavior differs markedly and substitution commonly preserves its ring framework. The discrepancy motivates reconsideration of whether each apparent double bond in benzene behaves independently."
+          },
+          {
+            "id": "pi",
+            "ja": "2　π結合とσ結合の役割を分ける",
+            "en": "2. Distinguish σ and π contributions to bonding",
+            "textJa": "エテンのC=C結合には、炭素原子間の軸に沿うσ成分と、その両側に広がるπ成分があります。付加反応ではπ成分に関係する電子配置が変わり、新しいσ結合が形成されます。炭素−炭素結合に『二本の同じ棒』があるわけではありません。結合がどのような電子密度の分布を含むかに着目すると、付加反応が起こる場所を考えやすくなります。",
+            "textEn": "The C=C bond of ethene contains a σ contribution along the internuclear axis and a π contribution distributed above and below the molecular plane. An addition reaction reorganizes electron density associated with the π bond and forms new σ bonds. A double bond is not simply two identical sticks. Its orbital structure helps explain patterns of addition."
+          },
+          {
+            "id": "benzene",
+            "ja": "3　ベンゼンではπ電子が環全体へ広がる",
+            "en": "3. Benzene's π system is delocalized",
+            "textJa": "ベンゼンの6個の炭素はおおむね平面の環を作り、各炭素のp軌道が隣接して連続的なπ電子系を形成します。実験的にも炭素−炭素結合はほぼ等しい長さです。二種類の交互に違う結合が固定された単一構造だけでは、この性質を十分に説明できません。二つのケクレ構造の書き分けは、結合が時間的に入れ替わる写真ではなく、非局在化した電子構造を表現するための手段です。",
+            "textEn": "Six approximately planar carbon atoms in benzene have adjacent p orbitals that form an extended π system. The carbon–carbon bond lengths are nearly equivalent. A picture of three permanently localized double bonds is insufficient. Alternative Kekulé structures are resonance contributors, not snapshots of bonds literally switching back and forth in time."
+          },
+          {
+            "id": "energy",
+            "ja": "4　芳香族性は『何となく安定』ではない",
+            "en": "4. What does aromatic stabilization mean?",
+            "textJa": "環状の共役π電子系を分子軌道で考えると、許される電子状態のエネルギーと電子の配置を比較できます。単純なヒュッケル模型では平面・単環状・完全共役の系に、4n+2個のπ電子を持つ場合の安定化の傾向が現れます。しかし4n+2という数だけで、どんな環も必ず芳香族になるわけではありません。形、共役の連続性、軌道の重なり、エネルギー条件が必要です。",
+            "textEn": "Molecular-orbital models compare allowed electronic energies for cyclic conjugated π systems. In the simplified Hückel description, planar monocyclic fully conjugated systems with 4n+2 π electrons often exhibit aromatic stabilization. But simply counting 4n+2 electrons is not sufficient to establish aromaticity in any arbitrary ring; geometry, uninterrupted conjugation and electronic structure matter."
+          },
+          {
+            "id": "substitute",
+            "ja": "5　置換反応が起こりやすい理由を考える",
+            "en": "5. Why is substitution a characteristic benzene reaction?",
+            "textJa": "ベンゼンの求電子芳香族置換では、求電子剤との結合を作る過程で一時的に芳香族性が失われ、脱プロトン化によって芳香族性が回復する経路をとります。付加によって環の共役が持続的に失われる場合と比べると、エネルギー的な違いがあります。反応機構の全体を一つの矢印で済ませず、中間体とエネルギー変化を分けて考えることが必要です。",
+            "textEn": "In electrophilic aromatic substitution, bond formation with an electrophile temporarily disrupts aromaticity, and subsequent deprotonation restores it. An addition that permanently removes the aromatic π system can be less favorable under comparable conditions. The reaction mechanism becomes comprehensible by considering intermediates and energetic consequences rather than drawing one unexplained overall arrow."
+          },
+          {
+            "id": "limits",
+            "ja": "6　芳香族という名前を反応の万能な予言にしない",
+            "en": "6. Aromaticity does not dictate every reaction",
+            "textJa": "ベンゼンも反応条件によっては水素添加や酸化などの反応を起こし得ます。また環に置換基が加わると電子分布が変わり、求電子置換の速度や位置選択性も変化します。芳香族性は『絶対に付加しない』という禁止規則ではありません。どの現象を説明するモデルかを明確にすると、芳香族化合物の反応を例外の暗記ではなく、条件付きの予測として扱えます。",
+            "textEn": "Benzene can undergo hydrogenation or oxidation under suitable conditions. Substituents alter electronic distributions and influence reaction rates and regioselectivity. Aromaticity is not a prohibition against every addition reaction. Treat it as an explanatory electronic-structure concept whose predictions depend on conditions and competing pathways."
+          }
+        ]
       }
     },
     {
@@ -251,6 +349,55 @@
             "type": "revisit",
             "ja": "電気陰性度と分子の極性を学んだときの知識が、カルボニル炭素の求電子性を理解する入口になります。酸化還元の形式的な酸化数も有機化合物の酸化へ応用できます。生体内ではエタノールの代謝や糖の酸化還元などが同じ官能基の変換として現れます。",
             "en": "Electronegativity and bond polarity explain why carbonyl carbon is electrophilic. Formal oxidation states extend redox ideas to organic transformations. Metabolic reactions such as ethanol processing and sugar oxidation use related functional-group chemistry."
+          }
+        ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "エタノールとジメチルエーテルは同じ分子式なのに沸点や酸化のされ方が異なります。そこから酸素の結合、分子間力、電子密度の偏りを考え、カルボニル炭素が反応する理由までつなげます。",
+        "premiseEn": "Ethanol and dimethyl ether share a molecular formula yet differ in physical properties and oxidation chemistry. Use connectivity, intermolecular forces and charge distribution to explain functional-group behavior.",
+        "sections": [
+          {
+            "id": "functional",
+            "ja": "1　酸素がどの原子と結合しているかを調べる",
+            "en": "1. Ask how oxygen is connected",
+            "textJa": "アルコールR−OHでは酸素が炭素と水素に結びついています。一方、エーテルR−O−R′では酸素が二つの炭素基を結びます。同じC、H、Oを含む化合物でも、酸素の結合相手が違えば反応できる場所や分子間の相互作用も変わります。官能基を丸で囲む作業は出発点ですが、どの電子対・どの結合がその性質を生むかを考える必要があります。",
+            "textEn": "An alcohol R–OH has oxygen bonded to carbon and hydrogen, whereas an ether R–O–R′ has oxygen bonded to two carbon groups. Even with the same elements, different connectivity changes intermolecular interactions and available reactions. Circling a functional group is a starting tool, not a complete molecular explanation."
+          },
+          {
+            "id": "boiling",
+            "ja": "2　沸点の違いを、分子間の相互作用から考える",
+            "en": "2. Explain boiling behavior through intermolecular forces",
+            "textJa": "エタノールは分子どうしでO−Hに関係する水素結合を形成できます。エーテルの酸素も水から水素結合を受け取れますが、純粋なエーテル同士ではO−Hドナーがないので、同じ水素結合網目を作りません。分子同士を引き離して気体にする際に必要なエネルギーの差が、沸点の違いに関係します。ただし分子量や形も無視できません。",
+            "textEn": "Ethanol molecules can hydrogen-bond to one another through O–H groups. Ether oxygens can accept hydrogen bonds from water, but pure ether lacks an O–H donor and cannot form the same self-associated hydrogen-bond network. Differences in intermolecular cohesion contribute to different boiling behavior, alongside molecular mass and molecular shape."
+          },
+          {
+            "id": "oxidation",
+            "ja": "3　アルコールを酸化すると、どの結合が変わるか",
+            "en": "3. Trace bond changes during alcohol oxidation",
+            "textJa": "第一級アルコールRCH₂OHをアルデヒドRCHOへ酸化する反応では、適切な条件で炭素に結びついたHとOに結びついたHが取り去られ、C=Oが形成されます。さらに酸化するとカルボン酸へ進むことがあります。第二級アルコールではケトン、第三級では同じ穏やかな酸化経路が難しい理由を、OHのついた炭素に何個のHがあるかから確かめられます。ただし実際の試薬選択性や機構は条件次第です。",
+            "textEn": "Oxidation of a primary alcohol RCH₂OH to aldehyde RCHO involves changes that remove hydrogen equivalents and form a C=O group under suitable conditions; further oxidation can yield a carboxylic acid. Secondary alcohols can form ketones, whereas tertiary alcohols lack an α hydrogen for the same common mild oxidation pathway. This bond-level view is more informative than memorizing three lists, though reagent specificity and mechanisms depend on conditions."
+          },
+          {
+            "id": "carbonyl",
+            "ja": "4　カルボニル炭素は、なぜ電子を受け取りやすいか",
+            "en": "4. Why is the carbonyl carbon electrophilic?",
+            "textJa": "C=O結合では酸素側に電子密度が偏るため、カルボニル炭素は部分正電荷をもち、電子対を与える求核剤の攻撃を受けることがあります。単に『C=Oがある』と記号で見るのでなく、どの原子へ電子対が移動し、π結合の電子密度がどう変わるかを追うと、求核付加反応の矢印が理解しやすくなります。すべてのカルボニル化合物が同じ速さで反応するわけではありません。",
+            "textEn": "The C=O bond is polarized toward oxygen, leaving the carbonyl carbon electrophilic. A nucleophile can donate electron density toward carbon while the π-electron distribution changes, producing addition under suitable conditions. Curved-arrow notation is an electron-accounting model, not a magical symbol. The reaction rates and outcomes differ among carbonyl compounds and with the reaction environment."
+          },
+          {
+            "id": "identify",
+            "ja": "5　銀鏡反応を、決め打ちの分類にしない",
+            "en": "5. What does a silver-mirror test actually establish?",
+            "textJa": "適切な銀アンミン錯体を用いる酸化反応では、アルデヒドが酸化される一方、Ag(I)が金属銀へ還元される場合があります。銀色の析出は、反応が起きたという観察事実ですが、試料の物質名をそれだけで一意に決められるわけではありません。ほかの還元性物質も類似の結果を生み得ます。官能基の識別は、反応の電子収支と試薬の選択性を同時に理解する問題です。",
+            "textEn": "In a suitable silver-ammonia oxidation test, an aldehyde may be oxidized while Ag(I) is reduced to metallic silver. A silver deposit is an observation supporting a redox event, not unique proof of a specific compound. Other reducing agents can produce similar results. Functional-group tests require attention to electron balance, reagent selectivity and alternative explanations."
+          },
+          {
+            "id": "limits",
+            "ja": "6　分類から反応機構へ戻る",
+            "en": "6. Return from classifications to mechanisms",
+            "textJa": "アルコール・エーテル・アルデヒド・ケトンという名称だけでは、その化合物の反応性を正確には予測できません。隣接する置換基、立体障害、溶媒、温度、触媒が重要です。最初のC₂H₆Oの構造異性体から学んだ『結合の場所が違えば性質が変わる』という認識を、カルボニルの電子密度と反応機構へ発展させることで、新しい分野を既知の知識から説明できます。",
+            "textEn": "Alcohol, ether, aldehyde and ketone are useful classes but do not uniquely determine rates or products. Neighboring substituents, steric effects, solvent, temperature and catalysts all matter. The earlier insight from C₂H₆O isomers—that connectivity changes properties—now develops into predictions based on electron distribution and mechanisms."
           }
         ]
       }
