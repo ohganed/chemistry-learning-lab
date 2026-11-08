@@ -70,6 +70,42 @@ assert.ok(enthalpy.originJourney.sections.find(x=>x.id==='hessworked').textJa.in
 assert.ok(enthalpy.originJourney.sections.find(x=>x.id==='states').textJa.includes('H₂O(l)'),'Liquid/gas enthalpy distinction must be explicit');
 assert.ok(enthalpy.originJourney.sections.find(x=>x.id==='worked').textJa.includes('400 J'),'Worked expansion energy balance must be present');
 
+// Organic: verify the natural conceptual progression and the applicability of each model.
+const organicChapters=all.filter(ch=>ch.id.startsWith('4-'));
+const organicModes=['structure','addition','carbonyl','catalysis','aromatic','stereochemistry'];
+assert.equal(organicChapters.length,6);
+let organicSteps=0,organicModels=0;
+for(const [index,ch] of organicChapters.entries()){
+ const o=ch.organicReasoning;
+ assert.equal(o?.schemaVersion,'1.0','Organic concept progression must be versioned: '+ch.id);
+ assert.equal(o.kind,organicModes[index],'Pedagogical focus must match the chapter concept: '+ch.id);
+ for(const key of ['titleJa','titleEn','questionJa','questionEn','predictionJa','predictionEn','boundaryJa','boundaryEn']){
+  assert.ok(typeof o[key]==='string'&&o[key].trim(),'Natural bilingual context, model boundary or follow-on question missing: '+ch.id+'/'+key);
+ }
+ assert.equal(o.steps.length,4,'Preserve the four causal stages in this organic worked concept: '+ch.id);
+ assert.equal(o.models.length,2,'Compare the explanatory power of two relevant models: '+ch.id);
+ for(const part of o.steps){
+  for(const key of ['ja','en','changeJa','changeEn','reasonJa','reasonEn']){
+   assert.ok(typeof part[key]==='string'&&part[key].trim(),'Organic reasoning must connect each step with its cause: '+ch.id+'/'+key);
+  }
+  organicSteps++;
+ }
+ for(const model of o.models){
+  for(const key of ['ja','en','canJa','canEn','limitJa','limitEn']){
+   assert.ok(typeof model[key]==='string'&&model[key].trim(),'Organic models must explain both capabilities and limits: '+ch.id+'/'+key);
+  }
+  organicModels++;
+ }
+}
+assert.equal(organicSteps,24);
+assert.equal(organicModels,12);
+const organicCase=id=>organicChapters.find(ch=>ch.id===id).organicReasoning;
+assert.ok(organicCase('4-1').steps.some(x=>x.reasonEn.includes('bromonium')),'Alkene addition should motivate intermediate formation');
+assert.ok(organicCase('4-2').steps.some(x=>x.reasonEn.includes('valence')),'Carbonyl addition must respect carbon valence');
+assert.ok(organicCase('4-3').steps.some(x=>x.reasonEn.includes('regenerates')),'Fischer esterification must explain catalyst regeneration');
+assert.ok(organicCase('4-4').steps.some(x=>x.reasonEn.includes('aromaticity')),'Aromatic substitution should explain recovery of aromaticity');
+assert.ok(organicCase('4-5').steps.some(x=>x.reasonEn.includes('geometry')),'Carbohydrate example should connect stereochemistry to enzyme recognition');
+
 // Inorganic: a new concept must be motivated, derived, visualized, compared and qualified.
 const inorganic=all.filter(ch=>ch.id.startsWith('3-'));
 assert.equal(inorganic.length,4,'The four existing inorganic chapter IDs must remain stable');
@@ -185,6 +221,10 @@ assert.ok(viewer.includes('chemistry-knowledge-bridges-v1.json')&&viewer.include
 
 assert.ok(viewer.includes('renderStageVisual(id,lang,entry.id)'), 'Annotated diagrams must appear inside the corresponding enthalpy derivation steps');
 assert.ok(viewer.includes('renderInorganicWorkshop(lesson,lang)'), 'Detailed model comparison and derivation are not presented');
+assert.ok(viewer.includes('renderOrganicReasoning(lesson,lang)'), 'Organic explanations must appear after conceptual origins and before formula summaries');
+assert.ok(viewer.includes('origin+workshop+organic+block+deep+guided+'), 'The organic reasoning route must be in a natural sequence within the lesson');
+assert.ok(viewer.includes('data-depth-section="organic-models"')&&viewer.includes('data-depth-section="organic-predict"'), 'Optional comparison and prediction should be available without a knowledge gate');
+
 
 
 const teaching=JSON.parse(readFileSync(new URL('../data/chemistry-teaching-approaches-v1.json',import.meta.url),'utf8'));
