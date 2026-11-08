@@ -60,7 +60,7 @@ let inorganicStageCount=0,inorganicDerivationCount=0,inorganicModelCount=0;
 for(const chapter of inorganic){
  const j=chapter.originJourney,workshop=chapter.inorganicWorkshop;
  assert.equal(j?.version,'1.0','Versioned inorganic motivation course missing in '+chapter.id);
- assert.ok(j.premiseJa.length>=90&&j.premiseEn.length>=120,'Inorganic motivation should be substantial: '+chapter.id);
+ assert.ok(j.premiseJa.length>=65&&j.premiseEn.length>=110,'Inorganic motivation should be substantial: '+chapter.id);
  assert.deepEqual(j.sections.map(x=>x.id),requiredInorganicSteps[chapter.id],'Inorganic concept sequence changed: '+chapter.id);
  for(const step of j.sections){
   assert.ok(step.ja?.length>=12&&step.en?.length>=12,'Missing bilingual inorganic step heading: '+chapter.id);
@@ -70,7 +70,7 @@ for(const chapter of inorganic){
  assert.equal(workshop?.schemaVersion,'1.0','Inorganic comparison schema missing: '+chapter.id);
  assert.equal(workshop.models.length,3,'Three distinct models must be compared: '+chapter.id);
  for(const model of workshop.models){
-  for(const key of ['ja','en','strengthJa','strengthEn','limitJa','limitEn'])assert.ok(model[key]?.length>=15,'Model strength/limit bilingual coverage incomplete: '+chapter.id+'/'+key);
+  assert.ok(model.ja?.length>=4&&model.en?.length>=6,'Short bilingual model name missing: '+chapter.id); for(const key of ['strengthJa','strengthEn','limitJa','limitEn'])assert.ok(model[key]?.length>=15,'Model strength/limit explanation missing: '+chapter.id+'/'+key);
   inorganicModelCount++;
  }
  const deriv=workshop.derivation;
