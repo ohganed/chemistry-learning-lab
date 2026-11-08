@@ -186,6 +186,34 @@ assert.ok(viewer.includes('chemistry-knowledge-bridges-v1.json')&&viewer.include
 assert.ok(viewer.includes('renderStageVisual(id,lang,entry.id)'), 'Annotated diagrams must appear inside the corresponding enthalpy derivation steps');
 assert.ok(viewer.includes('renderInorganicWorkshop(lesson,lang)'), 'Detailed model comparison and derivation are not presented');
 
+
+const teaching=JSON.parse(readFileSync(new URL('../data/chemistry-teaching-approaches-v1.json',import.meta.url),'utf8'));
+assert.equal(teaching.schema,'chemistry-teaching-approaches');
+assert.equal(teaching.schemaVersion,'1.0');
+assert.equal(teaching.chapters.length,29,'Every chemistry chapter needs an individual teaching-method plan');
+const allowedApproaches=new Set(Object.keys(teaching.approachKinds));
+assert.ok(allowedApproaches.size>=8,'Distinct concepts require distinct pedagogical methods');
+let plannedSections=0;
+for(const chapterPlan of teaching.chapters){
+ const chapter=all.find(x=>x.id===chapterPlan.id);
+ assert.ok(chapter,'Unknown chapter in teaching map '+chapterPlan.id);
+ assert.equal(chapterPlan.titleJa,chapter.ja,'Teaching map chapter identity changed');
+ assert.equal(chapterPlan.titleEn,chapter.en,'Teaching map English title changed');
+ assert.equal(chapterPlan.sections.length,chapter.sections.length,'Every subsection needs its own approach: '+chapter.id);
+ for(const [i,section] of chapterPlan.sections.entries()){
+  assert.equal(section.index,i,'Subsection index changed: '+chapter.id);
+  assert.equal(section.sectionJa,chapter.sections[i].ja,'Teaching target changed: '+chapter.id+'/'+i);
+  assert.equal(section.sectionEn,chapter.sections[i].en,'English teaching target changed: '+chapter.id+'/'+i);
+  assert.ok(allowedApproaches.has(section.approach),'Unknown pedagogy method: '+section.approach);
+  assert.ok(section.reasonJa.length>=14,'Explain why this pedagogical method fits this subsection: '+chapter.id+'/'+i);
+  plannedSections++;
+ }
+}
+assert.equal(plannedSections,87,'All 87 core syllabus subsections need tailored teaching decisions');
+const differentApproaches=new Set(teaching.chapters.flatMap(x=>x.sections.map(s=>s.approach)));
+assert.ok(differentApproaches.size>=8,'Do not use a single textbook explanation method for all science topics');
+console.log('PASS: 87 subsection-specific pedagogical approaches across 29 chapters, using '+differentApproaches.size+' methods.');
+
 const figures=readFileSync(new URL('../chemistry-topic-visuals.js',import.meta.url),'utf8');
 assert.doesNotThrow(()=>new Function(figures),'Original scientific figure JavaScript must parse');
 assert.ok(figures.includes('ChemistryPedagogyVisuals={render}'),'Scientific figure renderer must expose its entrypoint');
@@ -194,7 +222,7 @@ const figureKeys=[
  ['0-0','contrast'],['0-2','wave'],['0-3','melt'],['0-4','vectors'],
  ['1-0','molar'],['1-1','leftover'],['1-2','collision'],['1-3','dilution'],['1-4','pressure'],
  ['2-1','slope'],['2-2','rates'],['2-3','log'],['2-4','curve'],['2-5','circuit'],
- ['4-0','formula'],['5-1','rubber']
+ ['4-0','formula'],['4-1','benzene'],['4-3','resonance'],['4-5','starch'],['5-0','averages'],['5-1','rubber'],['5-2','evidence']
 ];
 for(const [id,stage] of figureKeys){
  assert.ok(figures.includes('id==="'+id+'"&&step==="'+stage+'"'),'Missing stage-specific visual: '+id+'/'+stage);
@@ -202,6 +230,8 @@ for(const [id,stage] of figureKeys){
  assert.ok(lesson.originJourney.sections.some(s=>s.id===stage),'Figure must attach to an existing explanation stage: '+id+'/'+stage);
 }
 assert.ok(figures.includes('figcaption')&&figures.includes('role="img"'),'Schematics must have captions and accessible descriptions');
+assert.equal(figureKeys.length,21,'Maintain 21 selectively placed original scientific diagrams');
+assert.ok(!figures.includes('q−16')&&!figures.includes('q−15'),'SVG path commands must use ASCII minus');
 assert.ok(sw.includes('chemistry-topic-visuals.js'),'Offline cache must include scientific drawings');
 
 assert.ok(viewer.includes('renderInorganicStageVisual(id,lang,entry.id)'), 'Scientific diagrams must appear in the correct inorganic explanatory section');
