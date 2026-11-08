@@ -54,10 +54,19 @@ function simulate(lang){
  const elements=new Map();
  function make(id){
   if(elements.has(id))return elements.get(id);
-  const n={id,innerHTML:"",textContent:"",href:"",hidden:false,disabled:false,
+  const n={id,_html:"",_buttons:[],textContent:"",href:"",hidden:false,disabled:false,
    dataset:{},listeners:{},
+   get innerHTML(){return this._html},
+   set innerHTML(content){
+    this._html=String(content);
+    this._buttons=Array.from(this._html.matchAll(/data-(case|answer)="([^"]+)"/g),match=>{
+     const button={dataset:{[match[1]]:match[2]},listeners:{},classList:{toggle(){}},
+       addEventListener(kind,fn){this.listeners[kind]=fn}};
+     return button;
+    });
+   },
    addEventListener(kind,fn){this.listeners[kind]=fn},
-   querySelectorAll(){return []},
+   querySelectorAll(selector){return selector==="button"?this._buttons:[]},
    scrollIntoView(){}
   };
   elements.set(id,n);
@@ -119,16 +128,30 @@ function simulate(lang){
  }
  const diagram=make("reactionDiagram").innerHTML;
  assert.ok(diagram.includes('<svg')&&diagram.includes('role="img"')&&diagram.includes('aria-label'),"The electron-pair model must have a readable accessible SVG");
- assert.ok(make("caseTitle").textContent.includes(lang==="ja"?"カルボニル":"Carbonyl")||make("caseTitle").textContent.includes(lang==="en"?"carbonyl":"求核"),"The carbonyl model is the initially selected worked example");
- // Click the real Next handler (the same callback used by the DOM button).
+ assert.ok(make("caseTitle").textContent.includes(lang==="ja"?"水素":"hydrogen"),"The first interactive example must use only atoms and electrons before curved-arrow mechanisms");
+ // Click the actual Next button to reveal shared pairs before using advanced reaction symbols.
  const next=make("nextStep");
  assert.equal(typeof next.listeners.click,"function","Interactive stages must have a working Next button");
  next.listeners.click();
+ assert.ok(make("reactionDiagram").innerHTML.includes("H:H"),"The next step should show two electrons as one shared bonding pair");
+ next.listeners.click();
+ assert.ok(make("reactionDiagram").innerHTML.includes("H–H"),"The next step should replace a pair of dots with a bond line");
+ assert.ok(!make("reactionDiagram").innerHTML.includes('marker-end="url(#curved-pair-arrow)"'),"Do not misrepresent two radical H atoms using a two-electron curved mechanism arrow");
+ // Select the carbonyl case using the same click callback that the user triggers.
+ const carbonylButton=make("caseButtons").querySelectorAll("button").find(button=>button.dataset.case==="carbonyl");
+ assert.ok(carbonylButton&&typeof carbonylButton.listeners.click==="function","Interactive case switching must be wired");
+ carbonylButton.listeners.click();
+ next.listeners.click();
  const after=make("reactionDiagram").innerHTML;
- assert.ok(after.includes('marker-end="url(#curved-pair-arrow)"'),"The next stage must reveal electron-pair arrows");
+ assert.ok(after.includes('marker-end="url(#curved-pair-arrow)"'),"Carbonyl addition should reveal curved electron-pair arrows");
  assert.ok((after.match(/marker-end="url\(#curved-pair-arrow\)"/g)||[]).length>=2,"Carbonyl addition requires both electron-pair arrows");
  assert.ok(lang==="ja"?make("stepReason").textContent.includes("価数"):/valence|overbonded|bond count/i.test(make("stepReason").textContent),"The second stage should explain how electron-pair relocation preserves appropriate carbon bonding");
  assert.ok(make("questionArea").innerHTML.includes('data-answer="0"'),"Optional questions must render");
+ const answer=make("questionArea").querySelectorAll("button").find(button=>button.dataset.answer==="0");
+ assert.ok(answer&&typeof answer.listeners.click==="function","Optional question must be interactive");
+ answer.listeners.click();
+ assert.equal(make("answerFeedback").hidden,false,"Selecting an answer must reveal an explanation without blocking progression");
+
  assert.ok(make("connections").innerHTML.includes("#chapter=4-2"),"Return paths to the prior carbonyl topic must exist");
  assert.equal(make("backToCourse").href,"./high-school-chemistry"+(lang==="en"?"-en":"")+".html#chapter=4-2","Language-aware return path must be preserved");
  return {lessons:root.curriculum.lessons.length,cases:cases.length};
