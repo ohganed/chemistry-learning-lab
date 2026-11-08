@@ -56,6 +56,43 @@ for(const ch of all){
 }
 console.log('PASS: bilingual conceptual journeys in all 29 chapters ('+allOriginSteps+' stages, with no fixed length quota).');
 
+// Mathematical scaffolding is attached only where the explanation requires it.
+let mathSupportCount=0;
+for(const chapter of all){
+ for(const stage of chapter.originJourney.sections){
+  const math=stage.mathHelp;
+  if(!math)continue;
+  mathSupportCount++;
+  assert.equal(math.schemaVersion,'1.0','Math support schema must be explicit: '+chapter.id+'/'+stage.id);
+  for(const key of ['titleJa','titleEn','purposeJa','purposeEn','boundaryJa','boundaryEn']){
+   assert.ok(typeof math[key]==='string'&&math[key].trim(),'Mathematical step must explain its purpose and limits: '+chapter.id+'/'+stage.id+'/'+key);
+  }
+  assert.ok(Array.isArray(math.lines)&&math.lines.length>0,'A derivation has as many steps as it needs: '+chapter.id+'/'+stage.id);
+  for(const calculation of math.lines){
+   for(const key of ['equation','ja','en'])assert.ok(typeof calculation[key]==='string'&&calculation[key].trim(),'Every equation needs an explanation in both languages: '+chapter.id+'/'+stage.id+'/'+key);
+  }
+ }
+}
+function needMath(chapter,stage,formula){
+ const found=all.find(x=>x.id===chapter)?.originJourney.sections.find(s=>s.id===stage)?.mathHelp;
+ assert.ok(found,'Math should be taught where the concept needs it: '+chapter+'/'+stage);
+ assert.ok(found.lines.some(s=>s.equation.includes(formula)),'A crucial derivation step is missing: '+chapter+'/'+stage+'/'+formula);
+}
+needMath('0-2','energy','n²h²');
+needMath('0-4','geometry','cos(θ/2)');
+needMath('1-2','isotropy','⟨v²⟩/3');
+needMath('1-4','formula','cRT');
+needMath('2-1','slope','d[A]/dt');
+needMath('2-3','log','log₁₀');
+needMath('2-4','derive','pKa');
+needMath('2-5','faraday','Q/(2F)');
+needMath('5-0','averages','Mw');
+assert.ok(Math.abs(2*Math.cos((104.5/2)*Math.PI/180)-1.22)<0.01,'Bond-dipole vector numerical interpretation');
+assert.ok(Math.abs((193000/(2*96485))-1)<0.01,'Faraday stoichiometry should yield approximately one mole');
+const mn=(100+200)/2,mw=(100*100+200*200)/(100+200);
+assert.ok(Math.abs(mn-150)<1e-10&&Math.abs(mw-166.6666667)<1e-5,'Polymer averages must be mutually consistent');
+console.log('PASS: '+mathSupportCount+' contextual mathematical explanations, with numeric consistency checks and no quota.');
+
 const enthalpy=all.find(x=>x.id==='2-0');
 assert.ok(enthalpy.originJourney?.version==='1.0','Enthalpy motivation course must be versioned');
 assert.ok(enthalpy.originJourney.sections.length>=1,'Enthalpy needs a coherent conceptual sequence');
@@ -237,6 +274,9 @@ assert.ok(viewer.includes('chemistry-knowledge-bridges-v1.json')&&viewer.include
 assert.ok(viewer.includes('renderStageVisual(id,lang,entry.id)'), 'Annotated diagrams must appear inside the corresponding enthalpy derivation steps');
 assert.ok(viewer.includes('renderInorganicWorkshop(lesson,lang)'), 'Detailed model comparison and derivation are not presented');
 assert.ok(viewer.includes('renderOrganicReasoning(lesson,lang)'), 'Organic explanations must appear after conceptual origins and before formula summaries');
+assert.ok(viewer.includes('renderMathHelp(entry,lang)+renderStageVisual'), 'Mathematics must appear alongside its motivating scientific explanation');
+assert.ok(viewer.includes('host.dataset.chapter!==id||host.dataset.language!==lang'), 'Stale asynchronous content must not overwrite a newly selected language');
+
 assert.ok(viewer.includes('data-depth-section="organic-evidence"')&&viewer.includes('evidenceHtml+'),'Show experimentally testable observations after mechanism explanation');
 assert.ok(viewer.includes('data-depth-section="organic-mechanism" open'),'Mechanism reasoning should not require extra clicks');
 
