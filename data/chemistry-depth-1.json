@@ -105,6 +105,55 @@
             "The result is plausible because an enormous number of atoms can have a mass of only a few grams. For 4.86 g MgO instead, both the molar mass and the type of entity counted must change."
           ]
         ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "目に見えないほど小さい粒子の個数を、天秤の数値からどう求めるのか。『モル』の定義を先に覚えるより、数えることと量ることの間に必要な橋を作ります。",
+        "premiseEn": "How can a balance provide the number of particles too small to count? Build the connection between counting and weighing before treating the mole as a formula.",
+        "sections": [
+          {
+            "id": "problem",
+            "ja": "1　原子や分子を一個ずつ数えることはできるのか",
+            "en": "1. Why can we not count atoms in the ordinary way?",
+            "textJa": "水の中には膨大な数の水分子があります。透明なコップの中で分子を一個ずつ見分け、個数を数えるのは普通の実験方法では困難です。しかしコップを天秤に載せれば質量はすぐに測定できます。ここで欲しいのは、直接数えられない粒子の個数を、測れる質量へ結びつける変換方法です。この目的がはっきりすれば、『モル』という単位の意味が見えてきます。",
+            "textEn": "A glass of water contains an enormous number of molecules. Counting each molecule directly is not practical in an ordinary laboratory, but the water's mass is readily measured. We need a conversion between a count of specified microscopic entities and a measurable macroscopic quantity. The mole becomes useful because it addresses this measurement problem."
+          },
+          {
+            "id": "dozen",
+            "ja": "2　ダースという単位と、モルという単位",
+            "en": "2. Extend the idea of a dozen to a mole",
+            "textJa": "卵を12個まとめると1ダースです。卵が12個になると性質が変わるわけではなく、個数を扱いやすく表現する単位ができただけです。同様に1 molには、指定した要素実体が正確に6.02214076×10²³個あります。水分子を数えるのか酸素原子を数えるのか、数える対象は常に明記します。『1 molだから同じ質量になる』のではありません。同じ個数の異なる分子は別の質量を持ちます。",
+            "textEn": "A dozen means twelve specified objects; it does not change them. One mole is exactly 6.02214076×10²³ specified entities. The entities might be water molecules, oxygen atoms, ions or formula units, and that choice must be named. Equal numbers of different kinds of entities do not imply equal masses. The amount unit is a count-based bridge, not a mass unit."
+          },
+          {
+            "id": "molar",
+            "ja": "3　個数と質量を結びつけるモル質量",
+            "en": "3. Molar mass connects count and measured mass",
+            "textJa": "水H₂O分子1 molの質量は約18 gなので、モル質量M≈18 g/molです。もし試料の質量が36 gであれば、36 g÷(18 g/mol)=2 molとなります。単位を含めて割り算をすると、gが約分されmolが残ります。式n=m/Mは、新しい暗記の公式ではなく『何gの試料を、1 molあたり何gで割るか』という個数を扱うための自然な関係です。",
+            "textEn": "The approximate molar mass of water is 18 g/mol. A 36 g sample therefore contains 36 g divided by 18 g/mol, or 2 mol of water molecules. Including units shows why grams cancel and moles remain. The relation n=m/M is simply the measured sample mass divided by the mass per mole, not an unrelated rule."
+          },
+          {
+            "id": "entities",
+            "ja": "4　化学式が変わると、何を数えているかも変わる",
+            "en": "4. A chemical formula specifies what is counted",
+            "textJa": "水の化学式H₂Oは、水分子1個に水素原子2個と酸素原子1個があることを示します。したがって水分子2 molには水素原子4 mol、酸素原子2 molが含まれます。一方、固体NaClでは孤立したNaCl分子が整列しているというより、結晶格子にNa⁺とCl⁻が規則的に配置しています。NaClを1 molというときは、通常1 molの式単位を数えるのです。",
+            "textEn": "H₂O means each water molecule contains two hydrogen atoms and one oxygen atom. Thus 2 mol of water molecules contains 4 mol of hydrogen atoms and 2 mol of oxygen atoms. In solid NaCl, ions form an extended lattice rather than an assembly of discrete NaCl molecules. One mole of NaCl ordinarily counts a mole of formula units. The entity being counted matters as much as the number."
+          },
+          {
+            "id": "uncertainty",
+            "ja": "5　測定値と定義された数値は区別する",
+            "en": "5. Separate a defined constant from measured quantities",
+            "textJa": "アボガドロ定数の数値はSIの定義で正確に決まっています。しかし水の質量36 gには測定誤差があり、モル質量を18 g/molと近似したことにも丸めがあります。結果の2 molが、すべての桁で絶対に正確という意味にはなりません。定義の正確さと、実際の測定結果の不確かさを分けることで、計算を実験の道具として使えるようになります。",
+            "textEn": "The numerical value of the Avogadro constant is exact by SI definition. A measured 36 g sample, however, has uncertainty, and using 18 g/mol is a rounded molar mass. Consequently, the resulting 2 mol is not infinitely precise in an experimental sense. Keeping exact definitions distinct from measurements and approximations is essential to using calculations scientifically."
+          },
+          {
+            "id": "transfer",
+            "ja": "6　モルは量的反応を理解する共通の言葉になる",
+            "en": "6. Mole ratios make equations experimentally useful",
+            "textJa": "2H₂+O₂→2H₂Oは、分子2個と1個の関係として読めるだけでなく、2 molと1 molの関係として読めます。ここで初めて、化学反応式の係数が天秤で測る試料の量と結びつきます。気体の体積や溶液の濃度へ進んでも、数えている対象をはっきりさせれば同じ『粒子数の比』を使えます。モルは化学の各分野をつなぐための単位です。",
+            "textEn": "The equation 2H₂+O₂→2H₂O expresses a particle-number ratio and equally a 2 mol:1 mol:2 mol ratio. Stoichiometric coefficients can now connect to laboratory masses through molar masses. Later, gas volumes and solution concentrations become additional ways to infer the amounts of specified particles. The mole is a bridge among those measurements."
+          }
+        ]
       }
     },
     {
@@ -305,6 +354,55 @@
             "If the container expands, V is no longer fixed and the result changes. Identifying the constraints is more fundamental than memorizing the proportionality."
           ]
         ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "気体が容器の壁を押す圧力は、どこから現れるのでしょうか。気体の状態方程式を暗記する前に、粒子の衝突と運動量変化を考えます。高校の力学を土台に、気体の法則へたどり着きます。",
+        "premiseEn": "Where does the pressure exerted by a gas originate? Before stating PV=nRT, begin with collisions and changes of momentum, using mechanics to build the gas laws.",
+        "sections": [
+          {
+            "id": "wall",
+            "ja": "1　気体の圧力は誰が作っているのか",
+            "en": "1. What causes pressure on the walls?",
+            "textJa": "空気の入った密閉容器の壁には力が働きます。気体粒子はさまざまな向きに運動し、壁に衝突して運動量を交換しています。一個の衝突が与える力は短時間ですが、膨大な数の粒子による衝突を平均すると、壁が受ける力を面積で割った圧力として測定できます。圧力を定義だけで覚えず、粒子の運動による結果として理解してみます。",
+            "textEn": "A sealed gas exerts a force on its container walls. Molecules move in many directions and exchange momentum with the walls when they collide. An individual collision is brief, but averaging many collisions gives a measurable force per unit area: pressure. The macroscopic quantity emerges from a great many microscopic events."
+          },
+          {
+            "id": "collision",
+            "ja": "2　一回の衝突で運動量はどれだけ変わるか",
+            "en": "2. Compute the momentum change in one collision",
+            "textJa": "一辺Lの立方体容器を考えます。質量mの粒子が壁に垂直な方向へ速さの成分vₓで進み、弾性衝突によって逆向きに跳ね返るとします。粒子の運動量はmvₓから−mvₓへ変わるので、粒子の変化量は−2mvₓ、壁が受け取る運動量は+2mvₓです。ここで一つの壁に戻るには向かいの壁まで往復するため、同じ壁との衝突間隔は2L/|vₓ|です。",
+            "textEn": "Consider a cubic box of side L. A molecule of mass m moves with velocity component vx normal to a wall and undergoes an elastic collision. Its x-momentum changes from mvx to −mvx, a change of −2mvx; the wall gains +2mvx. To hit the same wall again, it traverses the box and returns, taking time 2L/|vx| in the simplest idealized picture. Momentum change per collision and collision frequency determine average force."
+          },
+          {
+            "id": "force",
+            "ja": "3　衝突を平均すると、力と圧力が出てくる",
+            "en": "3. Average the collisions to obtain pressure",
+            "textJa": "一粒子が壁に与える平均の力は、衝突ごとの運動量2m|vₓ|を衝突間隔2L/|vₓ|で割った m vₓ²/Lです。壁の面積はA=L²なので、この粒子の圧力への寄与はm vₓ²/L³=m vₓ²/Vです。N個の粒子について足し合わせると、P=(m/V)Σvₓᵢ²となります。ここまでは力学の運動量と単位面積あたりの力の計算です。",
+            "textEn": "The momentum transferred to the wall per collision is 2m|vx| and the collision interval is 2L/|vx|. Their ratio gives average force mvx²/L. Since the wall area is L², the pressure contribution is mvx²/L³=mvx²/V. Summing over N particles yields P=(m/V)Σvxi². These steps combine momentum transfer, collision rate and force per unit area."
+          },
+          {
+            "id": "isotropy",
+            "ja": "4　なぜ3で割るのか：方向に偏りがないという仮定",
+            "en": "4. Where does the factor one-third come from?",
+            "textJa": "熱平衡に近い理想気体では、粒子の運動方向に平均的な偏りがないと考えます。そこで〈vₓ²〉=〈vᵧ²〉=〈v_z²〉であり、〈v²〉=〈vₓ²+vᵧ²+v_z²〉=3〈vₓ²〉となります。前の結果に代入するとPV=(1/3)Nm〈v²〉です。係数1/3は暗記の規則ではなく、三方向が統計的に等価という模型の仮定から生じています。",
+            "textEn": "For a near-equilibrium ideal gas with isotropic molecular motion, the average squared velocity components are equal: ⟨vx²⟩=⟨vy²⟩=⟨vz²⟩. Since ⟨v²⟩ is the sum of those three averages, ⟨vx²⟩=⟨v²⟩/3. Thus PV=(1/3)Nm⟨v²⟩. The factor one-third follows from the three equivalent spatial directions rather than an arbitrary rule."
+          },
+          {
+            "id": "temperature",
+            "ja": "5　温度と平均運動エネルギーを接続する",
+            "en": "5. Connect temperature to average kinetic energy",
+            "textJa": "単原子分子でも多原子分子でも、古典的な理想気体の並進運動については〈(1/2)mv²〉=(3/2)kBTという関係が成り立ちます。前の式PV=(2/3)N〈(1/2)mv²〉に代入するとPV=NkBTです。N=nNA、R=NAkBなので、PV=nRTとなります。これで状態方程式は突然与えられた公式ではなく、衝突と温度に関する模型を合わせた結果になります。",
+            "textEn": "For translational motion in a classical ideal gas, equipartition gives ⟨(1/2)mv²⟩=(3/2)kBT. Insert this into PV=(2/3)N⟨(1/2)mv²⟩ to obtain PV=NkBT. Since N=nNA and R=NAkB, the familiar PV=nRT follows. The ideal-gas law is a consequence of specific assumptions about collisions and equilibrium, not an unexplained starting formula."
+          },
+          {
+            "id": "numbers",
+            "ja": "6　数字を入れた後も、条件へ戻る",
+            "en": "6. Calculate, then examine assumptions",
+            "textJa": "理想気体1.0 molを300 K、1.0×10⁵ Paで扱うと、V=nRT/P≈(1.0×8.314×300)/(1.0×10⁵) m³≈0.0249 m³、すなわち約24.9 Lです。しかし高圧や低温では粒子同士の引力や有限の大きさが無視できず、実在気体は理想気体の式からずれます。算出値は条件を指定した模型の予測であり、どんな気体でも絶対にその体積になるという宣言ではありません。",
+            "textEn": "For 1.0 mol of ideal gas at 300 K and 1.0×10⁵ Pa, V=nRT/P≈(1.0×8.314×300)/(1.0×10⁵) m³≈0.0249 m³ or 24.9 L. At high pressure or low temperature, intermolecular forces and finite molecular volume can become important. The calculated value is a model prediction under specified conditions, not a universal property of every real gas."
+          }
+        ]
       }
     },
     {
@@ -504,6 +602,55 @@
             "同じ『塩分濃度』でも質量濃度とモル濃度を混同すると比較がずれます。植物細胞や生体膜では膜透過性や水ポテンシャル、非理想性まで重要になります。",
             "Mass concentration and molarity should not be mixed. In cells and biological membranes, permeability, water potential and nonideal solute behavior complicate this idealized prediction."
           ]
+        ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "水が通る膜で二種類の溶液を隔てると、なぜ水が片側へ移動するのか。『濃い方へ進む』という言い方は便利ですが、圧力をかけると逆転することもあります。現象・膜・化学ポテンシャルを結び、浸透圧が必要になる理由を説明します。",
+        "premiseEn": "Why does water move across a membrane separating two solutions? The slogan that it moves toward higher solute concentration is incomplete: pressure can oppose or reverse the net flow. Build the need for osmotic pressure through membranes and chemical potential.",
+        "sections": [
+          {
+            "id": "water",
+            "ja": "1　半透膜の両側で、水分子は止まっているか",
+            "en": "1. Does water stop moving across a semipermeable membrane?",
+            "textJa": "水は通すが特定の溶質は通さない膜を、純水と薄い糖の水溶液の間に置いたとします。水分子は膜を両方向へ通過し得ます。しかし正味では糖の水溶液側へ水が移動する傾向が現れます。『分子が一方向にだけ歩いている』のではなく、両方向への移動の差を測っているのです。まず観察される水位の変化と、微視的な運動を区別しましょう。",
+            "textEn": "Suppose a membrane passes water but not a particular dissolved sugar, with pure water on one side and dilute sugar solution on the other. Water molecules can move in both directions, yet a net transfer toward the solution may occur. This does not mean all water molecules move in one direction. The observed level change reflects a difference between opposing molecular fluxes."
+          },
+          {
+            "id": "pressure",
+            "ja": "2　水位が上がり続けるとは限らない",
+            "en": "2. Why does the water level eventually stop rising?",
+            "textJa": "溶液側に水が移れば、その側の液面が上がり、静水圧差が大きくなります。圧力差は水の移動に逆向きの影響を与えるため、ある高さで正味の移動が止まることがあります。したがって『水は必ず濃い方へ動く』という説明では不十分です。濃度と圧力という二つの条件を同時に扱う必要が生じます。",
+            "textEn": "As water enters the solution side, its liquid level can rise. The increasing hydrostatic pressure difference opposes further transfer, so net flow can stop. Thus the slogan 'water always moves toward the more concentrated side' is incomplete. We require a description that accounts for both solution composition and applied pressure."
+          },
+          {
+            "id": "potential",
+            "ja": "3　化学ポテンシャルは何を比較する量なのか",
+            "en": "3. Why introduce the chemical potential of water?",
+            "textJa": "温度、圧力、組成が変わると、系へ水を微小量加える際のギブズエネルギーの変化も変わります。これを表す状態量が水の化学ポテンシャルμwです。一定温度・圧力で混合により水の化学ポテンシャルは変わり、圧力を上げると逆向きに変化することがあります。水が通れる膜をはさんだ平衡では、同じ溶媒である水の化学ポテンシャルが両側で一致します。濃度と圧力を別の規則として覚えず統一して考えられます。",
+            "textEn": "The chemical potential of water is a state quantity related to how Gibbs energy changes when water is added to a system under specified conditions. Mixing solute changes water's chemical potential, while increasing pressure can change it in the opposing direction. At equilibrium across a membrane permeable to water, the chemical potential of water is equal on both sides. This offers a unified explanation rather than separate rules for concentration and pressure."
+          },
+          {
+            "id": "formula",
+            "ja": "4　薄い理想溶液で浸透圧の式が現れる",
+            "en": "4. Where does the dilute-solution osmotic law come from?",
+            "textJa": "理想的な希薄非電解質溶液では、溶媒の化学ポテンシャルの変化にRT ln xwという混合項が現れます。水の圧力依存を近似的にVmΔPで表し、膜の両側でμwが等しいと置くと、浸透圧πは π≈−(RT/Vm)ln xw となります。希薄ならln xw≈−nsolute/nwaterなので、Vm≈V/nwaterを用いてπ≈(nsolute/V)RT=cRTを得ます。ここで近似を一つずつ使ったからこそ、式の成立条件がわかります。",
+            "textEn": "For an ideal dilute nonelectrolyte solution, the solvent chemical potential contains a mixing contribution RT ln xw. Approximating the pressure dependence as VmΔP and equating solvent chemical potentials across the membrane gives π≈−(RT/Vm)ln xw. At low solute fraction, ln xw≈−nsolute/nwater. With Vm≈V/nwater, this becomes π≈(nsolute/V)RT=cRT. The derivation makes clear which ideality and dilute-solution approximations are involved."
+          },
+          {
+            "id": "example",
+            "ja": "5　濃度から圧力を計算してみる",
+            "en": "5. Check the size of osmotic pressure",
+            "textJa": "理想希薄の非電解質でc=0.10 mol/L、T=300 Kなら、まず濃度を0.10×1000=100 mol/m³へ換算します。π=cRT≈100 mol/m³×8.314 J/(mol K)×300 K≈2.49×10⁵ Paです。単位を含めて計算すると、J/m³=Paとなるので圧力の式として整合します。ただし実在の高濃度溶液や電解質では理想的な粒子数の近似からずれます。",
+            "textEn": "For an ideal dilute nonelectrolyte at c=0.10 mol/L and T=300 K, convert c to 100 mol/m³. Then π=cRT≈100×8.314×300 Pa≈2.49×10⁵ Pa. The unit analysis works because J/m³=Pa. The result is a substantial pressure, but real concentrated solutions and electrolytes require corrections for activity and effective particle number."
+          },
+          {
+            "id": "biology",
+            "ja": "6　植物細胞や腎臓へ、この説明をどうつなぐか",
+            "en": "6. Revisit osmosis in cells and organisms",
+            "textJa": "植物細胞では細胞壁が膨圧を支え、水の移動には溶質による寄与と圧力による寄与がともに関係します。膜の溶質透過性や輸送体も重要です。浸透圧の式は細胞のすべての輸送を説明する万能式ではありません。溶液の熱力学を理解した後で生物へ戻ると、『濃い方へ水が移る』だけでは見えなかった膜の選択性と力のつり合いが見えるようになります。",
+            "textEn": "A plant cell wall can sustain turgor pressure while solutes lower water chemical potential. Membrane permeability and transport proteins also matter. The ideal osmotic equation does not describe all cellular transport. Returning to plant water movement after thermodynamics reveals how selective membranes, pressure and composition work together."
+          }
         ]
       }
     }
