@@ -31,6 +31,29 @@ for (let group=0;group<expected.length;group++) {
   });
 }
 assert.equal(seen.size,29);
+
+const originCounts=[31,30,45,32,36,18];
+let allOriginSteps=0;
+for(const ch of all){
+ assert.equal(ch.originJourney?.version,'1.0','Concept-motivation course required for every chapter: '+ch.id);
+ const journey=ch.originJourney;
+ assert.ok(journey.premiseJa?.length>=50&&journey.premiseEn?.length>=90,'Meaningful bilingual premise required: '+ch.id);
+ assert.ok(Array.isArray(journey.sections)&&journey.sections.length>=6,'At least six substantive introductory stages: '+ch.id);
+ const identifiers=new Set();
+ for(const step of journey.sections){
+  assert.ok(!identifiers.has(step.id),'Repeated origin stage ID '+ch.id+'/'+step.id);
+  identifiers.add(step.id);
+  assert.ok(step.ja?.length>=10&&step.en?.length>=12,'Bilingual stage title incomplete: '+ch.id+'/'+step.id);
+  assert.ok(step.textJa?.length>=130&&step.textEn?.length>=230,'A stage is too superficial for independent learning: '+ch.id+'/'+step.id);
+  allOriginSteps++;
+ }
+}
+assert.equal(allOriginSteps,192,'All chapters should have 192 distinct motivating explanations');
+for(let group=0;group<6;group++){
+ const count=all.filter(ch=>ch.id.startsWith(group+'-')).reduce((n,ch)=>n+ch.originJourney.sections.length,0);
+ assert.equal(count,originCounts[group],'Unexpected chapter-specific explanation count in group '+group);
+}
+
 const enthalpy=all.find(x=>x.id==='2-0');
 assert.ok(enthalpy.originJourney?.version==='1.0','Enthalpy motivation course must be versioned');
 assert.equal(enthalpy.originJourney.sections.length,15,'Fifteen progressive enthalpy explanations are required');
@@ -121,6 +144,7 @@ html.forEach(s=>{
  assert.ok(s.includes('src="./chemistry-depth-viewer.js"'),'Viewer missing');
  assert.ok(s.includes('window.ChemistryDepth.render'),'Viewer not invoked');
  assert.ok(s.includes('id="depthMount"'),'No explanation mount');
+ assert.ok(s.includes('src="./chemistry-topic-visuals.js"'),'New original diagrams must be loaded in both language pages');
  const code=s.match(/<script>([\s\S]*?)<\/script>/)?.[1];
  assert.ok(code,'Missing inline chapter logic');
  assert.doesNotThrow(()=>new Function(code),'Chapter JS must parse');
@@ -161,6 +185,25 @@ assert.ok(viewer.includes('chemistry-knowledge-bridges-v1.json')&&viewer.include
 
 assert.ok(viewer.includes('renderStageVisual(id,lang,entry.id)'), 'Annotated diagrams must appear inside the corresponding enthalpy derivation steps');
 assert.ok(viewer.includes('renderInorganicWorkshop(lesson,lang)'), 'Detailed model comparison and derivation are not presented');
+
+const figures=readFileSync(new URL('../chemistry-topic-visuals.js',import.meta.url),'utf8');
+assert.doesNotThrow(()=>new Function(figures),'Original scientific figure JavaScript must parse');
+assert.ok(figures.includes('ChemistryPedagogyVisuals={render}'),'Scientific figure renderer must expose its entrypoint');
+assert.ok(viewer.includes('window.ChemistryPedagogyVisuals?.render?.(id,lang,entry.id)'),'Stage-specific diagrams must accompany their explanatory stage');
+const figureKeys=[
+ ['0-0','contrast'],['0-2','wave'],['0-3','melt'],['0-4','vectors'],
+ ['1-0','molar'],['1-1','leftover'],['1-2','collision'],['1-3','dilution'],['1-4','pressure'],
+ ['2-1','slope'],['2-2','rates'],['2-3','log'],['2-4','curve'],['2-5','circuit'],
+ ['4-0','formula'],['5-1','rubber']
+];
+for(const [id,stage] of figureKeys){
+ assert.ok(figures.includes('id==="'+id+'"&&step==="'+stage+'"'),'Missing stage-specific visual: '+id+'/'+stage);
+ const lesson=all.find(x=>x.id===id);
+ assert.ok(lesson.originJourney.sections.some(s=>s.id===stage),'Figure must attach to an existing explanation stage: '+id+'/'+stage);
+}
+assert.ok(figures.includes('figcaption')&&figures.includes('role="img"'),'Schematics must have captions and accessible descriptions');
+assert.ok(sw.includes('chemistry-topic-visuals.js'),'Offline cache must include scientific drawings');
+
 assert.ok(viewer.includes('renderInorganicStageVisual(id,lang,entry.id)'), 'Scientific diagrams must appear in the correct inorganic explanatory section');
 for(const concept of ['3-0','3-1','3-2','3-3'])assert.ok(viewer.includes('id==="'+concept+'"'), 'Missing inorganic diagram: '+concept);
 assert.ok(viewer.includes('aria-label')&&viewer.includes('figcaption'),'Scientific schematic requires accessible labels and a caption');
