@@ -38,6 +38,16 @@ aside p{font-size:13px;color:var(--muted)}
 .concept-figure svg{display:block;width:100%;height:auto;max-width:430px;margin:auto;overflow:visible}
 .concept-figure figcaption{font-size:14px;line-height:1.8;color:#48645a;padding:5px 7px 0}
 @media(max-width:480px){.concept-figure{padding:7px 5px 12px;margin:14px auto 18px}.concept-figure h3{font-size:15px}.concept-figure figcaption{font-size:13px;padding:4px 9px}}
+
+.figure-guide{max-width:750px;margin:12px auto 18px;border:1px solid #cfe1d7;background:#f8fcf9;border-radius:12px;padding:12px 15px}
+.figure-guide h3{margin:0 0 6px;font-size:16px;color:#27644f;line-height:1.5}
+.figure-guide ol{margin:5px 0 0;padding-left:1.5em}
+.figure-guide li{padding:3px 0;line-height:1.85}
+.toc-disclosure{margin-top:7px}
+.toc-disclosure summary{font-weight:750;border:1px solid #cbdcd3;border-radius:9px;min-height:44px;display:flex;align-items:center;cursor:pointer;padding:6px 11px;color:#275743;background:#eef6f0}
+.toc-disclosure nav{padding-top:8px}
+@media(max-width:800px){.figure-guide{padding:12px 13px;font-size:14px}.toc-disclosure nav{display:grid;grid-template-columns:1fr 1fr;gap:3px}.toc-disclosure nav a{font-size:13px;min-height:40px;display:flex;align-items:center}.toc-disclosure{margin-bottom:3px}}
+@media(max-width:430px){.toc-disclosure nav{grid-template-columns:1fr}.figure-guide ol{padding-left:1.3em}}
 .formula{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:clamp(15px,1.9vw,19px);background:#eaf3ed;border:1px solid #d4e5da;border-radius:12px;padding:15px;margin:17px 0;overflow-wrap:anywhere;line-height:1.8}
 .lesson .limit{border-radius:10px;background:#f2f5f8;border-left:3px solid #86a1b8;padding:12px 14px;font-size:14px;color:#344d60}
 .lesson .go{margin-top:17px;font-size:14px}
@@ -76,7 +86,7 @@ small{color:var(--muted)}
 <main class="layout">
 <aside aria-label="Chapter navigation">
 <h2 id="tocHeading">この講座の道筋</h2>
-<nav id="toc"></nav>
+<details class="toc-disclosure" id="chapterMenu" open><summary id="tocToggle">章の目次を開閉する</summary><nav id="toc"></nav></details>
 <p id="tocFoot">順番は理解のための提案です。関門テストはありません。わかった項目にはいつでも戻れます。</p>
 </aside>
 <div class="content">
