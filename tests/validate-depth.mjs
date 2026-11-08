@@ -84,6 +84,12 @@ for(const [index,ch] of organicChapters.entries()){
  const o=ch.organicReasoning;
  assert.equal(o?.schemaVersion,'1.0','Organic concept progression must be versioned: '+ch.id);
  assert.equal(o.kind,organicModes[index],'Pedagogical focus must match the chapter concept: '+ch.id);
+ const evidence=o.evidence;
+ assert.ok(evidence,'Each organic case needs one relevant form of experimental evidence: '+ch.id);
+ for(const key of ['titleJa','titleEn','questionJa','questionEn','methodJa','methodEn','supportsJa','supportsEn','limitsJa','limitsEn']){
+  assert.ok(typeof evidence[key]==='string'&&evidence[key].trim(),'Missing bilingual evidence interpretation: '+ch.id+'/'+key);
+ }
+
  for(const key of ['titleJa','titleEn','questionJa','questionEn','predictionJa','predictionEn','boundaryJa','boundaryEn']){
   assert.ok(typeof o[key]==='string'&&o[key].trim(),'Natural bilingual context, model boundary or follow-on question missing: '+ch.id+'/'+key);
  }
@@ -109,6 +115,10 @@ assert.ok(organicCase('4-2').steps.some(x=>x.reasonEn.includes('valence')),'Carb
 assert.ok(organicCase('4-3').steps.some(x=>x.reasonEn.includes('regenerates')),'Fischer esterification must explain catalyst regeneration');
 assert.ok(organicCase('4-4').steps.some(x=>x.reasonEn.includes('aromaticity')),'Aromatic substitution should explain recovery of aromaticity');
 assert.ok(organicCase('4-5').steps.some(x=>x.reasonEn.includes('geometry')),'Carbohydrate example should connect stereochemistry to enzyme recognition');
+assert.ok(organicCase('4-3').evidence.methodEn.includes('¹⁸O'),'Esterification evidence should trace oxygen atoms with an isotope');
+assert.ok(organicCase('4-1').evidence.limitsEn.includes('Symmetric ethene'),'Do not overstate mechanistic evidence from an achiral ethene product');
+assert.ok(organicCase('4-0').evidence.limitsEn.includes('Water contamination'),'The spectroscopic inference requires an appropriate control');
+
 
 // Inorganic: a new concept must be motivated, derived, visualized, compared and qualified.
 const inorganic=all.filter(ch=>ch.id.startsWith('3-'));
@@ -227,6 +237,9 @@ assert.ok(viewer.includes('chemistry-knowledge-bridges-v1.json')&&viewer.include
 assert.ok(viewer.includes('renderStageVisual(id,lang,entry.id)'), 'Annotated diagrams must appear inside the corresponding enthalpy derivation steps');
 assert.ok(viewer.includes('renderInorganicWorkshop(lesson,lang)'), 'Detailed model comparison and derivation are not presented');
 assert.ok(viewer.includes('renderOrganicReasoning(lesson,lang)'), 'Organic explanations must appear after conceptual origins and before formula summaries');
+assert.ok(viewer.includes('data-depth-section="organic-evidence"')&&viewer.includes('evidenceHtml+'),'Show experimentally testable observations after mechanism explanation');
+assert.ok(viewer.includes('data-depth-section="organic-mechanism" open'),'Mechanism reasoning should not require extra clicks');
+
 assert.ok(viewer.includes('depth-origin-toggle'),'Readers must be able to collapse or expand the complete explanation in one action');
 assert.ok(viewer.includes('lesson.originJourney.sections.map((entry,i)=>')&&viewer.includes('data-depth-section="origin-'),'Origin concepts must be rendered in their authored sequence');
 
