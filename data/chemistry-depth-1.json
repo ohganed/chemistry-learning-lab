@@ -254,6 +254,55 @@
             "If only 3.96 g CO₂ is collected, the measured yield is 3.96/4.40×100=90.0%. Loss of gas during collection and incomplete reaction are different possible causes that require further evidence."
           ]
         ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "反応物を増やしても、生成物が同じ割合で増えるとは限りません。必要な材料の組み合わせが決まっていて、足りなくなる物質が存在するからです。化学反応式の係数を、粒子を組み合わせる数え方として説明します。",
+        "premiseEn": "Adding more of one reactant does not always produce proportionally more product. The balanced equation specifies how many particles must combine, and one reactant may run out first. Build stoichiometry as a counting problem before doing algebra.",
+        "sections": [
+          {
+            "id": "ratio",
+            "ja": "1　反応式の数字は、何を数えているのか",
+            "en": "1. What do reaction coefficients actually count?",
+            "textJa": "2H₂+O₂→2H₂Oでは、水素分子2個と酸素分子1個の組み合わせが、水分子2個になる関係を表しています。係数は気体の体積そのものでも、質量そのものでもありません。粒子の数の比であり、モルで数えても2:1:2という比になります。原子数の保存を満たすように係数を決めたので、左辺の水素4原子・酸素2原子と、右辺の水素4原子・酸素2原子が一致します。",
+            "textEn": "The equation 2H₂+O₂→2H₂O says that two hydrogen molecules combine with one oxygen molecule to form two water molecules. Coefficients are neither masses nor volumes by definition. They give numbers of reacting entities and therefore mole ratios of 2:1:2. The numbers also enforce atom conservation: four H atoms and two O atoms occur on each side."
+          },
+          {
+            "id": "leftover",
+            "ja": "2　水素3 mol、酸素1 molを入れたら何が残るか",
+            "en": "2. What is left after reacting 3 mol H₂ with 1 mol O₂?",
+            "textJa": "O₂が1 molあれば、反応式から必要なH₂は2 molです。最初に3 molあるので、H₂は1 mol残ります。生成する水は最大2 molです。どの物質が最初にゼロになるかを考えると、制限試薬はO₂だとわかります。『数値を係数で割って小さい方』という手順は便利ですが、その意味は反応に必要な材料の組を作ったとき、どの材料が先に不足するかということです。",
+            "textEn": "One mole of O₂ requires two moles of H₂ according to the balanced equation. Starting with three moles of H₂ leaves one mole unused if reaction goes to completion, while at most two moles of H₂O form. Oxygen is the limiting reactant because it is exhausted first. The common division-by-coefficient method is simply a compact calculation of how many complete reaction sets can be assembled."
+          },
+          {
+            "id": "extent",
+            "ja": "3　反応進行度を使うと、係数の意味がさらに明確になる",
+            "en": "3. Reaction extent unifies all stoichiometric changes",
+            "textJa": "一般に反応aA+bB→cCでは、反応進行度ξを使って物質量の変化をΔnA=−aξ、ΔnB=−bξ、ΔnC=+cξと書けます。これは高校の計算に必須の記号ではありませんが、係数で割る理由を明確にします。H₂の消費量が2 mol、O₂の消費量が1 mol、水の生成量が2 molなら、いずれも係数に対応したξ=1 molの反応進行になります。",
+            "textEn": "For a general reaction aA+bB→cC, define an extent of reaction ξ so that ΔnA=−aξ, ΔnB=−bξ and ΔnC=+cξ. This notation is not required for elementary calculations, but explains why changes are divided by stoichiometric coefficients. Consuming 2 mol H₂ and 1 mol O₂ while forming 2 mol H₂O corresponds to an extent of 1 mol for the equation as written."
+          },
+          {
+            "id": "mass",
+            "ja": "4　粒子数を質量へ換算しても、原子は保存される",
+            "en": "4. Convert mole ratios into measured masses",
+            "textJa": "H₂のモル質量を約2 g/mol、O₂を約32 g/mol、水を約18 g/molとすると、反応式2H₂+O₂→2H₂Oでは、4 gのH₂と32 gのO₂から36 gの水が得られる量論関係になります。左辺と右辺の質量が等しいのは偶然ではありません。反応の前後で原子の種類と数が保存されるためです。実験で回収量が不足したら、副反応や回収損失など、別の原因を検討します。",
+            "textEn": "Using approximate molar masses of 2 g/mol for H₂, 32 g/mol for O₂ and 18 g/mol for H₂O, the balanced reaction corresponds to 4 g of H₂ plus 32 g of O₂ giving 36 g of water. Equal masses follow from conservation of constituent atoms. If less product is collected experimentally, possible causes include incomplete conversion, competing reactions or collection losses."
+          },
+          {
+            "id": "yield",
+            "ja": "5　理論生成量と実際の収率は同じではない",
+            "en": "5. The theoretical yield is not automatically the observed yield",
+            "textJa": "制限試薬から求めた理論生成量は、与えられた反応が完全に進み、副反応がなく、生成物を失わない場合の基準値です。実際の生成量が理論値の80%なら、百分率収率は80%です。しかし『残り20%は反応しなかった』とは限りません。平衡による未反応、副反応での消費、分離・洗浄の際の損失など、原因はいくつもあります。計算から実験へ戻る必要があります。",
+            "textEn": "The theoretical yield calculated from the limiting reactant is a reference based on complete conversion through the specified reaction and ideal recovery. If the observed amount is 80% of theoretical, the percentage yield is 80%. That does not prove that the remaining 20% simply failed to react; equilibrium, side reactions and handling losses may contribute. Stoichiometric calculations therefore set a benchmark for investigating experimental outcomes."
+          },
+          {
+            "id": "general",
+            "ja": "6　係数が与えるのは関係であり、機構ではない",
+            "en": "6. Stoichiometry does not specify a reaction mechanism",
+            "textJa": "反応式が正しくつり合っていても、反応物がどの順番で結び変わり、どれほど速く反応するかは、反応式だけではわかりません。量的関係は原子保存と粒子の数を扱い、反応速度論は途中の過程、平衡はどこまで進むかを扱います。量論がわかった後で反応速度や化学平衡へ進むと、『同じ反応式が別の問いに使われている』ことを整理できるようになります。",
+            "textEn": "A balanced overall reaction equation constrains stoichiometric changes but does not reveal the sequence of elementary steps or the time scale. Stoichiometry addresses atom conservation and amounts; kinetics studies time-dependent mechanisms, while equilibrium determines the favored composition under conditions. The same written reaction supports several different scientific questions."
+          }
+        ]
       }
     },
     {
@@ -502,6 +551,55 @@
             "濃度が10分の1になるため、原液体積は最終体積の10分の1という直感とも一致します。もし希釈途中で化学反応や沈殿が起こればc₁V₁=c₂V₂を単純に使えません。",
             "The tenfold dilution matches the intuitive 25/250=0.10 ratio. If a reaction or precipitation consumes the solute, simple dilution conservation is no longer valid."
           ]
+        ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "透明に見える水溶液にも、異なる種類と数の粒子が含まれています。濃度をなぜmol/Lで表すのか、希釈では何が保存されるのか、飽和すると何が起こるのかを、粒子数と実験操作から説明します。",
+        "premiseEn": "Clear solutions may contain very different numbers and kinds of particles. Build concentration measures from particle counting, analyze dilution through conservation, and use dissolution equilibrium to explain saturation.",
+        "sections": [
+          {
+            "id": "dissolve",
+            "ja": "1　食塩を水に溶かすと、何が見えなくなるのか",
+            "en": "1. What happens to salt when it dissolves?",
+            "textJa": "食塩結晶を水に入れてかき混ぜると、固体の粒が見えなくなります。しかし食塩の構成元素が消えたわけではありません。Na⁺とCl⁻が水分子と相互作用して液体中へ分散します。一方、砂糖では主に分子として分散します。溶けた物質を『目で見えないから存在しない』と考えると、濃度という概念を理解できません。まず溶質がどの化学種として存在するかを区別します。",
+            "textEn": "Stirring salt into water removes visible crystals, but the constituent chemical species have not vanished. Na⁺ and Cl⁻ disperse in water and interact with surrounding molecules. Sugar can dissolve as intact molecules rather than separating into ions. A clear solution is not empty: concentration describes the amount of solute entities present in the mixture."
+          },
+          {
+            "id": "define",
+            "ja": "2　濃度は、何を何で割った数値なのか",
+            "en": "2. Concentration is a ratio of two specified quantities",
+            "textJa": "モル濃度c=n/Vは、溶質の物質量nを溶液全体の体積Vで割った値です。溶媒の体積ではない点が重要です。例えば0.50 molの溶質が溶液1.0 L中にあるならc=0.50 mol/Lです。質量パーセント濃度は溶液の質量に対する溶質の質量の比なので、同じ『濃度』でも比べている量が異なります。どんな測定や反応を考えるのかによって適した表示が変わります。",
+            "textEn": "Molar concentration c=n/V is the amount of solute divided by total solution volume, not by the volume of solvent alone. If 0.50 mol of solute occupies 1.0 L of final solution, c=0.50 mol/L. Mass percentage instead compares solute mass with total solution mass. These are different ratios answering different measurement questions; choosing the correct one depends on the process studied."
+          },
+          {
+            "id": "dilution",
+            "ja": "3　水を加えると、粒子の数はどうなるか",
+            "en": "3. What remains constant during simple dilution?",
+            "textJa": "反応も沈殿も起こらず溶質が失われない希釈なら、溶質の物質量nは前後で同じです。したがってc₁V₁=n=c₂V₂となります。1.0 mol/Lの溶液100 mLには0.10 molの溶質があり、これを250 mLの溶液にすればc₂=0.10/0.250=0.40 mol/Lです。公式を覚えるより、何が保存され、何が変わったのかを数で確かめる方が確実です。",
+            "textEn": "If dilution neither reacts with nor loses solute, the amount n remains constant: c₁V₁=n=c₂V₂. A 100 mL portion of 1.0 mol/L solution contains 0.10 mol solute. When diluted to a final volume of 250 mL, c₂=0.10/0.250=0.40 mol/L. The equation is a direct mass-balance statement rather than a separate empirical law."
+          },
+          {
+            "id": "volume",
+            "ja": "4　溶液の体積は、単純に足せるとは限らない",
+            "en": "4. Why volumes are not always additive",
+            "textJa": "液体を混合すると、分子間の相互作用や配置が変化するため、混ぜる前の体積を足した値と混合後の体積が厳密に一致しない場合があります。希釈の計算で使うVは、最終的に調製した溶液の体積です。メスフラスコで標線まで液量を合わせる操作には、この意味があります。数式の記号を実験のどの量に対応させるかを確認すれば、見かけだけ正しい計算を防げます。",
+            "textEn": "Liquid mixing can change molecular interactions and packing, so the final volume need not equal the sum of initial component volumes. In dilution calculations V refers to the measured final solution volume. Preparing a solution to a volumetric flask's calibration mark has precisely this role. Correct algebra depends on identifying what each measured variable physically represents."
+          },
+          {
+            "id": "saturation",
+            "ja": "5　溶けなくなったとき、粒子は本当に動かないのか",
+            "en": "5. Does saturation mean molecular motion stops?",
+            "textJa": "十分な固体と接触している飽和溶液では、固体が溶ける過程と、溶液中の粒子が固体へ戻る過程が同時に起こり、条件によって正味の変化がゼロになります。飽和は反応停止ではなく動的平衡です。また溶解度の温度依存は物質ごとに異なり、『高温ほど必ず多く溶ける』とは限りません。溶液の濃度を単に増やし続けられるわけではない理由が見えてきます。",
+            "textEn": "In a saturated solution in contact with undissolved solid, dissolution and deposition can continue in both directions while the net change is zero. Saturation is a dynamic equilibrium, not the absence of molecular motion. Solubility varies with temperature differently across substances; heating does not invariably increase the amount that dissolves. The solution has constraints that concentration alone does not describe."
+          },
+          {
+            "id": "revisit",
+            "ja": "6　濃度を知ると、平衡や反応速度を理解できる",
+            "en": "6. Concentration becomes a variable in other explanations",
+            "textJa": "濃度がわかれば、滴定では反応する物質量を求め、反応速度論では時間変化の割合を測れます。化学平衡では化学種の活量や近似濃度から反応商を作り、溶解平衡では飽和条件を説明できます。ただし高濃度溶液では活量が濃度からずれる場合があります。『濃度とはどの粒子の量を、何の体積で割ったか』という基本へ戻れば、多くの式の意味がつながります。",
+            "textEn": "Concentration supports titration stoichiometry, kinetic rate measurements and equilibrium reaction quotients. For concentrated solutions, activities may deviate significantly from simple concentration approximations. Repeatedly asking which solute species is measured and which solution volume is used allows the same concept to support many different fields of chemistry."
+          }
         ]
       }
     },
