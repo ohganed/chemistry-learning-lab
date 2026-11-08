@@ -332,6 +332,37 @@ for(const kind of ['carbonyl','addition','catalysis','aromatic']){
 }
 assert.ok(visuals.renderOrganic('carbonyl','ja').includes('marker-end="url(#organic-electron-arrow)"'),'Curved arrows must identify electron-pair transfer');
 assert.equal(visuals.renderOrganic('unknown','en'),'','Do not force a diagram into an unrelated topic');
+
+// Exercise the actual curriculum HTML generation without a browser dependency.
+// This catches cases where valid JSON and JS never become readable text or images.
+const viewerForTest=viewer.replace('window.ChemistryDepth={render};',
+ 'window.ChemistryDepth={render};window.__renderOrganicReasoning=renderOrganicReasoning;window.__renderMathHelp=renderMathHelp;');
+const renderSandbox={
+ window:{ChemistryPedagogyVisuals:visuals},
+ localStorage:{getItem:()=>null}
+};
+assert.doesNotThrow(()=>runInNewContext(viewerForTest,renderSandbox,{timeout:1000}),'Curriculum renderer should initialize with a safe storage stub');
+for(const ch of organicChapters){
+ const o=ch.organicReasoning;
+ for(const locale of ['ja','en']){
+  const rendered=renderSandbox.window.__renderOrganicReasoning(ch,locale);
+  assert.ok(rendered.includes('depth-organic-reasoning')&&rendered.includes('organic-mechanism'),'Organic logic must render: '+ch.id+'/'+locale);
+  assert.ok(rendered.includes('organic-evidence')&&rendered.includes(o.evidence[locale==='ja'?'titleJa':'titleEn']),'Scientific evidence must be visible in sequence: '+ch.id+'/'+locale);
+  assert.ok(rendered.includes('organic-models')&&rendered.includes('organic-predict'),'Comparison and transfer remain optional: '+ch.id+'/'+locale);
+  assert.ok(rendered.includes('organic-boundary'),'A worked model needs its applicability limits: '+ch.id+'/'+locale);
+ }
+}
+for(const ch of all){
+ for(const stage of ch.originJourney.sections){
+  if(!stage.mathHelp)continue;
+  for(const locale of ['ja','en']){
+   const rendered=renderSandbox.window.__renderMathHelp(stage,locale);
+   assert.ok(rendered.includes('depth-math-support')&&rendered.includes('<ol>')&&rendered.includes('math-boundary'),'Math help must appear in the correct explanatory stage: '+ch.id+'/'+stage.id+'/'+locale);
+   assert.ok(rendered.includes(stage.mathHelp[locale==='ja'?'titleJa':'titleEn']),'Math explanations must use the selected language');
+  }
+ }
+}
+
 assert.ok(viewer.includes('const illustration=window.ChemistryPedagogyVisuals?.renderOrganic?.(organic.kind,lang)'),'Place the right mechanism image after the scientific question');
 assert.ok(viewer.includes('illustration+'),'The original mechanism image should be shown, not only defined');
 
