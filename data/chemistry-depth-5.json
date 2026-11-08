@@ -105,6 +105,55 @@
             "Doubling chain length approximately doubles molar mass in this model, but it does not double strength or melting temperature. Polymer properties also depend on branching, crystallinity and intermolecular organization."
           ]
         ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "同じエテンから、なぜ鎖の長いポリエチレンができ、同じ化学式の繰り返し単位をもっても材料の硬さが違うのでしょうか。反応機構と高分子鎖の構造を分けて、物性への接続を考えます。",
+        "premiseEn": "How can ethene form long polyethylene chains, and why can samples with the same repeat unit have different mechanical properties? Separate reaction mechanisms from chain architecture and bulk behavior.",
+        "sections": [
+          {
+            "id": "repeat",
+            "ja": "1　分子式の小さい分子から、長い鎖ができる",
+            "en": "1. Small monomers can form long molecules",
+            "textJa": "エテンCH₂=CH₂は二重結合をもち、適切な反応条件で多くの分子が結びついてポリエチレンの鎖になります。単なる化学反応式を眺めても、どこに新しい結合ができて長い鎖になるのかはすぐに見えません。エテンのC=C結合のπ成分が反応に関係し、隣の単位との新しいσ結合ができるという構造の変化を追うと、−CH₂−CH₂−という繰り返し単位の意味がわかります。",
+            "textEn": "Ethene CH₂=CH₂ contains a double bond and can form long polyethylene chains under suitable reaction conditions. A simple net reaction equation does not show the chain-building mechanism. The π contribution of the carbon–carbon double bond changes as new σ bonds connect neighboring carbon units. This explains why the repeat unit of polyethylene is written –CH₂–CH₂–."
+          },
+          {
+            "id": "growth",
+            "ja": "2　成長の仕組みと副生成物の有無は別の分類",
+            "en": "2. Growth mechanism and byproducts are different axes",
+            "textJa": "エテンの重合は、開始・成長・停止などの素過程が関係する連鎖反応として扱える場合があります。一方、ジカルボン酸とジオールからポリエステルをつくる際には、官能基どうしが反応し、水などの小分子が生じる場合があります。『付加重合＝連鎖重合』『縮合重合＝段階成長』は典型的な組み合わせですが、厳密に同じ意味の言葉ではありません。反応機構と副生成物の観点を区別する必要があります。",
+            "textEn": "Ethene polymerization can proceed by chain-growth mechanisms involving initiation, propagation and termination. Reaction between diacids and diols to form polyesters may eliminate small molecules such as water. Addition versus condensation classifies net compositional change, whereas chain-growth versus step-growth classifies how molecular chains grow. Common pairings exist, but they are not logically identical classifications."
+          },
+          {
+            "id": "distribution",
+            "ja": "3　一本の鎖が長いことと、試料の平均分子量は違う",
+            "en": "3. A polymer sample contains a distribution of chain lengths",
+            "textJa": "工業的な高分子試料では、鎖の長さがすべて同一とは限りません。分子量が10万の鎖と20万の鎖が混ざっている試料を、一つの『分子量』だけで完全に表すことはできません。数平均分子量Mnは分子の個数で重みづけした平均、重量平均分子量Mwは大きな分子の寄与を強く反映する平均です。鎖の分布を知らないと、加工性や強度を単一の分子式から予測することは難しいのです。",
+            "textEn": "A practical polymer sample generally contains chains of many lengths. A mixture of chains with molar masses near 100,000 and 200,000 cannot be fully characterized by one number. Number-average molar mass Mn weights chains by count, while weight-average Mw gives greater weight to larger chains. Chain-length distribution influences processing and mechanical behavior beyond the identity of a repeat unit."
+          },
+          {
+            "id": "averages",
+            "ja": "4　平均の取り方が違うと、数値も違う",
+            "en": "4. Derive two different averages from the same sample",
+            "textJa": "分子量100と200（同じ単位）の鎖がそれぞれ1本ずつある簡単な模型では、数平均は(100+200)/2=150です。一方、重量平均は(100²+200²)/(100+200)=50000/300≈166.7となります。二つの数値が異なるのは計算ミスではなく、平均の重みの選び方が違うためです。一般にはMn=ΣNiMi/ΣNi、Mw=ΣNiMi²/ΣNiMiです。どの物性を調べたいかによって、平均の選択にも意味が生まれます。",
+            "textEn": "In a toy sample with one chain of molar mass 100 and one of 200 in consistent units, the number-average is (100+200)/2=150. The weight-average is (100²+200²)/(100+200)=50,000/300≈166.7. The two values differ because the weighting differs, not because one calculation is wrong. In general Mn=ΣNiMi/ΣNi and Mw=ΣNiMi²/ΣNiMi. A distribution requires specifying the statistic used to describe it."
+          },
+          {
+            "id": "structure",
+            "ja": "5　鎖の枝分かれや結晶性が材料を変える",
+            "en": "5. Why do branching and crystallinity change a polymer's properties?",
+            "textJa": "ポリエチレンでも、枝分かれが多い鎖と比較的直線的な鎖では、互いに近づいて詰まりやすいかが違います。これによって結晶性、密度、柔らかさなどに差が生じることがあります。化学式が同じでも材料の性質が変わるのは、分子の結合だけでなく高分子鎖が集まって形成する構造が違うからです。分子のレベルと材料全体のレベルを往復して理解します。",
+            "textEn": "Even polyethylene can differ greatly depending on the degree of chain branching. Relatively linear chains may pack more regularly, while heavily branched chains can pack differently, changing crystallinity, density and flexibility. Identical repeat-unit formulas therefore do not guarantee identical bulk properties. Material behavior depends on the structure of assemblies of chains."
+          },
+          {
+            "id": "application",
+            "ja": "6　材料設計へ戻ると『どの構造を変えるか』がわかる",
+            "en": "6. A structure–property map supports material design",
+            "textJa": "強さ、透明性、耐熱性、柔らかさ、加工性は同じ方向には変化しません。鎖長を長くする、枝分かれを増減させる、架橋を導入する、結晶性を調整するなど、それぞれ異なる微視的な変数があります。『プラスチックはこういう性質』と一括りにするのではなく、求める材料特性から、どの分子構造や加工条件を変える必要があるかという設計の問題へ進みます。",
+            "textEn": "Strength, transparency, heat resistance, flexibility and processability do not necessarily improve together. Changing chain length, branching, crosslink density or crystallinity targets different microscopic variables. Rather than treating plastics as one fixed class, start with the desired performance and identify the structural or processing variables that might affect it."
+          }
+        ]
       }
     },
     {
@@ -179,6 +228,55 @@
             "en": "Esterification and amide formation explain how polymer backbones are built. Thermodynamics and intermolecular forces illuminate rubber elasticity and fiber strength beyond covalent bonding alone. Recycling chemistry then uses differences between ester and carbon–carbon backbones to choose feasible processing methods."
           }
         ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "同じ高分子でも、繊維として引っ張ると丈夫なもの、熱で柔らかくなるもの、ゴムのように伸びて戻るものがあります。分子鎖がどうつながり、どう動き、どう並ぶかから物性を説明します。",
+        "premiseEn": "Some polymers form strong fibers, some soften on heating, and others stretch and recover elastically. Use chain connectivity, motion, alignment and crosslinks to explain these differences instead of teaching product names as isolated facts.",
+        "sections": [
+          {
+            "id": "fiber",
+            "ja": "1　糸を引くと強くなるのは、何が変わるからか",
+            "en": "1. Why can drawing a polymer fiber increase its strength?",
+            "textJa": "ナイロンやポリエステルなどの高分子を繊維として加工するとき、鎖が伸びて一定方向へ配向することがあります。鎖が互いに近づきやすい部分では結晶性や分子間相互作用も変わります。材料全体の引張強度を考えるなら、単量体の種類だけでなく、分子鎖が力を受ける方向にどう並ぶかを知る必要があります。観察される強さを、分子の配置へ戻して考えるのです。",
+            "textEn": "During drawing of nylon or polyester fibers, polymer chains may align along the direction of tension. Alignment can also change crystallinity and intermolecular cohesion. Tensile behavior cannot be predicted from the monomer name alone: how the chains are oriented relative to applied force matters. A macroscopic strength measurement motivates a microscopic structural explanation."
+          },
+          {
+            "id": "bonds",
+            "ja": "2　ポリアミドとポリエステルの違いを結合から読む",
+            "en": "2. Compare polyamides and polyesters by their linkages",
+            "textJa": "ナイロンの鎖にはアミド結合があり、PETなどのポリエステルにはエステル結合があります。アミド基のN−HとC=Oは鎖間の水素結合に関係し、ポリエステルではエステル結合の極性や芳香環の硬さが重要です。しかし、同じアミド結合をもつ材料でも、鎖の長さや配向・結晶性が違えば性質は同じになりません。官能基は物性の説明の入口ですが、結論そのものではありません。",
+            "textEn": "Nylon contains amide linkages, whereas PET contains ester linkages. Amide N–H and C=O groups support intermolecular hydrogen bonding, while polar ester groups and rigid aromatic units contribute differently to polyester properties. Yet two materials with the same linkage type can behave differently because chain length, orientation and crystallinity vary. Functional groups are only one layer of explanation."
+          },
+          {
+            "id": "heat",
+            "ja": "3　熱可塑性と熱硬化性を、鎖の自由度で比べる",
+            "en": "3. Explain thermoplastic and thermoset behavior through chain mobility",
+            "textJa": "比較的独立した高分子鎖が熱で動きやすくなると、材料が軟化して成形できる場合があります。一方、鎖どうしが三次元的に架橋した網目では、鎖全体が流動しにくくなり、加熱しても単純には融けません。これが熱可塑性樹脂と熱硬化性樹脂の代表的な違いを説明します。ただしすべての熱可塑性樹脂が同じ温度で融けるわけではなく、熱硬化性樹脂は高温で分解する場合があります。",
+            "textEn": "Relatively separate polymer chains can gain mobility on heating, allowing many thermoplastics to soften and be reshaped. A heavily crosslinked three-dimensional network cannot flow in the same way, explaining typical thermoset behavior. This is not a claim that all thermoplastics melt at one temperature: glass transitions, melting ranges and thermal degradation must be distinguished."
+          },
+          {
+            "id": "rubber",
+            "ja": "4　引っ張ったゴムが元へ戻る仕組みを考える",
+            "en": "4. Why does stretched rubber tend to retract?",
+            "textJa": "ゴムの高分子鎖は、自然な状態では多様な折れ曲がり方をとれます。引っ張ると鎖の配置が一方向へ偏り、取り得る形の数が減ります。適度な架橋があると鎖がばらばらに流れてしまわず、外力を除くと多数の形を取りやすい状態へ戻ろうとします。これがゴム弾性のエントロピー的な説明の入口です。結合が単純なばねのように伸び縮みするだけではありません。",
+            "textEn": "Flexible rubber chains can adopt many conformations in an unstretched network. Stretching biases them toward more aligned conformations, reducing the number of accessible arrangements. Moderate crosslinks prevent the chains from flowing away, so removing the force favors a return toward the high-entropy conformational ensemble. Rubber elasticity is not simply individual covalent bonds behaving like metal springs."
+          },
+          {
+            "id": "vulcanize",
+            "ja": "5　架橋を増やすと、必ずよいゴムになるか",
+            "en": "5. Does more crosslinking always improve rubber?",
+            "textJa": "加硫などで適度な架橋を導入すると、ゴムの弾性回復や耐久性が改善する場合があります。しかし架橋を増やしすぎると鎖の動く自由度が小さくなり、伸びにくく硬い材料になります。『架橋＝強い』と覚えるのではなく、架橋密度と分子運動がトレードオフを持つと理解する必要があります。用途に応じて適度な構造を選ぶことが、材料設計という発想につながります。",
+            "textEn": "Vulcanization can introduce crosslinks that improve recovery and durability. Excessive crosslinking restricts chain motion and can produce a hard, poorly extensible material. The relationship is a trade-off, not a universal rule that more crosslinks always mean a better elastomer. Appropriate network architecture depends on intended use."
+          },
+          {
+            "id": "compare",
+            "ja": "6　同じ材料の名前でも、加工方法で性質が変わる",
+            "en": "6. Processing history is part of material structure",
+            "textJa": "材料の名称や化学式が同じでも、繊維の延伸、冷却速度、架橋反応、添加物によって実際の性能が変わります。だから材料の比較表には、化学結合だけでなく、分子量分布、配向、結晶性、架橋、温度、測定方向などの条件も必要です。Atkins的な構造図、McQuarrie的な理由の追跡、Pfennig的な模型の限界を、材料の実例に合わせて使い分けます。",
+            "textEn": "Even materials with the same repeat-unit chemistry can differ through drawing, cooling, crosslinking, plasticizers and other processing choices. A meaningful comparison must include chain-length distribution, orientation, crystallinity, crosslink density, temperature and measurement direction. Structural sketches, mechanistic reasoning and explicit model limits each serve a different part of the explanation."
+          }
+        ]
       }
     },
     {
@@ -251,6 +349,55 @@
             "type": "revisit",
             "ja": "分子の立体構造と水素結合を学んだ後で戻ると、セルロースの強さやデンプンの消化性を説明できます。生化学で酵素の活性部位を学べば、なぜ微妙な結合の違いが生体反応を選別するのか理解できます。材料の環境評価まで進むと、化学構造が社会の選択に関わることも見えてきます。",
             "en": "Stereochemistry and hydrogen bonding later explain cellulose strength and starch digestibility. Enzyme active-site specificity makes small linkage differences biologically decisive. Environmental assessment extends the same structural reasoning into decisions about sustainable materials and waste treatment."
+          }
+        ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "デンプンとセルロースは、ともにグルコースからできているのに、消化されやすさも材料としての強さも違います。『天然だから分解される』といった言葉を、立体構造・酵素・環境条件で検証します。",
+        "premiseEn": "Starch and cellulose are built from glucose but differ in digestibility and material behavior. Test broad claims such as 'natural means biodegradable' against stereochemistry, enzyme specificity and environmental conditions.",
+        "sections": [
+          {
+            "id": "link",
+            "ja": "1　同じグルコースが、違う高分子になる",
+            "en": "1. Why the same building block gives different polymers",
+            "textJa": "デンプンもセルロースも主にグルコース由来の単位を含みます。ところが結合の立体配置が異なります。デンプンではα型のグリコシド結合、セルロースではβ-1,4結合が代表的です。原子の種類と個数が似ていても、どちら向きに単位が結ばれるかで鎖の形が変わります。これは有機化学で学んだ立体異性の考え方が、高分子材料へつながる典型的な例です。",
+            "textEn": "Both starch and cellulose consist largely of glucose-derived units, but their linkages differ in stereochemistry. Starch uses mainly α-type glycosidic linkages, whereas cellulose uses β-1,4 linkages. Even with the same component sugars, connectivity and spatial orientation affect chain geometry. Stereochemical reasoning from organic chemistry now predicts macromolecular behavior."
+          },
+          {
+            "id": "structure",
+            "ja": "2　分子鎖の形が材料の強さに結びつく",
+            "en": "2. Chain geometry influences macroscopic strength",
+            "textJa": "セルロースの鎖は隣接する鎖と多くの水素結合を形成し、繊維状の集合体をつくることがあります。デンプンではアミロースのらせん構造やアミロペクチンの枝分かれなど別の構造が現れます。これらの違いは、水との相互作用、結晶性、材料の硬さに関係します。『グルコースからできている』という情報だけでは、どのように加工できるかを予測できません。",
+            "textEn": "Cellulose chains can pack into hydrogen-bonded fibrous assemblies. Starch includes amylose with helical tendencies and branched amylopectin. These distinct structures influence crystallinity, water interactions and mechanical behavior. Knowing only that both are glucose polymers is insufficient to predict processing or performance."
+          },
+          {
+            "id": "enzymes",
+            "ja": "3　人がデンプンを利用できても、セルロースを消化しにくい理由",
+            "en": "3. Enzyme specificity explains digestibility differences",
+            "textJa": "人間の消化酵素には、デンプン中の代表的なαグリコシド結合を加水分解できるものがあります。一方、人間はセルロースのβ-1,4結合を効率よく切断するセルラーゼを自前では産生しません。これにより同じ単糖を含む高分子でも栄養上の役割が異なります。ただし一部の微生物はセルラーゼを作れるため、セルロースが化学的に絶対分解できない物質という意味ではありません。",
+            "textEn": "Humans produce digestive enzymes that hydrolyze many α glycosidic linkages of starch, but they do not produce an efficient endogenous cellulase for the β-1,4 links of cellulose. This creates a major nutritional difference despite similar monomer composition. Some microorganisms produce cellulases, so cellulose is not chemically impossible to degrade; biological capability depends on the available enzymes."
+          },
+          {
+            "id": "protein",
+            "ja": "4　タンパク質では、並び方が機能に影響する",
+            "en": "4. Amino-acid sequences support specific protein functions",
+            "textJa": "タンパク質はアミノ酸がペプチド結合でつながる高分子で、一次構造はアミノ酸残基の並びです。そこから水素結合、疎水性相互作用、電荷相互作用、場合によってはジスルフィド結合などが関係し、立体構造が形成されます。温度やpHが変わって構造が乱れると機能が失われる場合がありますが、変性が必ずペプチド結合の加水分解を意味するわけではありません。",
+            "textEn": "Proteins are polymers of amino-acid residues connected by peptide bonds. The primary sequence supports folding through hydrogen bonding, hydrophobic effects, electrostatics and sometimes disulfide bonds. Temperature or pH changes can disrupt higher-order structure and function, but denaturation does not necessarily mean cleavage of the peptide backbone."
+          },
+          {
+            "id": "natural",
+            "ja": "5　天然由来というだけで、すぐ分解されるのか",
+            "en": "5. Does natural origin guarantee rapid degradation?",
+            "textJa": "木材やセルロースは天然由来ですが、乾燥状態や酸素の少ない環境では分解が非常に遅くなる場合があります。逆に合成高分子でも、特定の条件で微生物などによる分解を受けやすい設計があります。分解速度を決めるのは原料の由来だけではなく、結合構造、材料の厚さ・形、温度、水分、微生物の存在などです。天然・人工という分類は環境中での寿命を直接示しません。",
+            "textEn": "Wood and cellulose are naturally derived, yet they may persist for long periods in dry or oxygen-poor conditions. Conversely, some synthetic polymers are engineered to degrade biologically under specified conditions. Degradation depends on bond chemistry, morphology, dimensions, moisture, temperature and microbial communities. 'Natural' and 'synthetic' are origin labels, not direct measurements of environmental lifetime."
+          },
+          {
+            "id": "evidence",
+            "ja": "6　生分解性の評価には、どんな実験が必要か",
+            "en": "6. What evidence establishes biodegradability?",
+            "textJa": "材料が小さな破片になることと、微生物が分解して最終的にCO₂や水などへ変化することは同じではありません。分解性を調べるには質量の変化だけでなく、炭素の移動、呼吸によるCO₂生成、残存する物質の同定など、条件に応じた測定が必要です。工業的な堆肥化条件での分解と自然の海洋・土壌環境での分解も区別します。科学的な評価では、材料の名前より測定方法と実験条件が重要になります。",
+            "textEn": "Breaking into small fragments is not the same as complete microbial mineralization to CO₂, water and other final products. Assessing biodegradation can require carbon balances, CO₂ evolution, residual-material analysis and other appropriate measurements. Industrial composting conditions differ from soils and marine environments. A scientific claim about degradation must specify the environmental test and what was actually measured."
           }
         ]
       }
