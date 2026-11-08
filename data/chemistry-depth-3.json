@@ -79,6 +79,69 @@
             "en": "Redox concepts reinterpret halogen displacement in terms of electron transfer. Atmospheric chemistry shows how oxidation of sulfur and nitrogen species can contribute to acid deposition. Carbonate chemistry connects CO₂, acids and inorganic solids within a common equilibrium framework."
           }
         ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "『非金属元素は何色か、何と反応するか』から始めると、覚えることが増え続けます。まず同じ元素でも単体・イオン・化合物で性質が変わる事実を観察し、電子の受け渡し・結合・平衡という説明を必要なところで導入します。",
+        "premiseEn": "If nonmetals are taught as lists of colors and reactions, facts multiply without explanation. Begin with the observation that the same element behaves differently as a molecule, ion or compound, then introduce electron transfer, bonding and equilibria as they are needed.",
+        "sections": [
+          {
+            "id": "observation",
+            "ja": "1　同じ塩素でも、塩素分子と塩化物イオンは違う",
+            "en": "1. Chlorine molecules and chloride ions are not interchangeable",
+            "textJa": "塩素の単体Cl₂は反応性が高く、有害な気体です。一方、塩化物イオンCl⁻は水溶液や食塩の中に広く存在します。同じ元素名を含むのに性質が大きく異なります。何が違うのでしょうか。分子とイオンでは電子数、結合相手、周囲の溶媒和が異なります。元素を単体の名前だけで覚えても、化合物の性質は予測できません。最初に『どの化学種を比べているのか』を区別する必要があります。",
+            "textEn": "Elemental chlorine, Cl₂, is a reactive, hazardous gas. Chloride, Cl⁻, is a common ion in aqueous solutions and salts. The elemental name is shared but the chemical species are different: electron count, bonding, charge and solvation differ. An elemental name alone cannot specify how a substance behaves. First identify the actual species being compared."
+          },
+          {
+            "id": "electrons",
+            "ja": "2　電子配置は説明の道具であって、一覧表ではない",
+            "en": "2. Electron configuration is a tool, not a catalog",
+            "textJa": "ハロゲン原子には価電子が7個あります。これは電子を1個受け取って閉殻の電子配置をとる可能性を説明する手掛かりです。ただし『7個だから必ず電子を奪う』という法則ではありません。Cl₂では原子間で電子を共有し、Cl⁻では電子を受け取った状態です。反応の方向は、単独の原子だけでなく結合の切断・形成、溶媒和、物質の状態などのエネルギー変化によって決まります。",
+            "textEn": "Halogen atoms have seven valence electrons. That helps explain why forming a closed-shell anion can be favorable, but it is not a universal rule that every halogen always accepts an electron. Electrons are shared in Cl₂; a chloride ion has one additional electron. The overall direction of a reaction also depends on bond breaking and formation, solvation and the physical states of all species."
+          },
+          {
+            "id": "displacement",
+            "ja": "3　塩素を臭化物水溶液へ加えると何が起こるか",
+            "en": "3. What happens when chlorine meets bromide?",
+            "textJa": "臭化物イオンを含む水溶液へ塩素を加えると、条件によって臭素が生成します。単純化したイオン反応式は Cl₂+2Br⁻→2Cl⁻+Br₂ です。左辺の塩素は単体、右辺では塩化物イオンです。臭素は逆に臭化物イオンから単体へ変わります。この変化を単なる『置換』と覚える前に、どの化学種が電子を得て、どれが電子を失ったのかを追う必要があります。",
+            "textEn": "When chlorine contacts a bromide-containing solution, bromine can form under suitable conditions. A simplified net ionic equation is Cl₂+2Br⁻→2Cl⁻+Br₂. Chlorine changes from a neutral molecule to chloride ions; bromide changes to elemental bromine. Before memorizing this as displacement, follow the electrons: which species gains them and which loses them?"
+          },
+          {
+            "id": "balance",
+            "ja": "4　電子の保存を使えば、反応式が作れる",
+            "en": "4. Build the equation through electron conservation",
+            "textJa": "酸化側は 2Br⁻→Br₂+2e⁻、還元側は Cl₂+2e⁻→2Cl⁻ と書けます。それぞれの式で原子数と電荷がつり合っています。二つを足すと電子2個が消去され、Cl₂+2Br⁻→2Cl⁻+Br₂ が得られます。係数を合わせるのは機械的な操作ではなく、電子が反応の途中で新しく生まれたり消えたりしないことを式へ反映する操作です。",
+            "textEn": "Write oxidation as 2Br⁻→Br₂+2e⁻ and reduction as Cl₂+2e⁻→2Cl⁻. Each half-reaction balances both atoms and charge. Adding the equations cancels the two electrons and yields Cl₂+2Br⁻→2Cl⁻+Br₂. Balancing coefficients expresses conservation of atoms and electric charge rather than a purely formal algebraic trick."
+          },
+          {
+            "id": "potential",
+            "ja": "5　どちらが電子を受け取りやすいか、どう比較するか",
+            "en": "5. How can electron-accepting tendencies be compared?",
+            "textJa": "Cl₂/Cl⁻とBr₂/Br⁻の違いを定量的に比較するには、標準還元電位という電池の測定と結びついた量を使えます。25 ℃付近の標準値の例では Cl₂(g)+2e⁻→2Cl⁻(aq) のE°は約+1.36 V、Br₂(l)+2e⁻→2Br⁻(aq)は約+1.07 Vです。両者を組み合わせた反応の標準起電力は1.36−1.07≈+0.29 Vです。正の起電力は、指定した標準状態でΔrG°=−nFE°が負になることに対応します。電位の数値は反応条件を抜きにした万能の順位ではありません。",
+            "textEn": "Standard reduction potentials connect electron-transfer tendencies to electrochemical measurements. Near 25 °C, the Cl₂(g)/Cl⁻(aq) couple has E°≈+1.36 V, while Br₂(l)/Br⁻(aq) has E°≈+1.07 V. Combining the reduction of chlorine with oxidation of bromide gives E°cell≈+0.29 V, and ΔrG°=−nFE°cell is negative for the specified standard states. This is a conditional thermodynamic comparison, not an all-purpose list of reactivity."
+          },
+          {
+            "id": "trend",
+            "ja": "6　周期表の傾向は、何を説明し、何を説明しないか",
+            "en": "6. What periodic trends explain—and what they do not",
+            "textJa": "同族元素は価電子配置が似ているため、反応の型に共通点が現れます。しかし水溶液中の酸化力は原子の電子親和力だけで決まらず、単体の結合の強さやイオンの水和などにも依存します。『周期表の上ほど必ず強い』という一文だけでは、現実の反応を十分に説明できません。周期表は予測の出発点であり、実験結果や複数のエネルギー項と照らし合わせて使う道具です。",
+            "textEn": "Elements in a group share valence-shell patterns and often similar classes of reactions. Yet oxidizing strength in water is not determined by atomic electron affinity alone: bond energies, solvation and phase changes matter. A slogan about moving up or down the periodic table cannot replace an energy accounting. Periodic patterns are starting hypotheses to test against measurements."
+          },
+          {
+            "id": "oxides",
+            "ja": "7　非金属酸化物を酸性と呼ぶ理由を考える",
+            "en": "7. Why do some nonmetal oxides lead to acids?",
+            "textJa": "SO₂やCO₂が水に溶けると、条件に応じて水和・酸解離などの平衡が関係します。SO₃とSO₂では硫黄の酸化数や結合構造が異なり、水との反応も同じではありません。『非金属酸化物は酸性』という分類は初学者には便利ですが、酸を生む具体的な反応、平衡、酸化数まで区別することで説明力が高まります。中性に近い酸化物など、単純な分類から外れる例もあります。",
+            "textEn": "When CO₂ or SO₂ enters water, hydration and acid–base equilibria may affect the solution. SO₃ and SO₂ differ in sulfur oxidation state and bonding, and their reactions with water are not equivalent. The rule that nonmetal oxides are 'acidic' is a useful first approximation, but the actual species, reactions and equilibria provide a stronger explanation; some oxides do not fit a simple binary classification."
+          },
+          {
+            "id": "limits",
+            "ja": "8　標準電位・周期性・反応速度を混同しない",
+            "en": "8. Do not confuse redox thermodynamics with kinetics",
+            "textJa": "標準電位からわかるのは指定条件の反応の熱力学的な方向です。実際の反応速度や平衡に達する時間、表面反応や副反応までは単独でわかりません。さらに水溶液中ではpH、濃度、錯形成が化学種を変えます。高校で学ぶハロゲンの置換反応は、大学での自由エネルギー、電気化学、環境中の化学種の考え方につながります。元の現象を、必要なモデルを選んで説明できるようになることが目標です。",
+            "textEn": "Reduction potentials describe thermodynamic tendencies under specified conditions; they do not by themselves predict rates, induction periods or side reactions. In aqueous chemistry, pH, concentrations and complex formation also influence the species present. Halogen displacement connects to Gibbs energy, electrochemistry and environmental speciation. The goal is to choose and evaluate an explanatory model rather than repeat a reaction list."
+          }
+        ]
       }
     },
     {
@@ -153,6 +216,69 @@
             "en": "Electron configurations suggest common ionic charges; redox and electrochemistry put these charges into complete reactions. Complexation explains much amphoteric dissolution chemistry. Materials science turns passivation into a design principle for corrosion resistance."
           }
         ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "アルミニウムは電子を失いやすい金属なのに、身近なアルミ製品はすぐに崩れません。この『予想と観察のずれ』から、原子の電子配置だけでは不足する説明を作ります。",
+        "premiseEn": "Aluminium is readily oxidized in thermodynamic terms, yet everyday aluminium products do not rapidly disintegrate. This gap between a simple prediction and observation motivates the study of surfaces, redox energetics, solubility and complexation.",
+        "sections": [
+          {
+            "id": "surface",
+            "ja": "1　アルミニウムの表面で起こっていること",
+            "en": "1. What happens on an aluminium surface?",
+            "textJa": "アルミニウムは空気中で表面に酸化物の皮膜をつくり、その皮膜が内部への酸素や水の移動を遅くします。原子が電子を失いやすいという説明だけでは、この耐久性を予測できません。熱力学的に酸化が有利でも、表面膜があると反応速度が小さくなることがあります。最初に『どんな条件で、どの速さで反応するか』という問いを分けると、金属の実際の性質が見えてきます。",
+            "textEn": "Aluminium spontaneously forms an adherent oxide-rich film when exposed to air. The film can slow transport of oxygen, water and ions to the underlying metal. A statement about the metal's tendency to lose electrons cannot by itself predict durability. Oxidation may be thermodynamically favorable while the reaction is kinetically slow because the surface becomes passivated."
+          },
+          {
+            "id": "ion",
+            "ja": "2　金属原子がイオンになる、だけでは計算できない",
+            "en": "2. A metal does not dissolve as a bare isolated ion",
+            "textJa": "Al原子から電子を取り去るにはエネルギーが必要です。しかし実際の水溶液中では、陽イオンは水に囲まれて水和し、酸化物や水酸化物が形成される場合もあります。単独の原子のイオン化エネルギーだけで、『金属が酸と反応するか』や『溶液へ溶けるか』を判定できないのは、その後の水和、結合、反応相手の変化までエネルギー収支に入れる必要があるためです。",
+            "textEn": "Removing electrons from an isolated aluminium atom costs energy. In solution, however, ions are hydrated and can form oxides, hydroxides and complexes. The ionization energy of a free gaseous atom alone cannot decide whether a metal reacts with acid or dissolves in water: the entire reaction includes hydration, bond formation and changes in other chemical species."
+          },
+          {
+            "id": "thermo",
+            "ja": "3　標準電位は反応の可能性を示すが、速度を保証しない",
+            "en": "3. A reduction potential is not a reaction-rate constant",
+            "textJa": "金属の酸化還元を比較する際には電極電位を利用できます。たとえば標準還元電位Al³⁺/Alが大きな負の値であることは、適切な相手を組み合わせたときアルミニウムの酸化が有利になる傾向を示します。しかし電極電位は平衡に関係する量であり、表面皮膜の形成、反応障壁、過電圧などを無視できません。『反応しやすさ』という日本語を、熱力学的な傾向と速度の二つに分ける必要があります。",
+            "textEn": "Electrode potentials can compare redox tendencies. The strongly negative standard reduction potential of Al³⁺/Al indicates that aluminium oxidation can be favored with a suitable oxidant. Yet electrode potential is thermodynamic information, not a direct rate constant. Surface films, kinetic barriers and overpotentials all affect observable behavior. The phrase 'reactive metal' must be unpacked."
+          },
+          {
+            "id": "hydroxide",
+            "ja": "4　水酸化アルミニウムの沈殿を観察する",
+            "en": "4. Observe formation of aluminium hydroxide",
+            "textJa": "Al³⁺を含む水溶液へ塩基を加えると、条件によってAl(OH)₃に相当する白色沈殿が現れます。これは、単に『Al³⁺がOH⁻を3個受け取る』という粒子数の問題ではありません。水溶液中ではアルミニウムは水和し、加水分解し、複数の化学種をとり得ます。高校ではAl³⁺+3OH⁻→Al(OH)₃(s)と簡略化しますが、実在の水溶液の複雑さを理解しておくと次の実験を説明しやすくなります。",
+            "textEn": "Adding base to an aluminium-containing aqueous solution can produce a white hydroxide-rich precipitate represented as Al(OH)₃. It is not merely a counting exercise in which Al³⁺ captures three OH⁻ ions; hydrated and hydrolyzed species coexist. At high-school level, Al³⁺+3OH⁻→Al(OH)₃(s) is useful as a net representation, with the underlying speciation treated more carefully at higher levels."
+          },
+          {
+            "id": "amphoteric",
+            "ja": "5　酸でも塩基でも溶けるのは、反対の現象なのか",
+            "en": "5. Why does the hydroxide dissolve in both acid and base?",
+            "textJa": "Al(OH)₃は酸性条件では水酸基がプロトンと反応し、Alを含む溶存種へ移ります。簡略化すればAl(OH)₃(s)+3H⁺→Al³⁺+3H₂Oです。一方、十分強い塩基性条件では Al(OH)₃(s)+OH⁻⇌[Al(OH)₄]⁻ のように水酸化物配位子をもつ溶存種が形成されます。酸中と塩基中で違う化学種が安定になるのであり、同じ逆向きの反応を二つ書いているわけではありません。",
+            "textEn": "In acid, protonation of hydroxide groups can drive aluminium hydroxide into dissolved, hydrated aluminium species: Al(OH)₃(s)+3H⁺→Al³⁺+3H₂O is a simplified net equation. In sufficiently basic solution, hydroxide complexes such as [Al(OH)₄]⁻ can predominate, represented by Al(OH)₃(s)+OH⁻⇌[Al(OH)₄]⁻. These are distinct chemical pathways in different environments."
+          },
+          {
+            "id": "stoich",
+            "ja": "6　必要な酸や塩基の量を式から導く",
+            "en": "6. Derive reactant amounts from balanced equations",
+            "textJa": "例えば、固体のAl(OH)₃が0.0020 molあり、酸によってすべて溶かす理想化した条件を考えます。反応式Al(OH)₃+3H⁺→Al³⁺+3H₂Oでは、Al(OH)₃ 1 molあたりH⁺が3 mol必要です。したがって最低限の化学量論的な量は0.0020×3=0.0060 molとなります。実際に必要な酸の量は平衡や副反応で変わる可能性があります。計算は『係数が示す粒子の比』から始まります。",
+            "textEn": "Suppose an idealized sample contains 0.0020 mol of Al(OH)₃ and dissolves completely according to Al(OH)₃+3H⁺→Al³⁺+3H₂O. The balanced equation needs 3 mol of H⁺ per mole of Al(OH)₃, giving a stoichiometric requirement of 0.0020×3=0.0060 mol. Real solutions may require more acid because of equilibrium and competing reactions; the calculation establishes the ideal molecular accounting."
+          },
+          {
+            "id": "model",
+            "ja": "7　原子の説明・溶液の説明・表面の説明を比較する",
+            "en": "7. Compare atomic, solution and surface models",
+            "textJa": "電子配置は金属がどの価数をとりやすいかの手掛かりになります。溶解平衡と錯形成は水溶液中でどんな化学種が存在するかを説明します。表面科学は酸化膜や腐食の速度を扱います。この三つを混ぜて『アルミニウムは反応性が高い』と一言で済ませると、観察を説明できません。どの現象の、どの問いに答えるモデルなのかを区別して使います。",
+            "textEn": "Electronic structure helps explain common oxidation states. Solution equilibria and complexation identify which dissolved species are favored. Surface science explains films and corrosion rates. These are not competing descriptions of one identical question; they apply at different scales. Choosing the model that matches the observation is more productive than labeling aluminium simply 'reactive' or 'unreactive'."
+          },
+          {
+            "id": "limits",
+            "ja": "8　典型金属を元素一覧ではなく条件つきの予測へ",
+            "en": "8. Replace element lists with conditional predictions",
+            "textJa": "アルカリ金属の水との反応、アルカリ土類金属の水酸化物の溶解度、アルミニウムの不動態化は、すべて金属の性質ですが単一の規則には入りません。電子配置の似た元素を比べるときも、結晶の安定性、溶媒和、表面状態などを別途考えます。無機化学では『何の化学種が、どんな温度・pH・溶媒・表面状態にあるか』を記すことが、予測の正確さを高めます。",
+            "textEn": "Alkali-metal reactions with water, alkaline-earth hydroxide solubilities and aluminium passivation all concern metals, but no single trend explains them completely. Even when valence configurations resemble one another, lattice energies, hydration and surface conditions matter. Inorganic predictions improve when the species, temperature, pH, solvent and surface state are specified."
+          }
+        ]
       }
     },
     {
@@ -225,6 +351,69 @@
             "type": "revisit",
             "ja": "化学結合を学んだときの『電子対を共有する』という説明が、配位子の電子供与へつながります。平衡を学ぶと錯体の生成定数が理解でき、分析化学では錯形成を金属イオンの分離や定量に利用できます。大学では分子軌道・配位子場理論を通じて、高校の色の暗記を電子遷移へ読み直せます。",
             "en": "Electron donation from ligands extends earlier covalent-bond concepts. Equilibrium constants explain changing speciation, and analytical chemistry exploits complexation for selective detection and separation. Molecular orbital and ligand-field theories later turn observed colors into evidence about electronic transitions."
+          }
+        ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "銅(II)水溶液にアンモニアを加えると、沈殿が生じたり濃い青色になったりします。単に色を覚えるのではなく、溶液中の化学種と電子エネルギー準位の変化を説明するため、複数の結合モデルを比較します。",
+        "premiseEn": "Adding ammonia to aqueous copper(II) can produce a precipitate and then a deep-blue solution. Rather than memorize a color, identify the changing chemical species and build progressively from coordination geometry to electron-energy models, comparing what each model can and cannot explain.",
+        "sections": [
+          {
+            "id": "copper",
+            "ja": "1　青色を覚える前に、何の色を見ているのか",
+            "en": "1. Before memorizing blue, identify the absorbing species",
+            "textJa": "銅(II)イオンを含む水溶液は、条件によって青く見えます。周囲の配位子が変わると、その見かけの色も変わります。『Cu²⁺は青色』という言い方では、溶液中の水和した化学種や配位子交換を表せません。まず、何がCuの周囲に存在しているか、どの化学種の吸収を測っているかという問いを立てます。光の吸収と色は別の量であり、目に見える色は透過・反射した光によって決まります。",
+            "textEn": "A copper(II) solution can look blue, but changing the surrounding ligands changes its optical appearance. The phrase 'Cu²⁺ is blue' is insufficient because dissolved copper is solvated and can undergo ligand substitution. Ask which species is present and which transition absorbs light. Observed color arises from light that is transmitted or reflected, not directly from the absorbed wavelength."
+          },
+          {
+            "id": "ligands",
+            "ja": "2　配位子はなぜ金属に結びつくのか",
+            "en": "2. Why do ligands bind to metals?",
+            "textJa": "水分子やアンモニアには、金属中心と相互作用できる電子対があります。配位結合を説明する最初のモデルとして、配位子が電子対を供与し、金属が受け入れるルイス酸・塩基の考え方を使います。しかし実際には金属と配位子の電子雲全体が影響し合い、電子密度の分布が変わります。電子対供与は結合の開始を説明する道具であり、すべての結合の強さや色をそれだけで数値予測できるわけではありません。",
+            "textEn": "Water and ammonia have electron pairs that can interact with a metal center. Lewis acid–base language provides a first model: the ligand donates an electron pair and the metal accepts it. Actual bonding involves redistribution of electron density across the metal–ligand assembly. The donation picture is useful but does not numerically predict every bond strength or optical property."
+          },
+          {
+            "id": "geometry",
+            "ja": "3　配位数と立体構造は同じ情報ではない",
+            "en": "3. Coordination number does not uniquely determine geometry",
+            "textJa": "配位数とは、金属に直接結びついた配位原子の数です。例えば4配位だからといって必ず正四面体形とは限らず、平面四角形の配置もあり得ます。6配位では八面体形が代表的です。立体構造が変われば、金属の電子が感じる配位子の方向や対称性も変わります。ここで『電子のエネルギーを図で比較したい』という必要性が生まれます。",
+            "textEn": "Coordination number counts ligand donor atoms directly bound to a metal. Four-coordinate complexes can be tetrahedral or square planar; six-coordinate ones are often approximately octahedral. Geometry changes the directions in which ligand electron density interacts with metal orbitals. This creates a need for an energy-level description rather than a mere coordination-number list."
+          },
+          {
+            "id": "splitting",
+            "ja": "4　五つのd軌道が同じエネルギーとは限らない",
+            "en": "4. Why five d orbitals need not remain degenerate",
+            "textJa": "孤立した金属イオンの五つのd軌道を、初歩モデルでは同じエネルギーとして扱います。しかし八面体形に六つの配位子を置くと、配位子の方向を向くd(x²−y²)とd(z²)は、軸間を向くd(xy)、d(xz)、d(yz)とは異なる相互作用を受けます。最も単純な結晶場モデルでは前者が高いe_g、後者が低いt₂gに分かれます。軌道の形が配位子の方向とどう重なるかが理由です。",
+            "textEn": "In the simplest isolated-ion description, five d orbitals share an energy. Place six ligands around the metal in an octahedral geometry. The d(x²−y²) and d(z²) orbitals point along the metal–ligand axes, whereas d(xy), d(xz) and d(yz) are oriented between those axes. In the simplest crystal-field model the first pair forms a higher e_g set and the other three a lower t₂g set. Orbital orientation explains the difference."
+          },
+          {
+            "id": "barycenter",
+            "ja": "5　分裂エネルギーを計算する：重心を保存する模型",
+            "en": "5. Derive the 2/5 and 3/5 crystal-field shifts",
+            "textJa": "八面体結晶場の重心を0とする近似を考えます。下側t₂g軌道1個のエネルギー変化をa、高いe_g軌道1個をb、二組の差をΔₒ=b−aとします。軌道はt₂gが3個、e_gが2個なので、重心が変わらないというモデル上の約束から3a+2b=0となります。b=a+Δₒを代入すると5a+2Δₒ=0、つまりa=−(2/5)Δₒ、b=(3/5)Δₒです。e_gは+0.6Δₒ、t₂gは−0.4Δₒと表示されます。これは任意の錯体で実測エネルギーがこの比になるという意味ではなく、理想八面体場の相対エネルギーを表す模型です。",
+            "textEn": "Take the energy barycenter of an ideal octahedral d-orbital splitting diagram as zero. Let each lower t₂g orbital shift by a, each higher e_g orbital by b, and define Δo=b−a. There are three t₂g orbitals and two e_g orbitals, so preserving the barycenter gives 3a+2b=0. Substitution b=a+Δo yields 5a+2Δo=0, hence a=−(2/5)Δo and b=+(3/5)Δo. These shifts, −0.4Δo and +0.6Δo, define the conventional ideal octahedral crystal-field diagram; they are not universal measured orbital energies."
+          },
+          {
+            "id": "light",
+            "ja": "6　光の波長と電子エネルギー差を結ぶ",
+            "en": "6. Connect wavelength to an electronic energy gap",
+            "textJa": "光子のエネルギーはE=hν、光の速さはc=λνです。ν=c/λを代入するとE=hc/λが得られます。仮に600 nmの光を吸収する一つの電子遷移があるなら、E≈(6.626×10⁻³⁴ J·s)(3.00×10⁸ m/s)/(600×10⁻⁹ m)≈3.31×10⁻¹⁹ J≈2.07 eVです。ただし可視光吸収のすべてを単純なd軌道分裂で説明できません。電荷移動遷移や複雑な電子間相互作用もあり、吸収した波長と見た目の色は同じではありません。",
+            "textEn": "A photon carries energy E=hν. Since c=λν, substituting ν=c/λ gives E=hc/λ. For a hypothetical transition absorbing 600 nm light, E≈(6.626×10⁻³⁴ J·s)(3.00×10⁸ m/s)/(600×10⁻⁹ m)≈3.31×10⁻¹⁹ J≈2.07 eV. Not every visible absorption is a simple d–d transition: charge-transfer states and electron–electron interactions also matter, and perceived color is not the same as absorption wavelength."
+          },
+          {
+            "id": "equilibrium",
+            "ja": "7　色の変化と沈殿は、別々の反応ではなくつながっている",
+            "en": "7. Speciation links color, precipitation and ligands",
+            "textJa": "Cu²⁺を含む水溶液にアンモニアを少量加えると、アンモニアが水と反応して生じる塩基性条件によりCu(OH)₂などの沈殿が現れる場合があります。さらにアンモニアを増やすと、アンミン錯体を含む溶存種が優勢になり、深青色の溶液になることがあります。Cu²⁺+nNH₃⇌[Cu(NH₃)ₙ]²⁺のような形成平衡で記述できますが、実際には水分子の配位も含めた複数の化学種が共存します。色を記憶するだけでは、この沈殿と再溶解のつながりが見えません。",
+            "textEn": "A small amount of ammonia added to aqueous copper(II) may increase basicity enough to precipitate copper hydroxide. With more ammonia, dissolved ammine complexes can become important and a deep-blue solution can appear. A schematic equilibrium Cu²⁺+nNH₃⇌[Cu(NH₃)ₙ]²⁺ helps describe complexation, but the real solution contains hydrated and mixed-ligand species. Color change, precipitation and dissolution are linked by chemical speciation."
+          },
+          {
+            "id": "models",
+            "ja": "8　結晶場模型と分子軌道模型は、どちらを使うか",
+            "en": "8. Compare crystal-field and orbital models",
+            "textJa": "結晶場理論は配位子を点電荷などとみなしてd軌道の分裂を直感的に説明します。配位子場理論・分子軌道法では金属と配位子の軌道の重なりや共有結合性も考えます。VSEPRは主に単純な主族分子の形を予測する出発点で、遷移金属錯体の色やスピン状態の予測には不足します。どの模型が正しいか一つだけ選ぶより、何が説明でき何を捨てているかを比較することが深い理解につながります。",
+            "textEn": "Crystal-field theory idealizes ligands as electrostatic sources to make d-orbital splitting intuitive. Ligand-field and molecular-orbital theories also treat metal–ligand orbital overlap and covalency. VSEPR is useful for geometries of many simple main-group molecules but insufficient for transition-metal colors and spin states. Compare what each model explains and what it neglects rather than treating models as rival slogans."
           }
         ]
       }
@@ -326,6 +515,69 @@
             "Cl⁻を別途加えると[Cl⁻]はsだけでなく添加量を含むため、同じs²は使えません。錯形成によってAg⁺が減れば溶解度が増えることもあります。実験の条件に応じて再び平衡式を組み立てます。",
             "Added chloride invalidates the simple [Cl⁻]=s assumption. Strong complexation can lower free Ag⁺ and increase total dissolved silver. Rebuild the equilibrium equations for the actual conditions."
           ]
+        ]
+      },
+      "originJourney": {
+        "version": "1.0",
+        "premiseJa": "白色沈殿ができた、という観察だけでは物質名は決まりません。白色沈殿の正体を推理する過程で、溶解平衡・錯体形成・定量条件を必要な順に組み立てます。暗記ではなく、化学的な根拠の積み重ねによる識別を扱います。",
+        "premiseEn": "A white precipitate is an observation, not a chemical identification. To identify an unknown, build the reasoning from dissolution equilibrium to complexation, quantitative prediction and independent confirmation. The purpose is evidence-based inorganic analysis, not memorized spot tests.",
+        "sections": [
+          {
+            "id": "white",
+            "ja": "1　白い沈殿は何を意味し、何を意味しないか",
+            "en": "1. What a white precipitate does and does not prove",
+            "textJa": "Ag⁺を含む試料にCl⁻を加えると、適切な条件で白いAgCl沈殿が生じます。しかし白色沈殿はAgClだけではありません。見た目の色は候補を狭める証拠にはなりますが、単独では物質名を確定できません。どの試薬を加えたか、どのイオンがもともと存在し得るか、ほかの沈殿候補がないかを確認する必要があります。無機物質の識別は、色の記憶よりも推論と反証の技術です。",
+            "textEn": "Adding chloride to an aqueous sample containing Ag⁺ can form white AgCl under suitable conditions. Other solids can also be white; appearance narrows hypotheses but does not establish identity. Consider the added reagents, possible ions already present and alternative precipitates. Qualitative analysis is a process of building and testing chemical hypotheses."
+          },
+          {
+            "id": "equilibrium",
+            "ja": "2　沈殿は『全部固まって終わり』ではない",
+            "en": "2. Precipitation does not remove every dissolved ion",
+            "textJa": "AgCl(s)を水に接触させると、固体からAg⁺とCl⁻が溶け出す過程と、溶液中のイオンが固体へ戻る過程が起こります。平衡では、一定温度で溶解と析出の正味の変化がゼロになりますが、溶液中にAg⁺やCl⁻がまったくなくなるわけではありません。固体が存在する平衡を調べるため、溶解度積Kspという量が必要になります。",
+            "textEn": "When AgCl(s) contacts water, ions can dissolve from the solid and return by precipitation. At equilibrium the net transfer vanishes, but dissolved Ag⁺ and Cl⁻ remain. A saturated solution therefore contains ions rather than being 'completely precipitated'. The solubility product Ksp is introduced to quantify this equilibrium under specified conditions."
+          },
+          {
+            "id": "ksp",
+            "ja": "3　溶解度積Kspはどこから現れるか",
+            "en": "3. Derive the solubility-product expression",
+            "textJa": "AgCl(s)⇌Ag⁺(aq)+Cl⁻(aq)を考えます。平衡定数は各化学種の活量の積と比から作られます。純粋な固体の活量を1として扱うため、Ksp=a(Ag⁺)a(Cl⁻)となります。十分希薄な水溶液では活量を標準濃度で割った濃度で近似し、教科書ではしばしば[Ag⁺][Cl⁻]の形を使います。これは状態や濃度を指定した平衡の式であって、化学種が完全に消えるという意味ではありません。",
+            "textEn": "For AgCl(s)⇌Ag⁺(aq)+Cl⁻(aq), equilibrium constants are written in terms of species activities. The activity of pure solid AgCl is treated as one, so Ksp=a(Ag⁺)a(Cl⁻). In sufficiently dilute solutions, activities may be approximated by suitably normalized concentrations, giving the familiar [Ag⁺][Cl⁻] expression. This is an equilibrium condition, not a claim that all ions are removed."
+          },
+          {
+            "id": "ionproduct",
+            "ja": "4　Kspと実際の濃度を比べる意味",
+            "en": "4. Compare the actual ion product with Ksp",
+            "textJa": "イオン積Qspは、いま実際に存在するAg⁺とCl⁻の活量から同じ形で作ります。Qsp<Kspなら、固体がある条件では溶解側へ進む熱力学的傾向があります。Qsp>Kspなら析出側が有利です。ただし過飽和溶液では核生成に時間がかかり、直ちに目に見える沈殿が現れるとは限りません。平衡の予測と実際に変化が見えるまでの速度を混同しないようにします。",
+            "textEn": "The instantaneous ion product Qsp uses the same activity product evaluated for the current solution. If Qsp<Ksp, dissolution is favored when the solid is present; if Qsp>Ksp, precipitation is thermodynamically favored. Supersaturated solutions can remain clear for a time because nucleation is kinetically hindered. The direction favored by thermodynamics must be distinguished from the observed rate."
+          },
+          {
+            "id": "ammonia",
+            "ja": "5　アンモニアで沈殿が溶ける理由を探る",
+            "en": "5. Why can ammonia dissolve silver chloride?",
+            "textJa": "AgClの白い沈殿にアンモニアを加えると、条件によって沈殿が溶解します。アンモニア分子NH₃は銀イオンAg⁺と配位結合して[Ag(NH₃)₂]⁺をつくり、遊離のAg⁺を減らします。固体からイオンが溶け出す平衡は、遊離Ag⁺が減ると溶解側へ移ります。この現象は『沈殿がアンモニアで溶ける』という暗記事項ではなく、溶解平衡と錯形成平衡の組み合わせです。",
+            "textEn": "Under suitable conditions aqueous ammonia dissolves AgCl precipitate. NH₃ ligands bind Ag⁺ to form [Ag(NH₃)₂]⁺ and thereby reduce the activity of free Ag⁺. The dissolution equilibrium shifts toward releasing more ions from the solid. The event is explained by coupling dissolution and complex formation, rather than memorizing a special solubility exception."
+          },
+          {
+            "id": "combine",
+            "ja": "6　反応式を足すと、平衡定数はなぜ掛け算になるか",
+            "en": "6. Derive the combined equilibrium constant",
+            "textJa": "① AgCl(s)⇌Ag⁺+Cl⁻ の平衡定数はKsp、② Ag⁺+2NH₃⇌[Ag(NH₃)₂]⁺ の全生成定数はβ₂です。二つの式を足すとAg⁺が両辺から消え、AgCl(s)+2NH₃⇌[Ag(NH₃)₂]⁺+Cl⁻となります。平衡定数の定義を掛けると、途中のAg⁺の活量が分母と分子で打ち消され、全反応のK=Ksp×β₂です。式を足せるのは単なる約束ではなく、化学ポテンシャルや反応ギブズエネルギーの加法性と結びついています。",
+            "textEn": "Consider (1) AgCl(s)⇌Ag⁺+Cl⁻ with constant Ksp and (2) Ag⁺+2NH₃⇌[Ag(NH₃)₂]⁺ with overall formation constant β₂. Adding the equations cancels the intermediate Ag⁺, giving AgCl(s)+2NH₃⇌[Ag(NH₃)₂]⁺+Cl⁻. Multiplying the activity-based equilibrium expressions cancels a(Ag⁺), so the overall constant is K=Kspβ₂. This follows from the additivity of reaction Gibbs energies, not from an arbitrary multiplication rule."
+          },
+          {
+            "id": "free",
+            "ja": "7　遊離銀イオンが減る様子を、式で確認する",
+            "en": "7. Estimate how complexation suppresses free silver",
+            "textJa": "十分希薄な溶液で濃度近似を使い、β₂≈[Ag(NH₃)₂⁺]/([Ag⁺][NH₃]²)と書けば、[Ag⁺]≈[Ag(NH₃)₂⁺]/(β₂[NH₃]²)と変形できます。アンモニアの自由濃度が高いほど、全錯体濃度が同じなら遊離Ag⁺は小さくなる傾向が見えます。ただしアンモニアが水と反応してNH₄⁺になること、共存イオン、物質収支も必要なので、この式だけで実際の溶存銀の総量は決まりません。",
+            "textEn": "Using a dilute-solution concentration approximation, β₂≈[Ag(NH₃)₂⁺]/([Ag⁺][NH₃]²). Rearrangement gives [Ag⁺]≈[Ag(NH₃)₂⁺]/(β₂[NH₃]²). At fixed complex concentration, more free NH₃ tends to suppress free Ag⁺. Real speciation also depends on NH₃ protonation to NH₄⁺, competing ligands, ion balances and mass conservation; the rearranged equation alone cannot determine total dissolved silver."
+          },
+          {
+            "id": "proof",
+            "ja": "8　沈殿の色だけで断定しない科学的な識別",
+            "en": "8. Make an identification from converging evidence",
+            "textJa": "白い沈殿、アンモニアへの溶解、別の試薬への反応といった複数の証拠が同じ化学種を支持するか調べます。反応が見えない場合にも、検出限界、濃度不足、妨害イオン、光による分解などを検討します。未知試料の分析では、観察事実と推定した物質名を別々に記録し、必要なら空試験や既知試料による確認を行います。このような手順が、化学理論を実際の測定と結びつけます。",
+            "textEn": "An identification should be supported by converging observations: precipitate appearance, dissolution on complexation and other independent reactions. A negative observation may instead reflect a detection limit, insufficient concentration, interference or photochemical change. Record what was seen separately from the inferred identity, and use blanks or controls as appropriate. Inorganic analysis becomes a way to test models against evidence."
+          }
         ]
       }
     }
