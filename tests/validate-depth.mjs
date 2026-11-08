@@ -114,6 +114,15 @@ for(const item of bridges.bridges){
 assert.equal(covered.size,29,'Every chapter needs a verified connection to another knowledge domain');
 assert.ok(bridges.bridges.some(x=>x.id==='conservative-state'&&x.chapters.includes('2-0')&&x.lab==='state-function-lab.html'),'Conservative force → enthalpy connection missing');
 assert.ok(viewer.includes('chemistry-knowledge-bridges-v1.json')&&viewer.includes('appendBridges'),'Viewer does not load prior-knowledge bridges');
+
+assert.ok(viewer.includes('renderStageVisual(id,lang,entry.id)'), 'Annotated diagrams must appear inside the corresponding enthalpy derivation steps');
+for(const stage of ['piston','why','distinction']){
+ assert.ok(viewer.includes('step==="'+stage+'"'), 'Missing explanatory figure or comparison table for '+stage);
+}
+assert.ok(viewer.includes('figcaption') && viewer.includes('role="img"'), 'Scientific schematics need captions and accessible alt labels');
+assert.ok(viewer.includes('Pext × ΔV') && viewer.includes('H = U + PV'), 'Figure must link symbols to piston work and state variables');
+assert.ok(viewer.includes('PV is not the amount of mechanical work'), 'Figure must not conflate PV with actual work');
+
 const lab=readFileSync(new URL('../state-function-lab.html',import.meta.url),'utf8');
 assert.ok(lab.includes('workA')&&lab.includes('workB')&&lab.includes('distance'),'Path dependence must be explorable in mechanics and thermodynamics');
 const labCode=lab.match(/<script>([\s\S]*?)<\/script>/)?.[1];
